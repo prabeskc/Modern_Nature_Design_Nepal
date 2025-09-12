@@ -185,10 +185,6 @@ const megaMenuItems = {
       {
         title: 'By Style',
         items: ['Traditional', 'Contemporary', 'Minimalist']
-      },
-      {
-        title: 'Collections',
-        items: ['New In', 'Bestsellers']
       }
     ]
   }
@@ -268,7 +264,9 @@ export default function Navbar({ className = '' }: NavbarProps) {
   const [showSearchResults, setShowSearchResults] = useState(false);
   const [activeNavItem, setActiveNavItem] = useState<string | null>(null);
   const [dropdownPosition, setDropdownPosition] = useState<'left' | 'center' | 'right'>('center');
+  const [dropdownVerticalPosition, setDropdownVerticalPosition] = useState<'bottom' | 'top'>('bottom');
   const [searchDropdownPosition, setSearchDropdownPosition] = useState<'left' | 'right'>('right');
+  const [searchVerticalPosition, setSearchVerticalPosition] = useState<'bottom' | 'top'>('bottom');
   const dropdownRef = useRef<HTMLDivElement>(null);
   const megaMenuRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -311,28 +309,40 @@ export default function Navbar({ className = '' }: NavbarProps) {
     const megaMenu = megaMenuRef.current;
     const dropdownRect = dropdown.getBoundingClientRect();
     const megaMenuWidth = 896; // max-w-4xl = 896px
+    const megaMenuHeight = 300; // Estimated dropdown height
     const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
     const padding = 32; // Safe padding from viewport edges
 
-    // Calculate available space on each side
+    // Calculate horizontal position
     const leftSpace = dropdownRect.left;
     const rightSpace = viewportWidth - dropdownRect.right;
     const centerLeft = dropdownRect.left + dropdownRect.width / 2 - megaMenuWidth / 2;
     const centerRight = centerLeft + megaMenuWidth;
 
-    // Determine optimal position
+    // Determine optimal horizontal position
     if (centerLeft >= padding && centerRight <= viewportWidth - padding) {
-      // Center position fits
       setDropdownPosition('center');
     } else if (leftSpace >= megaMenuWidth + padding) {
-      // Align to right edge of button
       setDropdownPosition('right');
     } else if (rightSpace >= megaMenuWidth + padding) {
-      // Align to left edge of button
       setDropdownPosition('left');
     } else {
-      // Default to center with viewport constraints
       setDropdownPosition('center');
+    }
+
+    // Calculate vertical position
+    const spaceBelow = viewportHeight - dropdownRect.bottom - 8; // 8px for mt-2
+    const spaceAbove = dropdownRect.top - 8; // 8px for mb-2
+
+    // Determine optimal vertical position
+    if (spaceBelow >= megaMenuHeight + padding) {
+      setDropdownVerticalPosition('bottom');
+    } else if (spaceAbove >= megaMenuHeight + padding) {
+      setDropdownVerticalPosition('top');
+    } else {
+      // Default to bottom with scroll if needed
+      setDropdownVerticalPosition('bottom');
     }
   };
 
@@ -363,17 +373,30 @@ export default function Navbar({ className = '' }: NavbarProps) {
     const searchContainer = searchRef.current;
     const searchRect = searchContainer.getBoundingClientRect();
     const dropdownWidth = 384; // w-96 = 384px
+    const dropdownHeight = 384; // max-h-96 = 384px
     const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
     const padding = 16; // Safe padding from viewport edges
 
-    // Calculate available space on right side
+    // Calculate horizontal position
     const rightSpace = viewportWidth - searchRect.right;
     
-    // Determine optimal position
     if (rightSpace >= dropdownWidth + padding) {
       setSearchDropdownPosition('right');
     } else {
       setSearchDropdownPosition('left');
+    }
+
+    // Calculate vertical position
+    const spaceBelow = viewportHeight - searchRect.bottom - 8; // 8px for mt-2
+    const spaceAbove = searchRect.top - 8; // 8px for mb-2
+
+    if (spaceBelow >= dropdownHeight + padding) {
+      setSearchVerticalPosition('bottom');
+    } else if (spaceAbove >= dropdownHeight + padding) {
+      setSearchVerticalPosition('top');
+    } else {
+      setSearchVerticalPosition('bottom');
     }
   };
 
@@ -398,14 +421,26 @@ export default function Navbar({ className = '' }: NavbarProps) {
       }
     };
 
+    const handleScroll = () => {
+      // Recalculate positions on scroll to handle viewport changes
+      if (activeMegaMenu) {
+        calculateDropdownPosition();
+      }
+      if (showSearchResults) {
+        calculateSearchDropdownPosition();
+      }
+    };
+
     if (activeMegaMenu || isSearchExpanded) {
       document.addEventListener('mousedown', handleClickOutside);
       window.addEventListener('resize', handleResize);
+      window.addEventListener('scroll', handleScroll, { passive: true });
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [activeMegaMenu, isSearchExpanded]);
 
@@ -546,7 +581,11 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 {activeMegaMenu === 'shop' && (
                   <div 
                     ref={megaMenuRef}
-                    className={`mega-menu-enter absolute top-full mt-2 p-8 rounded-lg shadow-2xl border border-white/30 w-screen max-w-4xl ${
+                    className={`mega-menu-enter absolute p-6 rounded-lg shadow-2xl border border-white/30 w-screen max-w-3xl z-[9999] ${
+                      dropdownVerticalPosition === 'top' 
+                        ? 'bottom-full mb-2' 
+                        : 'top-full mt-2'
+                    } ${
                       dropdownPosition === 'left' 
                         ? 'left-0' 
                         : dropdownPosition === 'right' 
@@ -560,12 +599,14 @@ export default function Navbar({ className = '' }: NavbarProps) {
                       isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
                     }`}
                     style={{
-                      maxHeight: 'calc(100vh - 120px)',
+                      maxHeight: dropdownVerticalPosition === 'top' 
+                        ? `${Math.min(400, window.innerHeight - 120)}px`
+                        : `${Math.min(400, window.innerHeight - (dropdownRef.current?.getBoundingClientRect().bottom || 0) - 40)}px`,
                       overflowY: 'auto'
                     }}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-2 gap-8">
                       {megaMenuItems.shop.sections.map((section) => (
                         <div key={section.title}>
                           <h3 className="font-medium text-charcoal drop-shadow-sm mb-4 text-lg">{section.title}</h3>
@@ -668,7 +709,11 @@ export default function Navbar({ className = '' }: NavbarProps) {
               {showSearchResults && searchResults.length > 0 && (
                 <div 
                   ref={searchResultsRef}
-                  className={`search-dropdown absolute top-full mt-2 w-96 shadow-2xl border border-white/30 rounded-lg max-h-96 overflow-y-auto ${
+                  className={`search-dropdown absolute w-96 shadow-2xl border border-white/30 rounded-lg overflow-y-auto z-[9998] ${
+                     searchVerticalPosition === 'top' 
+                       ? 'bottom-full mb-2' 
+                       : 'top-full mt-2'
+                   } ${
                      searchDropdownPosition === 'left' ? 'left-0' : 'right-0'
                    } ${
                      window.innerWidth < 400 
@@ -678,7 +723,9 @@ export default function Navbar({ className = '' }: NavbarProps) {
                      isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
                    }`}
                   style={{
-                     maxHeight: 'calc(100vh - 120px)',
+                     maxHeight: searchVerticalPosition === 'top' 
+                       ? `${Math.min(384, window.innerHeight - 120)}px`
+                       : `${Math.min(384, window.innerHeight - (searchRef.current?.getBoundingClientRect().bottom || 0) - 40)}px`,
                      minWidth: window.innerWidth < 400 ? 'auto' : '384px'
                    }}
                 >

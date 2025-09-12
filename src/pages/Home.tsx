@@ -22,8 +22,8 @@ export default function Home() {
         {/* <StoriesCarousel /> */}
         {/* <DiscoverHome /> */}
         {/* <ShopBestsellers /> */}
-        <OurExperience />
         <FeaturedProducts />
+        <OurExperience />
         <StudioBanner />
         {/* <BrandValues /> */}
       </main>

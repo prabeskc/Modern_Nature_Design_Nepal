@@ -203,8 +203,8 @@ export default function LatestDesigns() {
   const scrollPosition = useRef(0);
   const animationRef = useRef<number>();
 
-  // Duplicate designs for infinite scroll
-  const duplicatedDesigns = [...latestDesigns, ...latestDesigns];
+  // Triple designs for seamless infinite scroll
+  const duplicatedDesigns = [...latestDesigns, ...latestDesigns, ...latestDesigns];
 
   // Intersection observer for fade-in animation
   useEffect(() => {
@@ -237,18 +237,24 @@ export default function LatestDesigns() {
      const scroll = () => {
        scrollPosition.current += 0.8; // Smooth scrolling speed
        
-       // Reset position when we've scrolled through one set of designs
+       // Reset position when we've scrolled through one complete set
        const cardWidth = 320 + 24; // w-80 (320px) + gap-6 (24px)
-       const totalWidth = cardWidth * latestDesigns.length;
+       const singleSetWidth = cardWidth * latestDesigns.length;
        
-       if (scrollPosition.current >= totalWidth) {
-         scrollPosition.current = 0;
+       // Reset to the middle set when reaching the end of second set
+       if (scrollPosition.current >= singleSetWidth * 2) {
+         scrollPosition.current = singleSetWidth;
        }
        
        carousel.style.transform = `translateX(-${scrollPosition.current}px)`;
        animationRef.current = requestAnimationFrame(scroll);
      };
 
+     // Start from the middle set to allow seamless backward looping if needed
+     const cardWidth = 320 + 24;
+     const singleSetWidth = cardWidth * latestDesigns.length;
+     scrollPosition.current = singleSetWidth;
+     
      animationRef.current = requestAnimationFrame(scroll);
 
      return () => {
@@ -308,8 +314,6 @@ export default function LatestDesigns() {
                }}
              >
                {duplicatedDesigns.map((design, index) => {
-                 // Only animate the first set of designs to avoid duplicate animations
-                 const isFirstSet = index < latestDesigns.length;
                  const cardIndex = index % latestDesigns.length;
                  
                  return (
@@ -317,7 +321,7 @@ export default function LatestDesigns() {
                      key={`${design.id}-${index}`}
                      design={design}
                      onClick={() => handleCardClick(design)}
-                     isVisible={isVisible && isFirstSet}
+                     isVisible={isVisible}
                      index={cardIndex}
                    />
                  );
