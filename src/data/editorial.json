@@ -1,0 +1,52 @@
+{
+  "editorial": [
+    {
+      "id": "edit-001",
+      "eyebrow": "Heritage",
+      "title": "Where Tradition Meets Innovation",
+      "excerpt": "Exploring the intersection of ancient craft and modern design",
+      "image": "/assets/editorial/tradition-innovation.jpg",
+      "link": "#stories"
+    },
+    {
+      "id": "edit-002",
+      "eyebrow": "Craftsmanship",
+      "title": "The Hands Behind Every Thread",
+      "excerpt": "Meet the artisans who bring our designs to life",
+      "image": "/assets/editorial/artisan-hands.jpg",
+      "link": "#stories"
+    },
+    {
+      "id": "edit-003",
+      "eyebrow": "Sustainability",
+      "title": "Weaving a Better Future",
+      "excerpt": "Our commitment to ethical and sustainable practices",
+      "image": "/assets/editorial/sustainable-future.jpg",
+      "link": "#stories"
+    },
+    {
+      "id": "edit-004",
+      "eyebrow": "Design",
+      "title": "Patterns That Tell Stories",
+      "excerpt": "The cultural significance behind our rug designs",
+      "image": "/assets/editorial/pattern-stories.jpg",
+      "link": "#stories"
+    },
+    {
+      "id": "edit-005",
+      "eyebrow": "Process",
+      "title": "From Mountain to Home",
+      "excerpt": "The journey of our rugs from Himalayan villages to your living room",
+      "image": "/assets/editorial/mountain-to-home.jpg",
+      "link": "#stories"
+    },
+    {
+      "id": "edit-006",
+      "eyebrow": "Community",
+      "title": "Supporting Artisan Families",
+      "excerpt": "How your purchase makes a difference in rural Nepal",
+      "image": "/assets/editorial/artisan-families.jpg",
+      "link": "#stories"
+    }
+  ]
+}

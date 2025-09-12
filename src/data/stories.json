@@ -1,0 +1,58 @@
+{
+  "stories": [
+    {
+      "id": "story-001",
+      "title": "The Art of Hand-Knotting",
+      "excerpt": "Discover the centuries-old tradition behind our rugs",
+      "content": "In the remote villages of Nepal, master artisans continue a tradition that spans generations. Each knot is tied with precision, creating patterns that tell stories of mountain life, spiritual beliefs, and cultural heritage. Our craftspeople spend months on a single rug, ensuring every detail reflects the beauty and complexity of Nepalese artistry.",
+      "image": "/assets/stories/hand-knotting.jpg",
+      "category": "craftsmanship",
+      "publishedAt": "2024-01-15"
+    },
+    {
+      "id": "story-002",
+      "title": "Sustainable Sourcing in the Himalayas",
+      "excerpt": "How we ensure ethical practices in every step of production",
+      "content": "Our commitment to sustainability begins in the high-altitude pastures where yaks and sheep graze freely. We work directly with herders who practice traditional, eco-friendly methods of wool collection. This approach not only preserves the environment but also supports local communities who have been guardians of these practices for centuries.",
+      "image": "/assets/stories/sustainable-sourcing.jpg",
+      "category": "sustainability",
+      "publishedAt": "2024-02-03"
+    },
+    {
+      "id": "story-003",
+      "title": "Meet Master Weaver Pemba",
+      "excerpt": "A profile of our lead artisan and his 40-year journey",
+      "content": "Pemba Sherpa began learning the art of rug weaving at age 12 in his family's workshop in Kathmandu. Today, at 52, he leads our team of master weavers, passing down techniques that have been refined over four decades. His expertise in color blending and pattern creation has made him one of Nepal's most respected artisans.",
+      "image": "/assets/stories/master-weaver-pemba.jpg",
+      "category": "artisan-profile",
+      "publishedAt": "2024-02-20"
+    },
+    {
+      "id": "story-004",
+      "title": "From Fiber to Finished Rug",
+      "excerpt": "The complete journey of our handcrafted creations",
+      "content": "Every rug begins with the careful selection of raw materials. Highland wool is sorted by quality and color, then hand-spun into yarn using traditional wheels. Natural dyes extracted from local plants and minerals create our signature color palette. The weaving process can take 3-8 months, depending on the complexity and size of the design.",
+      "image": "/assets/stories/fiber-to-rug.jpg",
+      "category": "process",
+      "publishedAt": "2024-03-10"
+    },
+    {
+      "id": "story-005",
+      "title": "Colors of the Himalayas",
+      "excerpt": "Natural dyes that capture the essence of mountain landscapes",
+      "content": "Our color palette is inspired by the changing seasons in the Himalayas. Deep charcoals reflect the rocky peaks, while mint greens echo the alpine meadows. Warm beiges capture the golden hour light on snow-capped mountains, and off-whites mirror the pristine snow that blankets the region for months each year.",
+      "image": "/assets/stories/himalayan-colors.jpg",
+      "category": "design",
+      "publishedAt": "2024-03-25"
+    },
+    {
+      "id": "story-006",
+      "title": "Preserving Cultural Heritage",
+      "excerpt": "How traditional patterns carry forward ancient wisdom",
+      "content": "Each pattern in our rugs has cultural significance, often representing protection, prosperity, or spiritual beliefs. We work closely with cultural historians and elder artisans to ensure these designs are represented authentically and respectfully, preserving their meaning for future generations while adapting them for contemporary homes.",
+      "image": "/assets/stories/cultural-heritage.jpg",
+      "category": "heritage",
+      "publishedAt": "2024-04-08"
+    }
+  ]
+}

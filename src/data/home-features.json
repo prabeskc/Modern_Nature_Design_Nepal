@@ -1,0 +1,25 @@
+{
+  "features": [
+    {
+      "id": "feat-001",
+      "title": "Living Room",
+      "label": "Area Rugs",
+      "image": "/assets/rooms/living-room.jpg",
+      "category": "living-room"
+    },
+    {
+      "id": "feat-002",
+      "title": "Bathroom",
+      "label": "Bath Mats",
+      "image": "/assets/rooms/bathroom.jpg",
+      "category": "bathroom"
+    },
+    {
+      "id": "feat-003",
+      "title": "Hallway",
+      "label": "Runner Rugs",
+      "image": "/assets/rooms/hallway.jpg",
+      "category": "hallway"
+    }
+  ]
+}

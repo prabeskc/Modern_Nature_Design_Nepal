@@ -1,0 +1,157 @@
+{
+  "products": [
+    {
+      "id": "rug-001",
+      "name": "Himalayan Heritage",
+      "description": "Hand-knotted wool rug with traditional Nepalese patterns",
+      "price": 1299,
+      "images": [
+        "/assets/rugs/himalayan-heritage-1.jpg",
+        "/assets/rugs/himalayan-heritage-2.jpg"
+      ],
+      "colors": [
+        { "id": "c1", "name": "Charcoal", "hex": "#1F1F1F" },
+        { "id": "c2", "name": "Mint", "hex": "#CDE6DC" },
+        { "id": "c3", "name": "Beige", "hex": "#E9DFD3" }
+      ],
+      "category": "living-room",
+      "isBestseller": true,
+      "isNew": false,
+      "dimensions": "8' x 10'",
+      "material": "100% Wool"
+    },
+    {
+      "id": "rug-002",
+      "name": "Mountain Mist",
+      "description": "Contemporary design with subtle texture variations",
+      "price": 899,
+      "images": [
+        "/assets/rugs/mountain-mist-1.jpg",
+        "/assets/rugs/mountain-mist-2.jpg"
+      ],
+      "colors": [
+        { "id": "c4", "name": "Off-White", "hex": "#FAF7F2" },
+        { "id": "c5", "name": "Warm Beige", "hex": "#E9DFD3" }
+      ],
+      "category": "bedroom",
+      "isBestseller": true,
+      "isNew": true,
+      "dimensions": "6' x 9'",
+      "material": "Wool & Silk Blend"
+    },
+    {
+      "id": "rug-003",
+      "name": "Artisan's Dream",
+      "description": "Intricate hand-woven patterns inspired by ancient motifs",
+      "price": 1599,
+      "images": [
+        "/assets/rugs/artisan-dream-1.jpg",
+        "/assets/rugs/artisan-dream-2.jpg"
+      ],
+      "colors": [
+        { "id": "c6", "name": "Deep Charcoal", "hex": "#1F1F1F" },
+        { "id": "c7", "name": "Sage Green", "hex": "#CDE6DC" }
+      ],
+      "category": "dining-room",
+      "isBestseller": false,
+      "isNew": true,
+      "dimensions": "9' x 12'",
+      "material": "100% Handspun Wool"
+    },
+    {
+      "id": "rug-004",
+      "name": "Valley Whisper",
+      "description": "Soft textures reminiscent of Himalayan valleys",
+      "price": 749,
+      "images": [
+        "/assets/rugs/valley-whisper-1.jpg",
+        "/assets/rugs/valley-whisper-2.jpg"
+      ],
+      "colors": [
+        { "id": "c8", "name": "Natural Beige", "hex": "#E9DFD3" },
+        { "id": "c9", "name": "Cream", "hex": "#FAF7F2" }
+      ],
+      "category": "living-room",
+      "isBestseller": true,
+      "isNew": false,
+      "dimensions": "5' x 8'",
+      "material": "Organic Cotton & Wool"
+    },
+    {
+      "id": "rug-005",
+      "name": "Tibetan Sunrise",
+      "description": "Vibrant colors capturing the essence of dawn",
+      "price": 1199,
+      "images": [
+        "/assets/rugs/tibetan-sunrise-1.jpg",
+        "/assets/rugs/tibetan-sunrise-2.jpg"
+      ],
+      "colors": [
+        { "id": "c10", "name": "Warm Terracotta", "hex": "#D4A574" },
+        { "id": "c11", "name": "Mint Green", "hex": "#CDE6DC" }
+      ],
+      "category": "bedroom",
+      "isBestseller": true,
+      "isNew": false,
+      "dimensions": "8' x 10'",
+      "material": "Tibetan Highland Wool"
+    },
+    {
+      "id": "rug-006",
+      "name": "Sherpa Trail",
+      "description": "Geometric patterns inspired by mountain paths",
+      "price": 999,
+      "images": [
+        "/assets/rugs/sherpa-trail-1.jpg",
+        "/assets/rugs/sherpa-trail-2.jpg"
+      ],
+      "colors": [
+        { "id": "c12", "name": "Stone Gray", "hex": "#8B8B8B" },
+        { "id": "c13", "name": "Charcoal", "hex": "#1F1F1F" }
+      ],
+      "category": "hallway",
+      "isBestseller": false,
+      "isNew": true,
+      "dimensions": "3' x 12'",
+      "material": "Hand-Knotted Wool"
+    },
+    {
+      "id": "rug-007",
+      "name": "Everest Base",
+      "description": "Bold design celebrating the majesty of the Himalayas",
+      "price": 1799,
+      "images": [
+        "/assets/rugs/everest-base-1.jpg",
+        "/assets/rugs/everest-base-2.jpg"
+      ],
+      "colors": [
+        { "id": "c14", "name": "Deep Blue", "hex": "#2C3E50" },
+        { "id": "c15", "name": "Silver Gray", "hex": "#BDC3C7" }
+      ],
+      "category": "living-room",
+      "isBestseller": true,
+      "isNew": false,
+      "dimensions": "10' x 14'",
+      "material": "Premium Yak Wool"
+    },
+    {
+      "id": "rug-008",
+      "name": "Kathmandu Nights",
+      "description": "Sophisticated urban-inspired design with traditional roots",
+      "price": 1399,
+      "images": [
+        "/assets/rugs/kathmandu-nights-1.jpg",
+        "/assets/rugs/kathmandu-nights-2.jpg"
+      ],
+      "colors": [
+        { "id": "c16", "name": "Midnight Black", "hex": "#1F1F1F" },
+        { "id": "c17", "name": "Gold Accent", "hex": "#F39C12" }
+      ],
+      "category": "dining-room",
+      "isBestseller": true,
+      "isNew": true,
+      "dimensions": "8' x 11'",
+      "material": "Silk & Wool Blend"
+    }
+  ]
+}
