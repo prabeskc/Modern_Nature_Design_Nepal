@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
+
 import SectionHeading from './SectionHeading';
 
 interface HomeFeature {

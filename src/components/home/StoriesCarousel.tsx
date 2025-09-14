@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
+
 import SectionHeading from './SectionHeading';
 
 interface Story {

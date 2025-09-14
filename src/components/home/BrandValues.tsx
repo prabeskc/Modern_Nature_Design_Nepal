@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Heart, Leaf, Award } from 'lucide-react';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
+
 
 interface ValueIconProps {
   icon: React.ReactNode;

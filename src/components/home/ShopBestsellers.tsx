@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
+
 import SectionHeading from './SectionHeading';
 import { LayoutGrid } from '../ui/layout-grid';
 import QuickViewModal from './QuickViewModal';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Clock, Scissors, Home, Globe, Leaf } from 'lucide-react';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
 import SectionHeading from './SectionHeading';
 
 // CSS for floating animation

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
+
 
 export default function StudioBanner() {
   const scrollToSection = (sectionId: string) => {

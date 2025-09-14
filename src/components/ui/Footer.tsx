@@ -1,6 +1,7 @@
 import { Instagram, Facebook, Twitter, Mail, MapPin } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
+
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null);

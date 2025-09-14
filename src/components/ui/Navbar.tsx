@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
+import { Link } from 'react-router-dom';
+
 
 // CSS animations for enhanced navbar interactions
 const navbarAnimations = `
@@ -551,7 +553,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
               className="logo-animation font-serif text-xl lg:text-2xl font-medium text-charcoal drop-shadow-sm cursor-pointer"
               onClick={scrollToTop}
             >
-              Modern Nature Design Nepal
+              <Link to="/">Modern Nature Design Nepal</Link>
             </h1>
           </div>
 
@@ -571,7 +573,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                     activeMegaMenu === 'shop' ? 'active' : ''
                   }`}
                 >
-                  <span>Products</span>
+                  <Link to="/products">Products</Link>
                   <ChevronDown className={`chevron-animation w-4 h-4 ${
                     activeMegaMenu === 'shop' ? 'rotate-180' : ''
                   }`} />
@@ -633,17 +635,19 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 )}
               </div>
               
-              <button 
-                onClick={() => scrollToSection('editorial')}
-                onMouseEnter={() => setActiveNavItem('collections')}
+              <Link 
+                to="/about"
+                onClick={() => scrollToSection('about')}
+                onMouseEnter={() => setActiveNavItem('about')}
                 onMouseLeave={() => setActiveNavItem(null)}
                 className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${
-                  activeNavItem === 'collections' ? 'active' : ''
+                  activeNavItem === 'about' ? 'active' : ''
                 }`}
               >
-                Collections
-              </button>
-              <button 
+                About
+              </Link>
+              <Link
+              to="/services"
                 onClick={() => scrollToSection('services')}
                 onMouseEnter={() => setActiveNavItem('services')}
                 onMouseLeave={() => setActiveNavItem(null)}
@@ -652,16 +656,17 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 }`}
               >
                 Services
-              </button>
-              <button 
-                onMouseEnter={() => setActiveNavItem('about')}
+              </Link>
+              <Link
+              to="/contact"
+                onMouseEnter={() => setActiveNavItem('contact')}
                 onMouseLeave={() => setActiveNavItem(null)}
                 className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${
-                  activeNavItem === 'about' ? 'active' : ''
+                  activeNavItem === 'contact' ? 'active' : ''
                 }`}
               >
-                About
-              </button>
+                Contact
+              </Link>
             </div>
             
             {/* Animated Search Bar - Far Right */}

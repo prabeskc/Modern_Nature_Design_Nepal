@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { X, Eye } from 'lucide-react';
-import Container from './Container';
+import Container from '../ui/Container.tsx';
+
 import SectionHeading from './SectionHeading';
 import { useModal } from '@/hooks/useModal';
 import productsData from '@/data/products.json';
