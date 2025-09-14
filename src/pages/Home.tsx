@@ -1,15 +1,15 @@
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-// import EditorialGrid from '@/components/EditorialGrid';
-import LatestDesigns from '@/components/LatestDesigns';
-// import StoriesCarousel from '@/components/StoriesCarousel';
-// import DiscoverHome from '@/components/DiscoverHome';
-// import ShopBestsellers from '@/components/ShopBestsellers';
-import OurExperience from '@/components/OurExperience';
-import FeaturedProducts from '@/components/FeaturedProducts';
-import StudioBanner from '@/components/StudioBanner';
-// import BrandValues from '@/components/BrandValues';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/home/Navbar';
+import HeroSection from '@/components/home/HeroSection';
+// import EditorialGrid from '@/components/home/EditorialGrid';
+import LatestDesigns from '@/components/home/LatestDesigns';
+// import StoriesCarousel from '@/components/home/StoriesCarousel';
+// import DiscoverHome from '@/components/home/DiscoverHome';
+// import ShopBestsellers from '@/components/home/ShopBestsellers';
+import OurExperience from '@/components/home/OurExperience';
+import FeaturedProducts from '@/components/home/FeaturedProducts';
+import StudioBanner from '@/components/home/StudioBanner';
+// import BrandValues from '@/components/home/BrandValues';
+import Footer from '@/components/home/Footer';
 
 export default function Home() {
   return (

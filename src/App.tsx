@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
-import ChatbotWidget from "@/components/ChatbotWidget";
+import ChatbotWidget from "@/components/home/ChatbotWidget";
 
 export default function App() {
   return (

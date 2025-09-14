@@ -176,7 +176,7 @@ interface NavbarProps {
 
 const megaMenuItems = {
   shop: {
-    title: 'Shop',
+    title: 'Products',
     sections: [
       {
         title: 'By Room',
@@ -571,7 +571,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                     activeMegaMenu === 'shop' ? 'active' : ''
                   }`}
                 >
-                  <span>Shop</span>
+                  <span>Products</span>
                   <ChevronDown className={`chevron-animation w-4 h-4 ${
                     activeMegaMenu === 'shop' ? 'rotate-180' : ''
                   }`} />
@@ -780,7 +780,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 onClick={() => scrollToSection('bestsellers')}
                 className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
               >
-                Shop
+                Products
               </button>
               <button 
                 onClick={() => scrollToSection('editorial')}
