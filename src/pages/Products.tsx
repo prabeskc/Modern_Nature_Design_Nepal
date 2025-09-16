@@ -1,18 +1,169 @@
 
-import Footer from '@/components/ui/Footer'
-import Navbar from '@/components/ui/Navbar'
-import React from 'react'
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import Footer from '@/components/ui/Footer';
+import Navbar from '@/components/ui/Navbar';
+import Container from '@/components/ui/Container';
+import { Product } from '@/components/home/ProductCard';
+import { UnifiedProduct } from '@/components/products/ProductUtils';
+import ProductSidebar from '@/components/products/ProductSidebar';
+import ProductGrid from '@/components/products/ProductGrid';
+import ProductHeader from '@/components/products/ProductHeader';
+import { categories } from '@/components/products/ProductUtils';
+import BedroomRugs from '@/components/products/BedroomRugs';
+import LivingRoomRugs from '@/components/products/LivingRoomRugs';
+import DiningRoomRugs from '@/components/products/DiningRoomRugs';
+import OutdoorRugs from '@/components/products/OutdoorRugs';
+import SpecialtyRugs from '@/components/products/SpecialtyRugs';
+import AllProductsView from '@/components/products/AllProductsView';
+
+import productsData from '@/data/products.json';
 
 const Products = () => {
+  const [searchParams] = useSearchParams();
+  const [products, setProducts] = useState<Product[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('');
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [showAllProducts, setShowAllProducts] = useState(true);
+
+  // Scroll to top when component mounts or category/subcategory changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [selectedCategory, selectedSubcategory]);
+
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    const subcategoryParam = searchParams.get('subcategory');
+    
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+      setExpandedCategories(prev => 
+        prev.includes(categoryParam) ? prev : [...prev, categoryParam]
+      );
+      setSelectedSubcategory(subcategoryParam || '');
+      setShowAllProducts(false);
+    } else {
+      // Default to All Products view when no category is specified
+      setSelectedCategory('');
+      setSelectedSubcategory('');
+      setExpandedCategories([]);
+      setShowAllProducts(true);
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      const productList = productsData.products as Product[];
+      setProducts(productList);
+      setFilteredProducts(productList);
+      setIsLoading(false);
+    }, 500);
+  }, []);
+
+  const handleProductSelect = (product: Product | UnifiedProduct) => {
+    console.log('Selected product:', product);
+  };
+
+  const handleSubcategoryChange = (subcategoryId: string) => {
+    setSelectedSubcategory(subcategoryId);
+  };
+
+  const renderCategoryComponent = () => {
+    const commonProps = {
+      selectedSubcategory: selectedSubcategory || undefined,
+      onSubcategoryChange: handleSubcategoryChange,
+      onProductSelect: handleProductSelect
+    };
+
+    // If showing all products, import and display all products from all categories
+    if (showAllProducts) {
+      return <AllProductsView onProductSelect={handleProductSelect} />;
+    }
+
+    const components = {
+      'living-room': <LivingRoomRugs {...commonProps} />,
+      'bedroom': <BedroomRugs {...commonProps} />,
+      'dining-room': <DiningRoomRugs {...commonProps} />,
+      'outdoor': <OutdoorRugs {...commonProps} />,
+      'specialty': <SpecialtyRugs {...commonProps} />
+    };
+
+    return components[selectedCategory as keyof typeof components] || (
+      <>
+        <ProductHeader
+          selectedCategory={selectedCategory}
+          selectedSubcategory={selectedSubcategory}
+          categories={categories}
+          productCount={filteredProducts.length}
+          isLoading={isLoading}
+        />
+        <ProductGrid products={filteredProducts} isLoading={isLoading} />
+      </>
+    );
+  };
+
+
+
+  const toggleCategory = (categoryId: string) => {
+    setExpandedCategories(prev => 
+      prev.includes(categoryId) 
+        ? prev.filter(id => id !== categoryId)
+        : [...prev, categoryId]
+    );
+  };
+
+  const handleCategorySelect = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+    setSelectedSubcategory('');
+    setShowAllProducts(false);
+    // Clear URL parameters when selecting main category
+    const newSearchParams = new URLSearchParams();
+    newSearchParams.set('category', categoryId);
+    window.history.replaceState({}, '', `${window.location.pathname}?${newSearchParams}`);
+  };
+
+  const handleSubcategorySelect = (subcategoryId: string, parentId: string) => {
+    setSelectedCategory(parentId);
+    setSelectedSubcategory(subcategoryId);
+    setShowAllProducts(false);
+  };
+
+  const handleAllProductsSelect = () => {
+    setShowAllProducts(true);
+    setSelectedCategory('');
+    setSelectedSubcategory('');
+    // Clear URL parameters when selecting All Products
+    window.history.replaceState({}, '', window.location.pathname);
+  };
+
   return (
     <div className="min-h-screen bg-off-white">
-          <Navbar />
-          <main className='text-black'>
-           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et vero mollitia reiciendis, ut tenetur dolorum! Nesciunt distinctio cum quas quis minus odio veniam corporis modi enim eligendi, assumenda soluta eos ullam voluptate aperiam, in, at sapiente suscipit? Rerum dolorem alias nobis illo reiciendis error maxime eius ex provident laborum ad, officia, velit perferendis labore nostrum repellendus sint possimus cum magnam, voluptatum fugit omnis soluta aliquam exercitationem! Incidunt, ullam! Veniam ex deleniti soluta officia non nisi itaque in rerum, eveniet fuga velit, libero eos. Quisquam maxime omnis quod, non rem doloremque aut magnam eligendi tempore dolorum quis eius, blanditiis nulla ex dignissimos fuga nesciunt est assumenda tenetur qui id officia dolore. Laboriosam voluptates at laudantium veritatis, ea placeat provident! Reprehenderit architecto doloremque et quae tempore sed dolor veritatis alias ratione fugiat at, perferendis natus autem vitae voluptates quis excepturi. Fuga ab harum veritatis ipsam natus pariatur quibusdam quis inventore id mollitia incidunt nulla, doloremque unde nam dolorem debitis deserunt sed nisi expedita porro? Molestias explicabo voluptatum nihil dolor, assumenda nemo reiciendis ducimus. Dolor enim est quae. Culpa iusto sed deleniti! Sapiente distinctio necessitatibus soluta placeat exercitationem! Ratione voluptatem numquam aut ad. Amet, quos! Iusto necessitatibus, ullam tempora ratione praesentium nobis perspiciatis et eos voluptatem. Architecto, minus expedita. Debitis minus totam impedit, nobis molestias illo quae ex veniam, eaque laborum, reiciendis accusamus alias ut aliquam voluptates eveniet! Aliquam, doloribus corrupti placeat minus velit ipsam! Rem dolores est esse maiores pariatur repellendus voluptatibus quia culpa nostrum voluptas commodi ratione expedita delectus, dignissimos, dicta illum nemo. Rerum eos aliquid officia! Fugit quis dignissimos rerum obcaecati quaerat adipisci, quae possimus officia. Hic accusantium ea perferendis, optio quam dicta quibusdam doloribus reiciendis molestias explicabo quasi? Excepturi, ullam mollitia.
-          </main>
-          <Footer />
+      <Navbar />
+      
+      <div className="pt-20 flex">
+        <ProductSidebar
+          categories={categories}
+          selectedCategory={selectedCategory}
+          selectedSubcategory={selectedSubcategory}
+          expandedCategories={expandedCategories}
+          onCategorySelect={handleCategorySelect}
+          onSubcategorySelect={handleSubcategorySelect}
+          onToggleCategory={toggleCategory}
+          onAllProductsSelect={handleAllProductsSelect}
+          showAllProducts={showAllProducts}
+        />
+        <div className="flex-1 p-8">
+          <Container>{renderCategoryComponent()}</Container>
         </div>
-  )
-}
+      </div>
+      
+      <Footer />
+    </div>
+  );
+};
 
-export default Products
+export default Products;

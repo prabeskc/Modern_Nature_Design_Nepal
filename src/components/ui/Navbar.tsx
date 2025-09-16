@@ -181,12 +181,59 @@ const megaMenuItems = {
     title: 'Products',
     sections: [
       {
-        title: 'By Room',
-        items: ['Living Room', 'Bedroom', 'Dining Room']
+        title: 'Living Room Rugs',
+        items: [
+          { name: 'Traditional Persian Rugs', id: 'traditional-persian' },
+          { name: 'Modern Contemporary Rugs', id: 'modern-contemporary' },
+          { name: 'Vintage Distressed Rugs', id: 'vintage-distressed' },
+          { name: 'Geometric Pattern Rugs', id: 'geometric-pattern' },
+          { name: 'Solid Color Area Rugs', id: 'solid-color-area' }
+        ],
+        categoryId: 'living-room'
       },
       {
-        title: 'By Style',
-        items: ['Traditional', 'Contemporary', 'Minimalist']
+        title: 'Bedroom Rugs',
+        items: [
+          { name: 'Soft Shag Rugs', id: 'soft-shag' },
+          { name: 'Luxury Silk Rugs', id: 'luxury-silk' },
+          { name: 'Cozy Wool Rugs', id: 'cozy-wool' },
+          { name: 'Minimalist Flat Weave', id: 'minimalist-flat' },
+          { name: 'Plush Memory Foam Rugs', id: 'plush-memory' }
+        ],
+        categoryId: 'bedroom'
+      },
+      {
+        title: 'Dining Room Rugs',
+        items: [
+          { name: 'Formal Oriental Rugs', id: 'formal-oriental' },
+          { name: 'Easy-Clean Synthetic Rugs', id: 'easy-clean' },
+          { name: 'Natural Fiber Rugs', id: 'natural-fiber' },
+          { name: 'Stain-Resistant Rugs', id: 'stain-resistant' },
+          { name: 'Classic Bordered Rugs', id: 'classic-bordered' }
+        ],
+        categoryId: 'dining-room'
+      },
+      {
+        title: 'Outdoor Rugs',
+        items: [
+          { name: 'Weather-Resistant Rugs', id: 'weather-resistant' },
+          { name: 'Patio & Deck Rugs', id: 'patio-deck' },
+          { name: 'Poolside Rugs', id: 'poolside' },
+          { name: 'Garden Path Rugs', id: 'garden-path' },
+          { name: 'All-Season Outdoor Rugs', id: 'all-season' }
+        ],
+        categoryId: 'outdoor'
+      },
+      {
+        title: 'Specialty Rugs',
+        items: [
+          { name: 'Handwoven Artisan Rugs', id: 'handwoven-artisan' },
+          { name: 'Custom Size Rugs', id: 'custom-size' },
+          { name: 'Eco-Friendly Rugs', id: 'eco-friendly' },
+          { name: 'Antique Collection Rugs', id: 'antique-collection' },
+          { name: 'Designer Collaboration Rugs', id: 'designer-collaboration' }
+        ],
+        categoryId: 'specialty'
       }
     ]
   }
@@ -269,12 +316,14 @@ export default function Navbar({ className = '' }: NavbarProps) {
   const [dropdownVerticalPosition, setDropdownVerticalPosition] = useState<'bottom' | 'top'>('bottom');
   const [searchDropdownPosition, setSearchDropdownPosition] = useState<'left' | 'right'>('right');
   const [searchVerticalPosition, setSearchVerticalPosition] = useState<'bottom' | 'top'>('bottom');
+  const [isHovering, setIsHovering] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const megaMenuRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
   const searchResultsRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Inject CSS animations
   useEffect(() => {
@@ -304,13 +353,41 @@ export default function Navbar({ className = '' }: NavbarProps) {
     }
   };
 
+  // Hover handlers for Products button
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    setIsHovering(true);
+    setActiveMegaMenu('shop');
+    setTimeout(() => calculateDropdownPosition(), 0);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsHovering(false);
+      setActiveMegaMenu(null);
+    }, 250);
+  };
+
+  // Click handler for navigation to products page
+  const handleProductsClick = () => {
+    // Clear any hover timeouts
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    // Close dropdown and navigate
+    setActiveMegaMenu(null);
+    setIsHovering(false);
+  };
+
   const calculateDropdownPosition = () => {
     if (!dropdownRef.current || !megaMenuRef.current) return;
 
     const dropdown = dropdownRef.current;
     const megaMenu = megaMenuRef.current;
     const dropdownRect = dropdown.getBoundingClientRect();
-    const megaMenuWidth = 896; // max-w-4xl = 896px
+    const megaMenuWidth = 1024; // max-w-5xl = 1024px
     const megaMenuHeight = 300; // Estimated dropdown height
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -443,6 +520,10 @@ export default function Navbar({ className = '' }: NavbarProps) {
       document.removeEventListener('mousedown', handleClickOutside);
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
+      // Cleanup hover timeout
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
     };
   }, [activeMegaMenu, isSearchExpanded]);
 
@@ -564,26 +645,27 @@ export default function Navbar({ className = '' }: NavbarProps) {
               <div 
                 ref={dropdownRef}
                 className="relative group"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                <button 
-                  onClick={() => handleMegaMenuToggle('shop')}
-                  onMouseEnter={() => setActiveNavItem('shop')}
-                  onMouseLeave={() => setActiveNavItem(null)}
+                <Link
+                  to="/products"
+                  onClick={handleProductsClick}
                   className={`navbar-item flex items-center space-x-1 text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${
                     activeMegaMenu === 'shop' ? 'active' : ''
                   }`}
                 >
-                  <Link to="/products">Products</Link>
+                  <span>Products</span>
                   <ChevronDown className={`chevron-animation w-4 h-4 ${
                     activeMegaMenu === 'shop' ? 'rotate-180' : ''
                   }`} />
-                </button>
+                </Link>
                 
                 {/* Mega Menu */}
                 {activeMegaMenu === 'shop' && (
                   <div 
                     ref={megaMenuRef}
-                    className={`mega-menu-enter absolute p-6 rounded-lg shadow-2xl border border-white/30 w-screen max-w-3xl z-[9999] ${
+                    className={`mega-menu-enter absolute p-6 rounded-lg shadow-2xl border border-white/30 w-screen max-w-5xl z-[9999] ${
                       dropdownVerticalPosition === 'top' 
                         ? 'bottom-full mb-2' 
                         : 'top-full mt-2'
@@ -592,9 +674,9 @@ export default function Navbar({ className = '' }: NavbarProps) {
                         ? 'left-0' 
                         : dropdownPosition === 'right' 
                         ? 'right-0' 
-                        : 'left-1/2 transform -translate-x-1/2'
+                        : 'right-0 lg:left-1/2 lg:transform lg:-translate-x-1/2'
                     } ${
-                      dropdownPosition === 'center' && (window.innerWidth < 896 + 64) 
+                      dropdownPosition === 'center' && (window.innerWidth < 1024) 
                         ? 'left-4 right-4 w-auto max-w-none' 
                         : ''
                     } ${
@@ -606,25 +688,32 @@ export default function Navbar({ className = '' }: NavbarProps) {
                         : `${Math.min(400, window.innerHeight - (dropdownRef.current?.getBoundingClientRect().bottom || 0) - 40)}px`,
                       overflowY: 'auto'
                     }}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
                       {megaMenuItems.shop.sections.map((section) => (
                         <div key={section.title}>
-                          <h3 className="font-medium text-charcoal drop-shadow-sm mb-4 text-lg">{section.title}</h3>
+                          <Link
+                            to={`/products?category=${section.categoryId}`}
+                            onClick={handleMegaMenuClose}
+                            className="block mb-3"
+                          >
+                            <h3 className="font-medium text-charcoal drop-shadow-sm text-base leading-5 hover:text-mint-green transition-colors duration-200">
+                              {section.title}
+                            </h3>
+                          </Link>
                           <ul className="space-y-2">
                             {section.items.map((item) => (
-                              <li key={item}>
-                                <button 
-                                  onClick={() => {
-                                    // Handle item selection here
-                                    console.log('Selected:', item);
-                                    handleMegaMenuClose();
-                                  }}
-                                  className="navbar-item text-charcoal/70 hover:bg-white/30 px-3 py-2 rounded w-full text-left text-base"
+                              <li key={item.id}>
+                                <Link
+                                  to={`/products?category=${section.categoryId}&subcategory=${item.id}`}
+                                  onClick={handleMegaMenuClose}
+                                  className="navbar-item text-charcoal/70 hover:bg-white/30 hover:text-charcoal px-3 py-2 rounded text-sm block leading-6 transition-all duration-200"
                                 >
-                                  {item}
-                                </button>
+                                  {item.name}
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -781,27 +870,49 @@ export default function Navbar({ className = '' }: NavbarProps) {
         }`}>
           <Container>
             <div className="py-4 space-y-4">
-              <button 
-                onClick={() => scrollToSection('bestsellers')}
+              <Link 
+                to="/products"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
               >
                 Products
-              </button>
-              <button 
-                onClick={() => scrollToSection('editorial')}
+              </Link>
+              
+              {/* Product Categories for Mobile */}
+              <div className="ml-4 space-y-2">
+                {megaMenuItems.shop.sections.map((section) => (
+                  <Link
+                    key={section.categoryId}
+                    to={`/products?category=${section.categoryId}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="mobile-menu-item block text-charcoal/80 drop-shadow-sm hover:bg-white/30 px-3 py-2 rounded-lg text-sm"
+                  >
+                    {section.title}
+                  </Link>
+                ))}
+              </div>
+              
+              <Link 
+                to="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
               >
-                Collections
-              </button>
-              <button 
-                onClick={() => scrollToSection('services')}
+                About
+              </Link>
+              <Link 
+                to="/services"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
               >
                 Services
-              </button>
-              <button className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base">
-                About
-              </button>
+              </Link>
+              <Link 
+                to="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
+              >
+                Contact
+              </Link>
             </div>
           </Container>
         </div>
