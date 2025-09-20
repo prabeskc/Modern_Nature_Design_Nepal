@@ -1,4 +1,3 @@
-// src/components/MaterialsPage.tsx
 import React from "react";
 import { motion, Variants, easeInOut, easeOut } from "framer-motion";
 import Slider from "react-slick";
@@ -8,47 +7,58 @@ import "slick-carousel/slick/slick-theme.css";
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: easeOut } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: easeOut },
+  },
   hover: { scale: 1.05, transition: { duration: 0.3, ease: easeInOut } },
 };
 
 const materials = [
   {
-    title: "Tencel",
+    title: "Tibetan Wool",
     description:
-      "Lenzing AG, an Australian company, manufactures Tencel, a synthetic fiber. Its primary source differs from silkworms or sheep. They create the fabric by drying, chipping, and mixing wood pulp with a solvent, resulting in a wet mixture. They push the mixture through tiny holes to form threads that undergo a chemical treatment, spin the lengths to make yarn, and then weave them to create clothes. Modern Nature Design Nepal also uses them to make rugs that come off smooth and soft. Repeated washes and drying cycles retain these qualities.",
-  },
-  {
-    title: "Viscose",
-    description:
-      "Cellulose xanthate forms the viscose rayon fiber. When used in rug production, it imbues the rugs with a glossy, silken feel, making them visually appealing for sale in the marketplace. This is more economical than other methods of making rugs in Nepal.",
+      "The quality of soft and lustrous wool supplied to make rugs comes from highland sheep's coats. These sheep, called 'Changphel,' graze at 14,000 feet in the cold Himalayan region. The wool has distinctive marks with tensile strength, long fleeces, and lanolin richness, making it soft, durable, and luxurious. Rugs made from Tibetan wool are warm, furry, and available in two shades: pure white and dark grey.",
   },
   {
     title: "New Zealand Wool",
     description:
-      "The fur coating of merino sheep, found in Australia and New Zealand, yields wool, also known as New Zealand wool. They are soft white-colored wool and finely crimped, making the finishing of the woven rugs more beautiful and aesthetic. To create the end product and increase its sale value, they also blend it with Tibetan wool, silk, or other synthetic fabrics.",
-  },
-  {
-    title: "Tibetan Wool",
-    description:
-      "Highland sheep's coats provide the quality of soft and lustrous wool required to make rugs. The sheep that produces this wool is called 'Changphel' and is found in the Himalayan region in the lands of nomads 14000 feet above, grazing in the cold weather. The wool from these sheep has distinctive marks because it has more tensile strength, longer fleeces, and lanolin, making the fur more woolly, soft, durable, and luxurious. The Tibetan wool comes in two different shades: one is pure white, and the other is dark grey.",
+      "This wool comes from the fur coating of merino sheep found in Australia and New Zealand. Known for its soft, white color and fine crimp, it enhances the beauty and aesthetics of woven rugs. Often blended with Tibetan wool, silk, or synthetic fabrics, New Zealand wool contributes to high-quality, valuable rug finishes.",
   },
   {
     title: "Chinese Silk",
     description:
-      "During the cocoon stage, silkworms spin these fabrics. Bombyx mori is the Chinese silk's name, and the quality is luxurious and soft. When combined with wool from sheep, it makes the rugs more soft and shiny.",
+      "Produced by Bombyx mori silkworms in the cocoon stage, Chinese silk is renowned for its luxurious and soft quality. When combined with wool, it enhances rugs by adding both softness and shine.",
+  },
+  {
+    title: "Local Silk",
+    description:
+      "Harvested by farmers in Nepal, local silk is processed in factories to create high-quality rugs with natural shine and softness. Its production also supports local farmers by providing them with opportunities to sell silk in domestic markets, contributing to sustainable livelihoods.",
+  },
+  {
+    title: "Viscose",
+    description:
+      "Made from cellulose xanthate, viscose is a regenerated fiber that mimics the qualities of silk. When used in rugs, it provides a glossy, silken feel at a more economical price, making it a popular choice in Nepal’s rug-making industry.",
+  },
+  {
+    title: "Tencel",
+    description:
+      "A synthetic fiber made by the Australian company Lenzing AG, Tencel is derived from wood pulp that is dried, chipped, and mixed with solvents before being spun into threads. Known for being smooth, soft, and sustainable, Tencel retains its properties even after repeated washes, making it an innovative choice for modern rugs.",
   },
 ];
+
 
 const MaterialsPage: React.FC = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 4500,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
@@ -57,20 +67,20 @@ const MaterialsPage: React.FC = () => {
 
   return (
     <motion.section
-      className="bg-gray-50 py-16 px-6 md:px-20"
+      className="relative bg-gradient-to-br from-teal-50 via-white to-amber-50 py-20 px-6 md:px-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div className="max-w-6xl mx-auto" variants={itemVariants}>
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12 drop-shadow-sm">
           Materials We Offer
         </h2>
         <Slider {...settings}>
           {materials.map((material, index) => (
-            <div key={index} className="px-4">
+            <div key={index} className="px-4 py-6">
               <motion.div
-                className="bg-white shadow-md rounded-2xl p-6 h-[400px] flex flex-col justify-between"
+                className="bg-white/80 backdrop-blur-md shadow-lg border border-gray-100 rounded-2xl p-6 h-[320px] flex flex-col justify-between transition"
                 variants={itemVariants}
                 whileHover="hover"
               >
