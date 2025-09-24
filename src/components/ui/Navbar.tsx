@@ -732,9 +732,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${
                   activeNavItem === 'about' ? 'active' : ''
                 }`}
-              >
-                About
-              </Link>
+              >About</Link>
               <Link
               to="/services"
                 onClick={() => scrollToSection('services')}
