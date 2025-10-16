@@ -33,10 +33,10 @@ function ProductCard({ product, onCardClick, isVisible, index, aspectRatio }: Pr
   
   // Use high-quality rug images from Unsplash
   const rugImages = [
-    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Persian-style rug
-    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Modern geometric rug
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Traditional oriental rug
-    'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'  // Contemporary textured rug
+    'assets/images/home/shopbestsellers/Cloudato.jpg',
+    'assets/images/home/shopbestsellers/Pyroqace.jpg',
+    'assets/images/home/shopbestsellers/Sint-Zabiz.jpg',
+    'assets/images/home/shopbestsellers/Unon-Extin.jpg',
   ];
 
   const formatPrice = (price: number) => {
@@ -297,7 +297,7 @@ export default function FeaturedProducts() {
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}>
           <SectionHeading
-            title="Shop Bestsellers"
+            title="Featured Products"
             subtitle="Discover our most loved handcrafted rugs, chosen by customers worldwide"
             className="mb-12 lg:mb-16"
           />

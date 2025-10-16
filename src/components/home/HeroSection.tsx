@@ -15,21 +15,21 @@ interface ImageLoadState {
 const heroSlides: HeroSlide[] = [
   {
     id: 'slide-1',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'assets/images/home/herosection/Altesphan.jpg',
     title: 'Interior Alchemy',
     subtitle: 'Transform Your Space',
     description: 'Discover handcrafted rugs that bridge traditional Nepalese artistry with contemporary design'
   },
   {
     id: 'slide-2',
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'assets/images/home/herosection/Proflex.jpg',
     title: 'Artisan Heritage',
     subtitle: 'Centuries of Craftsmanship',
     description: 'Each rug tells a story of skilled artisans preserving ancient techniques for modern homes'
   },
   {
     id: 'slide-3',
-    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'assets/images/home/herosection/Sint-Zabiz.jpg',
     title: 'Modern Living',
     subtitle: 'Contemporary Comfort',
     description: 'Experience the perfect blend of luxury, sustainability, and timeless design'

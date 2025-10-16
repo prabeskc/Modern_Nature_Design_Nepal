@@ -459,7 +459,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
 
     // Calculate horizontal position
     const rightSpace = viewportWidth - searchRect.right;
-    
+
     if (rightSpace >= dropdownWidth + padding) {
       setSearchDropdownPosition('right');
     } else {
@@ -623,18 +623,26 @@ export default function Navbar({ className = '' }: NavbarProps) {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 border-b border-white/20 transition-all duration-300 ${
-      isScrolled ? 'bg-white/10 backdrop-blur-lg shadow-lg' : 'bg-off-white'
-    } ${className}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 border-b border-white/20 transition-all duration-300 ${isScrolled ? 'bg-white/10 backdrop-blur-lg shadow-lg' : 'bg-off-white'
+      } ${className}`}>
       <Container>
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo - Left Aligned */}
           <div className="flex-shrink-0 mr-8">
-            <h1 
+            <h1
               className="logo-animation font-serif text-xl lg:text-2xl font-medium text-charcoal drop-shadow-sm cursor-pointer"
               onClick={scrollToTop}
             >
-              <Link to="/">Modern Nature Design Nepal</Link>
+              <div className="flex items-center space-x-4">
+                <img
+                  src="assets/images/navbar/MND_Logo.png"
+                  alt="logo"
+                  className="h-16 w-16"
+                />
+                <span className="text-xl font-semibold">
+                  Modern Nature Design Nepal
+                </span>
+              </div>
             </h1>
           </div>
 
@@ -642,7 +650,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
           <div className="hidden lg:flex items-center space-x-6 ml-auto">
             {/* Navigation Links */}
             <div className="flex items-center space-x-6">
-              <div 
+              <div
                 ref={dropdownRef}
                 className="relative group"
                 onMouseEnter={handleMouseEnter}
@@ -651,39 +659,33 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 <Link
                   to="/products"
                   onClick={handleProductsClick}
-                  className={`navbar-item flex items-center space-x-1 text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${
-                    activeMegaMenu === 'shop' ? 'active' : ''
-                  }`}
+                  className={`navbar-item flex items-center space-x-1 text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${activeMegaMenu === 'shop' ? 'active' : ''
+                    }`}
                 >
                   <span>Products</span>
-                  <ChevronDown className={`chevron-animation w-4 h-4 ${
-                    activeMegaMenu === 'shop' ? 'rotate-180' : ''
-                  }`} />
+                  <ChevronDown className={`chevron-animation w-4 h-4 ${activeMegaMenu === 'shop' ? 'rotate-180' : ''
+                    }`} />
                 </Link>
-                
+
                 {/* Mega Menu */}
                 {activeMegaMenu === 'shop' && (
-                  <div 
+                  <div
                     ref={megaMenuRef}
-                    className={`mega-menu-enter absolute p-6 rounded-lg shadow-2xl border border-white/30 w-screen max-w-5xl z-[9999] ${
-                      dropdownVerticalPosition === 'top' 
-                        ? 'bottom-full mb-2' 
+                    className={`mega-menu-enter absolute p-6 rounded-lg shadow-2xl border border-white/30 w-screen max-w-5xl z-[9999] ${dropdownVerticalPosition === 'top'
+                        ? 'bottom-full mb-2'
                         : 'top-full mt-2'
-                    } ${
-                      dropdownPosition === 'left' 
-                        ? 'left-0' 
-                        : dropdownPosition === 'right' 
-                        ? 'right-0' 
-                        : 'right-0 lg:left-1/2 lg:transform lg:-translate-x-1/2'
-                    } ${
-                      dropdownPosition === 'center' && (window.innerWidth < 1024) 
-                        ? 'left-4 right-4 w-auto max-w-none' 
+                      } ${dropdownPosition === 'left'
+                        ? 'left-0'
+                        : dropdownPosition === 'right'
+                          ? 'right-0'
+                          : 'right-0 lg:left-1/2 lg:transform lg:-translate-x-1/2'
+                      } ${dropdownPosition === 'center' && (window.innerWidth < 1024)
+                        ? 'left-4 right-4 w-auto max-w-none'
                         : ''
-                    } ${
-                      isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
-                    }`}
+                      } ${isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
+                      }`}
                     style={{
-                      maxHeight: dropdownVerticalPosition === 'top' 
+                      maxHeight: dropdownVerticalPosition === 'top'
                         ? `${Math.min(400, window.innerHeight - 120)}px`
                         : `${Math.min(400, window.innerHeight - (dropdownRef.current?.getBoundingClientRect().bottom || 0) - 40)}px`,
                       overflowY: 'auto'
@@ -723,64 +725,58 @@ export default function Navbar({ className = '' }: NavbarProps) {
                   </div>
                 )}
               </div>
-              
-              <Link 
+
+              <Link
                 to="/about"
                 onClick={() => scrollToSection('about')}
                 onMouseEnter={() => setActiveNavItem('about')}
                 onMouseLeave={() => setActiveNavItem(null)}
-                className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${
-                  activeNavItem === 'about' ? 'active' : ''
-                }`}
+                className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${activeNavItem === 'about' ? 'active' : ''
+                  }`}
               >About</Link>
               <Link
-              to="/services"
+                to="/services"
                 onClick={() => scrollToSection('services')}
                 onMouseEnter={() => setActiveNavItem('services')}
                 onMouseLeave={() => setActiveNavItem(null)}
-                className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${
-                  activeNavItem === 'services' ? 'active' : ''
-                }`}
+                className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${activeNavItem === 'services' ? 'active' : ''
+                  }`}
               >
                 Services
               </Link>
               <Link
-              to="/contact"
+                to="/contact"
                 onMouseEnter={() => setActiveNavItem('contact')}
                 onMouseLeave={() => setActiveNavItem(null)}
-                className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${
-                  activeNavItem === 'contact' ? 'active' : ''
-                }`}
+                className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${activeNavItem === 'contact' ? 'active' : ''
+                  }`}
               >
                 Contact
               </Link>
             </div>
-            
+
             {/* Animated Search Bar - Far Right */}
-            <div 
+            <div
               ref={searchRef}
               className="relative flex items-center ml-4"
             >
-              <div className={`flex items-center transition-all duration-300 ease-in-out ${
-                isSearchExpanded ? 'w-80' : 'w-10'
-              }`}>
+              <div className={`flex items-center transition-all duration-300 ease-in-out ${isSearchExpanded ? 'w-80' : 'w-10'
+                }`}>
                 <button
                   onClick={handleSearchToggle}
-                  className={`search-button flex-shrink-0 p-2 text-charcoal drop-shadow-sm rounded-full z-10 ${
-                    isScrolled ? 'bg-white/10 backdrop-blur-sm' : 'bg-white/20'
-                  }`}
+                  className={`search-button flex-shrink-0 p-2 text-charcoal drop-shadow-sm rounded-full z-10 ${isScrolled ? 'bg-white/10 backdrop-blur-sm' : 'bg-white/20'
+                    }`}
                   aria-label="Search"
                 >
                   <Search className="w-5 h-5" />
                 </button>
-                
-                <form 
+
+                <form
                   onSubmit={handleSearchSubmit}
-                  className={`absolute left-0 top-0 h-full transition-all duration-300 ease-in-out ${
-                    isSearchExpanded 
-                      ? 'w-full opacity-100 pointer-events-auto' 
+                  className={`absolute left-0 top-0 h-full transition-all duration-300 ease-in-out ${isSearchExpanded
+                      ? 'w-full opacity-100 pointer-events-auto'
                       : 'w-10 opacity-0 pointer-events-none'
-                  }`}
+                    }`}
                 >
                   <input
                     ref={searchInputRef}
@@ -788,38 +784,33 @@ export default function Navbar({ className = '' }: NavbarProps) {
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
                     placeholder="Search products..."
-                    className={`w-full h-full pl-12 pr-4 py-2 rounded-full border transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-mint-green/50 focus:border-mint-green ${
-                      isScrolled 
-                        ? 'bg-white/20 backdrop-blur-lg border-white/20 text-charcoal placeholder-charcoal/50' 
+                    className={`w-full h-full pl-12 pr-4 py-2 rounded-full border transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-mint-green/50 focus:border-mint-green ${isScrolled
+                        ? 'bg-white/20 backdrop-blur-lg border-white/20 text-charcoal placeholder-charcoal/50'
                         : 'bg-white/80 border-white/30 text-charcoal placeholder-charcoal/60'
-                    }`}
+                      }`}
                   />
                 </form>
               </div>
-              
+
               {/* Search Results Dropdown */}
               {showSearchResults && searchResults.length > 0 && (
-                <div 
+                <div
                   ref={searchResultsRef}
-                  className={`search-dropdown absolute w-96 shadow-2xl border border-white/30 rounded-lg overflow-y-auto z-[9998] ${
-                     searchVerticalPosition === 'top' 
-                       ? 'bottom-full mb-2' 
-                       : 'top-full mt-2'
-                   } ${
-                     searchDropdownPosition === 'left' ? 'left-0' : 'right-0'
-                   } ${
-                     window.innerWidth < 400 
-                       ? 'left-0 right-0 w-auto' 
-                       : ''
-                   } ${
-                     isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
-                   }`}
+                  className={`search-dropdown absolute w-96 shadow-2xl border border-white/30 rounded-lg overflow-y-auto z-[9998] ${searchVerticalPosition === 'top'
+                      ? 'bottom-full mb-2'
+                      : 'top-full mt-2'
+                    } ${searchDropdownPosition === 'left' ? 'left-0' : 'right-0'
+                    } ${window.innerWidth < 400
+                      ? 'left-0 right-0 w-auto'
+                      : ''
+                    } ${isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
+                    }`}
                   style={{
-                     maxHeight: searchVerticalPosition === 'top' 
-                       ? `${Math.min(384, window.innerHeight - 120)}px`
-                       : `${Math.min(384, window.innerHeight - (searchRef.current?.getBoundingClientRect().bottom || 0) - 40)}px`,
-                     minWidth: window.innerWidth < 400 ? 'auto' : '384px'
-                   }}
+                    maxHeight: searchVerticalPosition === 'top'
+                      ? `${Math.min(384, window.innerHeight - 120)}px`
+                      : `${Math.min(384, window.innerHeight - (searchRef.current?.getBoundingClientRect().bottom || 0) - 40)}px`,
+                    minWidth: window.innerWidth < 400 ? 'auto' : '384px'
+                  }}
                 >
                   <div className="p-2">
                     {searchResults.map((item) => (
@@ -863,19 +854,18 @@ export default function Navbar({ className = '' }: NavbarProps) {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className={`lg:hidden border-t border-white/30 ${
-          isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
-        }`}>
+        <div className={`lg:hidden border-t border-white/30 ${isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
+          }`}>
           <Container>
             <div className="py-4 space-y-4">
-              <Link 
+              <Link
                 to="/products"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
               >
                 Products
               </Link>
-              
+
               {/* Product Categories for Mobile */}
               <div className="ml-4 space-y-2">
                 {megaMenuItems.shop.sections.map((section) => (
@@ -889,22 +879,22 @@ export default function Navbar({ className = '' }: NavbarProps) {
                   </Link>
                 ))}
               </div>
-              
-              <Link 
+
+              <Link
                 to="/about"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
               >
                 About
               </Link>
-              <Link 
+              <Link
                 to="/services"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
               >
                 Services
               </Link>
-              <Link 
+              <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mobile-menu-item block w-full text-left text-charcoal drop-shadow-sm hover:bg-white/30 px-4 py-3 rounded-lg text-base"
