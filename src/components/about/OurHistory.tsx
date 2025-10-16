@@ -9,13 +9,14 @@ const fadeInUp:Variants = {
 const OurHistoryPage: React.FC = () => {
   return (
     <motion.section
-      className="relative bg-gradient-to-br from-gray-50 via-white to-teal-50 py-20 px-6 md:px-20"
+      // className="relative bg-gradient-to-br from-gray-50 via-white to-teal-50 py-20 px-6 md:px-20"
+      className="mt-10"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
     >
-      <div className="max-w-5xl mx-auto space-y-6 text-center">
+      <div className="mt-4 max-w-5xl mx-auto space-y-6 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 drop-shadow-sm">
           Our History
         </h2>

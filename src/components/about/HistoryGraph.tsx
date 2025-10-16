@@ -20,7 +20,7 @@ const data = [
 
 const HistoryGraph: React.FC = () => {
   return (
-    <div className="bg-white shadow-md rounded-2xl p-6 mt-10">
+    <div className="bg-white shadow-md rounded-2xl p-6 mt-10 mb-10">
       <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
         Company Growth Timeline
       </h3>
