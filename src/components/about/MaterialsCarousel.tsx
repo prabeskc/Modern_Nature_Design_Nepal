@@ -22,9 +22,9 @@ const materials: Material[] = [
       "Produced by Bombyx mori silkworms in the cocoon stage, Chinese silk is renowned for its luxurious and soft quality. When combined with wool, it enhances rugs by adding both softness and shine.",
   },
   {
-    title: "Local Silk",
+    title: "Lurex",
     description:
-      "Harvested by farmers in Nepal, local silk is processed in factories to create high-quality rugs with natural shine and softness. Its production also supports local farmers by providing them with opportunities to sell silk in domestic markets, contributing to sustainable livelihoods.",
+      "Lurex is a type of yarn with a metallic appearance. The yarn is made from synthetic film, onto which a metallic aluminium, silver, or gold layer has been vaporized."
   },
   {
     title: "Viscose",
@@ -138,6 +138,7 @@ const MaterialsCarousel: React.FC = () => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };

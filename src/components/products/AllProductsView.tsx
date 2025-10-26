@@ -205,3 +205,4 @@ const AllProductsView = ({ onProductSelect }: AllProductsViewProps) => {
 
 export default AllProductsView;
 export type { AllProductsViewProps };
+

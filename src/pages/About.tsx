@@ -22,7 +22,6 @@ const About = () => {
       </div>
 
       <MaterialsCarousel />
-      <MaterialsPage />
       <ProductionProcessPage />
       <Footer />
     </div>

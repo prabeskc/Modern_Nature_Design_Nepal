@@ -1,85 +1,93 @@
-// src/components/ProductionProcessPage.tsx
 import React from "react";
-import { motion } from "framer-motion";
 
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
+interface ServiceStep {
+  id: string;
+  title: string;
+  imageLabel: string;
+  description: string;
+}
 
-const steps = [
-    {
-        title: "STRIKE-OFF AND SAMPLES",
-        image: "assets/images/about/1.jpeg",
-        description:
-            "We will be ready to accompany you in the pre-production of the rugs by providing you with the samples you want to buy with a clear picture of the stripe-offs that show the colour and material of your rug. The stripe-off examples are the cut-offs of the specimen rugs, usually 30 by 30 centimetres, 60 by 60 centimetres or as per your need. We also give samples of various types of knots we use in our rugs, pile weight, materials, and colours that are available with us to you. We provide discounts to our regular customers and free samples over strike-off samplKeeping the needs of our customers in mind, we provide our services to satisfy their needs and requirements and aim to deliver high-quality standards with some added benefits that can help them place their own custom orders. On the other hand, we can weave them and dispatch them to them their doorsteps on the required date and time of the year. ",
-    },
-    {
-        title: "COLOR POMS AND TUFFS",
-        image: "assets/images/about/2.jpg",
-        description:
-            "We also provide a sample of colour dyes used in various materials such as wool, silk or other fabric to have your customized rug. We ship the pieces in 7 days to your station. We also produce large quantities of colour poms from which you can choose the right shade on the rugs. From the poms, make your colour kit, and the cost of the equipment is on the number of colours available. We make two colour kits upon your order. One is at your disposal, and the other is for our own records. We also make swatches of small pieces of rug about five by 5 centimetres or on the custom order sizes. You can also make your kit if you want. On the customized orders, we depend on the colour threads, wool, silk, leather, wool or Pantone Colour codes that we match with our stock to start the work. You can also tag the samples of colour codes with the names on each colour sample.Our readymade colour kit has an ARS 1200 Wool box with 1200 colours of wool, an ARS 600 with 600 colours ARS 700 Viscose box with 700 shades. You can contact us for the order and cost.",
-    },
-    {
-        title: "REDERINGS AND CAD services",
-        image: "assets/images/about/3.jpg",
-        description:
-            " We offer CAD services to our regular clients by providing graphic designs from a graphic designer who can work according to the specimen you desire for cushions, curtains, paintings, wall hangings or simply on your floor. We create a 3D view of rugs in the client's home using CAD. It can be stored on Computers and hard drives in .jpeg, .png, and .pdf formats. It can also be printed in HD. These designs are in your copyright, and we don't replicate them without your consent.",
-    },
-    {
-        title: "SHIPMENT AND DELIVERY",
-        image: "assets/images/about/4.jpg",
-        description:
-            "We want to ensure all customized orders are duly dispatched to our customer's area. We use courier service (door delivery), cargo(Airport drug only), FedEx, DHL, and UPS take 3-5 days for delivery. Shipment to the nearest airport takes 5-7 days. Cost and charges depend on the package volume, and we also send the invoice bill and packaging list along with the GSPO forum and certificate of originality. Your product is secured by the harmonized code we use for tracking and safe dispatch. It is classified according to an international standardized system with names, numbers, sizes and handling instructions.For European Countries, the delivery is under the security of the EU REX system, which is registered. Exporters for Countries like European Union, Norway, Switzerland, and Turkey use generalized tariff preference. The charge also includes customs/ duty taxes in your Country. The custom brokers and authorized companies for carriage can give you their details upon request.",
-    },
-   
+const steps: ServiceStep[] = [
+  {
+    id: "1",
+    title: "Precision Batch Dyeing",
+    imageLabel: "The Dye Master at Work",
+    description:
+      "The **Dye Master** is responsible for mixing and matching the colors, with each dye blend taking a full day to prepare. This commitment ensures flawless color fidelity and consistency across every batch of yarn.",
+  },
+  {
+    id: "2",
+    title: "Natural Sun Drying & Curing",
+    imageLabel: "Yarns Drying on Rooftop",
+    description:
+      "After dyeing, the yarns are spread out on the **rooftops of Kathmandu**, where they dry naturally in the sunlight. This traditional method cures the dyes, locking in the color and enhancing the wool's inherent luster.",
+  },
+  {
+    id: "3",
+    title: "Design Blueprint & Pattern Graph",
+    imageLabel: "Weaver Following Pattern Graph",
+    description:
+      "A design **blueprint is placed behind the loom** to guide the weavers, showing the exact placement and color of each knot. This document translates the custom design into a tangible, knot-by-knot instruction set.",
+  },
+  {
+    id: "4",
+    title: "Hand-Knotting Technique",
+    imageLabel: "Artisans Hand-Knotting the Rug",
+    description:
+      "Using the **traditional Tibetan knotting method**, skilled artisans carefully knot yarn around the warp threads. A **higher knot density** means a finer, more intricate rug.",
+  },
+  {
+    id: "5",
+    title: "Deep Cleansing & Water Pressing",
+    imageLabel: "Washing Rug with Paddles",
+    description:
+      "The rugs are **thoroughly washed on both sides**. **Wooden paddles** press water through the pile, removing any residual dirt and increasing the softness and shine of the fibers.",
+  },
+  {
+    id: "6",
+    title: "Final Shear, Flattening & Edging",
+    imageLabel: "Final Trimming and Finishing",
+    description:
+      "Once dried, the rug is flattened, and the pile is **hand-cut to the perfect height**. The final touches include **defining color transitions** and **smoothing height differences** before **wrapping edges with matching yarn**.",
+  },
 ];
 
-const ServicePage: React.FC = () => {
-    return (
-        <motion.section
-            className="bg-white py-16 px-6 md:px-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-        >
-            <motion.div className="max-w-6xl mx-auto" variants={itemVariants}>
-                <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">
-                    Services We Provide.
-                </h2>
-                <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-                    Keeping the needs of our customers in mind, we provide our services to satisfy their needs and requirements and aim to deliver high-quality standards with some added benefits that can help them place their own custom orders. On the other hand, we can weave them and dispatch them to them their doorsteps on the required date and time of the year.
-                    Some of our services focus on these areas:
-                </p>
+const Services: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-[#fdfdfb] py-32 flex justify-center">
+      <div className="w-4/5">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
+          Our Services
+        </h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {steps.map((step, index) => (
-                        <motion.div
-                            key={index}
-                            className="bg-gray-50 shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition"
-                            variants={itemVariants}
-                        >
-                            <a href={step.image} target="_blank" rel="noopener noreferrer">
-                                <img
-                                    src={step.image}
-                                    alt={step.title}
-                                    className="w-full h-48 object-cover"
-                                />
-                            </a>
-                            <div className="p-5">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                                    {step.title}
-                                </h3>
-                                <p className="text-gray-600 text-base leading-relaxed">
-                                    {step.description}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.div>
-        </motion.section>
-    );
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {steps.map((step) => (
+            <div
+              key={step.id}
+              className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+            >
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-900">
+                {step.title}
+              </h2>
+
+              <div className="bg-[#fdfcf8] border border-gray-200 rounded-lg flex items-center justify-center h-48 mb-6">
+                <p className="text-gray-700 font-medium text-center">
+                  Image: {step.imageLabel}
+                </p>
+              </div>
+
+              <p
+                className="text-gray-700 leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: step.description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"),
+                }}
+              ></p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default ServicePage;
+export default Services;

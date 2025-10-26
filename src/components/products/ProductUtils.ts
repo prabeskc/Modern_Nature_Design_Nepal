@@ -5,7 +5,7 @@ import { Product } from '@/components/home/ProductCard';
 export interface UnifiedProduct {
   id: string;
   name: string;
-  category: string;
+  category?: string;
   subcategoryId: string;
   material: string;
   size: string;
@@ -137,3 +137,5 @@ export const getSelectedCategoryName = (
   }
   return categories.find(cat => cat.id === selectedCategory)?.name || 'All Products';
 };
+
+
