@@ -1,0 +1,6 @@
+- Remove page2Prefixes, page3Prefixes, page4Prefixes, page5Prefixes arrays
+- Remove totalPages, currentPage state, getPrefixes function, goToPrevious, goToNext functions
+- Update currentPrefixes to always be page1Prefixes
+- Remove pagination buttons and dots
+- Remove the page indicator text
+- Simplify the component to show only the first color palette (AA-AT)
