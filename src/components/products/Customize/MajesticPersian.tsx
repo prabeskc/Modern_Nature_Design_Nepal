@@ -2653,7 +2653,7 @@ const MajesticPersian = () => {
                         <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
                 <div className="overflow-x-auto ml-6 ">
                   <table className="border-collapse">
-                    <thead>
+                    {/* <thead>
                       <tr>
                         <th className="p-1 text-xs text-gray-500"></th>
                         {currentPrefixes.map((p) => (
@@ -2694,7 +2694,51 @@ const MajesticPersian = () => {
                           })}
                         </tr>
                       ))}
-                    </tbody>
+                    </tbody> */}
+                    <thead>
+                                    <tr>
+                                        <th className="p-1 text-xs text-gray-500"></th>
+                                        {currentPrefixes.map((p) => (
+                                            <th
+                                                key={p}
+                                                className="text-[10px] text-gray-600 font-serif px-1 text-center"
+                                            >
+                                                {p}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {[...rows].reverse().map((row) => (
+                                        <tr key={row}>
+                                            <td className="text-[10px] text-gray-600 text-center px-1 font-serif">
+                                                {row}
+                                            </td>
+                                            {currentPrefixes.map((p) => {
+                                                const color = grouped[p]?.find((c) => c.name.split(" ")[1] === row);
+                                                if (!color)
+                                                    return (
+                                                        <td
+                                                            key={`${p}-${row}`}
+                                                            className="w-6 h-6 border border-gray-300 bg-gray-100"
+                                                        ></td>
+                                                    );
+                                                const hex = rgbToHex(color.r, color.g, color.b).toUpperCase();
+                                                const isSelected = (activeTarget === 'foreground' ? foregroundColor : backgroundColor) === hex;
+                                                return (
+                                                    <td
+                                                        key={color.name}
+                                                        title={`${color.name} ${hex}`}
+                                                        className={`w-6 h-6 border border-gray-300 cursor-pointer ${isSelected ? 'ring-2 ring-gray-800' : ''}`}
+                                                        style={{ backgroundColor: hex }}
+                                                        onClick={() => applyColor(hex)}
+                                                        onTouchEnd={() => applyColor(hex)}
+                                                    ></td>
+                                                );
+                                            })}
+                                        </tr>
+                                    ))}
+                                </tbody>
                   </table>
                 </div>
 
