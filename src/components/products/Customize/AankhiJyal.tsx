@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 const colorData = [
     // --- AA to AT Series ---
@@ -1350,6 +1350,84 @@ const groupColors = (data) => {
 const AankhiJhyal = () => {
     const grouped = groupColors(colorData);
 
+    // Color customization state
+    const DEFAULT_FG = '#211A1F';
+    const DEFAULT_BG = '#DFDBD7';
+
+    const [foregroundColor, setForegroundColor] = useState<string>(() => {
+        return (localStorage.getItem('aankhi_fg') || DEFAULT_FG).toUpperCase();
+    });
+    const [backgroundColor, setBackgroundColor] = useState<string>(() => {
+        return (localStorage.getItem('aankhi_bg') || DEFAULT_BG).toUpperCase();
+    });
+
+    const [activeTarget, setActiveTarget] = useState<'foreground' | 'background'>('foreground');
+
+    useEffect(() => {
+        localStorage.setItem('aankhi_fg', foregroundColor);
+        localStorage.setItem('aankhi_bg', backgroundColor);
+    }, [foregroundColor, backgroundColor]);
+
+    const hexToRgb = (hex: string) => {
+        const clean = hex.replace('#', '');
+        const bigint = parseInt(clean, 16);
+        return {
+            r: (bigint >> 16) & 255,
+            g: (bigint >> 8) & 255,
+            b: bigint & 255,
+        };
+    };
+
+    const relativeLuminance = (hex: string) => {
+        const { r, g, b } = hexToRgb(hex);
+        const srgb = [r, g, b].map((v) => v / 255).map((c) => (c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)));
+        return 0.2126 * srgb[0] + 0.7152 * srgb[1] + 0.0722 * srgb[2];
+    };
+    const contrastRatio = (hex1: string, hex2: string) => {
+        const L1 = relativeLuminance(hex1);
+        const L2 = relativeLuminance(hex2);
+        const lighter = Math.max(L1, L2);
+        const darker = Math.min(L1, L2);
+        return (lighter + 0.05) / (darker + 0.05);
+    };
+
+    const applyColor = (hex: string) => {
+        const nextHex = hex.toUpperCase();
+        if (activeTarget === 'foreground') {
+            setForegroundColor(nextHex);
+        } else {
+            setBackgroundColor(nextHex);
+        }
+    };
+
+    const resetColors = () => {
+        setForegroundColor(DEFAULT_FG);
+        setBackgroundColor(DEFAULT_BG);
+    };
+
+    const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
+
+    // Inline SVG loading and transformation
+    const [svgMarkup, setSvgMarkup] = useState<string>('');
+    useEffect(() => {
+        const loadSvg = async () => {
+            try {
+                const res = await fetch('/assets/images/products/Aankhi Jhyal.svg');
+                const svg = await res.text();
+                const transformed = svg
+                    // Replace .st0 fill to CSS var for background
+                    .replace(/(\.st0\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--bg-color)$3')
+                    // Replace .st1 fill to CSS var for foreground
+                    .replace(/(\.st1\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--fg-color)$3');
+                setSvgMarkup(transformed);
+            } catch (e) {
+                console.error('Failed to load SVG', e);
+                setSvgMarkup('');
+            }
+        };
+        loadSvg();
+    }, []);
+
     // Define page-based prefixes
     const page1Prefixes = [
         "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ",
@@ -1401,34 +1479,78 @@ const AankhiJhyal = () => {
                 <h1 className="text-3xl font-serif mt-2">Aankhi Jhyal</h1>
             </div>
 
-            <div className="flex w-full max-w-7xl gap-6">
-                <div className="w-1/2 bg-gray-200  border">
-                    <img
-                        src="/public/assets/images/products/AankhiJhyal.jpg"
-                        alt="Custom Rug"
-                        className="w-full h-full object-cover"
-                    />
+            <div className="flex w-full max-w-6xl gap-6">
+                <div className="w-5/12 relative">
+                    {svgMarkup ? (
+                        <div
+                            className="w-full h-full [&>svg]:block [&>svg]:w-full [&>svg]:h-auto"
+                            style={{ ['--fg-color' as any]: foregroundColor, ['--bg-color' as any]: backgroundColor }}
+                            dangerouslySetInnerHTML={{ __html: svgMarkup }}
+                            aria-describedby="aankhi-jhyal-description"
+                            role="img"
+                        />
+                    ) : (
+                        <img
+                            src="/assets/images/products/Aankhi Jhyal.svg"
+                            alt="Aankhi Jhyal - Traditional Nepalese Window Design Rug"
+                            className="block w-full h-auto"
+                            role="img"
+                            aria-describedby="aankhi-jhyal-description"
+                        />
+                    )}
+                    <div id="aankhi-jhyal-description" className="sr-only">
+                        Interactive color customization tool for the Aankhi Jhyal rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
+                    </div>
                 </div>
 
-                <div className="w-1/2 flex flex-col gap-6">
+                <div className="w-7/12 flex flex-col gap-6">
                     <div className="bg-gray-100 p-4 shadow-sm border">
                         <h2 className="font-semibold mb-2">TO CHANGE COLORS:</h2>
                         <ol className="list-decimal ml-4 text-sm text-gray-700 space-y-1">
-                            <li>Click on the color window below corresponding to the part of the design that you want to re-color.</li>
-                            <li>Then click on the desired color in the color chart.</li>
+                            <li>Tap or click a target panel (Foreground or Background).</li>
+                            <li>Then choose a color from the chart to apply it.</li>
                         </ol>
                     </div>
 
-                    <div className="flex gap-4">
-                        {/* <div className="w-16 h-10 border-black border-2 bg-gray-400 text-center">CA10</div>
-            <div className="w-16 h-10 border border-gray-400 bg-gray-300 text-center">BM11</div> */}
-                        <button className="ml-auto text-sm underline text-gray-600 hover:text-black">
-                            ⟳ Reset to original colors
-                        </button>
+                    {/* Color Target Panels */}
+                    <div className="flex items-center gap-4">
+                        <div
+                            role="button"
+                            aria-label="Foreground color panel"
+                            onClick={() => setActiveTarget('foreground')}
+                            onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('foreground')}
+                            tabIndex={0}
+                            className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'foreground' ? 'ring-2 ring-gray-800' : ''}`}
+                        >
+                            <div className="w-10 h-10 border" style={{ backgroundColor: foregroundColor }} />
+                            <div className="text-sm">
+                                <div className="font-medium">Foreground</div>
+                                <div className="text-xs text-gray-600">{foregroundColor} · RGB {hexToRgb(foregroundColor).r}, {hexToRgb(foregroundColor).g}, {hexToRgb(foregroundColor).b}</div>
+                            </div>
+                        </div>
+                        <div
+                            role="button"
+                            aria-label="Background color panel"
+                            onClick={() => setActiveTarget('background')}
+                            onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('background')}
+                            tabIndex={0}
+                            className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'background' ? 'ring-2 ring-gray-800' : ''}`}
+                        >
+                            <div className="w-10 h-10 border" style={{ backgroundColor: backgroundColor }} />
+                            <div className="text-sm">
+                                <div className="font-medium">Background</div>
+                                <div className="text-xs text-gray-600">{backgroundColor} · RGB {hexToRgb(backgroundColor).r}, {hexToRgb(backgroundColor).g}, {hexToRgb(backgroundColor).b}</div>
+                            </div>
+                        </div>
+                        <div className="ml-auto flex items-center gap-2">
+                            <button onClick={resetColors} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
+                        </div>
                     </div>
 
                     <div className="p-6 bg-gray-100 rounded-2xl shadow-md w-fit mx-auto">
                         <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart</h1>
+                        <div className="text-xs text-gray-600 text-center mb-2">Active target: {activeTarget}</div>
+                        <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
                         <div className="overflow-x-auto">
                             <table className="border-collapse">
                                 <thead>
@@ -1459,14 +1581,16 @@ const AankhiJhyal = () => {
                                                             className="w-6 h-6 border border-gray-300 bg-gray-100"
                                                         ></td>
                                                     );
-                                                const hex = rgbToHex(color.r, color.g, color.b);
+                                                const hex = rgbToHex(color.r, color.g, color.b).toUpperCase();
+                                                const isSelected = (activeTarget === 'foreground' ? foregroundColor : backgroundColor) === hex;
                                                 return (
                                                     <td
                                                         key={color.name}
                                                         title={`${color.name} ${hex}`}
-                                                        className="w-6 h-6 border border-gray-300 cursor-pointer"
+                                                        className={`w-6 h-6 border border-gray-300 cursor-pointer ${isSelected ? 'ring-2 ring-gray-800' : ''}`}
                                                         style={{ backgroundColor: hex }}
-                                                        onClick={() => navigator.clipboard.writeText(hex)}
+                                                        onClick={() => applyColor(hex)}
+                                                        onTouchEnd={() => applyColor(hex)}
                                                     ></td>
                                                 );
                                             })}
@@ -1476,7 +1600,7 @@ const AankhiJhyal = () => {
                             </table>
                         </div>
 
-                        <div className="mb-12 text-center">
+                        <div className="text-center">
                             <p className="text-gray-600">
                                 Page {currentPage} of {totalPages}
                             </p>
@@ -1506,8 +1630,7 @@ const AankhiJhyal = () => {
                             {[...Array(totalPages)].map((_, i) => (
                                 <div
                                     key={i}
-                                    className={`w-3 h-3 rounded-full transition-colors ${i + 1 === currentPage ? 'bg-gray-800' : 'bg-gray-300'
-                                        }`}
+                                    className={`w-3 h-3 rounded-full transition-colors ${i + 1 === currentPage ? 'bg-gray-800' : 'bg-gray-300'}`}
                                 />
                             ))}
                         </div>
