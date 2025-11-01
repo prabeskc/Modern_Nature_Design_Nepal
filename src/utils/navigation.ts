@@ -16,7 +16,7 @@ export const getProductDetailUrl = (productId: string): string => {
  * @returns True if the product has a dedicated detail page
  */
 export const hasDetailedPage = (productId: string): boolean => {
-  const productsWithDetailPages = ['lr-tp-001']; // Majestic Persian Masterpiece
+  const productsWithDetailPages = ['rug-001']; // Majestic Persian Masterpiece (sequential ID)
   return productsWithDetailPages.includes(productId);
 };
 
@@ -27,7 +27,7 @@ export const hasDetailedPage = (productId: string): boolean => {
  */
 export const getProductNameById = (productId: string): string | null => {
   const productMap: Record<string, string> = {
-    'lr-tp-001': 'Majestic Persian Masterpiece'
+    'rug-001': 'Majestic Persian Masterpiece'
   };
   
   return productMap[productId] || null;

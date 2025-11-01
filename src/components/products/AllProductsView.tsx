@@ -1,569 +1,88 @@
-import { useState } from 'react';
 import ProductCard from './ProductCard';
 import { UnifiedProduct } from './ProductUtils';
-
-// Import product arrays from all category components
-const livingRoomProducts: UnifiedProduct[] = [
-  {
-    id: 'lr-tp-001',
-    name: 'Majestic Persian Masterpiece',
-    category: 'living-room',
-    subcategoryId: 'traditional-persian',
-    material: 'Hand-knotted Wool',
-    size: '9\'x12\'',
-    price: '$2,899',
-    style: 'Traditional Persian',
-    imageUrl: '/rugsample.jpg'
-  },
-  {
-    id: 'lr-mc-001',
-    name: 'Urban Chic Contemporary Rug',
-    category: 'living-room',
-    subcategoryId: 'modern-contemporary',
-    material: 'Synthetic Blend',
-    size: '8\'x10\'',
-    price: '$1,299',
-    style: 'Modern Contemporary',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-vd-001',
-    name: 'Vintage Distressed Rug',
-    category: 'living-room',
-    subcategoryId: 'vintage-distressed',
-    material: 'Distressed Wool',
-    size: '8\'x10\'',
-    price: '$899',
-    style: 'Vintage Distressed',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-gp-001',
-    name: 'Geometric Pattern Rug',
-    category: 'living-room',
-    subcategoryId: 'geometric-pattern',
-    material: 'Wool Blend',
-    size: '7\'x9\'',
-    price: '$799',
-    style: 'Modern Geometric',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  // Additional living room products (10 more to total 14)
-  {
-    id: 'lr-bo-002',
-    name: 'Bohemian Medallion Rug',
-    category: 'living-room',
-    subcategoryId: 'bohemian-style',
-    material: 'Wool Blend',
-    size: '8\'x10\'',
-    price: '$1,049',
-    style: 'Bohemian',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-sc-003',
-    name: 'Scandinavian Minimal Rug',
-    category: 'living-room',
-    subcategoryId: 'scandinavian-minimal',
-    material: 'Wool Blend',
-    size: '7\'x9\'',
-    price: '$749',
-    style: 'Minimal Scandinavian',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-ad-004',
-    name: 'Art Deco Statement Rug',
-    category: 'living-room',
-    subcategoryId: 'art-deco',
-    material: 'Wool Blend',
-    size: '8\'x10\'',
-    price: '$1,199',
-    style: 'Art Deco',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-tp-005',
-    name: 'Traditional Floral Rug',
-    category: 'living-room',
-    subcategoryId: 'traditional-persian',
-    material: 'Hand-knotted Wool',
-    size: '9\'x12\'',
-    price: '$2,499',
-    style: 'Traditional Persian',
-    imageUrl: '/rugsample.jpg'
-  },
-  {
-    id: 'lr-gp-006',
-    name: 'Bold Geometric Blocks',
-    category: 'living-room',
-    subcategoryId: 'geometric-pattern',
-    material: 'Wool Blend',
-    size: '8\'x10\'',
-    price: '$999',
-    style: 'Modern Geometric',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-mc-007',
-    name: 'Contemporary Color Fade',
-    category: 'living-room',
-    subcategoryId: 'modern-contemporary',
-    material: 'Synthetic Blend',
-    size: '8\'x10\'',
-    price: '$1,149',
-    style: 'Modern Contemporary',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-vd-008',
-    name: 'Vintage Faded Patchwork',
-    category: 'living-room',
-    subcategoryId: 'vintage-distressed',
-    material: 'Distressed Wool',
-    size: '7\'x9\'',
-    price: '$899',
-    style: 'Vintage Distressed',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-kf-009',
-    name: 'Kilim Flatweave Rug',
-    category: 'living-room',
-    subcategoryId: 'kilim-flatweave',
-    material: 'Flatweave Wool',
-    size: '6\'x9\'',
-    price: '$699',
-    style: 'Flatweave Kilim',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-ms-010',
-    name: 'Moroccan Shag Comfort',
-    category: 'living-room',
-    subcategoryId: 'moroccan-shag',
-    material: 'Shag Wool',
-    size: '8\'x10\'',
-    price: '$1,049',
-    style: 'Moroccan Shag',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'lr-ht-011',
-    name: 'Hand-Tufted Accent',
-    category: 'living-room',
-    subcategoryId: 'hand-tufted',
-    material: 'Hand-tufted Wool',
-    size: '7\'x9\'',
-    price: '$849',
-    style: 'Hand Tufted',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  }
-];
-
-const bedroomProducts: UnifiedProduct[] = [
-  {
-    id: 'br-tp-001',
-    name: 'Bedroom Persian Classic',
-    category: 'bedroom',
-    subcategoryId: 'traditional-persian',
-    material: 'Hand-knotted Wool',
-    size: '8\'x10\'',
-    price: '$2,199',
-    style: 'Traditional Persian',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'br-mc-001',
-    name: 'Modern Bedroom Accent',
-    category: 'bedroom',
-    subcategoryId: 'modern-contemporary',
-    material: 'Synthetic Blend',
-    size: '6\'x9\'',
-    price: '$899',
-    style: 'Modern Contemporary',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  // Additional bedroom products (add 8 more to total 10)
-  {
-    id: 'br-sc-003',
-    name: 'Scandi Bedroom Comfort',
-    category: 'bedroom',
-    subcategoryId: 'scandinavian-minimal',
-    material: 'Wool Blend',
-    size: '6\'x9\'',
-    price: '$799',
-    style: 'Minimal Scandinavian',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'br-bo-004',
-    name: 'Boho Bedroom Layers',
-    category: 'bedroom',
-    subcategoryId: 'bohemian-style',
-    material: 'Wool Blend',
-    size: '5\'x8\'',
-    price: '$699',
-    style: 'Bohemian',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'br-mc-005',
-    name: 'Contemporary Bedroom Calm',
-    category: 'bedroom',
-    subcategoryId: 'modern-contemporary',
-    material: 'Synthetic Blend',
-    size: '6\'x9\'',
-    price: '$879',
-    style: 'Modern Contemporary',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'br-tp-006',
-    name: 'Classic Persian Bedroom',
-    category: 'bedroom',
-    subcategoryId: 'traditional-persian',
-    material: 'Hand-knotted Wool',
-    size: '7\'x9\'',
-    price: '$1,999',
-    style: 'Traditional Persian',
-    imageUrl: '/rugsample.jpg'
-  },
-  {
-    id: 'br-vd-007',
-    name: 'Vintage Bedroom Fade',
-    category: 'bedroom',
-    subcategoryId: 'vintage-distressed',
-    material: 'Distressed Wool',
-    size: '6\'x9\'',
-    price: '$749',
-    style: 'Vintage Distressed',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'br-ms-008',
-    name: 'Moroccan Shag Serenity',
-    category: 'bedroom',
-    subcategoryId: 'moroccan-shag',
-    material: 'Shag Wool',
-    size: '6\'x9\'',
-    price: '$849',
-    style: 'Moroccan Shag',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'br-kf-009',
-    name: 'Bedroom Kilim Flatweave',
-    category: 'bedroom',
-    subcategoryId: 'kilim-flatweave',
-    material: 'Flatweave Wool',
-    size: '5\'x8\'',
-    price: '$629',
-    style: 'Flatweave Kilim',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  }
-];
-
-const diningRoomProducts: UnifiedProduct[] = [
-  {
-    id: 'dr-tp-001',
-    name: 'Dining Persian Elegance',
-    category: 'dining-room',
-    subcategoryId: 'traditional-persian',
-    material: 'Hand-knotted Wool',
-    size: '8\'x11\'',
-    price: '$2,599',
-    style: 'Traditional Persian',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'dr-mc-001',
-    name: 'Contemporary Dining Rug',
-    category: 'dining-room',
-    subcategoryId: 'modern-contemporary',
-    material: 'Wool Blend',
-    size: '9\'x12\'',
-    price: '$1,599',
-    style: 'Modern Contemporary',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  // Additional dining room products (add 8 more to total 10)
-  {
-    id: 'dr-gp-003',
-    name: 'Dining Geometric Runner',
-    category: 'dining-room',
-    subcategoryId: 'geometric-pattern',
-    material: 'Wool Blend',
-    size: '2\'6"x10\'',
-    price: '$399',
-    style: 'Modern Geometric',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'dr-tp-004',
-    name: 'Dining Classic Borders',
-    category: 'dining-room',
-    subcategoryId: 'traditional-persian',
-    material: 'Hand-knotted Wool',
-    size: '8\'x11\'',
-    price: '$2,399',
-    style: 'Traditional Persian',
-    imageUrl: '/rugsample.jpg'
-  },
-  {
-    id: 'dr-mc-005',
-    name: 'Minimal Dining Accent',
-    category: 'dining-room',
-    subcategoryId: 'modern-contemporary',
-    material: 'Synthetic Blend',
-    size: '7\'x9\'',
-    price: '$899',
-    style: 'Modern Contemporary',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'dr-vd-006',
-    name: 'Vintage Dining Faded',
-    category: 'dining-room',
-    subcategoryId: 'vintage-distressed',
-    material: 'Distressed Wool',
-    size: '8\'x11\'',
-    price: '$899',
-    style: 'Vintage Distressed',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'dr-kf-007',
-    name: 'Dining Kilim Stripes',
-    category: 'dining-room',
-    subcategoryId: 'kilim-flatweave',
-    material: 'Flatweave Wool',
-    size: '6\'x9\'',
-    price: '$699',
-    style: 'Flatweave Kilim',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'dr-ms-008',
-    name: 'Dining Shag Comfort',
-    category: 'dining-room',
-    subcategoryId: 'moroccan-shag',
-    material: 'Shag Wool',
-    size: '7\'x9\'',
-    price: '$849',
-    style: 'Moroccan Shag',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  }
-];
-
-const outdoorProducts: UnifiedProduct[] = [
-  {
-    id: 'or-wr-001',
-    name: 'Weather Resistant Outdoor',
-    category: 'outdoor',
-    subcategoryId: 'weather-resistant',
-    material: 'Polypropylene',
-    size: '8\'x10\'',
-    price: '$599',
-    style: 'Weather Resistant',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'or-pd-001',
-    name: 'Patio Decorative Rug',
-    category: 'outdoor',
-    subcategoryId: 'patio-deck',
-    material: 'Synthetic Fiber',
-    size: '6\'x9\'',
-    price: '$399',
-    style: 'Patio Deck',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  // Additional outdoor products (add 8 more to total 10)
-  {
-    id: 'or-wr-003',
-    name: 'Outdoor Weather-Guard',
-    category: 'outdoor',
-    subcategoryId: 'weather-resistant',
-    material: 'Polypropylene',
-    size: '7\'x9\'',
-    price: '$549',
-    style: 'Weather Resistant',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'or-pd-004',
-    name: 'Deckside Pattern Rug',
-    category: 'outdoor',
-    subcategoryId: 'patio-deck',
-    material: 'Synthetic Fiber',
-    size: '8\'x10\'',
-    price: '$429',
-    style: 'Patio Deck',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'or-gp-005',
-    name: 'Outdoor Geometric Grid',
-    category: 'outdoor',
-    subcategoryId: 'geometric-pattern',
-    material: 'Polypropylene',
-    size: '6\'x9\'',
-    price: '$399',
-    style: 'Modern Geometric',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'or-vd-006',
-    name: 'Outdoor Vintage Fade',
-    category: 'outdoor',
-    subcategoryId: 'vintage-distressed',
-    material: 'Polypropylene',
-    size: '7\'x9\'',
-    price: '$469',
-    style: 'Vintage Distressed',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'or-kf-007',
-    name: 'Outdoor Kilim Diamond',
-    category: 'outdoor',
-    subcategoryId: 'kilim-flatweave',
-    material: 'Flatweave Poly',
-    size: '6\'x9\'',
-    price: '$389',
-    style: 'Flatweave Kilim',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'or-ms-008',
-    name: 'Outdoor Shag Comfort',
-    category: 'outdoor',
-    subcategoryId: 'moroccan-shag',
-    material: 'Synthetic Shag',
-    size: '6\'x9\'',
-    price: '$449',
-    style: 'Moroccan Shag',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  }
-];
-
-const specialtyProducts: UnifiedProduct[] = [
-  {
-    id: 'sp-hr-001',
-    name: 'Handmade Artisan Rug',
-    category: 'specialty',
-    subcategoryId: 'handmade-rugs',
-    material: 'Hand-woven Wool',
-    size: '9\'x12\'',
-    price: '$3,299',
-    style: 'Handmade Artisan',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'sp-ar-001',
-    name: 'Antique Reproduction',
-    category: 'specialty',
-    subcategoryId: 'antique-reproductions',
-    material: 'Aged Wool',
-    size: '8\'x10\'',
-    price: '$2,799',
-    style: 'Antique Reproduction',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'sp-cs-001',
-    name: 'Custom Size Rug',
-    category: 'specialty',
-    subcategoryId: 'custom-sizes',
-    material: 'Wool Blend',
-    size: 'Custom',
-    price: 'Quote',
-    style: 'Custom Made',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  // Additional specialty products (add 7 more to total 10)
-  {
-    id: 'sp-le-002',
-    name: 'Limited Edition Artist Series',
-    category: 'specialty',
-    subcategoryId: 'limited-edition',
-    material: 'Wool & Silk',
-    size: '8\'x10\'',
-    price: '$4,499',
-    style: 'Artist Limited',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'sp-nf-003',
-    name: 'Natural Fibers Jute Blend',
-    category: 'specialty',
-    subcategoryId: 'natural-fibers',
-    material: 'Jute & Cotton',
-    size: '8\'x10\'',
-    price: '$899',
-    style: 'Natural Fiber',
-    imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'sp-dc-004',
-    name: 'Designer Collaboration Rug',
-    category: 'specialty',
-    subcategoryId: 'designer-collab',
-    material: 'Wool Blend',
-    size: '7\'x9\'',
-    price: '$1,999',
-    style: 'Designer Collaboration',
-    imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'sp-ai-005',
-    name: 'Art Inspired Statement',
-    category: 'specialty',
-    subcategoryId: 'art-inspired',
-    material: 'Wool & Silk',
-    size: '8\'x10\'',
-    price: '$3,299',
-    style: 'Art Inspired',
-    imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-  }
-];
 
 interface AllProductsViewProps {
   onProductSelect?: (product: UnifiedProduct) => void;
 }
 
-const AllProductsView = ({ onProductSelect }: AllProductsViewProps) => {
-  // Combine products from all categories into a single array
-  const allProducts: UnifiedProduct[] = [
-    ...livingRoomProducts,
-    ...bedroomProducts,
-    ...diningRoomProducts,
-    ...outdoorProducts,
-    ...specialtyProducts
-  ];
+// Single unified products array with sequential IDs and essential fields only
+const products: UnifiedProduct[] = [
+  // Living Room (14)
+  { id: 'rug-001', name: 'Majestic Persian Masterpiece', material: 'Hand-knotted Wool', size: "9'x12'", price: '$2,899', style: 'Traditional Persian', imageUrl: '/rugsample.jpg' },
+  { id: 'rug-002', name: 'Urban Chic Contemporary Rug', material: 'Synthetic Blend', size: "8'x10'", price: '$1,299', style: 'Modern Contemporary', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-003', name: 'Vintage Distressed Rug', material: 'Distressed Wool', size: "8'x10'", price: '$899', style: 'Vintage Distressed', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-004', name: 'Geometric Pattern Rug', material: 'Wool Blend', size: "7'x9'", price: '$799', style: 'Modern Geometric', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-005', name: 'Bohemian Medallion Rug', material: 'Wool Blend', size: "8'x10'", price: '$1,049', style: 'Bohemian', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-006', name: 'Scandinavian Minimal Rug', material: 'Wool Blend', size: "7'x9'", price: '$749', style: 'Minimal Scandinavian', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-007', name: 'Art Deco Statement Rug', material: 'Wool Blend', size: "8'x10'", price: '$1,199', style: 'Art Deco', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-008', name: 'Traditional Floral Rug', material: 'Hand-knotted Wool', size: "9'x12'", price: '$2,499', style: 'Traditional Persian', imageUrl: '/rugsample.jpg' },
+  { id: 'rug-009', name: 'Bold Geometric Blocks', material: 'Wool Blend', size: "8'x10'", price: '$999', style: 'Modern Geometric', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-010', name: 'Contemporary Color Fade', material: 'Synthetic Blend', size: "8'x10'", price: '$1,149', style: 'Modern Contemporary', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-011', name: 'Vintage Faded Patchwork', material: 'Distressed Wool', size: "7'x9'", price: '$899', style: 'Vintage Distressed', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-012', name: 'Kilim Flatweave Rug', material: 'Flatweave Wool', size: "6'x9'", price: '$699', style: 'Flatweave Kilim', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-013', name: 'Moroccan Shag Comfort', material: 'Shag Wool', size: "8'x10'", price: '$1,049', style: 'Moroccan Shag', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-014', name: 'Hand-Tufted Accent', material: 'Hand-tufted Wool', size: "7'x9'", price: '$849', style: 'Hand Tufted', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
 
-  // Handle product selection
+  // Bedroom (9)
+  { id: 'rug-015', name: 'Bedroom Persian Classic', material: 'Hand-knotted Wool', size: "8'x10'", price: '$2,199', style: 'Traditional Persian', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-016', name: 'Modern Bedroom Accent', material: 'Synthetic Blend', size: "6'x9'", price: '$899', style: 'Modern Contemporary', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-017', name: 'Scandi Bedroom Comfort', material: 'Wool Blend', size: "6'x9'", price: '$799', style: 'Minimal Scandinavian', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-018', name: 'Boho Bedroom Layers', material: 'Wool Blend', size: "5'x8'", price: '$699', style: 'Bohemian', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-019', name: 'Contemporary Bedroom Calm', material: 'Synthetic Blend', size: "6'x9'", price: '$879', style: 'Modern Contemporary', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-020', name: 'Classic Persian Bedroom', material: 'Hand-knotted Wool', size: "7'x9'", price: '$1,999', style: 'Traditional Persian', imageUrl: '/rugsample.jpg' },
+  { id: 'rug-021', name: 'Vintage Bedroom Fade', material: 'Distressed Wool', size: "6'x9'", price: '$749', style: 'Vintage Distressed', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-022', name: 'Moroccan Shag Serenity', material: 'Shag Wool', size: "6'x9'", price: '$849', style: 'Moroccan Shag', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-023', name: 'Bedroom Kilim Flatweave', material: 'Flatweave Wool', size: "5'x8'", price: '$629', style: 'Flatweave Kilim', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+
+  // Dining Room (8)
+  { id: 'rug-024', name: 'Dining Persian Elegance', material: 'Hand-knotted Wool', size: "8'x11'", price: '$2,599', style: 'Traditional Persian', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-025', name: 'Contemporary Dining Rug', material: 'Wool Blend', size: "9'x12'", price: '$1,599', style: 'Modern Contemporary', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-026', name: 'Dining Geometric Runner', material: 'Wool Blend', size: '2\'6"x10\'', price: '$399', style: 'Modern Geometric', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-027', name: 'Dining Classic Borders', material: 'Hand-knotted Wool', size: "8'x11'", price: '$2,399', style: 'Traditional Persian', imageUrl: '/rugsample.jpg' },
+  { id: 'rug-028', name: 'Minimal Dining Accent', material: 'Synthetic Blend', size: "7'x9'", price: '$899', style: 'Modern Contemporary', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-029', name: 'Vintage Dining Faded', material: 'Distressed Wool', size: "8'x11'", price: '$899', style: 'Vintage Distressed', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-030', name: 'Dining Kilim Stripes', material: 'Flatweave Wool', size: "6'x9'", price: '$699', style: 'Flatweave Kilim', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-031', name: 'Dining Shag Comfort', material: 'Shag Wool', size: "7'x9'", price: '$849', style: 'Moroccan Shag', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+
+  // Outdoor (8)
+  { id: 'rug-032', name: 'Weather Resistant Outdoor', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-033', name: 'Patio Decorative Rug', material: 'Synthetic Fiber', size: "6'x9'", price: '$399', style: 'Patio Deck', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-034', name: 'Outdoor Weather-Guard', material: 'Polypropylene', size: "7'x9'", price: '$549', style: 'Weather Resistant', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-035', name: 'Deckside Pattern Rug', material: 'Synthetic Fiber', size: "8'x10'", price: '$429', style: 'Patio Deck', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-036', name: 'Outdoor Geometric Grid', material: 'Polypropylene', size: "6'x9'", price: '$399', style: 'Modern Geometric', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-037', name: 'Outdoor Vintage Fade', material: 'Polypropylene', size: "7'x9'", price: '$469', style: 'Vintage Distressed', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-038', name: 'Outdoor Kilim Diamond', material: 'Flatweave Poly', size: "6'x9'", price: '$389', style: 'Flatweave Kilim', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-039', name: 'Outdoor Shag Comfort', material: 'Synthetic Shag', size: "6'x9'", price: '$449', style: 'Moroccan Shag', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+
+  // Specialty (7)
+  { id: 'rug-040', name: 'Handmade Artisan Rug', material: 'Hand-woven Wool', size: "9'x12'", price: '$3,299', style: 'Handmade Artisan', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-041', name: 'Antique Reproduction', material: 'Aged Wool', size: "8'x10'", price: '$2,799', style: 'Antique Reproduction', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-042', name: 'Custom Size Rug', material: 'Wool Blend', size: 'Custom', price: 'Quote', style: 'Custom Made', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-043', name: 'Limited Edition Artist Series', material: 'Wool & Silk', size: "8'x10'", price: '$4,499', style: 'Artist Limited', imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-044', name: 'Natural Fibers Jute Blend', material: 'Jute & Cotton', size: "8'x10'", price: '$899', style: 'Natural Fiber', imageUrl: 'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-045', name: 'Designer Collaboration Rug', material: 'Wool Blend', size: "7'x9'", price: '$1,999', style: 'Designer Collaboration', imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
+  { id: 'rug-046', name: 'Art Inspired Statement', material: 'Wool & Silk', size: "8'x10'", price: '$3,299', style: 'Art Inspired', imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }
+];
+
+const AllProductsView = ({ onProductSelect }: AllProductsViewProps) => {
   const handleProductClick = (product: UnifiedProduct) => {
     onProductSelect?.(product);
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-      {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
         <div>
           <h2 className="text-xl md:text-2xl font-medium text-charcoal">All Products</h2>
-          <p className="text-charcoal/60 text-sm mt-1">Explore our complete collection across all categories</p>
+          <p className="text-charcoal/60 text-sm mt-1">Explore our complete collection</p>
         </div>
         <div className="text-charcoal/60 text-sm">
-          <span className="font-medium text-charcoal">{allProducts.length}</span> products found
+          <span className="font-medium text-charcoal">{products.length}</span> products found
         </div>
       </div>
 
-      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {allProducts.map((product) => (
+        {products.map((product) => (
           <ProductCard key={product.id} product={product} onProductClick={handleProductClick} />
         ))}
       </div>

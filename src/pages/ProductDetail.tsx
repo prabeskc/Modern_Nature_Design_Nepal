@@ -11,16 +11,14 @@ import { ProductDetailView, DetailedProduct } from '@/components/products/produc
 const getAllProducts = (): DetailedProduct[] => {
   return [
     {
-      id: 'lr-tp-001',
+      id: 'rug-001',
       name: 'Majestic Persian Masterpiece',
-      category: 'living-room',
-      subcategoryId: 'traditional-persian',
       material: 'Hand-knotted Wool',
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
       imageUrl: '/rugsample.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully crafted by skilled artisans, ensuring exceptional quality and durability that will last for generations.',
+      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
         'Premium wool construction',
@@ -30,7 +28,7 @@ const getAllProducts = (): DetailedProduct[] => {
         'Easy to maintain'
       ],
       specifications: {
-        'Dimensions': '9\' x 12\' (108\" x 144\")',
+        'Dimensions': '9\' x 12\' (108" x 144")',
         'Material': 'Hand-knotted Wool',
         'Pile Height': '0.5 inches',
         'Knot Count': '400 knots per square inch',

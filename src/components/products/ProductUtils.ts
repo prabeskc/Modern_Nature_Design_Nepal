@@ -6,7 +6,7 @@ export interface UnifiedProduct {
   id: string;
   name: string;
   category?: string;
-  subcategoryId: string;
+  subcategoryId?: string;
   material: string;
   size: string;
   price: string;
