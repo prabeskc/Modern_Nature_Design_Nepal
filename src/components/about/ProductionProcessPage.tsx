@@ -25,15 +25,15 @@ const steps: Step[] = [
     description:
       "Raw wool is carefully sorted, impurities removed, and thoroughly cleaned.",
     detailedDescription:
-      "Shearing the sheep yields wool. This is the raw material for the weavers. Initially, we sort the yarn by eliminating non-pure wool particles like wood and vegetables. We then separate them based on their respective colors. White ones from the darker shade color by hand, and then they get rinsed with warm water. The weavers thoroughly clean the pure wool before weaving it into the rug. They do not blend well with other wool brands."
+      "We begin with pure Tibetan wool sourced from the High Himalayas of Nepal, known for its strength, softness, and natural sheen. Each fleece is hand-sorted to remove impurities and separate natural color shades. The wool is then washed in warm water, cleansing away oils and dust — preparing it to absorb dyes beautifully and evenly.We use 100% Tibetan wool, never mixed, ensuring the finest quality from the very first touch."
   },
   {
-    title: "Carding",
+    title: "Wool Carding",
     image: "assets/images/about/2.jpg",
     description:
       "Fibers are combed to remove residues and prepare for spinning.",
     detailedDescription:
-      "This is the process that supports spinning yarns out of pure wool. Carding separates the fibers from intermingling, removes any foreign particles or residues, and makes the wool pure. We use a traditional steel tool, and a wooden hand comb helps create yarn."
+      "The cleaned wool is hand-carded using traditional wooden and steel combs. This process aligns the fibers, removes the last traces of impurities, and creates a smooth, airy texture — the perfect foundation for spinning fine yarns."
   },
   {
     title: "Spinning",
@@ -41,15 +41,15 @@ const steps: Step[] = [
     description:
       "Traditional spinning wheels twist threads into yarn.",
     detailedDescription:
-      "The charkha, a traditional spinning wheel, draws and twists the threads to create yarn of the desired thickness. We use these stagnant pools of yarn to weave the rugs."
+      "Our artisans spin the carded wool on the wooden wheel (Charkha), twisting and drawing each fiber into yarns of perfect thickness. Yarn thickness depends on the rug’s knot density — coarser for 60–80 knots, finer for 100–150 knots. Every spin carries the rhythm of tradition, forming the soul of a timeless hand-knotted rug.",
   },
-  {
+      {
     title: "Dyeing",
     image: "assets/images/about/4.jpg",
     description:
       "Yarns are dyed with Swiss chrome azo-free or vegetable dyes.",
     detailedDescription:
-      "Dyeing To complete the dyeing process, we wash the spun yarn with warm water. They rinse it thoroughly and dye it in a large pot on the stove. They do this either with Swiss chrome azo-free dye or with vegetable dye, which is more in demand or requested by clients."
+      "The spun yarns are washed again and then dyed by hand in large metal pots heated over wood or gas stoves. We use Swiss Chrome Azo-free dyes or natural vegetable dyes, depending on the desired color tone. Each hue is tested, matched, and fixed to perfection — ensuring brilliant, long-lasting colors that remain true for generations."
   },
   {
     title: "Weaving",
@@ -57,7 +57,7 @@ const steps: Step[] = [
     description:
       "Weavers handcraft rugs using looms and traditional tools.",
     detailedDescription:
-      "The weavers then prepare the dyed yarn for weaving, using it to create rugs. They use traditional tools like scissors, comb heaters, iron rods, and levers to make the rugs. They see the designs before their eyes and work on a loom to have the design on the rug."
+      "Weaving is where craftsmanship meets art. Each rug is woven on vertical looms by master weavers following 1:1 scale design graphs placed in front of them. Using simple tools — scissors, rods, wooden beaters, and hammers — they tie each knot with precision and care. Thousands of hand-tied knots unite to form intricate patterns, capturing the essence of artistry."
   },
   {
     title: "Clipping & Carving",
@@ -65,7 +65,7 @@ const steps: Step[] = [
     description:
       "Edges are clipped and designs refined for a smooth finish.",
     detailedDescription:
-      "The weavers unload the woven rugs from the handloom onto a surface, then use the khapsi, a traditional scissor, to clip the rough edges, ensuring a uniform level of the woven pile. They cut the designs at the edges, giving a sophisticated finish to the woven rugs."
+      "Once off the loom, the rug undergoes its first transformation. Using large traditional scissors (Khapsi), artisans clip the surface evenly, revealing a smooth, luminous pile. Edges of motifs are hand-carved to enhance definition and create a refined, sculpted texture."
   },
   {
     title: "Washing & Drying",
@@ -73,28 +73,28 @@ const steps: Step[] = [
     description:
       "Rugs are washed with soap and left to dry naturally.",
     detailedDescription:
-      "We will now wash the rugs using the long wooden flappers, rubbing them off on the pile's surface to trap the water and leave it for later use. We use regular liquid soaps to wash the rugs. The cleaned carpets take four to seven days to dry."
+      "The rug is then washed thoroughly using natural soaps like Sapindus and gentle liquid cleansers. Artisans beat the rug with long wooden paddles, ensuring deep cleansing and softness. Finally, it is sun-dried naturally, allowing the Himalayan sunlight to bring warmth and life to every fiber."
   },
   {
-    title: "Final Clipping",
+    title: "Second Clipping and Carving",
     image: "assets/images/about/8.jpg",
     description: "Surfaces are clipped again for uniformity.",
     detailedDescription:
-      "Once the rugs have dried, we clip them one final time to ensure the surface balance and finish. This is the final clipping and carving to get a finished result."
+      "After drying, the rug receives another round of fine clipping and carving. This step ensures a perfectly balanced surface and sharp, clean patterns — the final polish of perfection."
   },
   {
     title: "Stretching",
     image: "assets/images/about/9.jpeg",
     description: "Rugs are stretched on frames to lock their shape.",
     detailedDescription:
-      "We will now stretch the rugs on all four sides using metal frames or hooks. We will lock the rugs into their edges and allow them to stand on the metal frames and clips for 24 hours. This will help the rug retain its shape and durability."
+      "To maintain shape and symmetry, the rug is stretched on iron frames using hooks on all four sides. It remains in place for at least 7-8 hours, allowing the weave to settle evenly for flawless alignment and structure."
   },
   {
-    title: "Finishing & Checking",
+    title: "Final Finishing & Quality Check",
     image: "assets/images/about/10.jpg",
     description: "Experts inspect rugs for size, texture, and quality.",
     detailedDescription:
-      "When the rugs come out of the frame, they go under the professionals' keen eyes to see any residues or shortcomings in the weaving and design. They regard key indicators such as size, shape, surface, structure, and stains as essential for the final product's quality standards."
+      "Each rug undergoes strict quality inspection by our experts. Every detail — size, color, texture, design, and surface — is examined to meet our highest standards. Only rugs that embody excellence move forward for packaging."
   },
   {
     title: "Packing",
