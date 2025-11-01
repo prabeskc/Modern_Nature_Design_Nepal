@@ -11,13 +11,7 @@ const ProductCard = ({ product, onProductClick }: ProductCardProps) => {
   const navigate = useNavigate();
   
   const handleClick = () => {
-    // Check if product has a dedicated detail page
-    if (hasDetailedPage(product.id)) {
-      navigate(getProductDetailUrl(product.id));
-    } else {
-      // For other products, use the existing click handler
-      onProductClick?.(product);
-    }
+    navigate(getProductDetailUrl(product.id));
   };
   
   return (

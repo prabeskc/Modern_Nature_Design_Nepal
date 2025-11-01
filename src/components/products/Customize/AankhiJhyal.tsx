@@ -9,7 +9,7 @@ import colorDataE from '../../../../colorE.json';
 
 
 
-// const colorData1200 = [
+
 //   // --- AA to AT Series ---
 //   { name: "AA01", r: 30, g: 23, b: 27 },
 //   { name: "AA02", r: 31, g: 24, b: 28 },
