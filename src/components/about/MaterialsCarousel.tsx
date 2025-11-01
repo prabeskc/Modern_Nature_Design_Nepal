@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useCallback, useEffect } from "react";
+import React, { useMemo, useState, useCallback, useEffect, useRef } from "react";
 
 type Material = {
   title: string;
@@ -9,32 +9,37 @@ const materials: Material[] = [
   {
     title: "Tibetan Wool",
     description:
-      "The quality of soft and lustrous wool supplied to make rugs comes from highland sheep's coats. These sheep, called 'Changphel,' graze at 14,000 feet in the cold Himalayan region. The wool has distinctive marks with tensile strength, long fleeces, and lanolin richness, making it soft, durable, and luxurious. Rugs made from Tibetan wool are warm, furry, and available in two shades: pure white and dark grey.",
+      "Also called Himalayan wool, it comes from hardy sheep that roam the high-altitude pastures over 3,000 meters above sea level. Exposed to biting cold and harsh mountain winds, these sheep grow long, resilient fleece rich in natural lanolin, making Tibetan wool incredibly soft, durable, and luxurious. Its palette spans natural shades from deep darks to gentle off-whites. We cherish this exquisite wool, crafting it into rugs that embody warmth, elegance, and timeless beauty. Tibetan wool can also be artfully blended with New Zealand wool, silk, or other yarns, creating rugs with unique textures, sumptuous softness, and distinctive character."
   },
   {
     title: "New Zealand Wool",
     description:
-      "This wool comes from the fur coating of merino sheep found in Australia and New Zealand. Known for its soft, white color and fine crimp, it enhances the beauty and aesthetics of woven rugs. Often blended with Tibetan wool, silk, or synthetic fabrics, New Zealand wool contributes to high-quality, valuable rug finishes.",
+      "Sourced from fine Merino sheep in Australia and New Zealand, this wool is prized for its exceptional quality, soft texture, and beautifully crimped fibers. Its pure white hue makes it perfect for light-colored rugs, offering durability, softness, and excellent color retention. New Zealand wool can also be artfully blended with Tibetan wool, silk, or other materials, creating rugs with unique textures, luxurious feel, and distinctive character.",
   },
   {
     title: "Chinese Silk",
     description:
-      "Produced by Bombyx mori silkworms in the cocoon stage, Chinese silk is renowned for its luxurious and soft quality. When combined with wool, it enhances rugs by adding both softness and shine.",
+      "Sourced from the finest silkworms (Bombyx mori) in China, this silk is the epitome of elegance—sumptuously soft, shimmering with a natural lustre, and unmistakably luxurious. Revered worldwide for its high-end craftsmanship, Chinese silk transforms every rug into a masterpiece of texture and sophistication. It can be crafted into 100% Chinese silk rugs or blended with wool and other selected yarns, tailored to your requirements, creating pieces that exude opulence, exquisite detail, and timeless beauty.",
   },
   {
-    title: "Lurex",
+    title: "Lurex Yarn",
     description:
-      "Lurex is a type of yarn with a metallic appearance. The yarn is made from synthetic film, onto which a metallic aluminium, silver, or gold layer has been vaporized."
+      "Add a touch of sparkle to your space with Lurex yarn, lurex is a metallic yarn for adding sparkle to projects, a dazzling metallic fiber that brings shimmer and elegance to hand-knotted rugs. Blended with wool, silk, or other fibers, it enhances patterns and details while keeping every rug luminous and timeless."
   },
   {
     title: "Viscose",
     description:
-      "Made from cellulose xanthate, viscose is a regenerated fiber that mimics the qualities of silk. When used in rugs, it provides a glossy, silken feel at a more economical price, making it a popular choice in Nepal’s rug-making industry.",
+      "Known as “art silk,” viscose is made from regenerated wood cellulose, creating a soft, versatile fiber. Though not natural silk, when woven into rugs, it beautifully mimics silk’s texture and glistens with a striking, lustrous shine. Affordable yet visually luxurious, viscose is the perfect budget-friendly alternative for those who want the elegance of silk without the premium price.",
   },
   {
-    title: "Tencel",
+    title: "Nettle (Allo)",
     description:
-      "A synthetic fiber made by the Australian company Lenzing AG, Tencel is derived from wood pulp that is dried, chipped, and mixed with solvents before being spun into threads. Known for being smooth, soft, and sustainable, Tencel retains its properties even after repeated washes, making it an innovative choice for modern rugs.",
+      "Harvested from the wild highlands of Nepal, nettle is a remarkable all-natural fiber with inherent strength and resilience. Every part of the plant is used—roots for remedies, stems for fibers, and leaves for food—making it fully sustainable. Its natural anti-pest properties mean nettle rugs require no dyes or treatments, while their raw, earthy texture brings authentic, eco-friendly charm to any space.",
+  },
+  {
+    title: "Hemp",
+    description:
+      "Grown in the pristine hills of Nepal, hemp is a natural fiber celebrated for its unmatched strength and 90% water resistance. Hemp rugs are incredibly durable, with a rugged, textured feel that gives them a bold, distinctive character. Ideal for high-traffic areas, these rugs combine practicality with natural elegance. Crafted in earthy, abstract tones, each hemp rug showcases the organic beauty and timeless charm of nature, making every space feel grounded, warm, and uniquely alive.",
   },
 ];
 
@@ -44,6 +49,8 @@ const clamp = (n: number, min: number, max: number) =>
 const MaterialsCarousel: React.FC = () => {
   const [active, setActive] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [expanded, setExpanded] = useState<boolean[]>(new Array(materials.length).fill(false));
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   // Track mobile state
   useEffect(() => {
@@ -60,6 +67,27 @@ const MaterialsCarousel: React.FC = () => {
   const goNext = useCallback(() => {
     setActive((i) => (i + 1) % materials.length);
   }, []);
+
+  // Auto-play carousel every 5 seconds
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        goNext();
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [goNext, isAutoPlaying]);
+
+  const toggleExpanded = useCallback((index: number) => {
+    setExpanded((prev) => prev.map((exp, i) => (i === index ? !exp : exp)));
+    setIsAutoPlaying(false);
+  }, []);
+
+  const truncateText = (text: string, wordLimit: number) => {
+    const words = text.split(' ');
+    if (words.length <= wordLimit) return text;
+    return words.slice(0, wordLimit).join(' ') + '...';
+  };
 
   const layout = useMemo(() => {
     const STEP_X = 360; // horizontal spacing between cards
@@ -121,7 +149,7 @@ const MaterialsCarousel: React.FC = () => {
               return (
                 <div
                   key={i}
-                  className="absolute w-[300px] sm:w-[340px] h-[360px] sm:h-[400px] bg-gray-50 p-6 rounded-xl shadow-lg flex flex-col justify-center transition-transform duration-500"
+                  className="absolute w-[300px] sm:w-[340px] h-[360px] sm:h-[400px] bg-gray-50 p-6 rounded-xl shadow-lg flex flex-col transition-transform duration-1000 overflow-hidden"
                   style={{
                     transform: `translateX(${tx}px) scale(${scale})`,
                     zIndex: z,
@@ -129,9 +157,73 @@ const MaterialsCarousel: React.FC = () => {
                   }}
                 >
                   <h3 className="text-xl md:text-2xl font-bold mb-3 text-center">{m.title}</h3>
-                  <p className="text-sm md:text-base text-gray-700 text-justify overflow-auto">
-                    {m.description}
-                  </p>
+                  <div className={`text-sm md:text-base text-gray-700 text-center flex-1 ${expanded[i] ? 'overflow-auto' : ''}`}>
+                    {m.title === "New Zealand Wool" ? (
+                      <>
+                        <p className="mb-2">
+                          {expanded[i] ? "Sourced from fine Merino sheep in Australia and New Zealand, this wool is prized for its exceptional quality, soft texture, and beautifully crimped fibers. Its pure white hue makes it perfect for light-colored rugs, offering durability, softness, and excellent color retention." : truncateText("Sourced from fine Merino sheep in Australia and New Zealand, this wool is prized for its exceptional quality, soft texture, and beautifully crimped fibers. Its pure white hue makes it perfect for light-colored rugs, offering durability, softness, and excellent color retention.", 25)}
+                        </p>
+                        <p>
+                          {expanded[i] ? (
+                            <>
+                              New Zealand wool can also be artfully blended with Tibetan wool, silk, or other materials, creating rugs with unique textures, luxurious feel, and distinctive character
+                              <button onClick={() => toggleExpanded(i)} className="px-1 py-0 font-bold">
+                                see less
+                              </button>
+                            </>
+                          ) : (
+                            <>
+                              {truncateText("New Zealand wool can also be artfully blended with Tibetan wool, silk, or other materials, creating rugs with unique textures, luxurious feel, and distinctive character", 25)}
+                              <button onClick={() => toggleExpanded(i)} className="px-1 py-0 font-bold">
+                                see more
+                              </button>
+                            </>
+                          )}
+                        </p>
+                      </>
+                    ) : m.title === "Chinese Silk" ? (
+                      <>
+                        <p className="mb-2">
+                          {expanded[i] ? "Sourced from the finest silkworms (Bombyx mori) in China, this silk is the epitome of elegance—sumptuously soft, shimmering with a natural lustre, and unmistakably luxurious. Revered worldwide for its high-end craftsmanship, Chinese silk transforms every rug into a masterpiece of texture and sophistication." : truncateText("Sourced from the finest silkworms (Bombyx mori) in China, this silk is the epitome of elegance—sumptuously soft, shimmering with a natural lustre, and unmistakably luxurious. Revered worldwide for its high-end craftsmanship, Chinese silk transforms every rug into a masterpiece of texture and sophistication.", 25)}
+                        </p>
+                        <p>
+                          {expanded[i] ? (
+                            <>
+                              It can be crafted into 100% Chinese silk rugs or blended with wool and other selected yarns, tailored to your requirements, creating pieces that exude opulence, exquisite detail, and timeless beauty.
+                              <button onClick={() => toggleExpanded(i)} className="px-1 py-0 font-bold">
+                                see less
+                              </button>
+                            </>
+                          ) : (
+                            <>
+                              {truncateText("It can be crafted into 100% Chinese silk rugs or blended with wool and other selected yarns, tailored to your requirements, creating pieces that exude opulence, exquisite detail, and timeless beauty.", 25)}
+                              <button onClick={() => toggleExpanded(i)} className="px-1 py-0 font-bold">
+                                see more
+                              </button>
+                            </>
+                          )}
+                        </p>
+                      </>
+                    ) : (
+                      <p>
+                        {expanded[i] ? (
+                          <>
+                            {m.description}
+                            <button onClick={() => toggleExpanded(i)} className="px-1 py-0 font-bold">
+                              see less
+                            </button>
+                          </>
+                        ) : (
+                          <>
+                            {truncateText(m.description, 50)}
+                            <button onClick={() => toggleExpanded(i)} className="px-1 py-0 font-bold">
+                              see more
+                            </button>
+                          </>
+                        )}
+                      </p>
+                    )}
+                  </div>
                 </div>
               );
             })}

@@ -1,4 +1,5 @@
 import AboutUsPage from '@/components/about/AboutUs'
+import DyingProcessPage from '@/components/about/DyeingProcess'
 import HistoryGraph from '@/components/about/HistoryGraph'
 import MaterialsCarousel from '@/components/about/MaterialsCarousel'
 import MaterialsPage from '@/components/about/MaterialsPage'
@@ -23,6 +24,7 @@ const About = () => {
 
       <MaterialsCarousel />
       <ProductionProcessPage />
+      <DyingProcessPage />
       <Footer />
     </div>
   )
