@@ -12,8 +12,8 @@ const ProductImageGallery = ({ productName, mainImageUrl, className = '' }: Prod
   // Mock additional images for gallery
   const productImages = [
     mainImageUrl,
-    '/rugsample2.jpg', // Alternative view
-    '/rugsample3.jpg' // Detail shot
+    // '/public/assets/images/products/AankhiJhyal.jpg', // Alternative view
+    // '/public/assets/images/products/AankhiJhyal.jpg' // Detail shot
   ];
 
   return (
