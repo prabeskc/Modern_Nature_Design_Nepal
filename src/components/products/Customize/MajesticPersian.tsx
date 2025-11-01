@@ -1,3 +1,5 @@
+// MajesticPersian.tsx
+
 import React, { useState, useMemo, useEffect } from 'react';
 
 const colorData1200 = [

@@ -26,7 +26,7 @@ const ProductCard = ({ product, onProductClick }: ProductCardProps) => {
       onClick={handleClick}
     >
       {/* Product Image */}
-      <div className="aspect-square overflow-hidden relative">
+      <div className="aspect-[4/5] overflow-hidden relative">
         <img
           src={product.imageUrl}
           alt={product.name}
