@@ -64,7 +64,7 @@ const ProductActions = ({
           {customizeButtonText}
         </button> */}
 
-          <Link to = "/customize/majesticpersian"
+          <Link to = "/customize/aankhijhyal"
           
           className="w-full bg-mint-green text-charcoal px-8 py-4 rounded-lg font-semibold text-lg hover:bg-mint-green/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
         >

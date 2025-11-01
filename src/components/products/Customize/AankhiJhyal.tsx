@@ -2384,7 +2384,7 @@ const colorData1000 = [
 
 
 
-const MajesticPersian = () => {
+const AankhiJhyal = () => {
 
   const DEFAULT_FG = '#211A1F';
   const DEFAULT_BG = '#DFDBD7';
@@ -2770,4 +2770,4 @@ const MajesticPersian = () => {
   );
 };
 
-export default MajesticPersian;
+export default AankhiJhyal;

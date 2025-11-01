@@ -6,8 +6,7 @@ import ChatbotWidget from "@/components/home/ChatbotWidget";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import MajesticPersian from "./components/products/Customize/MajesticPersian";
-import AankhiJhyal from "./components/products/Customize/AankhiJyal";
+import AankhiJhyal from "./components/products/Customize/AankhiJhyal";
 import Attraction from "./components/products/Customize/Attraction";
 import Bamboos from "./components/products/Customize/Bamboos";
 import BayLeaves from "./components/products/Customize/Bayleaves";
@@ -64,8 +63,7 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/product/:productId" element={<ProductDetail />} />
 
-        <Route path="/customize/majesticpersian" element={<MajesticPersian />} />
-        <Route path="/customize/aankhijhyal" element={<AankhiJhyal/>} />
+        <Route path="/customize/aankhijhyal" element={<AankhiJhyal />} />
         <Route path="/customize/attraction" element={<Attraction/>} />
         <Route path="/customize/bamboos" element={<Bamboos/>} />
         <Route path="/customize/bayleaves" element={<BayLeaves/>} />
