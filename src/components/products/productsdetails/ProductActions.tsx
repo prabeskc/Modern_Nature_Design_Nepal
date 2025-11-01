@@ -23,6 +23,9 @@ const ProductActions = ({
 }: ProductActionsProps) => {
   const [quantity, setQuantity] = useState(1);
 
+const[productName, setProductName]= useState("/customize/"+product.name.replace(/\s+/g, ""));
+
+
   const handleAddToCart = () => {
     onAddToCart(quantity);
   };
@@ -56,16 +59,7 @@ const ProductActions = ({
 
       {/* Action Buttons */}
       <div className="space-y-3">
-        {/* Customize Button - Prominently Displayed */}
-        {/* <button
-          onClick={onCustomize}
-          className="w-full bg-mint-green text-charcoal px-8 py-4 rounded-lg font-semibold text-lg hover:bg-mint-green/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
-        >
-          {customizeButtonText}
-        </button> */}
-
-          <Link to = "/customize/aankhijhyal"
-          
+          <Link to = {productName}
           className="w-full bg-mint-green text-charcoal px-8 py-4 rounded-lg font-semibold text-lg hover:bg-mint-green/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
         >
           {customizeButtonText}
