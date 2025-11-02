@@ -14,32 +14,69 @@ type CustomizeTemplateProps = {
 };
 
 // Helpers
-const hexToRgb = (hex: string) => {
+const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
   const normalized = hex.replace('#', '');
-  const bigint = parseInt(normalized.length === 3 ? normalized.split('').map((c) => c + c).join('') : normalized, 16);
+  const expanded = normalized.length === 3 ? normalized.split('').map((c) => c + c).join('') : normalized;
+  const bigint = parseInt(expanded, 16);
   const r = (bigint >> 16) & 255;
   const g = (bigint >> 8) & 255;
   const b = bigint & 255;
   return { r, g, b };
 };
 
-const rgbToHex = (r: number, g: number, b: number) => {
-  const toHex = (n: number) => n.toString(16).padStart(2, '0');
+const rgbToHex = (r: number, g: number, b: number): string => {
+  const toHex = (n: number) => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2, '0');
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
 };
 
-const relativeLuminance = (hex: string) => {
+const relativeLuminance = (hex: string): number => {
   const { r, g, b } = hexToRgb(hex);
   const srgb = [r, g, b].map((v) => v / 255).map((c) => (c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)));
   return 0.2126 * srgb[0] + 0.7152 * srgb[1] + 0.0722 * srgb[2];
 };
 
-const contrastRatio = (hex1: string, hex2: string) => {
+const contrastRatio = (hex1: string, hex2: string): number => {
   const L1 = relativeLuminance(hex1);
   const L2 = relativeLuminance(hex2);
   const light = Math.max(L1, L2);
   const dark = Math.min(L1, L2);
   return (light + 0.05) / (dark + 0.05);
+};
+
+// Allow CSS custom properties in React style prop
+type CSSVarStyle = React.CSSProperties & {
+  '--fg-color'?: string;
+  '--bg-color'?: string;
+};
+
+// SVG transformation utility
+const transformSvg = (svg: string): string => {
+  let s = svg;
+
+  // Ensure we have an <svg> tag
+  const hasSvgTag = /<svg[\s\S]*?>/i.test(s);
+  if (!hasSvgTag) throw new Error('Invalid SVG: missing <svg> tag');
+
+  // Replace fills in style classes .st0 and .st1 to use CSS vars
+  // Also add smooth transition on fill changes
+  s = s
+    .replace(/(\.st0\s*\{[^}]*?fill\s*:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--bg-color)$3')
+    .replace(/(\.st1\s*\{[^}]*?fill\s*:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--fg-color)$3')
+    .replace(/\.st0\s*\{([^}]*)\}/m, (_m, inner) => `.st0{${inner} transition: fill 200ms ease-in-out;}`)
+    .replace(/\.st1\s*\{([^}]*)\}/m, (_m, inner) => `.st1{${inner} transition: fill 200ms ease-in-out;}`);
+
+  const hasSt0 = /\.st0\s*\{[\s\S]*?\}/.test(s);
+  const hasSt1 = /\.st1\s*\{[\s\S]*?\}/.test(s);
+
+  // Fallback: inject override style block if classes not found
+  if (!hasSt0 || !hasSt1) {
+    s = s.replace(/<svg([^>]*)>/i, (m, attrs) => {
+      const style = `<style>\n.st0{fill: var(--bg-color) !important;}\n.st1{fill: var(--fg-color) !important;}\n</style>`;
+      return `<svg${attrs}>\n${style}`;
+    });
+  }
+
+  return s;
 };
 
 const CustomizeTemplate: React.FC<CustomizeTemplateProps> = ({
@@ -67,8 +104,9 @@ const CustomizeTemplate: React.FC<CustomizeTemplateProps> = ({
   }, [foregroundColor, backgroundColor, localStoragePrefix]);
 
   const applyColor = (hex: string) => {
-    if (activeTarget === 'foreground') setForegroundColor(hex.toUpperCase());
-    else setBackgroundColor(hex.toUpperCase());
+    const value = hex.toUpperCase();
+    if (activeTarget === 'foreground') setForegroundColor(value);
+    else setBackgroundColor(value);
   };
 
   const resetColors = () => {
@@ -80,33 +118,50 @@ const CustomizeTemplate: React.FC<CustomizeTemplateProps> = ({
 
   // Inline SVG loading and transformation
   const [svgMarkup, setSvgMarkup] = useState<string>('');
+  const [loadingSvg, setLoadingSvg] = useState<boolean>(false);
+  const [svgError, setSvgError] = useState<string | null>(null);
+
   useEffect(() => {
+    let cancelled = false;
     const loadSvg = async () => {
+      setLoadingSvg(true);
+      setSvgError(null);
       try {
         const res = await fetch(svgPath);
+        if (!res.ok) throw new Error(`Failed to fetch SVG (${res.status})`);
         const svg = await res.text();
-        const transformed = svg
-          .replace(/(\.st0\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--bg-color)$3')
-          .replace(/(\.st1\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--fg-color)$3')
-          .replace(/\.st0\s*\{([^}]*)\}/m, (_m, inner) => `.st0{${inner} transition: fill 200ms ease-in-out;}`)
-          .replace(/\.st1\s*\{([^}]*)\}/m, (_m, inner) => `.st1{${inner} transition: fill 200ms ease-in-out;}`);
-        setSvgMarkup(transformed);
+        const transformed = transformSvg(svg);
+        if (!cancelled) setSvgMarkup(transformed);
       } catch (e) {
-        console.error('Failed to load SVG', e);
-        setSvgMarkup('');
+        console.error('Failed to load/transform SVG', e);
+        if (!cancelled) {
+          setSvgMarkup('');
+          setSvgError('Unable to load design preview. Showing image fallback.');
+        }
+      } finally {
+        if (!cancelled) setLoadingSvg(false);
       }
     };
     loadSvg();
+    return () => { cancelled = true; };
   }, [svgPath]);
 
   // Pagination
-  const [currentPage1000, setCurrentPage1000] = useState(1);
+  const [currentPage1000, setCurrentPage1000] = useState<number>(1);
   const totalPages1000 = Math.ceil(colorData1000.length / 200) || 1;
-  const [currentPage1200, setCurrentPage1200] = useState(1);
+  const [currentPage1200, setCurrentPage1200] = useState<number>(1);
   const totalPages1200 = Math.ceil(colorData1200.length / 200) || 1;
 
-  const split20 = (array: any): any => {
-    const result: any[] = [];
+  // Clamp pages if totals change
+  useEffect(() => {
+    setCurrentPage1200((p) => Math.min(totalPages1200, Math.max(1, p)));
+  }, [totalPages1200]);
+  useEffect(() => {
+    setCurrentPage1000((p) => Math.min(totalPages1000, Math.max(1, p)));
+  }, [totalPages1000]);
+
+  const split20 = <T,>(array: T[]): T[][] => {
+    const result: T[][] = [];
     for (let i = 0; i < array.length; i += 20) {
       result.push(array.slice(i, i + 20));
     }
@@ -122,15 +177,22 @@ const CustomizeTemplate: React.FC<CustomizeTemplateProps> = ({
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-5/12 relative">
-          {svgMarkup ? (
+          {/* Loading / Error States */}
+          {loadingSvg && (
+            <div className="w-full h-[400px] bg-gray-100 animate-pulse rounded-md" aria-live="polite" aria-busy="true" />
+          )}
+
+          {!loadingSvg && svgMarkup ? (
             <div
               className="w-full h-full [&>svg]:block [&>svg]:w-full [&>svg]:h-auto"
-              style={{ ['--fg-color' as any]: foregroundColor, ['--bg-color' as any]: backgroundColor }}
+              style={{ '--fg-color': foregroundColor, '--bg-color': backgroundColor } as CSSVarStyle}
               dangerouslySetInnerHTML={{ __html: svgMarkup }}
               aria-describedby={`${localStoragePrefix}-description`}
               role="img"
             />
-          ) : (
+          ) : null}
+
+          {!loadingSvg && !svgMarkup && (
             <img
               src={svgPath}
               alt={`${title} Rug`}
@@ -139,6 +201,11 @@ const CustomizeTemplate: React.FC<CustomizeTemplateProps> = ({
               aria-describedby={`${localStoragePrefix}-description`}
             />
           )}
+
+          {svgError && (
+            <p className="mt-2 text-xs text-red-600" role="alert">{svgError}</p>
+          )}
+
           <div id={`${localStoragePrefix}-description`} className="sr-only">
             Interactive color customization tool for the {title} rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
           </div>
@@ -263,4 +330,12 @@ const CustomizeTemplate: React.FC<CustomizeTemplateProps> = ({
           {/* Actions */}
           <div className="flex items-center justify-between">
             <button className="px-4 py-2 border rounded hover:bg-gray-800 hover:text-white transition-colors" aria-label="Save as PDF">Save PDF</button>
-            <div className="text-xs text-gray-500">Colors are approximate and may vary based on
+            <div className="text-xs text-gray-500">Colors are approximate and may vary based on screen and lighting conditions.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CustomizeTemplate;
