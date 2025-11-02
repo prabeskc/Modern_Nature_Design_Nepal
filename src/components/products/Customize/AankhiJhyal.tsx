@@ -2413,6 +2413,11 @@ const AankhiJhyal = () => {
     };
   };
 
+  const rgbToHex = (r: number, g: number, b: number) => {
+    const toHex = (n: number) => n.toString(16).padStart(2, '0');
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
+  };
+
   const relativeLuminance = (hex: string) => {
     const { r, g, b } = hexToRgb(hex);
     const srgb = [r, g, b].map((v) => v / 255).map((c) => (c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)));
@@ -2646,6 +2651,11 @@ const AankhiJhyal = () => {
                             style={{
                               backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
                             }}
+                            onClick={() => applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
+                            onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
+                            role="button"
+                            tabIndex={0}
+                            aria-label={`Set ${activeTarget} to ${colorItem.name}`}
                           ></div>
                           <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
                             {colorItem.name}
@@ -2705,6 +2715,11 @@ const AankhiJhyal = () => {
                               style={{
                                 backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
                               }}
+                              onClick={() => applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
+                              onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
+                              role="button"
+                              tabIndex={0}
+                              aria-label={`Set ${activeTarget} to ${colorItem.name}`}
                             ></div>
                             <div className="text-[7px] text-center mt-1 text-gray-600">
                               {colorItem.name}

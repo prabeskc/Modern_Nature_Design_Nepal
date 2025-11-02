@@ -2386,22 +2386,27 @@ const colorData1000 = [
 
 const Retro = () => {
 
-    const DEFAULT_FG = '#211A1F';
-    const DEFAULT_BG = '#DFDBD7';
+    const DEFAULT_FG = '#ae685a';
+    const DEFAULT_BG = '#92453f';
+    const DEFAULT_LAYER = '#153239';
 
     const [foregroundColor, setForegroundColor] = useState<string>(() => {
-        return (localStorage.getItem('aankhi_fg') || DEFAULT_FG).toUpperCase();
+        return (localStorage.getItem('retro_fg') || DEFAULT_FG).toUpperCase();
     });
     const [backgroundColor, setBackgroundColor] = useState<string>(() => {
-        return (localStorage.getItem('aankhi_bg') || DEFAULT_BG).toUpperCase();
+        return (localStorage.getItem('retro_bg') || DEFAULT_BG).toUpperCase();
+    });
+    const [layerColor, setLayerColor] = useState<string>(() => {
+        return (localStorage.getItem('retro_layer') || DEFAULT_LAYER).toUpperCase();
     });
 
-    const [activeTarget, setActiveTarget] = useState<'foreground' | 'background'>('foreground');
+    const [activeTarget, setActiveTarget] = useState<'foreground' | 'background' | 'layer'>('foreground');
 
     useEffect(() => {
-        localStorage.setItem('aankhi_fg', foregroundColor);
-        localStorage.setItem('aankhi_bg', backgroundColor);
-    }, [foregroundColor, backgroundColor]);
+        localStorage.setItem('retro_fg', foregroundColor);
+        localStorage.setItem('retro_bg', backgroundColor);
+        localStorage.setItem('retro_layer', layerColor);
+    }, [foregroundColor, backgroundColor, layerColor]);
 
     const hexToRgb = (hex: string) => {
         const clean = hex.replace('#', '');
@@ -2411,6 +2416,11 @@ const Retro = () => {
             g: (bigint >> 8) & 255,
             b: bigint & 255,
         };
+    };
+
+    const rgbToHex = (r: number, g: number, b: number) => {
+        const toHex = (v: number) => v.toString(16).padStart(2, '0');
+        return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
     };
 
     const relativeLuminance = (hex: string) => {
@@ -2430,14 +2440,17 @@ const Retro = () => {
         const nextHex = hex.toUpperCase();
         if (activeTarget === 'foreground') {
             setForegroundColor(nextHex);
-        } else {
+        } else if (activeTarget === 'background') {
             setBackgroundColor(nextHex);
+        } else {
+            setLayerColor(nextHex);
         }
     };
 
     const resetColors = () => {
         setForegroundColor(DEFAULT_FG);
         setBackgroundColor(DEFAULT_BG);
+        setLayerColor(DEFAULT_LAYER);
     };
 
     const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
@@ -2448,16 +2461,35 @@ const Retro = () => {
     useEffect(() => {
         const loadSvg = async () => {
             try {
-                const res = await fetch('/assets/images/products/Aankhi Jhyal.svg');
+                const url = '/assets/images/products/Retro.svg';
+                console.log('[Retro] Fetching SVG:', url);
+                const res = await fetch(url);
+                if (!res.ok) {
+                    throw new Error(`HTTP ${res.status} fetching ${url}`);
+                }
                 const svg = await res.text();
-                const transformed = svg
-                    // Replace .st0 fill to CSS var for background
-                    .replace(/(\.st0\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--bg-color)$3')
-                    // Replace .st1 fill to CSS var for foreground
-                    .replace(/(\.st1\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--fg-color)$3');
+                console.log('[Retro] Original SVG length:', svg.length);
+                // Strip XML prolog (if present) to ensure proper inline rendering
+                const cleaned = svg.replace(/<\?xml[\s\S]*?\?>/i, '');
+
+                // Inject our class-based fill overrides using CSS variables without removing existing styles
+                const transformed = cleaned.replace(
+                    /<svg([^>]*)>/i,
+                    (m, attrs) => `<svg${attrs}><style id="retro-overrides">.st0{fill:var(--fg-color) !important}.st1{fill:var(--bg-color) !important}.st2{fill:var(--layer-color) !important}</style>`
+                );
+
+                console.log('[Retro] Transformed SVG length:', transformed.length);
+                if (!/<svg/i.test(transformed)) {
+                    console.warn('[Retro] Transformed markup missing <svg> tag');
+                }
+                const hasSt0 = /class\s*=\s*["\']st0["\']/.test(transformed);
+                const hasSt1 = /class\s*=\s*["\']st1["\']/.test(transformed);
+                const hasSt2 = /class\s*=\s*["\']st2["\']/.test(transformed);
+                console.log('[Retro] Classes present:', { st0: hasSt0, st1: hasSt1, st2: hasSt2 });
+
                 setSvgMarkup(transformed);
             } catch (e) {
-                console.error('Failed to load SVG', e);
+                console.error('[Retro] Failed to load SVG', e);
                 setSvgMarkup('');
             }
         };
@@ -2556,23 +2588,23 @@ const Retro = () => {
 
             <div className="flex w-full max-w-7xl gap-6">
                 <div className="w-5/12 relative">
-                    {/* {svgMarkup ? (
+                    {svgMarkup ? (
                         <div
                             className="w-full h-full [&>svg]:block [&>svg]:w-full [&>svg]:h-auto"
-                            style={{ ['--fg-color' as any]: foregroundColor, ['--bg-color' as any]: backgroundColor }}
+                            style={{ ['--fg-color' as any]: foregroundColor, ['--bg-color' as any]: backgroundColor, ['--layer-color' as any]: layerColor }}
                             dangerouslySetInnerHTML={{ __html: svgMarkup }}
-                            aria-describedby="aankhi-jhyal-description"
+                            aria-describedby="retro-description"
                             role="img"
                         />
-                    ) : ( */}
+                    ) : (
                         <img
-                            src="/public/assets/images/products/Retro.jpg"
-                            alt="Custom Rug"
+                            src="/assets/images/products/Retro.jpg"
+                            alt="Retro rug preview"
                             className="w-full h-full object-cover"
                         />
-                    {/* )} */}
-                    <div id="aankhi-jhyal-description" className="sr-only">
-                        Interactive color customization tool for the Aankhi Jhyal rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
+                    )}
+                    <div id="retro-description" className="sr-only">
+                        Interactive color customization tool for the Retro rug design. Use the foreground, background, and layer pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
                     </div>
                 </div>
 
@@ -2615,6 +2647,20 @@ const Retro = () => {
                                 <div className="text-xs text-gray-600">{backgroundColor} · RGB {hexToRgb(backgroundColor).r}, {hexToRgb(backgroundColor).g}, {hexToRgb(backgroundColor).b}</div>
                             </div>
                         </div>
+                        <div
+                            role="button"
+                            aria-label="Layer color panel"
+                            onClick={() => setActiveTarget('layer')}
+                            onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('layer')}
+                            tabIndex={0}
+                            className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'layer' ? 'ring-2 ring-gray-800' : ''}`}
+                        >
+                            <div className="w-10 h-10 border" style={{ backgroundColor: layerColor }} />
+                            <div className="text-sm">
+                                <div className="font-medium">Layer</div>
+                                <div className="text-xs text-gray-600">{layerColor} · RGB {hexToRgb(layerColor).r}, {hexToRgb(layerColor).g}, {hexToRgb(layerColor).b}</div>
+                            </div>
+                        </div>
                         <div className="ml-auto flex items-center gap-2">
                             <button onClick={resetColors} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
                         </div>
@@ -2640,6 +2686,10 @@ const Retro = () => {
                                             {group.map((colorItem: any) => (
                                                 <div key={colorItem.name}>
                                                     <div
+                                                        role="button"
+                                                        tabIndex={0}
+                                                        onClick={() => applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
+                                                        onKeyDown={(e) => e.key === 'Enter' && applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
                                                         className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
                                                         style={{
                                                             backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
@@ -2699,6 +2749,10 @@ const Retro = () => {
                                                 {group.reverse().map((colorItem: any) => (
                                                     <div key={colorItem.name}>
                                                         <div
+                                                            role="button"
+                                                            tabIndex={0}
+                                                            onClick={() => applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
+                                                            onKeyDown={(e) => e.key === 'Enter' && applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
                                                             className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
                                                             style={{
                                                                 backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,

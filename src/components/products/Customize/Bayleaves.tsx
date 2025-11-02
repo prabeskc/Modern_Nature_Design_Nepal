@@ -2386,21 +2386,21 @@ const colorData1000 = [
 
 const BayLeaves = () => {
 
-    const DEFAULT_FG = '#211A1F';
-    const DEFAULT_BG = '#DFDBD7';
+    const DEFAULT_FG = '#5e6270';
+    const DEFAULT_BG = '#9db8b4';
 
     const [foregroundColor, setForegroundColor] = useState<string>(() => {
-        return (localStorage.getItem('aankhi_fg') || DEFAULT_FG).toUpperCase();
+        return (localStorage.getItem('bayleaves_fg') || DEFAULT_FG).toUpperCase();
     });
     const [backgroundColor, setBackgroundColor] = useState<string>(() => {
-        return (localStorage.getItem('aankhi_bg') || DEFAULT_BG).toUpperCase();
+        return (localStorage.getItem('bayleaves_bg') || DEFAULT_BG).toUpperCase();
     });
 
     const [activeTarget, setActiveTarget] = useState<'foreground' | 'background'>('foreground');
 
     useEffect(() => {
-        localStorage.setItem('aankhi_fg', foregroundColor);
-        localStorage.setItem('aankhi_bg', backgroundColor);
+        localStorage.setItem('bayleaves_fg', foregroundColor);
+        localStorage.setItem('bayleaves_bg', backgroundColor);
     }, [foregroundColor, backgroundColor]);
 
     const hexToRgb = (hex: string) => {
@@ -2411,6 +2411,11 @@ const BayLeaves = () => {
             g: (bigint >> 8) & 255,
             b: bigint & 255,
         };
+    };
+
+    const rgbToHex = (r: number, g: number, b: number) => {
+        const toHex = (n: number) => n.toString(16).padStart(2, '0');
+        return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
     };
 
     const relativeLuminance = (hex: string) => {
@@ -2448,13 +2453,11 @@ const BayLeaves = () => {
     useEffect(() => {
         const loadSvg = async () => {
             try {
-                const res = await fetch('/assets/images/products/Aankhi Jhyal.svg');
+                const res = await fetch('/assets/images/products/bayleaves.svg');
                 const svg = await res.text();
                 const transformed = svg
-                    // Replace .st0 fill to CSS var for background
-                    .replace(/(\.st0\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--bg-color)$3')
-                    // Replace .st1 fill to CSS var for foreground
-                    .replace(/(\.st1\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--fg-color)$3');
+                    .replace(/(\.st0\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--fg-color)$3')
+                    .replace(/(\.st1\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--bg-color)$3');
                 setSvgMarkup(transformed);
             } catch (e) {
                 console.error('Failed to load SVG', e);
@@ -2556,23 +2559,23 @@ const BayLeaves = () => {
 
             <div className="flex w-full max-w-7xl gap-6">
                 <div className="w-5/12 relative">
-                    {/* {svgMarkup ? (
+                    {svgMarkup ? (
                         <div
                             className="w-full h-full [&>svg]:block [&>svg]:w-full [&>svg]:h-auto"
                             style={{ ['--fg-color' as any]: foregroundColor, ['--bg-color' as any]: backgroundColor }}
                             dangerouslySetInnerHTML={{ __html: svgMarkup }}
-                            aria-describedby="aankhi-jhyal-description"
+                            aria-describedby="bayleaves-description"
                             role="img"
                         />
-                    ) : ( */}
+                    ) : (
                         <img
-                            src="/public/assets/images/products/BayLeaves.jpg"
-                            alt="Custom Rug"
+                            src="/assets/images/products/bayleaves.svg"
+                            alt="Bayleaves Rug"
                             className="w-full h-full object-cover"
                         />
-                    {/* )} */}
-                    <div id="aankhi-jhyal-description" className="sr-only">
-                        Interactive color customization tool for the Aankhi Jhyal rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
+                    )}
+                    <div id="bayleaves-description" className="sr-only">
+                        Interactive color customization tool for the Bayleaves rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
                     </div>
                 </div>
 
@@ -2644,6 +2647,14 @@ const BayLeaves = () => {
                                                         style={{
                                                             backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
                                                         }}
+                                                        role="button"
+                                                        tabIndex={0}
+                                                        onClick={() => applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
+                                                        onKeyDown={(e) => {
+                                                            if (e.key === 'Enter') {
+                                                                applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b));
+                                                            }
+                                                        }}
                                                     ></div>
                                                     <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
                                                         {colorItem.name}
@@ -2702,6 +2713,14 @@ const BayLeaves = () => {
                                                             className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
                                                             style={{
                                                                 backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
+                                                            }}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                            onClick={() => applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
+                                                            onKeyDown={(e) => {
+                                                                if (e.key === 'Enter') {
+                                                                    applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b));
+                                                                }
                                                             }}
                                                         ></div>
                                                         <div className="text-[7px] text-center mt-1 text-gray-600">

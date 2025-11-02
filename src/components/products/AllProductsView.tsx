@@ -9,7 +9,7 @@ interface AllProductsViewProps {
 const products: UnifiedProduct[] = [
 
   { id: 'rug-001', name: 'Aankhi Jhyal', material: 'Hand-knotted Wool', size: "9'x12'", price: '$2,899', style: 'Traditional Persian', imageUrl: '/public/assets/images/products/AankhiJhyal.jpg' },
-  { id: 'rug-002', name: 'Attraction', material: 'Synthetic Blend', size: "8'x10'", price: '$1,299', style: 'Modern Contemporary', imageUrl: '/public/assets/images/products/Attraction.jpg' },
+  { id: 'rug-032', name: 'Retro', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/public/assets/images/products/Retro.jpg' },
   { id: 'rug-003', name: 'Bamboos', material: 'Distressed Wool', size: "8'x10'", price: '$899', style: 'Vintage Distressed', imageUrl: '/public/assets/images/products/bamboos.jpg' },
   { id: 'rug-004', name: 'Bayleaves', material: 'Wool Blend', size: "7'x9'", price: '$799', style: 'Modern Geometric', imageUrl: '/public/assets/images/products/BayLeaves.jpg' },
   { id: 'rug-005', name: 'Bubbles', material: 'Wool Blend', size: "8'x10'", price: '$1,049', style: 'Bohemian', imageUrl: '/public/assets/images/products/Bubbles.jpg' },
@@ -39,7 +39,7 @@ const products: UnifiedProduct[] = [
   { id: 'rug-029', name: 'Paint', material: 'Distressed Wool', size: "8'x11'", price: '$899', style: 'Vintage Distressed', imageUrl: '/public/assets/images/products/Paint.jpg' },
   { id: 'rug-030', name: 'Path', material: 'Flatweave Wool', size: "6'x9'", price: '$699', style: 'Flatweave Kilim', imageUrl: '/public/assets/images/products/Path.jpg' },
   { id: 'rug-031', name: 'Rain Forest', material: 'Shag Wool', size: "7'x9'", price: '$849', style: 'Moroccan Shag', imageUrl: '/public/assets/images/products/RainForest.jpg' },
-  { id: 'rug-032', name: 'Retro', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/public/assets/images/products/Retro.jpg' },
+  { id: 'rug-002', name: 'Attraction', material: 'Synthetic Blend', size: "8'x10'", price: '$1,299', style: 'Modern Contemporary', imageUrl: '/public/assets/images/products/Attraction.jpg' },
   { id: 'rug-033', name: 'Sherpa Love', material: 'Synthetic Fiber', size: "6'x9'", price: '$399', style: 'Patio Deck', imageUrl: '/public/assets/images/products/SherpaLove.jpg' },
   { id: 'rug-034', name: 'Shreepanch', material: 'Polypropylene', size: "7'x9'", price: '$549', style: 'Weather Resistant', imageUrl: '/public/assets/images/products/Shreepanch.jpg' },
   { id: 'rug-035', name: 'Shyala', material: 'Synthetic Fiber', size: "8'x10'", price: '$429', style: 'Patio Deck', imageUrl: '/public/assets/images/products/Shyala.jpg' },

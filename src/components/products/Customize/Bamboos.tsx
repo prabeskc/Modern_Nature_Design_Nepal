@@ -2386,21 +2386,21 @@ const colorData1000 = [
 
 const Bamboos = () => {
 
-    const DEFAULT_FG = '#211A1F';
-    const DEFAULT_BG = '#DFDBD7';
+    const DEFAULT_FG = '#0A3741';
+    const DEFAULT_BG = '#CE9052';
 
     const [foregroundColor, setForegroundColor] = useState<string>(() => {
-        return (localStorage.getItem('aankhi_fg') || DEFAULT_FG).toUpperCase();
+        return (localStorage.getItem('bamboos_fg') || DEFAULT_FG).toUpperCase();
     });
     const [backgroundColor, setBackgroundColor] = useState<string>(() => {
-        return (localStorage.getItem('aankhi_bg') || DEFAULT_BG).toUpperCase();
+        return (localStorage.getItem('bamboos_bg') || DEFAULT_BG).toUpperCase();
     });
 
     const [activeTarget, setActiveTarget] = useState<'foreground' | 'background'>('foreground');
 
     useEffect(() => {
-        localStorage.setItem('aankhi_fg', foregroundColor);
-        localStorage.setItem('aankhi_bg', backgroundColor);
+        localStorage.setItem('bamboos_fg', foregroundColor);
+        localStorage.setItem('bamboos_bg', backgroundColor);
     }, [foregroundColor, backgroundColor]);
 
     const hexToRgb = (hex: string) => {
@@ -2411,6 +2411,11 @@ const Bamboos = () => {
             g: (bigint >> 8) & 255,
             b: bigint & 255,
         };
+    };
+
+    const rgbToHex = (r: number, g: number, b: number) => {
+        const toHex = (n: number) => n.toString(16).padStart(2, '0');
+        return `#${toHex(r)}${toHex(g)}${toHex(b)}`.toUpperCase();
     };
 
     const relativeLuminance = (hex: string) => {
@@ -2448,7 +2453,7 @@ const Bamboos = () => {
     useEffect(() => {
         const loadSvg = async () => {
             try {
-                const res = await fetch('/assets/images/products/Aankhi Jhyal.svg');
+                const res = await fetch('/assets/images/products/bamboos.svg');
                 const svg = await res.text();
                 const transformed = svg
                     // Replace .st0 fill to CSS var for background
@@ -2556,23 +2561,23 @@ const Bamboos = () => {
 
             <div className="flex w-full max-w-7xl gap-6">
                 <div className="w-5/12 relative">
-                    {/* {svgMarkup ? (
+                    {svgMarkup ? (
                         <div
                             className="w-full h-full [&>svg]:block [&>svg]:w-full [&>svg]:h-auto"
                             style={{ ['--fg-color' as any]: foregroundColor, ['--bg-color' as any]: backgroundColor }}
                             dangerouslySetInnerHTML={{ __html: svgMarkup }}
-                            aria-describedby="aankhi-jhyal-description"
+                            aria-describedby="bamboos-description"
                             role="img"
                         />
-                    ) : ( */}
+                    ) : (
                         <img
-                            src="/public/assets/images/products/bamboos.jpg"
-                            alt="Custom Rug"
+                            src="/assets/images/products/bamboos.svg"
+                            alt="Bamboos Rug"
                             className="w-full h-full object-cover"
                         />
-                    {/* )} */}
-                    <div id="aankhi-jhyal-description" className="sr-only">
-                        Interactive color customization tool for the Aankhi Jhyal rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
+                    )}
+                    <div id="bamboos-description" className="sr-only">
+                        Interactive color customization tool for the Bamboos rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
                     </div>
                 </div>
 
@@ -2644,6 +2649,11 @@ const Bamboos = () => {
                                                         style={{
                                                             backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
                                                         }}
+                                                        role="button"
+                                                        tabIndex={0}
+                                                        aria-label={`Set ${activeTarget} to ${colorItem.name}`}
+                                                        onClick={() => applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
+                                                        onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
                                                     ></div>
                                                     <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
                                                         {colorItem.name}
@@ -2703,6 +2713,11 @@ const Bamboos = () => {
                                                             style={{
                                                                 backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
                                                             }}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                            aria-label={`Set ${activeTarget} to ${colorItem.name}`}
+                                                            onClick={() => applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b))}
+                                                            onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
                                                         ></div>
                                                         <div className="text-[7px] text-center mt-1 text-gray-600">
                                                             {colorItem.name}
