@@ -48,13 +48,13 @@ const experienceCards: ExperienceCard[] = [
   {
     id: 'craftsmanship',
     icon: <Clock className="w-8 h-8" />,
-    title: '20+ Years of Craftsmanship',
-    description: 'Serving homes with handwoven rugs since 2003.'
+    title: '10+ Years of Craftsmanship',
+    description: 'Serving homes with hand-Knotted rugs since 2016.'
   },
   {
     id: 'authentic',
     icon: <Scissors className="w-8 h-8" />,
-    title: 'Authentic Handwoven Rugs',
+    title: 'Authentic Hand-Knotted Rugs',
     description: 'Each rug is crafted by skilled artisans using traditional weaving methods.'
   },
   {
@@ -67,7 +67,7 @@ const experienceCards: ExperienceCard[] = [
     id: 'worldwide',
     icon: <Globe className="w-8 h-8" />,
     title: 'Worldwide Delivery',
-    description: 'From Nepal to the world – shipping premium rugs to over 15 countries.'
+    description: 'From Nepal to the world – shipping premium rugs to over several countries.'
   },
   {
     id: 'sustainable',
@@ -189,8 +189,8 @@ export default function OurExperience() {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
             <SectionHeading
-              title="Our Experience"
-              subtitle="Discover what makes us Nepal's trusted rug artisans"
+              title="Mastery in Motion"
+              subtitle="Mastering the Art of Hand-Knotted Rugs - Nepal's Trusted Artisans"
               className="mb-12 lg:mb-16"
             />
           </div>

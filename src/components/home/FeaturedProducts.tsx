@@ -297,9 +297,8 @@ export default function FeaturedProducts() {
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}>
           <SectionHeading
-            title="Featured Products"
-            subtitle="Discover our most loved handcrafted rugs, chosen by customers worldwide"
-            className="mb-12 lg:mb-16"
+            title="The Rugs Everyone's Talking About - Hand-Knotted for You"
+            className="mb-12 lg:mb-16 "
           />
         </div>
         

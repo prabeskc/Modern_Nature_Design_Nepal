@@ -178,7 +178,7 @@ interface NavbarProps {
 
 const megaMenuItems = {
   shop: {
-    title: 'Products',
+    title: 'Collections',
     sections: [
       {
         title: 'Living Room Rugs',
@@ -664,7 +664,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                   className={`navbar-item flex items-center space-x-1 text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${activeMegaMenu === 'shop' ? 'active' : ''
                     }`}
                 >
-                  <span>Products</span>
+                  <span>Collections</span>
                   <ChevronDown className={`chevron-animation w-4 h-4 ${activeMegaMenu === 'shop' ? 'rotate-180' : ''
                     }`} />
                 </Link>

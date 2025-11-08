@@ -236,7 +236,7 @@ export default function HeroSection() {
                 <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-800 ease-out ${
                   isContentVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                 }`}>
-                  <button 
+                  {/* <button 
                     onClick={() => scrollToSection('bestsellers')}
                     className="bg-mint-green text-charcoal px-8 py-4 rounded-lg font-medium hover:bg-mint-green/90 hover:scale-105 transition-all duration-300 ease-out"
                   >
@@ -247,7 +247,7 @@ export default function HeroSection() {
                     className="border-2 border-mint-green text-mint-green px-8 py-4 rounded-lg font-medium hover:bg-mint-green hover:text-charcoal hover:scale-105 transition-all duration-300 ease-out"
                   >
                     Visit Stores
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>

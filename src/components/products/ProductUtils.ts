@@ -7,10 +7,11 @@ export interface UnifiedProduct {
   name: string;
   category?: string;
   subcategoryId?: string;
-  material: string;
-  size: string;
-  price: string;
+  material?: string;
+  size?: string;
+  price?: string;
   imageUrl: string;
+  Inspired_From?: string;
   // Category-specific fields
   comfort?: string;
   style?: string;

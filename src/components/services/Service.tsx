@@ -83,7 +83,7 @@ const Services: React.FC = () => {
   );
 
   return (
-    <section className="min-h-screen bg-[#fdfdfb] py-28 flex justify-center">
+    <section className="bg-[url('/public/assets/images/products/Cells.jpg')] min-h-screen bg-[#fdfdfb] py-28 flex justify-center">
       <div className="w-11/12 md:w-4/5">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
           Our Services
@@ -96,7 +96,7 @@ const Services: React.FC = () => {
               key={service.id}
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg cursor-pointer"
+              className="bg-gray-400 rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg cursor-pointer"
               onClick={() => setActiveService(service)}
             >
               <div className="relative w-full h-56 overflow-hidden">

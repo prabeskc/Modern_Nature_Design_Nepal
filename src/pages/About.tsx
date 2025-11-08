@@ -22,7 +22,7 @@ const About = () => {
         </div>
       </div>
 
-      <MaterialsCarousel />
+      {/* <MaterialsCarousel /> */}
       <ProductionProcessPage />
       <DyingProcessPage />
       <Footer />

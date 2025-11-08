@@ -2,6 +2,7 @@
 import Footer from '@/components/ui/Footer'
 import Navbar from '@/components/ui/Navbar'
 import ServicePage from '@/components/services/Service'
+import MaterialsCarousel from '@/components/about/MaterialsCarousel'
 
 
 const Services = () => {
@@ -9,6 +10,7 @@ const Services = () => {
     <div className="min-h-screen bg-off-white">
       <Navbar />
       <ServicePage />
+      <MaterialsCarousel />
       <Footer />
     </div>
   )

@@ -203,7 +203,7 @@ export default function StudioBanner() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={5}
+                  rows={2}
                   className="w-full p-2 border border-gray-300 rounded"
                   required
                 />
@@ -235,7 +235,7 @@ export default function StudioBanner() {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
                 }`}
               >
-                Our Studio
+                Experience Hand-Knotted Mastery
               </span>
               <h2
                 className={`font-serif text-3xl lg:text-4xl font-medium text-charcoal mb-6 transition-all duration-700 ${
@@ -252,8 +252,7 @@ export default function StudioBanner() {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
                 }`}
               >
-                Experience our handcrafted rugs in person at our showroom in the heart of Kathmandu. 
-                Meet our artisans, learn about our processes, and discover the perfect rug for your space.
+                Explore our showroom in Lalitpur, Nepal - meet our artisans, see traditional weaving in action, and find the perfect rug for your space.
               </p>
 
               <div className="space-y-4">
@@ -264,8 +263,8 @@ export default function StudioBanner() {
                 >
                   <h4 className="font-medium text-charcoal mb-2">Showroom Hours</h4>
                   <p className="text-charcoal/70">
-                    Monday - Saturday: 9:00 AM - 6:00 PM<br />
-                    Sunday: 10:00 AM - 4:00 PM
+                    Sunday - Friday: 8:00 AM - 5:00 PM<br />
+                    Saturday: 8:00 AM - 12:00 PM
                   </p>
                 </div>
 
@@ -276,7 +275,7 @@ export default function StudioBanner() {
                 >
                   <h4 className="font-medium text-charcoal mb-2">Location</h4>
                   <p className="text-charcoal/70">
-                    Thamel District, Kathmandu<br />
+                    Thaiba-14, Lalitpur<br />
                     Nepal
                   </p>
                 </div>
@@ -288,8 +287,8 @@ export default function StudioBanner() {
                 >
                   <h4 className="font-medium text-charcoal mb-2">Contact</h4>
                   <p className="text-charcoal/70">
-                    +977-1-4123456<br />
-                    hello@modernnaturedesignnepal.com
+                    +977-9801037585<br />
+                    info@modernnaturedesignnepal.com
                   </p>
                 </div>
               </div>
