@@ -53,7 +53,8 @@ const products: UnifiedProduct[] = [
   { id: 'rug-043', name: 'Vines', material: 'Wool & Silk', size: "8'x10'", price: '$4,499', style: 'Artist Limited', imageUrl: '/assets/images/products/Vines.jpg' },
   { id: 'rug-044', name: 'Water Brust', material: 'Jute & Cotton', size: "8'x10'", price: '$899', style: 'Natural Fiber', imageUrl: '/assets/images/products/WaterBrust.jpg' },
   { id: 'rug-045', name: 'Water Coin', material: 'Wool Blend', size: "7'x9'", price: '$1,999', style: 'Designer Collaboration', imageUrl: '/assets/images/products/WaterCoin.jpg' },
-  { id: 'rug-046', name: 'Weave', material: 'Wool & Silk', size: "8'x10'", price: '$3,299', style: 'Art Inspired', imageUrl: '/assets/images/products/Weave.jpg' }
+  { id: 'rug-046', name: 'Weave', material: 'Wool & Silk', size: "8'x10'", price: '$3,299', style: 'Art Inspired', imageUrl: '/assets/images/products/Weave.jpg' },
+  { id: 'rug-047', name: 'Pari', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Pari.jpg' },
 ];
 
 const AllProductsView = ({ onProductSelect }: AllProductsViewProps) => {

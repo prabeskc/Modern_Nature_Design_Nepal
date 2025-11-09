@@ -52,6 +52,7 @@ import Vines from "./components/products/Customize/Vines";
 import WaterBrust from "./components/products/Customize/WaterBrust";
 import WaterCoin from "./components/products/Customize/WaterCoin";
 import Weave from "./components/products/Customize/Weave";
+import Pari from "./components/products/Customize/Pari";
 
 
 
@@ -109,6 +110,8 @@ export default function App() {
         <Route path="/customize/waterbrust" element={<WaterBrust/>} />
         <Route path="/customize/watercoin" element={<WaterCoin/>} />
         <Route path="/customize/weave" element={<Weave/>} />
+        <Route path="/customize/pari" element={<Pari/>} />
+
  
         
         <Route path="/about" element={<About />} />
