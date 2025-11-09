@@ -7,8 +7,15 @@ import OurHistoryPage from '@/components/about/OurHistory'
 import ProductionProcessPage from '@/components/about/ProductionProcessPage'
 import Footer from '@/components/ui/Footer'
 import Navbar from '@/components/ui/Navbar'
+import LayeredRug from '../components/products/Customize/pariLayer'
+import { useState } from 'react'
+
+
 
 const About = () => {
+
+
+
   return (
     <div className="min-h-screen bg-off-white pt-4">
       <Navbar />
@@ -22,10 +29,11 @@ const About = () => {
         </div>
       </div>
 
-      {/* <MaterialsCarousel /> */}
+      <MaterialsCarousel />
       <ProductionProcessPage />
       <DyingProcessPage />
       <Footer />
+
     </div>
   )
 }

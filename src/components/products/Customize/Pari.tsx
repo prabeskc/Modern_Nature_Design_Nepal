@@ -7,10 +7,10 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
+import LayeredRug from '@/components/products/Customize/pariLayer';
 
 
 
-//   // --- AA to AT Series ---
 //   { name: "AA01", r: 30, g: 23, b: 27 },
 //   { name: "AA02", r: 31, g: 24, b: 28 },
 //   { name: "AA03", r: 24, g: 18, b: 22 },
@@ -2386,6 +2386,14 @@ const colorData1000 = [
 
 const Pari = () => {
 
+
+  const [colors, setColors] = useState({
+    1: "#d8c4ab",
+    2: "#8a7e79",
+    3: "#baac9a",
+    4: "#0cod18"
+  });
+
   const DEFAULT_FG = '#211A1F';
   const DEFAULT_BG = '#DFDBD7';
 
@@ -2449,25 +2457,25 @@ const Pari = () => {
 
 
   // Inline SVG loading and transformation
-  const [svgMarkup, setSvgMarkup] = useState<string>('');
-  useEffect(() => {
-    const loadSvg = async () => {
-      try {
-        const res = await fetch('/assets/images/products/Aankhi Jhyal.svg');
-        const svg = await res.text();
-        const transformed = svg
-          // Replace .st0 fill to CSS var for background
-          .replace(/(\.st0\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--bg-color)$3')
-          // Replace .st1 fill to CSS var for foreground
-          .replace(/(\.st1\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--fg-color)$3');
-        setSvgMarkup(transformed);
-      } catch (e) {
-        console.error('Failed to load SVG', e);
-        setSvgMarkup('');
-      }
-    };
-    loadSvg();
-  }, []);
+  // const [svgMarkup, setSvgMarkup] = useState<string>('');
+  // useEffect(() => {
+  //   const loadSvg = async () => {
+  //     try {
+  //       const res = await fetch('/assets/images/products/Aankhi Jhyal.svg');
+  //       const svg = await res.text();
+  //       const transformed = svg
+  //         // Replace .st0 fill to CSS var for background
+  //         .replace(/(\.st0\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--bg-color)$3')
+  //         // Replace .st1 fill to CSS var for foreground
+  //         .replace(/(\.st1\s*\{[^}]*fill:\s*)(#[0-9a-fA-F]{3,6})([^}]*\})/m, '$1var(--fg-color)$3');
+  //       setSvgMarkup(transformed);
+  //     } catch (e) {
+  //       console.error('Failed to load SVG', e);
+  //       setSvgMarkup('');
+  //     }
+  //   };
+  //   loadSvg();
+  // }, []);
 
 
 
@@ -2561,26 +2569,17 @@ const Pari = () => {
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-5/12 relative">
-          {svgMarkup ? (
-            <div
-              className="w-full h-full [&>svg]:block [&>svg]:w-full [&>svg]:h-auto"
-              style={{ ['--fg-color' as any]: foregroundColor, ['--bg-color' as any]: backgroundColor }}
-              dangerouslySetInnerHTML={{ __html: svgMarkup }}
-              aria-describedby="aankhi-jhyal-description"
-              role="img"
-            />
-          ) : (
-            <img
-              src="/assets/images/products/Aankhi Jhyal.svg"
-              alt="Aankhi Jhyal - Traditional Nepalese Window Design Rug"
-              className="block w-full h-auto"
-              role="img"
-              aria-describedby="aankhi-jhyal-description"
-            />
-          )}
-          <div id="aankhi-jhyal-description" className="sr-only">
-            Interactive color customization tool for the Aankhi Jhyal rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
-          </div>
+
+
+
+          <LayeredRug
+            layers={[
+              { src: "/layers/Pari.png", color: colors[1] },
+              { src: "/layers/Pari2.png", color: colors[2] },
+              { src: "/layers/Pari3.png", color: colors[3] },
+              { src: "/layers/Pari4.png", color: colors[4] }
+            ]}
+          />
         </div>
 
         <div className="w-1/2 flex flex-col gap-6">
