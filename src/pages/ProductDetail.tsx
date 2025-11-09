@@ -17,7 +17,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/AankhiJhyal.jpg',
+      imageUrl: '/assets/images/products/AankhiJhyal.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -45,7 +45,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Attraction.jpg',
+      imageUrl: '/assets/images/products/Attraction.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -73,7 +73,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/bamboos.jpg',
+      imageUrl: '/assets/images/products/bamboos.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -101,7 +101,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/BayLeaves.jpg',
+      imageUrl: '/assets/images/products/BayLeaves.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -129,7 +129,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Bubbles.jpg',
+      imageUrl: '/assets/images/products/Bubbles.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -157,7 +157,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/BurningRope.jpg',
+      imageUrl: '/assets/images/products/BurningRope.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -185,7 +185,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Cells.jpg',
+      imageUrl: '/assets/images/products/Cells.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -213,7 +213,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Childhood.jpg',
+      imageUrl: '/assets/images/products/Childhood.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -241,7 +241,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/FarmHouse.jpg',
+      imageUrl: '/assets/images/products/FarmHouse.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -269,7 +269,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Festival.jpg',
+      imageUrl: '/assets/images/products/Festival.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -297,7 +297,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/FountainWater.jpg',
+      imageUrl: '/assets/images/products/FountainWater.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -325,7 +325,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Gurung.jpg',
+      imageUrl: '/assets/images/products/Gurung.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -353,7 +353,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Holi.jpg',
+      imageUrl: '/assets/images/products/Holi.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -381,7 +381,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Imagination.jpg',
+      imageUrl: '/assets/images/products/Imagination.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -409,7 +409,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/JungleSafari.jpg',
+      imageUrl: '/assets/images/products/JungleSafari.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -437,7 +437,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/JungleTribes.jpg',
+      imageUrl: '/assets/images/products/JungleTribes.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -465,7 +465,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/LakheFace.jpg',
+      imageUrl: '/assets/images/products/LakheFace.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -493,7 +493,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Majesty.jpg',
+      imageUrl: '/assets/images/products/Majesty.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -521,7 +521,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/ManasluCircut.jpg',
+      imageUrl: '/assets/images/products/ManasluCircut.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -549,7 +549,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Maze.jpg',
+      imageUrl: '/assets/images/products/Maze.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -577,7 +577,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Mirror.jpg',
+      imageUrl: '/assets/images/products/Mirror.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -605,7 +605,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/ModernFern.jpg',
+      imageUrl: '/assets/images/products/ModernFern.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -633,7 +633,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/MonkeyTemple.jpg',
+      imageUrl: '/assets/images/products/MonkeyTemple.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -661,7 +661,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/MorningSun.jpg',
+      imageUrl: '/assets/images/products/MorningSun.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -689,7 +689,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/NaghDaha.jpg',
+      imageUrl: '/assets/images/products/NaghDaha.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -717,7 +717,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/NamcheBazar.jpg',
+      imageUrl: '/assets/images/products/NamcheBazar.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -745,7 +745,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/OnBoard.jpg',
+      imageUrl: '/assets/images/products/OnBoard.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -773,7 +773,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/OnTheRoad.jpg',
+      imageUrl: '/assets/images/products/OnTheRoad.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -801,7 +801,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Paint.jpg',
+      imageUrl: '/assets/images/products/Paint.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -829,7 +829,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Path.jpg',
+      imageUrl: '/assets/images/products/Path.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -857,7 +857,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/RainForest.jpg',
+      imageUrl: '/assets/images/products/RainForest.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -885,7 +885,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Retro.jpg',
+      imageUrl: '/assets/images/products/Retro.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -913,7 +913,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/SherpaLove.jpg',
+      imageUrl: '/assets/images/products/SherpaLove.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -941,7 +941,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Shreepanch.jpg',
+      imageUrl: '/assets/images/products/Shreepanch.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -969,7 +969,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Shyala.jpg',
+      imageUrl: '/assets/images/products/Shyala.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -997,7 +997,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Sweet16.jpg',
+      imageUrl: '/assets/images/products/Sweet16.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1025,7 +1025,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/TeraiFarm.jpg',
+      imageUrl: '/assets/images/products/TeraiFarm.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1053,7 +1053,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Thoughts.jpg',
+      imageUrl: '/assets/images/products/Thoughts.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1081,7 +1081,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Tides.jpg',
+      imageUrl: '/assets/images/products/Tides.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1109,7 +1109,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Trek.jpg',
+      imageUrl: '/assets/images/products/Trek.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1137,7 +1137,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/TsumValleyPatan.jpg',
+      imageUrl: '/assets/images/products/TsumValleyPatan.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1165,7 +1165,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/UndefinedUniverse.jpg',
+      imageUrl: '/assets/images/products/UndefinedUniverse.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1193,7 +1193,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Vines.jpg',
+      imageUrl: '/assets/images/products/Vines.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1221,7 +1221,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/WaterBrust.jpg',
+      imageUrl: '/assets/images/products/WaterBrust.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1249,7 +1249,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/WaterCoin.jpg',
+      imageUrl: '/assets/images/products/WaterCoin.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
@@ -1277,7 +1277,7 @@ const getAllProducts = (): DetailedProduct[] => {
       size: '9\'x12\'',
       price: '$2,899',
       style: 'Traditional Persian',
-      imageUrl: '/public/assets/images/products/Weave.jpg',
+      imageUrl: '/assets/images/products/Weave.jpg',
       description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',

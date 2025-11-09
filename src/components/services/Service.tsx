@@ -15,7 +15,7 @@ const services: ServiceSection[] = [
     id: "1",
     title: "Strike-Offs & Samples",
     subtitle: "See. Feel. Perfect Your Design.",
-    image: "/public/assets/images/services/strikeoffs-and-samples.png",
+    image: "/assets/images/services/strikeoffs-and-samples.png",
     description: `
       At Modern Nature Design Nepal, we know that perfection begins with the smallest detail. That’s why we offer strike-offs and samples — your opportunity to experience the true color, texture, and craftsmanship of your rug before full production.<br /><br />
       Our strike-offs showcase every element — yarn quality, pile height, and weaving precision — so you can confidently finalize your design. Available in <strong>30×30 cm</strong>, <strong>60×60 cm</strong>, or custom sizes, they ensure your rug turns out exactly as envisioned.<br /><br />
@@ -28,7 +28,7 @@ const services: ServiceSection[] = [
     id: "2",
     title: "Color Poms & Tufts",
     subtitle: "Bring Your Colors to Life",
-    image: "/public/assets/images/services/colorpoms.png",
+    image: "/assets/images/services/colorpoms.png",
     description: `
       We match any shade — from fabric swatches, yarns, leather, or Pantone codes — in wool, silk, or other materials. Create your custom color kits or mini rug swatches for a perfect preview.<br /><br />
       Instant access to a world of shades:<br />
@@ -42,7 +42,7 @@ const services: ServiceSection[] = [
     id: "3",
     title: "Online Color Customizer",
     subtitle: "Your Vision, Your Colors — Instantly",
-    image: "/public/assets/images/services/online-color-customizer.png",
+    image: "/assets/images/services/online-color-customizer.png",
     description: `
       No color kits? No problem. Our Online Color Customizer lets you choose, adjust, and share your color preferences directly online — making communication seamless and precise. Whether you’re exploring new palettes or matching existing shades, our digital tool ensures your colors are clear, consistent, and ready for creation.<br /><br />
       ✨ Design from anywhere — we’ll bring your colors to life.
@@ -52,7 +52,7 @@ const services: ServiceSection[] = [
     id: "4",
     title: "Renderings & CAD",
     subtitle: "Where Imagination Meets Precision",
-    image: "/public/assets/images/services/rendering.png",
+    image: "/assets/images/services/rendering.png",
     description: `
       Every great rug begins with a vision. Our exclusive rendering and CAD service transforms your ideas into detailed, lifelike designs that capture the essence of your concept before weaving begins.<br /><br />
       Whether inspired by fabric colors, artworks, wall hangings, or real photographs, our skilled designers translate any reference into elegant rug compositions that mirror your imagination with stunning accuracy.<br /><br />
@@ -65,7 +65,7 @@ const services: ServiceSection[] = [
     id: "5",
     title: "Shipment & Delivery",
     subtitle: "Your Rugs, Anywhere in the World",
-    image: "/public/assets/images/services/shipping.png",
+    image: "/assets/images/services/shipping.png",
     description: `
       We ship your rugs as agreed — small orders via couriers (door-to-door) or air cargo, larger shipments via the same fast, reliable channels.<br /><br />
       <strong>FedEx, DHL, UPS:</strong> 3–5 days<br />
