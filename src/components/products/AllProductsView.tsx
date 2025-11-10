@@ -55,6 +55,15 @@ const products: UnifiedProduct[] = [
   { id: 'rug-045', name: 'Water Coin', material: 'Wool Blend', size: "7'x9'", price: '$1,999', style: 'Designer Collaboration', imageUrl: '/assets/images/products/WaterCoin.jpg' },
   { id: 'rug-046', name: 'Weave', material: 'Wool & Silk', size: "8'x10'", price: '$3,299', style: 'Art Inspired', imageUrl: '/assets/images/products/Weave.jpg' },
   { id: 'rug-047', name: 'Pari', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Pari.jpg' },
+  { id: 'rug-048', name: 'Chakati', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Chakati.jpg' },
+  { id: 'rug-049', name: 'Chino', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Chino.jpg' },
+  { id: 'rug-050', name: 'Kaath', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Kaath.jpg' },
+  { id: 'rug-051', name: 'Landmark', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Landmark.jpg' },
+  { id: 'rug-052', name: 'Paisa', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Paisa.jpg' },
+  { id: 'rug-053', name: 'Ping', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Ping.jpg' },
+  { id: 'rug-054', name: 'Purano Jhyal', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/PuranoJhyal.jpg' },
+  { id: 'rug-055', name: 'Smoke', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Smoke.jpg' },
+
 ];
 
 const AllProductsView = ({ onProductSelect }: AllProductsViewProps) => {

@@ -53,6 +53,14 @@ import WaterBrust from "./components/products/Customize/WaterBrust";
 import WaterCoin from "./components/products/Customize/WaterCoin";
 import Weave from "./components/products/Customize/Weave";
 import Pari from "./components/products/Customize/Pari";
+import Chakati from "./components/products/Customize/Chakati";
+import Chino from "./components/products/Customize/Chino";
+import Kaath from "./components/products/Customize/Kaath";
+import Landmark from "./components/products/Customize/Landmark";
+import Paisa from "./components/products/Customize/Paisa";
+import Ping from "./components/products/Customize/Ping";
+import PuranoJhyal from "./components/products/Customize/PuranoJhyal";
+import Smoke from "./components/products/Customize/Smoke";
 
 
 
@@ -111,6 +119,15 @@ export default function App() {
         <Route path="/customize/watercoin" element={<WaterCoin/>} />
         <Route path="/customize/weave" element={<Weave/>} />
         <Route path="/customize/pari" element={<Pari/>} />
+        <Route path="/customize/chakati" element={<Chakati/>} />
+        <Route path="/customize/chino" element={<Chino/>} />
+        <Route path="/customize/kaath" element={<Kaath/>} />
+        <Route path="/customize/landmark" element={<Landmark/>} />
+        <Route path="/customize/paisa" element={<Paisa/>} />
+        <Route path="/customize/ping" element={<Ping/>} />
+        <Route path="/customize/puranojhyal" element={<PuranoJhyal/>} />
+        <Route path="/customize/smoke" element={<Smoke/>} />
+
 
  
         
