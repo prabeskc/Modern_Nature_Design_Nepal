@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 
-const fadeInUp:Variants = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
@@ -9,7 +9,6 @@ const fadeInUp:Variants = {
 const OurHistoryPage: React.FC = () => {
   return (
     <motion.section
-      // className="relative bg-gradient-to-br from-gray-50 via-white to-teal-50 py-20 px-6 md:px-20"
       className="mt-10"
       initial="hidden"
       whileInView="visible"
@@ -18,29 +17,39 @@ const OurHistoryPage: React.FC = () => {
     >
       <div className="mt-4 max-w-5xl mx-auto space-y-6 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 drop-shadow-sm">
-          Our History
+          Decades of Weaving Excellence from the Heart of Nepal
         </h2>
+
         <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-          Modern Nature Design Nepal (MND Nepal), established in{" "}
-          <span className="font-semibold text-gray-800">1990 A.D.</span>, has
-          become a leading manufacturer and supplier of hand-knotted rugs in
-          Lalitpur, Nepal. We are known as versatile designers, innovative
-          manufacturers, and leading exporters of Nepalese hand-knotted rugs.
+          Founded in <span className="font-semibold text-gray-800">2016 A.D.</span>, Modern Nature Design Nepal (MND Nepal)
+          has grown into one of Nepal’s leading manufacturers and exporters of hand-knotted rugs.
+          Based in Lalitpur — the artistic hub of Nepal — MND Nepal was built with a clear vision:
+          to share Nepal’s finest craftsmanship with the world.
         </p>
+
         <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-          We collaborate with companies and designers worldwide to weave
-          high-end rugs tailored to unique concepts and specifications.
+          Today, MND Nepal collaborates with international designers and global brands, bringing
+          creative visions to life through exquisite woven masterpieces. Whether custom-made or from
+          our curated collections, every rug reflects artistic precision and timeless beauty.
         </p>
+
         <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-          Our rugs have found homes in{" "}
-          <span className="font-semibold text-gray-800">
-            five-star hotels, casinos, universities, restaurants, museums
-          </span>{" "}
-          and residences across the USA, Canada, Europe, and Australia. With
-          over 150 highly skilled employees, we proudly ensure{" "}
-          <span className="font-semibold text-gray-800">100% child-labor-free</span>{" "}
-          and eco-friendly production.
+          Our creations grace <span className="font-semibold text-gray-800">
+          five-star hotels, museums, universities, casinos, restaurants,</span> and luxurious
+          residences across the USA, Canada, Europe, and Australia.
         </p>
+
+        <div className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p>✨ <span className="font-semibold">100% child labor–free</span></p>
+          <p>🌿 <span className="font-semibold">Committed to sustainable, all-natural materials</span></p>
+          <p>🧶 <span className="font-semibold">Dedicated to handmade craftsmanship — no machines used</span></p>
+        </div>
+
+        {/* <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+          MND Nepal employs over 150 skilled artisans and staff, many of whom have spent decades
+          mastering their craft. Their dedication transforms every rug into a living piece of Nepal’s
+          cultural legacy.
+        </p> */}
       </div>
     </motion.section>
   );

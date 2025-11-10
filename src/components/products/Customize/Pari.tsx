@@ -2569,10 +2569,7 @@ const Pari = () => {
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-5/12 relative">
-
-
-
-          <LayeredRug
+          <LayeredRug 
             layers={[
               { src: "/layers/Pari.png", color: colors[1] },
               { src: "/layers/Pari2.png", color: colors[2] },

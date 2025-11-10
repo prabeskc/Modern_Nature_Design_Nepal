@@ -665,12 +665,12 @@ export default function Navbar({ className = '' }: NavbarProps) {
                     }`}
                 >
                   <span>Collections</span>
-                  <ChevronDown className={`chevron-animation w-4 h-4 ${activeMegaMenu === 'shop' ? 'rotate-180' : ''
-                    }`} />
+                  {/* <ChevronDown className={`chevron-animation w-4 h-4 ${activeMegaMenu === 'shop' ? 'rotate-180' : ''
+                    }`} /> */}
                 </Link>
 
                 {/* Mega Menu */}
-                {activeMegaMenu === 'shop' && (
+                {/* {activeMegaMenu === 'shop' && (
                   <div
                     ref={megaMenuRef}
                     className={`mega-menu-enter absolute p-6 rounded-lg shadow-2xl border border-white/30 w-screen max-w-5xl z-[9999] ${dropdownVerticalPosition === 'top'
@@ -725,7 +725,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                       ))}
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
 
               <Link
@@ -754,6 +754,16 @@ export default function Navbar({ className = '' }: NavbarProps) {
                   }`}
               >
                 Contact
+              </Link>
+
+               <Link
+                to="/products"
+                onMouseEnter={() => setActiveNavItem('Color Customizer')}
+                onMouseLeave={() => setActiveNavItem(null)}
+                className={`navbar-item text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${activeNavItem === 'shop' ? 'active' : ''
+                  }`}
+              >
+                Color Customizer
               </Link>
             </div>
 

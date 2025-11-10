@@ -9,6 +9,7 @@ import Footer from '@/components/ui/Footer'
 import Navbar from '@/components/ui/Navbar'
 import LayeredRug from '../components/products/Customize/pariLayer'
 import { useState } from 'react'
+import PhilosophyPage from '@/components/about/PhilosophyPage'
 
 
 
@@ -20,7 +21,7 @@ const About = () => {
     <div className="min-h-screen bg-off-white pt-4">
       <Navbar />
       <AboutUsPage />
-      <div className="flex flex-col lg:flex-row gap-20 w-4/5 mx-auto">
+      <div className="flex flex-col lg:flex-row gap-20 w-4/5 mx-auto mb-10">
         <div className="w-full lg:w-1/2">
           <OurHistoryPage />
         </div>
@@ -29,9 +30,10 @@ const About = () => {
         </div>
       </div>
 
-      <MaterialsCarousel />
+      {/* <MaterialsCarousel /> */}
       <ProductionProcessPage />
       <DyingProcessPage />
+      <PhilosophyPage />
       <Footer />
 
     </div>
