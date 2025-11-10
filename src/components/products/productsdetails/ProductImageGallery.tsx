@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 interface ProductImageGalleryProps {
   productName: string;
-  mainImageUrl: string;
+  mainImageUrl?: string;
   className?: string;
 }
 
@@ -28,7 +28,7 @@ const ProductImageGallery = ({ productName, mainImageUrl, className = '' }: Prod
       </div>
       
       {/* Thumbnail Gallery */}
-      <div className="grid grid-cols-3 gap-1.5 max-w-md mx-auto">
+      {/* <div className="grid grid-cols-3 gap-1.5 max-w-md mx-auto">
         {productImages.map((image, index) => (
           <button
             key={index}
@@ -44,7 +44,7 @@ const ProductImageGallery = ({ productName, mainImageUrl, className = '' }: Prod
             />
           </button>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

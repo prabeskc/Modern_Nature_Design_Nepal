@@ -66,7 +66,7 @@ const[productName, setProductName]= useState("/customize/"+product.name.replace(
         </Link>
         
         
-        <button
+        {/* <button
           onClick={handleAddToCart}
           className="w-full bg-charcoal text-off-white px-8 py-3 rounded-lg font-medium hover:bg-charcoal/90 transition-colors"
         >
@@ -80,7 +80,7 @@ const[productName, setProductName]= useState("/customize/"+product.name.replace(
           >
             Buy Now
           </button>
-        )}
+        )} */}
       </div>
     </div>
   );
