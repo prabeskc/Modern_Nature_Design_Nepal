@@ -2385,14 +2385,14 @@ const colorData1000 = [
 
 
 const Pari = () => {
-
-
-  const [colors, setColors] = useState({
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4]: string } = {
     1: "#d8c4ab",
     2: "#8a7e79",
     3: "#baac9a",
-    4: "#0cod18"
-  });
+    4: "#0c0d18",
+  };
+
+  const [colors, setColors] = useState(INITIAL_COLORS);
 
   const DEFAULT_FG = '#211A1F';
   const DEFAULT_BG = '#DFDBD7';
@@ -2404,7 +2404,7 @@ const Pari = () => {
     return (localStorage.getItem('aankhi_bg') || DEFAULT_BG).toUpperCase();
   });
 
-  const [activeTarget, setActiveTarget] = useState<'foreground' | 'background'>('foreground');
+  const [activeLayer, setActiveLayer] = useState<1 | 2 | 3 | 4>(1);
 
   useEffect(() => {
     localStorage.setItem('aankhi_fg', foregroundColor);
@@ -2441,16 +2441,13 @@ const Pari = () => {
 
   const applyColor = (hex: string) => {
     const nextHex = hex.toUpperCase();
-    if (activeTarget === 'foreground') {
-      setForegroundColor(nextHex);
-    } else {
-      setBackgroundColor(nextHex);
-    }
+    setColors((prev) => ({ ...prev, [activeLayer]: nextHex }));
   };
 
   const resetColors = () => {
     setForegroundColor(DEFAULT_FG);
     setBackgroundColor(DEFAULT_BG);
+    setColors(INITIAL_COLORS);
   };
 
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
@@ -2587,37 +2584,24 @@ const Pari = () => {
               <li>Then click on the desired color in the color chart.</li>
             </ol>
           </div>
-
-
-          <div className="flex items-center gap-4">
-            <div
-              role="button"
-              aria-label="Foreground color panel"
-              onClick={() => setActiveTarget('foreground')}
-              onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('foreground')}
-              tabIndex={0}
-              className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'foreground' ? 'ring-2 ring-gray-800' : ''}`}
-            >
-              <div className="w-10 h-10 border" style={{ backgroundColor: foregroundColor }} />
-              <div className="text-sm">
-                <div className="font-medium">Foreground</div>
-                <div className="text-xs text-gray-600">{foregroundColor} · RGB {hexToRgb(foregroundColor).r}, {hexToRgb(foregroundColor).g}, {hexToRgb(foregroundColor).b}</div>
+          <div className="flex items-center gap-4 flex-wrap">
+            {[1, 2, 3, 4].map((layer) => (
+              <div
+                key={layer}
+                role="button"
+                aria-label={`Layer ${layer} color panel`}
+                onClick={() => setActiveLayer(layer as 1 | 2 | 3 | 4)}
+                onKeyDown={(e) => e.key === 'Enter' && setActiveLayer(layer as 1 | 2 | 3 | 4)}
+                tabIndex={0}
+                className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeLayer === layer ? 'ring-2 ring-gray-800' : ''}`}
+              >
+                <div className="w-10 h-10 border" style={{ backgroundColor: colors[layer as 1 | 2 | 3 | 4] }} />
+                <div className="text-sm">
+                  <div className="font-medium">Layer {layer}</div>
+                  <div className="text-xs text-gray-600">{colors[layer as 1 | 2 | 3 | 4]}</div>
+                </div>
               </div>
-            </div>
-            <div
-              role="button"
-              aria-label="Background color panel"
-              onClick={() => setActiveTarget('background')}
-              onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('background')}
-              tabIndex={0}
-              className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'background' ? 'ring-2 ring-gray-800' : ''}`}
-            >
-              <div className="w-10 h-10 border" style={{ backgroundColor: backgroundColor }} />
-              <div className="text-sm">
-                <div className="font-medium">Background</div>
-                <div className="text-xs text-gray-600">{backgroundColor} · RGB {hexToRgb(backgroundColor).r}, {hexToRgb(backgroundColor).g}, {hexToRgb(backgroundColor).b}</div>
-              </div>
-            </div>
+            ))}
             <div className="ml-auto flex items-center gap-2">
               <button onClick={resetColors} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
             </div>
@@ -2633,7 +2617,7 @@ const Pari = () => {
             {!showNewContent ? (
               <>
                 <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1200</h1>
-                <div className="text-xs text-gray-600 text-center mb-2">Active target: {activeTarget}</div>
+                <div className="text-xs text-gray-600 text-center mb-2">Active layer: {activeLayer}</div>
                 <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
 
 
@@ -2651,7 +2635,7 @@ const Pari = () => {
                             onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
                             role="button"
                             tabIndex={0}
-                            aria-label={`Set ${activeTarget} to ${colorItem.name}`}
+                            aria-label={`Set Layer ${activeLayer} to ${colorItem.name}`}
                           ></div>
                           <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
                             {colorItem.name}
@@ -2715,7 +2699,7 @@ const Pari = () => {
                               onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
                               role="button"
                               tabIndex={0}
-                              aria-label={`Set ${activeTarget} to ${colorItem.name}`}
+                              aria-label={`Set layer ${activeLayer} to ${colorItem.name}`}
                             ></div>
                             <div className="text-[7px] text-center mt-1 text-gray-600">
                               {colorItem.name}
