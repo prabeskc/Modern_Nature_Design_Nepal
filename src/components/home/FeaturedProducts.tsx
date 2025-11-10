@@ -123,10 +123,10 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
 
   // Use the same high-quality images as the cards
   const rugImages = [
-    'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+    'assets/images/home/shopbestsellers/Cloudato.jpg',
+    'assets/images/home/shopbestsellers/Pyroqace.jpg',
+    'assets/images/home/shopbestsellers/Sint-Zabiz.jpg',
+    'assets/images/home/shopbestsellers/Unon-Extin.jpg',
   ];
   
   const productIndex = productsData.products.findIndex(p => p.id === product.id);
@@ -229,7 +229,7 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
             </div>
           </div>
           
-          {/* Action Buttons */}
+          {/* Action Buttons
           <div className="flex space-x-3 mt-auto flex-shrink-0">
             <button className="flex-1 bg-charcoal text-off-white px-6 py-3 rounded-lg font-medium hover:bg-charcoal/90 transition-colors duration-200">
               Add to Cart
@@ -237,7 +237,7 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
             <button className="px-6 py-3 border-2 border-charcoal text-charcoal rounded-lg font-medium hover:bg-charcoal hover:text-off-white transition-colors duration-200">
               Add to Wishlist
             </button>
-          </div>
+          </div> */}
           </div>
         </div>
       </div>
