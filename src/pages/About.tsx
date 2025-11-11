@@ -7,7 +7,7 @@ import OurHistoryPage from '@/components/about/OurHistory'
 import ProductionProcessPage from '@/components/about/ProductionProcessPage'
 import Footer from '@/components/ui/Footer'
 import Navbar from '@/components/ui/Navbar'
-import LayeredRug from '../components/products/Customize/pariLayer'
+import PariLayer from '../components/products/Customize/PariLayer'
 import { useState } from 'react'
 import PhilosophyPage from '@/components/about/PhilosophyPage'
 

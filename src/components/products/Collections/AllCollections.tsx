@@ -74,7 +74,7 @@ const AllCollections: React.FC = () => {
     const [activeCarpet, setActiveCarpet] = useState<Carpet | null>(null);
 
     return (
-        <>
+        <> 
             <Navbar />
            <section className="min-h-screen bg-[#fdfdfb] py-20">
   {/* Container with 80% width centered */}
