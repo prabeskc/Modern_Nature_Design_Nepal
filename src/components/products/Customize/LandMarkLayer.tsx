@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function PariLayer({ layers }) {
+export default function LandMarkLayer({ layers }) {
   const canvasRefs = useRef([]);
 
   layers.forEach((layer, index) => {
