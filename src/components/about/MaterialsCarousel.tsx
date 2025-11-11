@@ -111,7 +111,7 @@ const MaterialsCarousel: React.FC = () => {
   }, [active]);
 
   return (
-    <section className="bg-white py-16 select-none">
+    <section className="bg-[url('/public/assets/images/services/background1.png')]  py-16 select-none">
       <div className="w-11/12 max-w-6xl mx-auto">
         <h2 className="text-center text-3xl md:text-4xl font-extrabold text-slate-900">
           Materials We Offer

@@ -659,7 +659,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
-                  to="/products"
+                  to="/collections"
                   onClick={handleProductsClick}
                   className={`navbar-item flex items-center space-x-1 text-charcoal drop-shadow-sm hover:bg-white/20 px-4 py-3 rounded-lg text-base ${activeMegaMenu === 'shop' ? 'active' : ''
                     }`}
@@ -756,7 +756,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
                 Contact
               </Link>
 
-               <Link
+              {/* <Link
                 to="/products"
                 onMouseEnter={() => setActiveNavItem('Color Customizer')}
                 onMouseLeave={() => setActiveNavItem(null)}
@@ -764,10 +764,43 @@ export default function Navbar({ className = '' }: NavbarProps) {
                   }`}
               >
                 Color Customizer
+              </Link> */}
+
+              <Link
+                to="/products"
+                onMouseEnter={() => setActiveNavItem('Color Customizer')}
+                onMouseLeave={() => setActiveNavItem(null)}
+                className={`inline-flex items-center justify-center px-3 py-0.5 rounded-xl text-lg font-bold shadow-md transition-all duration-300
+    ${activeNavItem === 'Color Customizer'
+                    ? 'scale-105 bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 text-gray-900'
+                    : 'bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 text-gray-900 hover:opacity-90 hover:scale-105'}`}
+              >
+                <span className="flex space-x-0.5 drop-shadow-sm">
+                  <span className="text-red-500">C</span>
+                  <span className="text-orange-500">O</span>
+                  <span className="text-yellow-400">L</span>
+                  <span className="text-green-500">O</span>
+                  <span className="text-blue-500">R</span>
+                  <span>&nbsp;</span>
+                  <span className="text-purple-500">C</span>
+                  <span className="text-pink-500">U</span>
+                  <span className="text-indigo-500">S</span>
+                  <span className="text-red-400">T</span>
+                  <span className="text-orange-400">O</span>
+                  <span className="text-yellow-500">M</span>
+                  <span className="text-green-400">I</span>
+                  <span className="text-blue-400">Z</span>
+                  <span className="text-purple-400">E</span>
+                  <span className="text-pink-400">R</span>
+                </span>
               </Link>
+
+
+
+
             </div>
 
-            {/* Animated Search Bar - Far Right */}
+            {/* Animated Search Bar - Far Right
             <div
               ref={searchRef}
               className="relative flex items-center ml-4"
@@ -805,7 +838,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
               </div>
 
               {/* Search Results Dropdown */}
-              {showSearchResults && searchResults.length > 0 && (
+              {/* {showSearchResults && searchResults.length > 0 && (
                 <div
                   ref={searchResultsRef}
                   className={`search-dropdown absolute w-96 shadow-2xl border border-white/30 rounded-lg overflow-y-auto z-[9998] ${searchVerticalPosition === 'top'
@@ -850,8 +883,8 @@ export default function Navbar({ className = '' }: NavbarProps) {
                   )}
                 </div>
               )}
-            </div>
-          </div>
+            </div> */}
+          </div> 
 
           {/* Mobile menu button */}
           <button

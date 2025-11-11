@@ -3,6 +3,7 @@ import { X } from 'lucide-react';
 import Container from '../ui/Container.tsx';
 
 import SectionHeading from './SectionHeading';
+import { Link } from 'react-router-dom';
 
 interface DesignCard {
   id: string;
@@ -172,20 +173,20 @@ function ExpandedCardModal({ design, isOpen, onClose }: { design: DesignCard | n
                 <h3 className="font-medium text-charcoal mb-2">Available Sizes</h3>
                 <p className="text-charcoal/70">{design.dimensions}</p>
               </div>
-              <div>
+              {/* <div>
                 <h3 className="font-medium text-charcoal mb-2">Price</h3>
                 <p className="text-mint-green font-medium text-lg">{design.price}</p>
-              </div>
+              </div> */}
             </div>
             
             {/* Actions */}
-            <div className="flex space-x-4">
-              <button className="flex-1 bg-charcoal text-off-white px-6 py-3 rounded-lg font-medium hover:bg-charcoal/90 transition-colors duration-200">
+            <div>
+              <Link to="/products" className="flex-1 bg-charcoal text-off-white px-6 py-3 rounded-lg font-medium hover:bg-charcoal/90 transition-colors duration-200">
                 View Details
-              </button>
-              <button className="flex-1 border-2 border-mint-green text-mint-green px-6 py-3 rounded-lg font-medium hover:bg-mint-green hover:text-charcoal transition-colors duration-200">
+              </Link>
+              {/* <button className="flex-1 border-2 border-mint-green text-mint-green px-6 py-3 rounded-lg font-medium hover:bg-mint-green hover:text-charcoal transition-colors duration-200">
                 Contact Us
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

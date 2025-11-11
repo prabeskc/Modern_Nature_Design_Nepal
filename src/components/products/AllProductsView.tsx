@@ -72,23 +72,35 @@ const AllProductsView = ({ onProductSelect }: AllProductsViewProps) => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
-        <div>
-          <h2 className="text-xl md:text-2xl font-medium text-charcoal">All Products</h2>
-          <p className="text-charcoal/60 text-sm mt-1">Explore our complete collection</p>
-        </div>
-        <div className="text-charcoal/60 text-sm">
-          <span className="font-medium text-charcoal">{products.length}</span> products found
-        </div>
-      </div>
+   <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+  {/* Centered Image Section */}
+  <div className="bg-[url('/public/assets/images/color-customizer/colorbox.png')] flex justify-center items-center mb-6">
+    <img
+      src="/assets/images/color-customizer/ColorCustomizer.png"
+      alt="Color Customizer"
+      className="w-[300px] h-[100px] object-contain mb-3 mt-3"
+    />
+  </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} onProductClick={handleProductClick} />
-        ))}
-      </div>
+  {/* Product Info */}
+  {/* <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+    <div className="text-charcoal/60 text-sm text-center sm:text-left">
+      <span className="font-medium text-charcoal">{products.length}</span> products found
     </div>
+  </div> */}
+
+  {/* Product Grid */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    {products.map((product) => (
+      <ProductCard
+        key={product.id}
+        product={product}
+        onProductClick={handleProductClick}
+      />
+    ))}
+  </div>
+</div>
+
   );
 };
 

@@ -83,7 +83,7 @@ const Services: React.FC = () => {
   );
 
   return (
-    <section className="bg-[url('/public/assets/images/products/Cells.jpg')] min-h-screen bg-[#fdfdfb] py-28 flex justify-center">
+    <section className="bg-[url('/assets/images/services/background2.jpg')] bg-cover bg-center bg-no-repeat min-h-screen bg-[#fdfdfb] py-28 flex justify-center">
       <div className="w-11/12 md:w-4/5">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
           Our Services
@@ -91,7 +91,7 @@ const Services: React.FC = () => {
 
         {/* Service Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.id}
               whileHover={{ scale: 1.03 }}
@@ -99,11 +99,15 @@ const Services: React.FC = () => {
               className="bg-[#F5F5DC] rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg cursor-pointer"
               onClick={() => setActiveService(service)}
             >
-              <div className="relative w-full h-56 overflow-hidden">
+              <div className="relative w-full h-56 overflow-hidden flex items-center justify-center bg-white">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${
+                    service.id === "3"
+                      ? "object-contain p-4 bg-white"
+                      : "object-cover"
+                  }`}
                 />
               </div>
               <div className="p-6">
@@ -137,11 +141,15 @@ const Services: React.FC = () => {
                 transition={{ duration: 0.3 }}
               >
                 {/* Left Image */}
-                <div className="md:w-1/2 h-64 md:h-auto">
+                <div className="md:w-1/2 h-64 md:h-auto flex items-center justify-center bg-white">
                   <img
                     src={activeService.image}
                     alt={activeService.title}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full ${
+                      activeService.id === "3"
+                        ? "object-contain p-6 bg-white"
+                        : "object-cover"
+                    }`}
                   />
                 </div>
 

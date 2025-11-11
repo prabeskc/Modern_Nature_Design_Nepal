@@ -61,6 +61,7 @@ import Paisa from "./components/products/Customize/Paisa";
 import Ping from "./components/products/Customize/Ping";
 import PuranoJhyal from "./components/products/Customize/PuranoJhyal";
 import Smoke from "./components/products/Customize/Smoke";
+import AllCollections from "./components/products/Collections/AllCollections";
 
 
 
@@ -69,6 +70,9 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+
+        <Route path="/collections" element={<AllCollections />} />
+        
         <Route path="/products" element={<Products />} />
         <Route path="/product/:productId" element={<ProductDetail />} />
 
