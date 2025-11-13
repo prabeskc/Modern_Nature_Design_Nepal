@@ -40,7 +40,7 @@ const carpets: Carpet[] = [
     { id: 'rug-026', name: 'Namche Bazar', imageUrl: '/assets/images/products/NamcheBazar.jpg' },
     { id: 'rug-027', name: 'On Board', imageUrl: '/assets/images/products/OnBoard.jpg' },
     { id: 'rug-028', name: 'On The Road', imageUrl: '/assets/images/products/OnTheRoad.jpg' },
-    { id: 'rug-029', name: 'Paint', imageUrl: '/assets/images/products/Paint.jpg' },
+    { id: 'rug-029', name: 'Begnas Lake', imageUrl: '/assets/images/products/BegnasLake.png' },
     { id: 'rug-030', name: 'Path', imageUrl: '/assets/images/products/Path.jpg' },
     { id: 'rug-031', name: 'Rain Forest', imageUrl: '/assets/images/products/RainForest.jpg' },
     { id: 'rug-032', name: 'Retro', imageUrl: '/assets/images/products/Retro.jpg' },
@@ -79,6 +79,8 @@ const carpets: Carpet[] = [
     { id: 'rug-065', name: 'Budi Aunla', imageUrl: '/assets/images/products/BudiAunla.jpg' },
     { id: 'rug-066', name: 'Sukool', imageUrl: '/assets/images/products/Sukool.jpg' },
     { id: 'rug-067', name: 'Water Lilies', imageUrl: '/assets/images/products/WaterLilies.jpg' },
+    { id: 'rug-068', name: 'Birendra Taal', imageUrl: '/assets/images/products/BirendraTaal.jpg' },
+    { id: 'rug-069', name: 'Echo', imageUrl: '/assets/images/products/Echo.jpg' },
 
 
 ];

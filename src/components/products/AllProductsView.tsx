@@ -36,7 +36,7 @@ const products: UnifiedProduct[] = [
   { id: 'rug-026', name: 'Namche Bazar', material: 'Wool Blend', size: '2\'6"x10\'', price: '$399', style: 'Modern Geometric', imageUrl: '/assets/images/products/NamcheBazar.jpg' },
   { id: 'rug-027', name: 'On Board', material: 'Hand-knotted Wool', size: "8'x11'", price: '$2,399', style: 'Traditional Persian', imageUrl: '/assets/images/products/OnBoard.jpg' },
   { id: 'rug-028', name: 'On The Road', material: 'Synthetic Blend', size: "7'x9'", price: '$899', style: 'Modern Contemporary', imageUrl: '/assets/images/products/OnTheRoad.jpg' },
-  { id: 'rug-029', name: 'Paint', material: 'Distressed Wool', size: "8'x11'", price: '$899', style: 'Vintage Distressed', imageUrl: '/assets/images/products/Paint.jpg' },
+  { id: 'rug-029', name: 'Begnas Lake', material: 'Distressed Wool', size: "8'x11'", price: '$899', style: 'Vintage Distressed', imageUrl: '/assets/images/products/BegnasLake.png' },
   { id: 'rug-030', name: 'Path', material: 'Flatweave Wool', size: "6'x9'", price: '$699', style: 'Flatweave Kilim', imageUrl: '/assets/images/products/Path.jpg' },
   { id: 'rug-031', name: 'Rain Forest', material: 'Shag Wool', size: "7'x9'", price: '$849', style: 'Moroccan Shag', imageUrl: '/assets/images/products/RainForest.jpg' },
   { id: 'rug-002', name: 'Attraction', material: 'Synthetic Blend', size: "8'x10'", price: '$1,299', style: 'Modern Contemporary', imageUrl: '/assets/images/products/Attraction.jpg' },
@@ -75,6 +75,8 @@ const products: UnifiedProduct[] = [
   { id: 'rug-065', name: 'Budi Aunla', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/BudiAunla.jpg' },
   { id: 'rug-066', name: 'Sukool', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Sukool.jpg' },
   { id: 'rug-067', name: 'Water Lilies', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/WaterLilies.jpg' },
+  { id: 'rug-068', name: 'Birendra Taal', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/BirendraTaal.jpg' },
+  { id: 'rug-069', name: 'Echo', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Echo.jpg' },
 
 ];
 

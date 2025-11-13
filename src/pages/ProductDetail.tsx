@@ -432,9 +432,9 @@ const getAllProducts = (): DetailedProduct[] => {
 
     {
       id: 'rug-029',
-      name: 'Paint',
+      name: 'Begnas Lake',
       material: 'Hand-knotted Wool',
-      imageUrl: '/assets/images/products/Paint.jpg',
+      imageUrl: '/assets/images/products/BegnasLake.png',
       features: [
         'Hand-knotted by master artisans',
         'Premium yarn construction',
@@ -1005,6 +1005,36 @@ const getAllProducts = (): DetailedProduct[] => {
       name: 'Water Lilies',
       material: 'Hand-knotted Wool',
       imageUrl: '/assets/images/products/WaterLilies.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+     {
+      id: 'rug-068',
+      name: 'Birendra Taal',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/BirendraTaal.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+     {
+      id: 'rug-069',
+      name: 'Echo',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Echo.jpg',
       features: [
         'Hand-knotted by master artisans',
         'Premium yarn construction',

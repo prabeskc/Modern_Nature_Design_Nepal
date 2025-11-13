@@ -34,7 +34,7 @@ import NaghDaha from "./components/products/Customize/NaghDaha";
 import NamcheBazar from "./components/products/Customize/NamcheBazar";
 import OnBoard from "./components/products/Customize/OnBoard";
 import OnTheRoad from "./components/products/Customize/OnTheRoad";
-import Paint from "./components/products/Customize/Paint";
+import BegnasLake from "./components/products/Customize/BegnasLake";
 import Path from "./components/products/Customize/Path";
 import RainForest from "./components/products/Customize/RainForest";
 import Retro from "./components/products/Customize/Retro";
@@ -74,6 +74,9 @@ import Kunda from "./components/products/Customize/Kunda";
 import BudiAunla from "./components/products/Customize/BudiAunla";
 import Sukool from "./components/products/Customize/Sukool";
 import WaterLilies from "./components/products/Customize/WaterLilies";
+import Echo from "./components/products/Customize/Echo";
+import BirendraTaal from "./components/products/Customize/BirendraTaal";
+
 
 
 
@@ -116,7 +119,7 @@ export default function App() {
         <Route path="/customize/namchebazar" element={<NamcheBazar/>} />
         <Route path="/customize/onboard" element={<OnBoard/>} />
         <Route path="/customize/ontheroad" element={<OnTheRoad/>} />
-        <Route path="/customize/paint" element={<Paint/>} />
+        <Route path="/customize/begnaslake" element={<BegnasLake/>} />
         <Route path="/customize/path" element={<Path/>} />
         <Route path="/customize/rainforest" element={<RainForest/>} />
         <Route path="/customize/retro" element={<Retro/>} />
@@ -155,6 +158,9 @@ export default function App() {
         <Route path="/customize/budiaunla" element={<BudiAunla/>} />
         <Route path="/customize/sukool" element={<Sukool/>} />
         <Route path="/customize/waterlilies" element={<WaterLilies/>} />
+        <Route path="/customize/birendrataal" element={<BirendraTaal/>} />
+        <Route path="/customize/echo" element={<Echo/>} />
+
 
 
 
