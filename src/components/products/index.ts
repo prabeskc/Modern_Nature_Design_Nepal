@@ -1,6 +1,6 @@
 // Export all product category components
 export { default as LivingRoomRugs } from './LivingRoomRugs';
-export { default as BedroomRugs } from './BedroomRugs';
+// export { default as BedroomRugs } from './BedroomRugs';
 export { default as DiningRoomRugs } from './DiningRoomRugs';
 export { default as OutdoorRugs } from './OutdoorRugs';
 export { default as SpecialtyRugs } from './SpecialtyRugs';
@@ -18,7 +18,7 @@ export * from './productsdetails';
 
 // Export component prop types
 export type { LivingRoomRugsProps } from './LivingRoomRugs';
-export type { BedroomRugsProps } from './BedroomRugs';
+// export type { BedroomRugsProps } from './BedroomRugs';
 export type { DiningRoomRugsProps } from './DiningRoomRugs';
 export type { OutdoorRugsProps } from './OutdoorRugs';
 export type { SpecialtyRugsProps } from './SpecialtyRugs';
