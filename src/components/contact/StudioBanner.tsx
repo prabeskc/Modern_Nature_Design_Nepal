@@ -300,7 +300,7 @@ export default function StudioBanner() {
                 isVisible ? 'opacity-100 translate-y-0 shadow-md hover:shadow-lg' : 'opacity-0 translate-y-4 shadow-sm'
               }`}
               style={{
-                transitionDelay: isVisible ? '1100ms' : '0ms',
+                transitionDelay: isVisible ? '500ms' : '0ms',
                 transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
               }}
             >

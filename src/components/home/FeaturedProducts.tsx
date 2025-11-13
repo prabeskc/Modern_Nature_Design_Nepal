@@ -72,9 +72,9 @@ function ProductCard({ product, onCardClick, isVisible, index, aspectRatio }: Pr
           <h3 className="font-serif text-lg font-medium text-white mb-1 line-clamp-1">
             {product.name}
           </h3>
-          <p className="text-mint-green font-bold text-lg">
+          {/* <p className="text-mint-green font-bold text-lg">
             {formatPrice(product.price)}
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
@@ -170,11 +170,11 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                   New
                 </span>
               )}
-              {product.isBestseller && (
+              {/* {product.isBestseller && (
                 <span className="bg-charcoal text-off-white px-3 py-1 rounded-full text-sm font-medium">
                   Bestseller
                 </span>
-              )}
+              )} */}
             </div>
 
             {/* Product Info */}
@@ -182,9 +182,9 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
               {product.name}
             </h2>
 
-            <p className="text-xl lg:text-2xl font-bold text-mint-green mb-4">
+            {/* <p className="text-xl lg:text-2xl font-bold text-mint-green mb-4">
               {formatPrice(product.price)}
-            </p>
+            </p> */}
 
             <p className="text-charcoal/70 leading-relaxed mb-6">
               {product.description}
@@ -293,8 +293,8 @@ export default function FeaturedProducts() {
         <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
           <SectionHeading
-            title="The Rugs Everyone's Talking About - Hand-Knotted for You"
-            className="mb-12 lg:mb-16 "
+            title="The Rugs Everyone's Talking About - Hand Knotted for You"
+            className="mb-12 lg:mb-16"
           />
         </div>
 

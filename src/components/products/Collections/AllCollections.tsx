@@ -67,6 +67,20 @@ const carpets: Carpet[] = [
     { id: 'rug-053', name: 'Ping', imageUrl: '/assets/images/products/Ping.jpg' },
     { id: 'rug-054', name: 'Purano Jhyal', imageUrl: '/assets/images/products/PuranoJhyal.jpg' },
     { id: 'rug-055', name: 'Smoke', imageUrl: '/assets/images/products/Smoke.jpg' },
+    { id: 'rug-056', name: 'Mandro', imageUrl: '/assets/images/products/Mandro.png' },
+    { id: 'rug-057', name: 'Tihar', imageUrl: '/assets/images/products/Tihar.jpg' },
+    { id: 'rug-058', name: 'The Wall', imageUrl: '/assets/images/products/TheWall.jpg' },
+    { id: 'rug-059', name: 'Ring', imageUrl: '/assets/images/products/Ring.jpg' },
+    { id: 'rug-060', name: 'Lalitpur', imageUrl: '/assets/images/products/Lalitpur.jpg' },
+    { id: 'rug-061', name: 'Broken Mirror', imageUrl: '/assets/images/products/BrokenMirror.jpg' },
+    { id: 'rug-062', name: 'Illusion', imageUrl: '/assets/images/products/Illusion.jpg' },
+    { id: 'rug-063', name: 'Beehive', imageUrl: '/assets/images/products/Beehive.jpg' },
+    { id: 'rug-064', name: 'Kunda', imageUrl: '/assets/images/products/Kunda.jpg' },
+    { id: 'rug-065', name: 'Budi Aunla', imageUrl: '/assets/images/products/BudiAunla.jpg' },
+    { id: 'rug-066', name: 'Sukool', imageUrl: '/assets/images/products/Sukool.jpg' },
+    { id: 'rug-067', name: 'Water Lilies', imageUrl: '/assets/images/products/WaterLilies.jpg' },
+
+
 ];
 
 
@@ -78,7 +92,9 @@ const AllCollections: React.FC = () => {
             <Navbar />
            <section className="min-h-screen bg-[#fdfdfb] py-20">
   {/* Container with 80% width centered */}
-  <div className="w-4/5 mx-auto">
+  <div 
+  className="w-4/5 mx-auto"
+  >
     {/* Heading */}
     {/* <div className="bg-[url('/public/assets/images/collections/backgroundImage.jpg')]"> */}
       <h1 className="mt-10 mb-10 text-4xl md:text-5xl font-bold text-gray-900 text-center">
@@ -130,7 +146,7 @@ const AllCollections: React.FC = () => {
           initial={{ scale: 0.95, opacity: 0, y: 50 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.95, opacity: 0, y: 50 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 1 }}
         >
           {/* Close Button above image */}
           <div className="absolute top-0 right-0 m-2 bg-white rounded-full z-10">

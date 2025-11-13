@@ -138,7 +138,7 @@ const ProductionProcessPage: React.FC = () => {
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="bg-white/90 backdrop-blur-md border border-gray-100 shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer"
+              className="bg-gray-200 backdrop-blur-md border border-gray-100 shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer"
               variants={fadeInUp}
               onClick={() => setSelectedStep(step)}
             >

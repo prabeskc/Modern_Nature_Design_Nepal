@@ -63,6 +63,18 @@ const products: UnifiedProduct[] = [
   { id: 'rug-053', name: 'Ping', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Ping.jpg' },
   { id: 'rug-054', name: 'Purano Jhyal', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/PuranoJhyal.jpg' },
   { id: 'rug-055', name: 'Smoke', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Smoke.jpg' },
+  { id: 'rug-056', name: 'Mandro', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Mandro.png' },
+  { id: 'rug-057', name: 'Tihar', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Tihar.jpg' },
+  { id: 'rug-058', name: 'The Wall', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/TheWall.jpg' },
+  { id: 'rug-059', name: 'Ring', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Ring.jpg' },
+  { id: 'rug-060', name: 'Lalitpur', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Lalitpur.jpg' },
+  { id: 'rug-061', name: 'Broken Mirror', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/BrokenMirror.jpg' },
+  { id: 'rug-062', name: 'Illusion', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Illusion.jpg' },
+  { id: 'rug-063', name: 'Beehive', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Beehive.jpg' },
+  { id: 'rug-064', name: 'Kunda', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Kunda.jpg' },
+  { id: 'rug-065', name: 'Budi Aunla', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/BudiAunla.jpg' },
+  { id: 'rug-066', name: 'Sukool', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Sukool.jpg' },
+  { id: 'rug-067', name: 'Water Lilies', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/WaterLilies.jpg' },
 
 ];
 

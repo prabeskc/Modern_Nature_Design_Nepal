@@ -21,16 +21,14 @@ const steps: Step[] = [
   {
     title: "Warm Water Washing",
     image: "assets/images/about/1.jpeg",
-    description: "click here for detail",
+    description: "✨ Pure. Safe. Vibrant. Crafted to last.",
     detailedDescription:
-      `Before dyeing, yarns are gently washed to remove impurities, ensuring deep, even color absorption and a radiant finish.
-      
-      ✨ Pure. Safe. Vibrant. Crafted to last.`,
+      `Before dyeing, yarns are gently washed to remove impurities, ensuring deep, even color absorption and a radiant finish.`,
   },
   {
     title: "Precision Color Sampling",
     image: "assets/images/about/2.jpg",
-    description: "click here for detail",
+    description: "✨ Pure. Safe. Vibrant. Crafted to last.",
     detailedDescription: `
 Dye master prepares a small sample tuft to match your desired shade. Once approved, the same formula is used for the full batch—guaranteeing consistency and perfection. The dyeing is done manually, heating pots gradually to 90–95°C. Yarns are then sun-dried naturally, giving them a luminous, lasting shine.
 
@@ -41,10 +39,7 @@ Made in Switzerland, these dyes are metal-free, non-toxic, and colorfast, ensuri
 Derived from plants and minerals such as walnut, indigo, madder root, and henna, these dyes create organic tones with a natural, abstract charm. 100% eco-friendly and beautifully imperfect.
 
 3. Color Communication
-We use the ARS color system and can match any sample you provide—ensuring your rug’s color is exactly as you envision.
-
-✨ Pure. Safe. Vibrant. Crafted to last.
-`,
+We use the ARS color system and can match any sample you provide—ensuring your rug’s color is exactly as you envision.`,
   },
 ];
 
@@ -72,7 +67,7 @@ const DyingProcessPage: React.FC = () => {
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="bg-white/90 backdrop-blur-md border border-gray-100 shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer"
+              className="bg-gray-200 backdrop-blur-md border border-gray-100 shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2 cursor-pointer"
               variants={fadeInUp}
               onClick={() => setSelectedStep(step)}
             >

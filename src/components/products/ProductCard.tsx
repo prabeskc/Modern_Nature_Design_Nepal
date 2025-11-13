@@ -35,18 +35,18 @@ const ProductCard = ({ product, onProductClick }: ProductCardProps) => {
       
       {/* Product Info */}
       <div className="p-4">
-        <h3 className="font-medium text-charcoal mb-2 line-clamp-2">
+        <h3 className="text-center font-medium text-charcoal line-clamp-2">
           {product.name}
         </h3>
         <div className="space-y-1 text-sm text-charcoal/60">
-          <p>Material: {product.material}</p>
-          <p>Size: {product.size}</p>
+          {/* <p>Material: {product.material}</p> */}
+          {/* <p>Size: {product.size}</p> */}
           {product.comfort && <p>Comfort: {product.comfort}</p>}
-          {product.style && <p>Style: {product.style}</p>}
+          {/* {product.style && <p>Style: {product.style}</p>} */}
           {product.durability && <p>Durability: {product.durability}</p>}
           {product.weatherResistance && <p>Weather Resistance: {product.weatherResistance}</p>}
           {product.artisan && <p>Artisan: {product.artisan}</p>}
-          <p className="font-medium text-charcoal text-lg">{product.price}</p>
+          {/* <p className="font-medium text-charcoal text-lg">{product.price}</p> */}
         </div>
       </div>
     </div>

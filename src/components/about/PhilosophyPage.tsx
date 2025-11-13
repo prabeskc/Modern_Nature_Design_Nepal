@@ -253,7 +253,7 @@ const PhilosophyPage: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setActiveCard(card.id)}
-              className="cursor-pointer bg-white shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-8 flex flex-col items-center justify-center border border-gray-100"
+              className="cursor-pointer bg-gray-200 shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-8 flex flex-col items-center justify-center border border-gray-100"
             >
               {card.icon}
               <h3 className="text-2xl font-semibold text-gray-800 mt-4">{card.title}</h3>

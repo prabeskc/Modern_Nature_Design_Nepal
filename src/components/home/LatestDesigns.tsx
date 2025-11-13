@@ -19,9 +19,9 @@ interface DesignCard {
 const latestDesigns: DesignCard[] = [
   {
     id: 'design-1',
-    title: 'Himalayan Texture',
+    title: 'Beehive',
     description: 'Rich, tactile weaves inspired by mountain landscapes',
-    image: 'assets/images/home/latestdesigns/1.jpg',
+    image: 'assets/images/home/latestdesigns/Beehive.jpg',
     detailedDescription: 'Our Himalayan Texture collection draws inspiration from the majestic mountain ranges of Nepal. Each rug features rich, tactile weaves that capture the essence of rugged landscapes and serene valleys. Hand-crafted by master artisans using traditional techniques passed down through generations.',
     materials: 'Premium Tibetan wool, Natural silk highlights',
     dimensions: '8\'x10\', 9\'x12\', 10\'x14\'',
@@ -29,9 +29,9 @@ const latestDesigns: DesignCard[] = [
   },
   {
     id: 'design-2',
-    title: 'Artisan Knots',
+    title: 'Lalitpur',
     description: 'Intricate hand-knotted patterns with contemporary appeal',
-    image: 'assets/images/home/latestdesigns/2.jpg',
+    image: 'assets/images/home/latestdesigns/Lalitpur.jpg',
     detailedDescription: 'The Artisan Knots series showcases the pinnacle of Nepalese craftsmanship. Each piece features intricate hand-knotted patterns that blend traditional motifs with contemporary design sensibilities. The result is a timeless piece that complements modern interiors while honoring ancient traditions.',
     materials: 'Hand-spun wool, Bamboo silk accents',
     dimensions: '6\'x9\', 8\'x10\', 9\'x12\'',
@@ -39,9 +39,9 @@ const latestDesigns: DesignCard[] = [
   },
   {
     id: 'design-3',
-    title: 'Modern Heritage',
+    title: 'Majesty',
     description: 'Traditional techniques reimagined for today\'s interiors',
-    image: 'assets/images/home/latestdesigns/3.jpg',
+    image: 'assets/images/home/latestdesigns/Majesty.jpg',
     detailedDescription: 'Modern Heritage represents the evolution of traditional rug-making for contemporary living spaces. These pieces maintain the soul of classical Nepalese designs while incorporating modern color palettes and simplified patterns that speak to today\'s aesthetic preferences.',
     materials: 'Organic wool, Natural dyes, Cotton foundation',
     dimensions: '5\'x8\', 8\'x10\', 9\'x12\'',
@@ -49,9 +49,9 @@ const latestDesigns: DesignCard[] = [
   },
   {
     id: 'design-4',
-    title: 'Zen Minimalism',
+    title: 'ManasluCircuit',
     description: 'Clean lines and subtle textures for modern spaces',
-    image: 'assets/images/home/latestdesigns/4.jpg',
+    image: 'assets/images/home/latestdesigns/ManasluCircut.jpg',
     detailedDescription: 'Zen Minimalism embodies the philosophy of \'less is more\'. These rugs feature clean lines, subtle textures, and a restrained color palette that creates a sense of calm and balance in any space. Perfect for contemporary homes seeking tranquility.',
     materials: 'Fine wool, Linen blend, Natural fibers',
     dimensions: '6\'x9\', 8\'x11\', 10\'x14\'',
@@ -59,9 +59,9 @@ const latestDesigns: DesignCard[] = [
   },
   {
     id: 'design-5',
-    title: 'Cultural Fusion',
+    title: 'Namche Bazar',
     description: 'East meets West in harmonious design',
-    image: 'assets/images/home/latestdesigns/5.jpg',
+    image: 'assets/images/home/latestdesigns/NamcheBazar.jpg',
     detailedDescription: 'Cultural Fusion celebrates the meeting of Eastern and Western design philosophies. These rugs incorporate traditional Nepalese motifs with contemporary Western aesthetics, creating pieces that are both globally inspired and locally crafted.',
     materials: 'Highland wool, Silk details, Eco-friendly dyes',
     dimensions: '7\'x10\', 8\'x12\', 9\'x13\'',
@@ -103,9 +103,9 @@ function CarouselCard({ design, onClick, isVisible = true, index = 0 }: Carousel
           <h3 className="font-serif text-lg sm:text-xl font-medium mb-2 group-hover:text-mint-green transition-colors duration-300">
             {design.title}
           </h3>
-          <p className="text-off-white/90 leading-relaxed text-xs sm:text-sm line-clamp-2">
+          {/* <p className="text-off-white/90 leading-relaxed text-xs sm:text-sm line-clamp-2">
             {design.description}
-          </p>
+          </p> */}
           <div className="mt-2 sm:mt-3 text-mint-green font-medium text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
             Click to explore →
           </div>
@@ -180,14 +180,14 @@ function ExpandedCardModal({ design, isOpen, onClose }: { design: DesignCard | n
             </div>
             
             {/* Actions */}
-            <div>
+            {/* <div>
               <Link to="/products" className="flex-1 bg-charcoal text-off-white px-6 py-3 rounded-lg font-medium hover:bg-charcoal/90 transition-colors duration-200">
                 View Details
-              </Link>
-              {/* <button className="flex-1 border-2 border-mint-green text-mint-green px-6 py-3 rounded-lg font-medium hover:bg-mint-green hover:text-charcoal transition-colors duration-200">
+              </Link> 
+              <button className="flex-1 border-2 border-mint-green text-mint-green px-6 py-3 rounded-lg font-medium hover:bg-mint-green hover:text-charcoal transition-colors duration-200">
                 Contact Us
-              </button> */}
-            </div>
+              </button>
+            </div> */}
           </div>
         </div>
       </div>

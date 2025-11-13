@@ -3,8 +3,8 @@
   "products": [
     {
       "id": "rug-001",
-      "name": "Himalayan Heritage",
-      "description": "Hand-knotted wool rug with traditional Nepalese patterns",
+      "name": "Aankhi Jhyal",
+      "description": "Hand-knotted yarn rug with traditional Nepalese patterns",
       "price": 1299,
       "images": [
         "/assets/rugs/himalayan-heritage-1.jpg",
@@ -23,7 +23,7 @@
     },
     {
       "id": "rug-002",
-      "name": "Mountain Mist",
+      "name": "Sweet16",
       "description": "Contemporary design with subtle texture variations",
       "price": 899,
       "images": [
@@ -42,7 +42,7 @@
     },
     {
       "id": "rug-003",
-      "name": "Artisan's Dream",
+      "name": "Holi",
       "description": "Intricate hand-woven patterns inspired by ancient motifs",
       "price": 1599,
       "images": [
@@ -61,7 +61,7 @@
     },
     {
       "id": "rug-004",
-      "name": "Valley Whisper",
+      "name": "Cells",
       "description": "Soft textures reminiscent of Himalayan valleys",
       "price": 749,
       "images": [

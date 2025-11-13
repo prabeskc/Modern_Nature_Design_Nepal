@@ -14,1530 +14,1006 @@ const getAllProducts = (): DetailedProduct[] => {
       id: 'rug-001',
       name: 'Aankhi Jhyal',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/AankhiJhyal.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-002',
       name: 'Attraction',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Attraction.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-003',
       name: 'Bamboos',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/bamboos.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-004',
       name: 'Bay Leaves',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/BayLeaves.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-005',
       name: 'Bubbles',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Bubbles.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-006',
       name: 'Burning Rope',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/BurningRope.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-007',
       name: 'Cells',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Cells.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-008',
       name: 'Childhood',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Childhood.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-009',
       name: 'Farm House',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/FarmHouse.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-010',
       name: 'Festival',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Festival.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-011',
       name: 'Fountain Water',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/FountainWater.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-012',
       name: 'Gurung',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Gurung.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-013',
       name: 'Holi',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Holi.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-014',
       name: 'Imagination',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Imagination.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-015',
       name: 'Jungle Safari',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/JungleSafari.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-016',
       name: 'Jungle Tribes',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/JungleTribes.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-017',
       name: 'Lakhe Face',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/LakheFace.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-018',
       name: 'Majesty',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Majesty.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-019',
       name: 'Manaslu Circuit',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/ManasluCircut.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-020',
       name: 'Maze',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Maze.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-021',
       name: 'Mirror',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Mirror.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-022',
       name: 'Modern Fern',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/ModernFern.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-023',
       name: 'Monkey Temple',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/MonkeyTemple.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-024',
       name: 'Morning Sun',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/MorningSun.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-025',
       name: 'Nagh Daha',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/NaghDaha.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-026',
       name: 'Namche Bazar',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/NamcheBazar.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-027',
       name: 'On Board',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/OnBoard.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-028',
       name: 'On The Road',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/OnTheRoad.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-029',
       name: 'Paint',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Paint.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-030',
       name: 'Path',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Path.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-031',
       name: 'Rain Forest',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/RainForest.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-032',
       name: 'Retro',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Retro.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-033',
       name: 'Sherpa Love',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/SherpaLove.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-034',
       name: 'Shreepanch',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Shreepanch.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-035',
       name: 'Shyala',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Shyala.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-036',
       name: 'Sweet16',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Sweet16.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-037',
       name: 'Terai Farm',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/TeraiFarm.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-038',
       name: 'Thoughts',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Thoughts.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-039',
       name: 'Tides',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Tides.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-040',
       name: 'Trek',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Trek.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-041',
       name: 'Tsum Valley Patan',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/TsumValleyPatan.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-042',
       name: 'Undefined Universe',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/UndefinedUniverse.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-043',
       name: 'Vines',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Vines.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-044',
       name: 'Water Brust',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/WaterBrust.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-045',
       name: 'Water Coin',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/WaterCoin.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-046',
       name: 'Weave',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Weave.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-047',
       name: 'Pari',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Pari.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
      {
       id: 'rug-048',
       name: 'Chakati',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Chakati.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
     },
 
     {
       id: 'rug-049',
       name: 'Chino',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Chino.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
-    },{
+    },
+    
+    {
       id: 'rug-050',
       name: 'Kaath',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Kaath.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
-    },{
+    },
+    
+    {
       id: 'rug-051',
       name: 'Landmark',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Landmark.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
-    },{
+    },
+    
+    {
       id: 'rug-052',
       name: 'Paisa',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Paisa.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
-    },{
+    },
+    
+    {
       id: 'rug-053',
       name: 'Ping',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Ping.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
-    },{
+    },
+    
+    {
       id: 'rug-054',
       name: 'Purano Jhyal',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/PuranoJhyal.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
-    },{
+    },
+    
+    {
       id: 'rug-055',
       name: 'Smoke',
       material: 'Hand-knotted Wool',
-      size: '9\'x12\'',
-      price: '$2,899',
-      style: 'Traditional Persian',
       imageUrl: '/assets/images/products/Smoke.jpg',
-      description: 'Experience the timeless elegance of our Majestic Persian Masterpiece. This exquisite hand-knotted wool rug showcases centuries-old weaving traditions with intricate patterns and rich colors that will transform any living space into a sophisticated sanctuary. Each knot is carefully tied by master craftsmen using premium wool, ensuring remarkable durability and lasting beauty. The traditional Persian design features elaborate medallions, floral motifs, and symmetries that evoke a sense of heritage and artistry. Perfect for formal living rooms, dining areas, or expansive bedrooms, this rug provides both visual depth and luxurious comfort underfoot.',
       features: [
         'Hand-knotted by master artisans',
-        'Premium wool construction',
+        'Premium yarn construction',
         'Traditional Persian design',
         'Fade-resistant colors',
         'Durable and long-lasting',
         'Easy to maintain'
       ],
-      specifications: {
-        'Dimensions': '9\' x 12\' (108" x 144")',
-        'Material': 'Hand-knotted Wool',
-        'Pile Height': '0.5 inches',
-        'Knot Count': '400 knots per square inch',
-        'Origin': 'Traditional Persian Style',
-        'Care Instructions': 'Professional cleaning recommended',
-        'Warranty': '10 years against manufacturing defects'
-      }
+    },
+
+    {
+      id: 'rug-056',
+      name: 'Mandro',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Mandro.png',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-057',
+      name: 'Tihar',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Tihar.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-058',
+      name: 'The Wall',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/TheWall.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-059',
+      name: 'Ring',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Ring.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-060',
+      name: 'Lalitpur',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Lalitpur.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-061',
+      name: 'Broken Mirror',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/BrokenMirror.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-062',
+      name: 'Illusion',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Illusion.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-063',
+      name: 'Beehive',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Beehive.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-064',
+      name: 'Kunda',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Kunda.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
     },
     
+     {
+      id: 'rug-065',
+      name: 'Budi Aunla',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/BudiAunla.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+     {
+      id: 'rug-066',
+      name: 'Sukool',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Sukool.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+     {
+      id: 'rug-067',
+      name: 'Water Lilies',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/WaterLilies.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
   ];
 };
 
@@ -1636,8 +1112,8 @@ const ProductDetail = () => {
         <ProductDetailView
           product={product}
           onCustomize={handleCustomize}
-          onAddToCart={handleAddToCart}
-          onBuyNow={handleBuyNow}
+          // onAddToCart={handleAddToCart}
+          // onBuyNow={handleBuyNow}
           onWishlist={handleWishlist}
           onShare={handleShare}
           className="py-8"

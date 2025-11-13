@@ -149,7 +149,7 @@ const MaterialsCarousel: React.FC = () => {
               return (
                 <div
                   key={i}
-                  className="absolute w-[300px] sm:w-[340px] h-[360px] sm:h-[400px] bg-gray-50 p-6 rounded-xl shadow-lg flex flex-col transition-transform duration-1000 overflow-hidden"
+                  className="bg-gray-300 absolute w-[300px] sm:w-[340px] h-[360px] sm:h-[400px] bg-gray-50 p-6 rounded-xl shadow-lg flex flex-col transition-transform duration-1000 overflow-hidden"
                   style={{
                     transform: `translateX(${tx}px) scale(${scale})`,
                     zIndex: z,

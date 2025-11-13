@@ -1,6 +1,7 @@
 import { Instagram, Facebook, Twitter, Mail, MapPin } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import Container from '../ui/Container.tsx';
+import { FaThreads } from 'react-icons/fa6';
 
 
 export default function Footer() {
@@ -58,18 +59,18 @@ export default function Footer() {
       ]
     },
     support: {
-      title: 'Support',
+      title: 'Contact',
       links: [
-        { name: 'Care Guide', action: () => {} },
-        { name: 'Shipping', action: () => {} }
+        { name: '+977-9801037585', action: () => {} },
+        { name: 'Thaiba-14, Lalitpur, Nepal', action: () => {} },
       ]
     }
   };
 
   const socialLinks = [
-    { icon: <Instagram className="w-4 h-4" />, href: 'https://instagram.com/thenokocafe', label: 'Instagram' },
-    { icon: <Facebook className="w-4 h-4" />, href: '#', label: 'Facebook' },
-    { icon: <Twitter className="w-4 h-4" />, href: '#', label: 'Twitter' }
+    { icon: <Instagram className="w-4 h-4" />, href: 'https://instagram.com/mndnepal?igsh=MWJ4bzh1dnBoMjZpcQ==', label: 'Instagram' },
+    { icon: <Facebook className="w-4 h-4" />, href: 'https://www.facebook.com/share/16JeiHVbWb/?mibextid=wwXlfr', label: 'Facebook' },
+    { icon: <FaThreads className="w-4 h-4" />, href: 'https://www.threads.com/@mndnepal?igshid=NTc4MTlwNjQ2YQ==', label: 'Thread' }
   ];
 
   return (
@@ -103,18 +104,18 @@ export default function Footer() {
                 Modern Nature Design Nepal
               </h2>
               <p className="text-off-white/70 text-sm leading-relaxed mb-4 hover:text-off-white/90 transition-colors duration-300">
-                Handcrafted rugs bridging traditional Nepalese artistry with contemporary design.
+                Hand-Knotted in Nepal, each rug is a masterpiece of heritage and precision, seamlessly blending traditional weaving artistry with contemporary design. Crafted for discerning interiors around the world, Our rugs embody timeless elegance, exceptional quality and ethical craftmanship - a statement of sophistication for generations to come.
               </p>
               
               {/* Contact Info */}
               <div className="space-y-2">
-                <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
+                {/* <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
                   <MapPin className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                  <span>Kathmandu, Nepal</span>
-                </div>
+                  <span>Lalitpur, Nepal</span>
+                </div> */}
                 <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
                   <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                  <span>hello@modernnaturedesignnepal.com</span>
+                  <span>info@modernnaturedesignnepal.com</span>
                 </div>
               </div>
             </div>
@@ -196,8 +197,8 @@ export default function Footer() {
             transitionDelay: animatedElements.has('bottom') ? '450ms' : '0ms'
           }}
         >
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div className="flex items-center space-x-4 text-sm">
+          <div className="justify-between items-center space-y-4 sm:space-y-0">
+            {/* <div className="flex items-center space-x-4 text-sm">
               <button className="text-off-white/70 hover:text-mint-green hover:scale-105 transition-all duration-300 transform">
                 Privacy Policy
               </button>
@@ -205,8 +206,8 @@ export default function Footer() {
                 Terms of Service
               </button>
             </div>
-            
-            <p className="text-off-white/50 text-sm hover:text-off-white/70 transition-colors duration-300">
+             */}
+            <p className="text-center text-off-white/50 text-sm hover:text-off-white/70 transition-colors duration-300">
               © {new Date().getFullYear()} Modern Nature Design Nepal. All rights reserved.
             </p>
           </div>

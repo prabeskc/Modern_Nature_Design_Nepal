@@ -62,6 +62,18 @@ import Ping from "./components/products/Customize/Ping";
 import PuranoJhyal from "./components/products/Customize/PuranoJhyal";
 import Smoke from "./components/products/Customize/Smoke";
 import AllCollections from "./components/products/Collections/AllCollections";
+import Mandro from "./components/products/Customize/Mandro";
+import Tihar from "./components/products/Customize/Tihar";
+import TheWall from "./components/products/Customize/TheWall";
+import Ring from "./components/products/Customize/Ring";
+import Lalitpur from "./components/products/Customize/Lalitpur";
+import BrokenMirror from "./components/products/Customize/BrokenMirror";
+import Illusion from "./components/products/Customize/Illusion";
+import Beehive from "./components/products/Customize/Beehive";
+import Kunda from "./components/products/Customize/Kunda";
+import BudiAunla from "./components/products/Customize/BudiAunla";
+import Sukool from "./components/products/Customize/Sukool";
+import WaterLilies from "./components/products/Customize/WaterLilies";
 
 
 
@@ -131,9 +143,23 @@ export default function App() {
         <Route path="/customize/ping" element={<Ping/>} />
         <Route path="/customize/puranojhyal" element={<PuranoJhyal/>} />
         <Route path="/customize/smoke" element={<Smoke/>} />
+        <Route path="/customize/mandro" element={<Mandro/>} />
+        <Route path="/customize/tihar" element={<Tihar/>} />
+        <Route path="/customize/thewall" element={<TheWall/>} />
+        <Route path="/customize/ring" element={<Ring/>} />
+        <Route path="/customize/lalitpur" element={<Lalitpur/>} />
+        <Route path="/customize/brokenmirror" element={<BrokenMirror/>} />
+        <Route path="/customize/illusion" element={<Illusion/>} />
+        <Route path="/customize/beehive" element={<Beehive/>} />
+        <Route path="/customize/kunda" element={<Kunda/>} />
+        <Route path="/customize/budiaunla" element={<BudiAunla/>} />
+        <Route path="/customize/sukool" element={<Sukool/>} />
+        <Route path="/customize/waterlilies" element={<WaterLilies/>} />
 
 
- 
+
+
+
         
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
