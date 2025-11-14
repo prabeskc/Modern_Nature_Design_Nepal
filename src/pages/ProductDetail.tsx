@@ -131,21 +131,6 @@ const getAllProducts = (): DetailedProduct[] => {
     },
 
      {
-      id: 'rug-009',
-      name: 'Farm House',
-      material: 'Hand-knotted Wool',
-      imageUrl: '/assets/images/products/FarmHouse.jpg',
-      features: [
-        'Hand-knotted by master artisans',
-        'Premium yarn construction',
-        'Traditional Persian design',
-        'Fade-resistant colors',
-        'Durable and long-lasting',
-        'Easy to maintain'
-      ],
-    },
-
-     {
       id: 'rug-010',
       name: 'Festival',
       material: 'Hand-knotted Wool',

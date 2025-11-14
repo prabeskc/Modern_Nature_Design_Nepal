@@ -14,7 +14,6 @@ import Bubbles from "./components/products/Customize/Bubbles";
 import BurningRope from "./components/products/Customize/BurningRope";
 import Cells from "./components/products/Customize/Cells";
 import Childhood from "./components/products/Customize/Childhood";
-import FarmHouse from "./components/products/Customize/FarmHouse";
 import Festival from "./components/products/Customize/Festival";
 import FountainWater from "./components/products/Customize/FountainWater";
 import Gurung from "./components/products/Customize/Gurung";
@@ -99,7 +98,6 @@ export default function App() {
         <Route path="/customize/burningrope" element={<BurningRope/>} />
         <Route path="/customize/cells" element={<Cells/>} />
         <Route path="/customize/childhood" element={<Childhood/>} />
-        <Route path="/customize/farmhouse" element={<FarmHouse/>} />
         <Route path="/customize/festival" element={<Festival/>} />
         <Route path="/customize/fountainwater" element={<FountainWater/>} />
         <Route path="/customize/gurung" element={<Gurung/>} />

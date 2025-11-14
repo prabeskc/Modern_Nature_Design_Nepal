@@ -1037,7 +1037,7 @@ const colorData1000 = [
 
 
 const ManasluCircuit = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11]: string } = {
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 ]: string } = {
     1: "#989e92",
     2: "#bdbaa3",
     3: "#ded7a0",

@@ -16,7 +16,6 @@ const products: UnifiedProduct[] = [
   { id: 'rug-006', name: 'Burning Rope', material: 'Wool Blend', size: "7'x9'", price: '$749', style: 'Minimal Scandinavian', imageUrl: '/assets/images/products/BurningRope.jpg' },
   { id: 'rug-007', name: 'Cells', material: 'Wool Blend', size: "8'x10'", price: '$1,199', style: 'Art Deco', imageUrl: '/assets/images/products/Cells.jpg' },
   { id: 'rug-008', name: 'Childhood', material: 'Hand-knotted Wool', size: "9'x12'", price: '$2,499', style: 'Traditional Persian', imageUrl: '/assets/images/products/Childhood.jpg' },
-  { id: 'rug-009', name: 'Farmhouse', material: 'Wool Blend', size: "8'x10'", price: '$999', style: 'Modern Geometric', imageUrl: '/assets/images/products/FarmHouse.jpg' },
   { id: 'rug-010', name: 'Festival', material: 'Synthetic Blend', size: "8'x10'", price: '$1,149', style: 'Modern Contemporary', imageUrl: '/assets/images/products/Festival.jpg' },
   { id: 'rug-011', name: 'Fountain Water', material: 'Distressed Wool', size: "7'x9'", price: '$899', style: 'Vintage Distressed', imageUrl: '/assets/images/products/FountainWater.jpg' },
   { id: 'rug-012', name: 'Gurung', material: 'Flatweave Wool', size: "6'x9'", price: '$699', style: 'Flatweave Kilim', imageUrl: '/assets/images/products/Gurung.jpg' },

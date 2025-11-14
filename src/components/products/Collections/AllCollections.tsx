@@ -20,7 +20,6 @@ const carpets: Carpet[] = [
     { id: 'rug-006', name: 'Burning Rope', imageUrl: '/assets/images/products/BurningRope.jpg' },
     { id: 'rug-007', name: 'Cells', imageUrl: '/assets/images/products/Cells.jpg' },
     { id: 'rug-008', name: 'Childhood', imageUrl: '/assets/images/products/Childhood.jpg' },
-    { id: 'rug-009', name: 'Farmhouse', imageUrl: '/assets/images/products/FarmHouse.jpg' },
     { id: 'rug-010', name: 'Festival', imageUrl: '/assets/images/products/Festival.jpg' },
     { id: 'rug-011', name: 'Fountain Water', imageUrl: '/assets/images/products/FountainWater.jpg' },
     { id: 'rug-012', name: 'Gurung', imageUrl: '/assets/images/products/Gurung.jpg' },
