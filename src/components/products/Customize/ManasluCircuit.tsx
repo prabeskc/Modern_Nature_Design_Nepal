@@ -7,7 +7,8 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import SmokeLayer from '@/components/products/Customize/SmokeLayer';
+
+import ManasluCircuitLayer from './ManasluCircuitLayer';
 
 
 const colorData1000 = [
@@ -1036,10 +1037,19 @@ const colorData1000 = [
 
 
 const ManasluCircuit = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 ]: string } = {
-    1: "#a8d5d3",
-    2: "#c4dfda",
-    3: "#e2e3e4",
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11]: string } = {
+    1: "#989e92",
+    2: "#bdbaa3",
+    3: "#ded7a0",
+    4: "#eee8d2",
+    5: "#f9f8f5",
+    6: "#d3d89e",
+    7: "#b1ba49",
+    8: "#949f3e",
+    9: "#6f862b",
+    10: "#51562e",
+    11: "#373133",
+
   
   };
 
@@ -1104,13 +1114,22 @@ const ManasluCircuit = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Smoke/Smoke1.png", color: colors[1] },
-    { src: "/layers/Smoke/Smoke2.png", color: colors[2] },
-    { src: "/layers/Smoke/Smoke3.png", color: colors[3] }
+    { src: "/layers/ManasluCircuit/Manaslu Circuit1.png", color: colors[1] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit2.png", color: colors[2] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit3.png", color: colors[3] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit4.png", color: colors[4] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit5.png", color: colors[5] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit6.png", color: colors[6] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit7.png", color: colors[7] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit8.png", color: colors[8] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit9.png", color: colors[9] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit10.png", color: colors[10] },
+    { src: "/layers/ManasluCircuit/Manaslu Circuit11.png", color: colors[11] },
+
   
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CJ10", "CJ11", "BF12"]);
+  const [layerNameList, setLayerNameList] = useState(["CA 08", "CQ 10", "DE 11", "AH 09", "AH 12", "CK 10", "CK 05", "CK 04", "CL 04", "CP 04", "AJ 01"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1185,12 +1204,12 @@ const ManasluCircuit = () => {
     <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
         <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
-        <h1 className="text-3xl font-serif mt-2">Smoke</h1>
+        <h1 className="text-3xl font-serif mt-2">Manaslu Circuit</h1>
       </div>
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-1/2 relative">
-          <SmokeLayer layers={layers} />
+          <ManasluCircuitLayer layers={layers} />
         </div>
 
         <div className="w-1/2 flex flex-col gap-6">
@@ -1226,7 +1245,7 @@ const ManasluCircuit = () => {
               <button onClick={() => {
                 resetColors();
                 setLayerNameList((lArray) => {
-                  return ["CJ10", "CJ11", "BF12"]
+                  return ["CA 08", "CQ 10", "DE 11", "AH 09", "AH 12", "CK 10", "CK 05", "CK 04", "CL 04", "CP 04", "AJ 01"]
                 })
               }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
             </div>

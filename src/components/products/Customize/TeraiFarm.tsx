@@ -7,7 +7,8 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import SmokeLayer from '@/components/products/Customize/SmokeLayer';
+
+import TeraiFarmLayer from './TeraiFarmLayer';
 
 
 const colorData1000 = [
@@ -1036,10 +1037,16 @@ const colorData1000 = [
 
 
 const TeraiFarm = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 ]: string } = {
-    1: "#a8d5d3",
-    2: "#c4dfda",
-    3: "#e2e3e4",
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 |4 | 5 | 6 | 7 | 8]: string } = {
+    1: "#725264",
+    2: "#d7be8a",
+    3: "#e4c69c",
+    4: "#ebdcb4",
+    5: "#c3ccaf",
+    6: "#91be9f",
+    7: "#52717a",
+    8: "#1e2a3d",
+
   
   };
 
@@ -1104,13 +1111,19 @@ const TeraiFarm = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Smoke/Smoke1.png", color: colors[1] },
-    { src: "/layers/Smoke/Smoke2.png", color: colors[2] },
-    { src: "/layers/Smoke/Smoke3.png", color: colors[3] }
+    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[1] },
+    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[2] },
+    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[3] },
+    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[4] },
+    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[5] },
+    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[6] },
+    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[7] },
+    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[8] },
+
   
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CJ10", "CJ11", "BF12"]);
+  const [layerNameList, setLayerNameList] = useState(["ES 06", "DB 07", "DS 09", "DT 11", "CD 11", "CH 09", "CF 05", "BK 01"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1185,12 +1198,12 @@ const TeraiFarm = () => {
     <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
         <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
-        <h1 className="text-3xl font-serif mt-2">Smoke</h1>
+        <h1 className="text-3xl font-serif mt-2">Terai Farm</h1>
       </div>
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-1/2 relative">
-          <SmokeLayer layers={layers} />
+          <TeraiFarmLayer layers={layers} />
         </div>
 
         <div className="w-1/2 flex flex-col gap-6">
@@ -1226,7 +1239,7 @@ const TeraiFarm = () => {
               <button onClick={() => {
                 resetColors();
                 setLayerNameList((lArray) => {
-                  return ["CJ10", "CJ11", "BF12"]
+                  return ["ES 06", "DB 07", "DS 09", "DT 11", "CD 11", "CH 09", "CF 05", "BK 01"]
                 })
               }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
             </div>
