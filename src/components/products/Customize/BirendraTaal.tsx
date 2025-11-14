@@ -7,7 +7,8 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import SmokeLayer from '@/components/products/Customize/SmokeLayer';
+
+import BirendraTaalLayer from './BirendraTaalLayer';
 
 
 const colorData1000 = [
@@ -1036,10 +1037,16 @@ const colorData1000 = [
 
 
 const BirendraTaal = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 ]: string } = {
-    1: "#a8d5d3",
-    2: "#c4dfda",
-    3: "#e2e3e4",
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 ]: string } = {
+    1: "#BFC761",
+    2: "#83934A",
+    3: "#34364B",
+    4: "#4D596C",
+    5: "#608682",
+    6: "#ABB8A0",
+    7: "#FDECBD",
+    8: "#A8D5D3",
+    9: "#68BAC8",
   
   };
 
@@ -1104,13 +1111,20 @@ const BirendraTaal = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Smoke/Smoke1.png", color: colors[1] },
-    { src: "/layers/Smoke/Smoke2.png", color: colors[2] },
-    { src: "/layers/Smoke/Smoke3.png", color: colors[3] }
+    { src: "/layers/BirendraTaal/Birendra Taal1.png", color: colors[1] },
+    { src: "/layers/BirendraTaal/Birendra Taal2.png", color: colors[2] },
+    { src: "/layers/BirendraTaal/Birendra Taal3.png", color: colors[3] },
+    { src: "/layers/BirendraTaal/Birendra Taal4.png", color: colors[4] },
+    { src: "/layers/BirendraTaal/Birendra Taal5.png", color: colors[5] },
+    { src: "/layers/BirendraTaal/Birendra Taal6.png", color: colors[6] },
+    { src: "/layers/BirendraTaal/Birendra Taal7.png", color: colors[7] },
+    { src: "/layers/BirendraTaal/Birendra Taal8.png", color: colors[8] },
+    { src: "/layers/BirendraTaal/Birendra Taal9.png", color: colors[9] },
+
   
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CJ10", "CJ11", "BF12"]);
+  const [layerNameList, setLayerNameList] = useState(["CK 07", "CM 08", "BR 04", "BL 06", "CB O7", "CD 10", "DR 11", "CJ 10", "CJ 08"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1185,12 +1199,12 @@ const BirendraTaal = () => {
     <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
         <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
-        <h1 className="text-3xl font-serif mt-2">Smoke</h1>
+        <h1 className="text-3xl font-serif mt-2">Birendra Taal</h1>
       </div>
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-1/2 relative">
-          <SmokeLayer layers={layers} />
+          <BirendraTaalLayer layers={layers} />
         </div>
 
         <div className="w-1/2 flex flex-col gap-6">
@@ -1226,7 +1240,7 @@ const BirendraTaal = () => {
               <button onClick={() => {
                 resetColors();
                 setLayerNameList((lArray) => {
-                  return ["CJ10", "CJ11", "BF12"]
+                  return ["CK 07", "CM 08", "BR 04", "BL 06", "CB O7", "CD 10", "DR 11", "CJ 10", "CJ 08"]
                 })
               }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
             </div>
