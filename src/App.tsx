@@ -74,13 +74,9 @@ import Kunda from "./components/products/Customize/Kunda";
 import BudiAunla from "./components/products/Customize/BudiAunla";
 import Sukool from "./components/products/Customize/Sukool";
 import WaterLilies from "./components/products/Customize/WaterLilies";
-<<<<<<< Updated upstream
 import Echo from "./components/products/Customize/Echo";
 import BirendraTaal from "./components/products/Customize/BirendraTaal";
 
-=======
-import BayLeavesLayer from "./components/products/Customize/BayleavesLayer";
->>>>>>> Stashed changes
 
 
 
