@@ -7,7 +7,8 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import SmokeLayer from '@/components/products/Customize/SmokeLayer';
+import TiharLayer from '@/components/products/Customize/TiharLayer';
+
 
 
 const colorData1000 = [
@@ -1036,11 +1037,14 @@ const colorData1000 = [
 
 
 const Tihar = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 ]: string } = {
-    1: "#a8d5d3",
-    2: "#c4dfda",
-    3: "#e2e3e4",
-  
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5| 6 | 7]: string } = {
+    1: "#52717a",
+    2: "#94b1ad",
+    3: "#c0c5af",
+    4: "#dbd8c4",
+    5: "#fceecc",
+    6: "#be9265",
+    7: "#781d23",
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1104,13 +1108,17 @@ const Tihar = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Smoke/Smoke1.png", color: colors[1] },
-    { src: "/layers/Smoke/Smoke2.png", color: colors[2] },
-    { src: "/layers/Smoke/Smoke3.png", color: colors[3] }
-  
+    { src: "/layers/Tihar/Tihar1.png", color: colors[1] },
+    { src: "/layers/Tihar/Tihar2.png", color: colors[2] },
+    { src: "/layers/Tihar/Tihar3.png", color: colors[3] },
+    { src: "/layers/Tihar/Tihar4.png", color: colors[4] },
+    { src: "/layers/Tihar/Tihar5.png", color: colors[5] },
+    { src: "/layers/Tihar/Tihar6.png", color: colors[6] },
+    { src: "/layers/Tihar/Tihar7.png", color: colors[7] },
+
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CJ10", "CJ11", "BF12"]);
+  const [layerNameList, setLayerNameList] = useState(["CF 05", "CG 10", "CR 09" , "CO 12", "DR 12", "DS 07","AT 03"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1185,12 +1193,12 @@ const Tihar = () => {
     <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
         <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
-        <h1 className="text-3xl font-serif mt-2">Smoke</h1>
+        <h1 className="text-3xl font-serif mt-2">Tihar</h1>
       </div>
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-1/2 relative">
-          <SmokeLayer layers={layers} />
+          <TiharLayer layers={layers} />
         </div>
 
         <div className="w-1/2 flex flex-col gap-6">
@@ -1226,7 +1234,7 @@ const Tihar = () => {
               <button onClick={() => {
                 resetColors();
                 setLayerNameList((lArray) => {
-                  return ["CJ10", "CJ11", "BF12"]
+                  return ["CF 05", "CG 10", "CR 09" , "CO 12", "DR 12", "DS 07","AT 03"];
                 })
               }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
             </div>

@@ -1121,7 +1121,7 @@ const LakheFace = () => {
 
   ], [colors]);
 
-const [layerNameList, setLayerNameList]=useState(["BM01", "BM012", "BM08", "BM07", "BM04", "BM06", "BM03","BM02"]);
+const [layerNameList, setLayerNameList]=useState(["BM01", "BM12", "BM08", "BM07", "BM04", "BM06", "BM03","BM02"]);
   const [activeLayer, setActiveLayer] = useState(1);
  
 
@@ -1237,7 +1237,7 @@ const [layerNameList, setLayerNameList]=useState(["BM01", "BM012", "BM08", "BM07
               <button onClick={() => {
                 resetColors();
                 setLayerNameList((lArray) => {
-                  return ["BM01", "BM012", "BM08", "BM07", "BM04", "BM06", "BM03","BM02"]
+                  return ["BM01", "BM12", "BM08", "BM07", "BM04", "BM06", "BM03","BM02"]
                 })
               }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
             </div>

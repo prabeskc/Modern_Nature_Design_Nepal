@@ -7,7 +7,8 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import SmokeLayer from '@/components/products/Customize/SmokeLayer';
+import IllusionLayer from '@/components/products/Customize/IllusionLayer';
+
 
 
 const colorData1000 = [
@@ -1036,11 +1037,11 @@ const colorData1000 = [
 
 
 const Illusion = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 ]: string } = {
-    1: "#a8d5d3",
-    2: "#c4dfda",
-    3: "#e2e3e4",
-  
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4]: string } = {
+    1: "#433a3b",
+    2: "#3ea4ca",
+    3: "#f9f8f5",
+    4: "#627e2a",
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1104,13 +1105,13 @@ const Illusion = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Smoke/Smoke1.png", color: colors[1] },
-    { src: "/layers/Smoke/Smoke2.png", color: colors[2] },
-    { src: "/layers/Smoke/Smoke3.png", color: colors[3] }
-  
+    { src: "/layers/Illusion/Illusion1.png", color: colors[1] },
+    { src: "/layers/Illusion/Illusion2.png", color: colors[2] },
+    { src: "/layers/Illusion/Illusion3.png", color: colors[3] },
+    { src: "/layers/Illusion/Illusion4.png", color: colors[4] },
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CJ10", "CJ11", "BF12"]);
+  const [layerNameList, setLayerNameList] = useState(["AJ 02", "CJ 07", "AH 12" , "CL 03"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1185,12 +1186,12 @@ const Illusion = () => {
     <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
         <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
-        <h1 className="text-3xl font-serif mt-2">Smoke</h1>
+        <h1 className="text-3xl font-serif mt-2">Illusion</h1>
       </div>
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-1/2 relative">
-          <SmokeLayer layers={layers} />
+          <IllusionLayer layers={layers} />
         </div>
 
         <div className="w-1/2 flex flex-col gap-6">
@@ -1226,7 +1227,7 @@ const Illusion = () => {
               <button onClick={() => {
                 resetColors();
                 setLayerNameList((lArray) => {
-                  return ["CJ10", "CJ11", "BF12"]
+                  return ["AJ 02", "CJ 07", "AH 12" , "CL 03"];
                 })
               }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
             </div>

@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import AankhiJhyal from "./components/products/Customize/AankhiJhyal";
 import Attraction from "./components/products/Customize/Attraction";
 import Bamboos from "./components/products/Customize/Bamboos";
-import BayLeaves from "./components/products/Customize/Bayleaves";
+import BayLeaves from "./components/products/Customize/BayLeaves";
 import Bubbles from "./components/products/Customize/Bubbles";
 import BurningRope from "./components/products/Customize/BurningRope";
 import Cells from "./components/products/Customize/Cells";
@@ -74,9 +74,13 @@ import Kunda from "./components/products/Customize/Kunda";
 import BudiAunla from "./components/products/Customize/BudiAunla";
 import Sukool from "./components/products/Customize/Sukool";
 import WaterLilies from "./components/products/Customize/WaterLilies";
+<<<<<<< Updated upstream
 import Echo from "./components/products/Customize/Echo";
 import BirendraTaal from "./components/products/Customize/BirendraTaal";
 
+=======
+import BayLeavesLayer from "./components/products/Customize/BayleavesLayer";
+>>>>>>> Stashed changes
 
 
 

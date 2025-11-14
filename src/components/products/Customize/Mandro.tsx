@@ -7,7 +7,8 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import SmokeLayer from '@/components/products/Customize/SmokeLayer';
+import MandroLayer from '@/components/products/Customize/MandroLayer';
+
 
 
 const colorData1000 = [
@@ -1037,10 +1038,9 @@ const colorData1000 = [
 
 const Mandro = () => {
   const INITIAL_COLORS: { [key in 1 | 2 | 3 ]: string } = {
-    1: "#a8d5d3",
-    2: "#c4dfda",
+    1: "#afacb9",
+    2: "#f9ae53",
     3: "#e2e3e4",
-  
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1104,13 +1104,12 @@ const Mandro = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Smoke/Smoke1.png", color: colors[1] },
-    { src: "/layers/Smoke/Smoke2.png", color: colors[2] },
-    { src: "/layers/Smoke/Smoke3.png", color: colors[3] }
-  
+    { src: "/layers/Mandro/Mandro1.png", color: colors[1] },
+    { src: "/layers/Mandro/Mandro2.png", color: colors[2] },
+    { src: "/layers/Mandro/Mandro3.png", color: colors[3] },
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CJ10", "CJ11", "BF12"]);
+  const [layerNameList, setLayerNameList] = useState(["DG 12", "BI 05", "CL 04"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1185,12 +1184,12 @@ const Mandro = () => {
     <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
         <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
-        <h1 className="text-3xl font-serif mt-2">Smoke</h1>
+        <h1 className="text-3xl font-serif mt-2">Mandro</h1>
       </div>
 
       <div className="flex w-full max-w-7xl gap-6">
         <div className="w-1/2 relative">
-          <SmokeLayer layers={layers} />
+          <MandroLayer layers={layers} />
         </div>
 
         <div className="w-1/2 flex flex-col gap-6">
@@ -1226,7 +1225,7 @@ const Mandro = () => {
               <button onClick={() => {
                 resetColors();
                 setLayerNameList((lArray) => {
-                  return ["CJ10", "CJ11", "BF12"]
+                  return ["BQ 10", "DM 07", "BF 12"];
                 })
               }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
             </div>
