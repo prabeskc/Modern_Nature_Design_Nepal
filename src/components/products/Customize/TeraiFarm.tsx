@@ -1037,7 +1037,7 @@ const colorData1000 = [
 
 
 const TeraiFarm = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 |4 | 5 | 6 | 7 | 8]: string } = {
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 |4 | 5 | 6 | 7 | 8 ]: string } = {
     1: "#725264",
     2: "#d7be8a",
     3: "#e4c69c",
@@ -1112,13 +1112,13 @@ const TeraiFarm = () => {
 
   const layers = useMemo(() => [
     { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[1] },
-    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[2] },
-    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[3] },
-    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[4] },
-    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[5] },
-    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[6] },
-    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[7] },
-    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[8] },
+    { src: "/layers/TeraiFarm/Terai Farm2.png", color: colors[2] },
+    { src: "/layers/TeraiFarm/Terai Farm3.png", color: colors[3] },
+    { src: "/layers/TeraiFarm/Terai Farm4.png", color: colors[4] },
+    { src: "/layers/TeraiFarm/Terai Farm5.png", color: colors[5] },
+    { src: "/layers/TeraiFarm/Terai Farm6.png", color: colors[6] },
+    { src: "/layers/TeraiFarm/Terai Farm7.png", color: colors[7] },
+    { src: "/layers/TeraiFarm/Terai Farm8.png", color: colors[8] },
 
   
   ], [colors]);
