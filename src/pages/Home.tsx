@@ -10,6 +10,7 @@ import FeaturedProducts from '@/components/home/FeaturedProducts';
 // import ShopBestsellers from '@/components/home/ShopBestsellers';
 // import BrandValues from '@/components/home/BrandValues';
 import Footer from '@/components/ui/Footer';
+import InspirationGallery from '@/components/home/InspirationGallery';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <InspirationGallery />
         <LatestDesigns />
         <FeaturedProducts />
         <OurExperience />
