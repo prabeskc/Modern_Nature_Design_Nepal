@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 type Item = {
   id: string;
@@ -20,132 +20,103 @@ const ITEMS: Item[] = [
   },
 ];
 
-export default function InspirationGallery() {
-  const [active, setActive] = useState<number | null>(null);
-
-  function open(i: number) {
-    setActive(i);
-    document.body.style.overflow = "hidden"; // lock scroll
-  }
-
-  function close() {
-    setActive(null);
-    document.body.style.overflow = "";
-  }
+export default function InspirationGalleryMinimal() {
+  const item = ITEMS[0];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-extrabold mb-8">
-        "From Nature’s Palette to Timeless Hand-Knotted Rugs"
-      </h2>
+    <div className="w-full bg-[#f7f7f7] py-20">
+      <div className="max-w-6xl mx-auto px-6">
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {ITEMS.map((item, i) => (
-          <div
-            key={item.id}
-            onClick={() => open(i)}
-            className="cursor-pointer bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden border"
-          >
-            <div className="h-52 relative">
+        {/* HEADER */}
+        <div className="mb-14">
+          <p className="text-gray-500 uppercase tracking-[0.15em] text-sm">
+            WHAT WE DO
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold mt-1 leading-tight">
+            LOOK DEEP INTO <br /> THE NATURE
+          </h2>
+        </div>
+
+        {/* 3 COLUMN LAYOUT */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+          {/* LEFT COLUMN */}
+          <div className="space-y-6 text-center md:text-left">
+                <div className="flex flex-col items-center md:items-start gap-2">
+              <div className="w-10 h-10 border rounded-full flex items-center justify-center text-gray-700">
+                <span className="text-xl">▲</span>
+              </div>
+
+              <h3 className="text-lg font-semibold tracking-wide">
+                INSPIRATION
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+                Captured during your trek — the moment that sparked the idea.
+              </p>
+            </div>
+
+            <div className="w-full h-[360px] overflow-hidden rounded-lg shadow-sm">
+              <img
+                src={item.photo}
+                className="w-full h-full"
+              />
+            </div>
+
+          </div>
+
+          {/* CENTER COLUMN (TALLER IMAGE) */}
+          <div className="space-y-6 text-center">
+            <div className="w-full h-[430px] overflow-hidden rounded-lg shadow-sm">
               <img
                 src={item.design}
-                alt={item.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full"
               />
-              <div className="absolute bottom-4 left-4 text-white drop-shadow">
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-sm">{item.short}</p>
+            </div>
+
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-10 h-10 border rounded-full flex items-center justify-center text-gray-700">
+                <span className="text-xl">✦</span>
               </div>
+
+              <h3 className="text-lg font-semibold tracking-wide">
+                ARTISTIC TRANSLATION
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+                Your sketch transforming natural forms into artistic language.
+              </p>
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* MODAL */}
-      {active !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          {/* Dark backdrop */}
-          <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={close}
-          />
+          {/* RIGHT COLUMN */}
+          <div className="space-y-6 text-center md:text-right">
+             <div className="flex flex-col items-center md:items-end gap-2">
+              <div className="w-10 h-10 border rounded-full flex items-center justify-center text-gray-700">
+                <span className="text-xl">❉</span>
+              </div>
 
-          {/* Modal card */}
-          <div className="relative z-10 bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto animate-fadeIn">
+              <h3 className="text-lg font-semibold tracking-wide">
+                FINISHED CARPET
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+                The final hand-knotted artwork crafted by Nepali artisans.
+              </p>
+            </div>
             
-            {/* Header */}
-            <div className="p-6 border-b flex justify-between items-center">
-              <div>
-                <h3 className="text-xl font-semibold">
-                  {ITEMS[active].title}
-                </h3>
-                <p className="text-sm text-gray-600">
-                  {ITEMS[active].short}
-                </p>
-              </div>
-              <button
-                onClick={close}
-                className="text-gray-500 hover:text-black text-2xl leading-none"
-              >
-                ×
-              </button>
-            </div>
-
-            {/* Content */}
-            <div className="p-6 space-y-10">
-
-              {/* 1. Inspiration */}
-              <div className="flex flex-col lg:flex-row gap-6 items-center">
-                <img
-                  src={ITEMS[active].photo}
-                  className="w-full lg:w-1/3 rounded-xl object-cover shadow"
-                />
-                <div className="lg:w-2/3">
-                  <h4 className="text-xl font-bold mb-2">Inspiration</h4>
-                  <p className="text-gray-600">
-                    The natural scene captured during your trek—the moment
-                    that sparked the idea.
-                  </p>
-                </div>
-              </div>
-
-              {/* 2. Design Sketch */}
-              <div className="flex flex-col lg:flex-row gap-6 items-center">
-                <img
-                  src={ITEMS[active].design}
-                  className="w-full lg:w-1/3 rounded-xl object-contain bg-gray-50 p-4 shadow"
-                />
-                <div className="lg:w-2/3">
-                  <h4 className="text-xl font-bold mb-2">
-                    Artistic Translation
-                  </h4>
-                  <p className="text-gray-600">
-                    Your design sketch interpreting the natural elements
-                    into patterns and textures.
-                  </p>
-                </div>
-              </div>
-
-              {/* 3. Final Carpet */}
-              <div className="flex flex-col lg:flex-row gap-6 items-center">
-                <img
-                  src={ITEMS[active].carpet}
-                  className="w-full lg:w-1/3 rounded-xl object-cover shadow"
-                />
-                <div className="lg:w-2/3">
-                  <h4 className="text-xl font-bold mb-2">Hand-Knotted Result</h4>
-                  <p className="text-gray-600">
-                    The final carpet brought to life by skilled Nepali artisans.
-                  </p>
-                </div>
-              </div>
-
+            <div className="w-full h-[360px] overflow-hidden rounded-lg shadow-sm">
+              <img
+                src={item.carpet}
+                className="w-full h-full"
+              />
             </div>
 
           </div>
+
         </div>
-      )}
+      </div>
     </div>
   );
 }

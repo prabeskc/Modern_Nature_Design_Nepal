@@ -18,7 +18,7 @@ const AboutUsPage: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-20 w-4/5 mx-auto items-center justify-center">
 
         {/* Left Content */}
-        <div className="w-full lg:w-full max-w-5xl mx-auto space-y-6 text-center lg:text-left">
+        <div className="w-full lg:w-1/2 max-w-5xl mx-auto space-y-6 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 drop-shadow-sm">
             Weaving Heritage into Modern Elegance
           </h2>
@@ -30,18 +30,16 @@ const AboutUsPage: React.FC = () => {
             <br /> <br />
             We operate exclusively on a wholesale, custom-order basis, ensuring every piece is ethically made — 100% child labor–free, handcrafted, and a tribute to Nepal’s weaving legacy. Beyond rugs, we weave purpose — empowering artisans and preserving culture through every creation.
           </p>
-
-
         </div>
 
-        {/* Right Image */}
-        {/* <div className="w-full lg:w-1/2">
-          <img
-            src="assets/images/about/12.jpg"
-            alt="About Modern Nature Design Nepal"
-            className="rounded-2xl shadow-lg object-cover w-full h-auto"
+        {/* Right Video */}
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <video
+            src="/public/assets/images/about/video.mp4"
+            controls
+            className="rounded-2xl shadow-lg w-full h-auto object-cover"
           />
-        </div> */}
+        </div>
 
       </div>
     </motion.section>
