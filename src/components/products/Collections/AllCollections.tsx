@@ -32,7 +32,6 @@ const carpets: Carpet[] = [
     { id: 'rug-019', name: 'Manaslu Circuit', imageUrl: '/assets/images/products/ManasluCircut.jpg' },
     { id: 'rug-020', name: 'Maze', imageUrl: '/assets/images/products/Maze.jpg' },
     { id: 'rug-021', name: 'Mirror', imageUrl: '/assets/images/products/Mirror.jpg' },
-    { id: 'rug-022', name: 'Modern Fern', imageUrl: '/assets/images/products/ModernFern.jpg' },
     { id: 'rug-023', name: 'Monkey Temple', imageUrl: '/assets/images/products/MonkeyTemple.jpg' },
     { id: 'rug-024', name: 'Morning Sun', imageUrl: '/assets/images/products/MorningSun.jpg' },
     { id: 'rug-025', name: 'Nagh Daha', imageUrl: '/assets/images/products/NaghDaha.jpg' },
@@ -80,6 +79,9 @@ const carpets: Carpet[] = [
     { id: 'rug-067', name: 'Water Lilies', imageUrl: '/assets/images/products/WaterLilies.jpg' },
     { id: 'rug-068', name: 'Birendra Taal', imageUrl: '/assets/images/products/BirendraTaal.jpg' },
     { id: 'rug-069', name: 'Echo', imageUrl: '/assets/images/products/Echo.jpg' },
+    { id: 'rug-070', name: 'Kapaal', imageUrl: '/assets/images/products/Kapaal.jpg' },
+    { id: 'rug-071', name: 'Phulchoki', imageUrl: '/assets/images/products/Phulchoki.jpg' },
+
 
 
 ];

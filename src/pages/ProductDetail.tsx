@@ -311,21 +311,6 @@ const getAllProducts = (): DetailedProduct[] => {
     },
 
     {
-      id: 'rug-022',
-      name: 'Modern Fern',
-      material: 'Hand-knotted Wool',
-      imageUrl: '/assets/images/products/ModernFern.jpg',
-      features: [
-        'Hand-knotted by master artisans',
-        'Premium yarn construction',
-        'Traditional Persian design',
-        'Fade-resistant colors',
-        'Durable and long-lasting',
-        'Easy to maintain'
-      ],
-    },
-
-    {
       id: 'rug-023',
       name: 'Monkey Temple',
       material: 'Hand-knotted Wool',
@@ -1020,6 +1005,38 @@ const getAllProducts = (): DetailedProduct[] => {
       name: 'Echo',
       material: 'Hand-knotted Wool',
       imageUrl: '/assets/images/products/Echo.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    
+     {
+      id: 'rug-070',
+      name: 'Kapaal',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Kapaal.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    
+     {
+      id: 'rug-071',
+      name: 'Phulchoki',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Phulchoki.jpg',
       features: [
         'Hand-knotted by master artisans',
         'Premium yarn construction',

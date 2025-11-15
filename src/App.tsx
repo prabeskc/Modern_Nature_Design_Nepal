@@ -26,7 +26,6 @@ import Majesty from "./components/products/Customize/Majesty";
 import ManasluCircuit from "./components/products/Customize/ManasluCircuit";
 import Maze from "./components/products/Customize/Maze";
 import Mirror from "./components/products/Customize/Mirror";
-import ModernFern from "./components/products/Customize/ModernFern";
 import MonkeyTemple from "./components/products/Customize/MonkeyTemple";
 import MorningSun from "./components/products/Customize/MorningSun";
 import NaghDaha from "./components/products/Customize/NaghDaha";
@@ -75,6 +74,8 @@ import Sukool from "./components/products/Customize/Sukool";
 import WaterLilies from "./components/products/Customize/WaterLilies";
 import Echo from "./components/products/Customize/Echo";
 import BirendraTaal from "./components/products/Customize/BirendraTaal";
+import Phulchoki from "./components/products/Customize/Phulchoki";
+import Kapaal from "./components/products/Customize/Kapaal";
 
 
 
@@ -110,7 +111,6 @@ export default function App() {
         <Route path="/customize/manaslucircuit" element={<ManasluCircuit/>} />
         <Route path="/customize/maze" element={<Maze/>} />
         <Route path="/customize/mirror" element={<Mirror/>} />
-        <Route path="/customize/modernfern" element={<ModernFern/>} />
         <Route path="/customize/monkeytemple" element={<MonkeyTemple/>} />
         <Route path="/customize/morningsun" element={<MorningSun/>} />
         <Route path="/customize/naghdaha" element={<NaghDaha/>} />
@@ -158,6 +158,9 @@ export default function App() {
         <Route path="/customize/waterlilies" element={<WaterLilies/>} />
         <Route path="/customize/birendrataal" element={<BirendraTaal/>} />
         <Route path="/customize/echo" element={<Echo/>} />
+        <Route path="/customize/kapaal" element={<Kapaal/>} />
+        <Route path="/customize/phulchoki" element={<Phulchoki/>} />
+
 
 
 

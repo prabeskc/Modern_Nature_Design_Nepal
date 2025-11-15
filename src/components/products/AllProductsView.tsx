@@ -28,7 +28,6 @@ const products: UnifiedProduct[] = [
   { id: 'rug-019', name: 'Manaslu Circuit', material: 'Synthetic Blend', size: "6'x9'", price: '$879', style: 'Modern Contemporary', imageUrl: '/assets/images/products/ManasluCircut.jpg' },
   { id: 'rug-020', name: 'Maze', material: 'Hand-knotted Wool', size: "7'x9'", price: '$1,999', style: 'Traditional Persian', imageUrl: '/assets/images/products/Maze.jpg' },
   { id: 'rug-021', name: 'Mirror', material: 'Distressed Wool', size: "6'x9'", price: '$749', style: 'Vintage Distressed', imageUrl: '/assets/images/products/Mirror.jpg' },
-  { id: 'rug-022', name: 'Modern Fern', material: 'Shag Wool', size: "6'x9'", price: '$849', style: 'Moroccan Shag', imageUrl: '/assets/images/products/ModernFern.jpg' },
   { id: 'rug-023', name: 'Monkey Temple', material: 'Flatweave Wool', size: "5'x8'", price: '$629', style: 'Flatweave Kilim', imageUrl: '/assets/images/products/MonkeyTemple.jpg' },
   { id: 'rug-024', name: 'Morning Sun', material: 'Hand-knotted Wool', size: "8'x11'", price: '$2,599', style: 'Traditional Persian', imageUrl: '/assets/images/products/MorningSun.jpg' },
   { id: 'rug-025', name: 'Nagh Daha', material: 'Wool Blend', size: "9'x12'", price: '$1,599', style: 'Modern Contemporary', imageUrl: '/assets/images/products/NaghDaha.jpg' },
@@ -76,6 +75,9 @@ const products: UnifiedProduct[] = [
   { id: 'rug-067', name: 'Water Lilies', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/WaterLilies.jpg' },
   { id: 'rug-068', name: 'Birendra Taal', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/BirendraTaal.jpg' },
   { id: 'rug-069', name: 'Echo', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Echo.jpg' },
+  { id: 'rug-070', name: 'Kapaal', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Kapaal.jpg' },
+  { id: 'rug-071', name: 'Phulchoki', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Phulchoki.jpg' },
+
 
 ];
 
