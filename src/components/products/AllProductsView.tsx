@@ -10,7 +10,7 @@ const products: UnifiedProduct[] = [
 
   { id: 'rug-001', name: 'Aankhi Jhyal', material: 'Hand-knotted Wool', size: "9'x12'", price: '$2,899', style: 'Traditional Persian', imageUrl: '/assets/images/products/AankhiJhyal.jpg' },
   { id: 'rug-032', name: 'Retro', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Retro.jpg' },
-  { id: 'rug-003', name: 'Bamboos', material: 'Distressed Wool', size: "8'x10'", price: '$899', style: 'Vintage Distressed', imageUrl: '/assets/images/products/bamboos.jpg' },
+  { id: 'rug-003', name: 'Baasn', material: 'Distressed Wool', size: "8'x10'", price: '$899', style: 'Vintage Distressed', imageUrl: '/assets/images/products/baasn.jpg' },
   { id: 'rug-004', name: 'Bayleaves', material: 'Wool Blend', size: "7'x9'", price: '$799', style: 'Modern Geometric', imageUrl: '/assets/images/products/BayLeaves.jpg' },
   { id: 'rug-005', name: 'Bubbles', material: 'Wool Blend', size: "8'x10'", price: '$1,049', style: 'Bohemian', imageUrl: '/assets/images/products/Bubbles.jpg' },
   { id: 'rug-006', name: 'Burning Rope', material: 'Wool Blend', size: "7'x9'", price: '$749', style: 'Minimal Scandinavian', imageUrl: '/assets/images/products/BurningRope.jpg' },
@@ -77,6 +77,7 @@ const products: UnifiedProduct[] = [
   { id: 'rug-069', name: 'Echo', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Echo.jpg' },
   { id: 'rug-070', name: 'Kapaal', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Kapaal.jpg' },
   { id: 'rug-071', name: 'Phulchoki', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Phulchoki.jpg' },
+  { id: 'rug-072', name: 'Thaali', material: 'Polypropylene', size: "8'x10'", price: '$599', style: 'Weather Resistant', imageUrl: '/assets/images/products/Thaali.jpg' },
 
 
 ];

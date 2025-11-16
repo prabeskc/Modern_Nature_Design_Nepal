@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import AankhiJhyal from "./components/products/Customize/AankhiJhyal";
 import Attraction from "./components/products/Customize/Attraction";
-import Bamboos from "./components/products/Customize/Bamboos";
+import Baasn from "./components/products/Customize/Baasn";
 import BayLeaves from "./components/products/Customize/BayLeaves";
 import Bubbles from "./components/products/Customize/Bubbles";
 import BurningRope from "./components/products/Customize/BurningRope";
@@ -76,6 +76,7 @@ import Echo from "./components/products/Customize/Echo";
 import BirendraTaal from "./components/products/Customize/BirendraTaal";
 import Phulchoki from "./components/products/Customize/Phulchoki";
 import Kapaal from "./components/products/Customize/Kapaal";
+import Thaali from "./components/products/Customize/Thaali";
 
 
 
@@ -93,7 +94,7 @@ export default function App() {
 
         <Route path="/customize/aankhijhyal" element={<AankhiJhyal />} />
         <Route path="/customize/attraction" element={<Attraction/>} />
-        <Route path="/customize/bamboos" element={<Bamboos/>} />
+        <Route path="/customize/baasn" element={<Baasn/>} />
         <Route path="/customize/bayleaves" element={<BayLeaves/>} />
         <Route path="/customize/bubbles" element={<Bubbles/>} />
         <Route path="/customize/burningrope" element={<BurningRope/>} />
@@ -160,6 +161,8 @@ export default function App() {
         <Route path="/customize/echo" element={<Echo/>} />
         <Route path="/customize/kapaal" element={<Kapaal/>} />
         <Route path="/customize/phulchoki" element={<Phulchoki/>} />
+        <Route path="/customize/thaali" element={<Thaali/>} />
+
 
 
 

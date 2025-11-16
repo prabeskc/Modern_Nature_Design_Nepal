@@ -29,12 +29,8 @@ export default function InspirationGalleryMinimal() {
 
         {/* HEADER */}
         <div className="mb-14">
-          <p className="text-gray-500 uppercase tracking-[0.15em] text-sm">
-            WHAT WE DO
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-extrabold mt-1 leading-tight">
-            LOOK DEEP INTO <br /> THE NATURE
+          <h2 className="text-4xl md:text-3xl font-extrabold mt-1 leading-tight">
+            From Nature’s Palette to Timeless Hand-Knotted Rugs
           </h2>
         </div>
 

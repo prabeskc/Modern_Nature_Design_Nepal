@@ -1037,14 +1037,14 @@ const colorData1000 = [
 
 
 const Cells = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 ]: string } = {
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5]: string } = {
     1: "#37302A",
     2: "#C6A96C",
     3: "#8F8176",
     4: "#E4DEC1",
     5: "#806272",
 
-  
+
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1114,7 +1114,7 @@ const Cells = () => {
     { src: "/layers/Cells/cells4.png", color: colors[4] },
     { src: "/layers/Cells/cells5.png", color: colors[5] },
 
-  
+
   ], [colors]);
 
   const [layerNameList, setLayerNameList] = useState(["AE 02", "DF 07", "AA 12", "DA 12", "ES 07"]);
@@ -1196,11 +1196,29 @@ const Cells = () => {
       </div>
 
       <div className="flex w-full max-w-7xl gap-6">
-        <div className="w-1/2 relative">
-          <CellsLayer layers={layers} />
+        <div className="w-2/5 relative">
+          <div className='mb-5'>
+            <h2>Description of Carpet</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nisi impedit obcaecati quis quam, doloribus corporis ex, minima aut iste odio sed harum sunt totam itaque voluptas alias. Dolor ex vel, temporibus excepturi facere tempora quod repudiandae deleniti </p>
+          </div>
+          <div
+            className="border bg-gray-50"
+            style={{
+              width: "500px",
+              height: "700px",
+              overflow: "hidden"
+            }}
+          >
+            <div className="w-full h-full">
+              <CellsLayer layers={layers} />
+            </div>
+          </div>
         </div>
 
-        <div className="w-1/2 flex flex-col gap-6">
+        {/* <CellsLayer layers={layers} />
+        </div> */}
+
+        <div className="w-3/5 flex flex-col gap-6">
           <div className="bg-gray-100 p-4 shadow-sm border">
             <h2 className="font-semibold mb-2">TO CHANGE COLORS:</h2>
             <ol className="list-decimal ml-4 text-sm text-gray-700 space-y-1">
@@ -1244,9 +1262,9 @@ const Cells = () => {
             {/* Conditional rendering based on showNewContent */}
             {!showNewContent ? (
               <>
-                <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1200</h1>
-                <div className="text-xs text-gray-600 text-center mb-2">Active layer: {activeLayer}</div>
-                <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
+                <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart ARS 1200 Wool Box</h1>
+                {/* <div className="text-xs text-gray-600 text-center mb-2">Active layer: {activeLayer}</div>
+                <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div> */}
 
 
                 <div className="flex flex-row justify-center flex-wrap gap-1">
@@ -1326,7 +1344,7 @@ const Cells = () => {
               <div className="   bg-gray-100  p-8">
                 <div className="max-w-7xl mx-auto">
                   <div>
-                    <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1000</h1>
+                    <h1 className="text-xl font-bold text-center mb-10 font-serif">Color Chart ARS 1000 Viscose Box</h1>
                   </div>
                   <div className="flex flex-row justify-center flex-wrap gap-2">
                     {split20(colorData1000.slice((currentPage1000 - 1) * 200, 200 * currentPage1000).reverse()).map((group, i) => (

@@ -14,7 +14,7 @@ interface Carpet {
 const carpets: Carpet[] = [
     { id: 'rug-001', name: 'Aankhi Jhyal', imageUrl: '/assets/images/products/AankhiJhyal.jpg' },
     { id: 'rug-002', name: 'Attraction', imageUrl: '/assets/images/products/Attraction.jpg' },
-    { id: 'rug-003', name: 'Bamboos', imageUrl: '/assets/images/products/bamboos.jpg' },
+    { id: 'rug-003', name: 'Baasn', imageUrl: '/assets/images/products/baasn.jpg' },
     { id: 'rug-004', name: 'Bayleaves', imageUrl: '/assets/images/products/BayLeaves.jpg' },
     { id: 'rug-005', name: 'Bubbles', imageUrl: '/assets/images/products/Bubbles.jpg' },
     { id: 'rug-006', name: 'Burning Rope', imageUrl: '/assets/images/products/BurningRope.jpg' },
@@ -81,6 +81,8 @@ const carpets: Carpet[] = [
     { id: 'rug-069', name: 'Echo', imageUrl: '/assets/images/products/Echo.jpg' },
     { id: 'rug-070', name: 'Kapaal', imageUrl: '/assets/images/products/Kapaal.jpg' },
     { id: 'rug-071', name: 'Phulchoki', imageUrl: '/assets/images/products/Phulchoki.jpg' },
+    { id: 'rug-072', name: 'Thaali', imageUrl: '/assets/images/products/Thaali.jpg' },
+
 
 
 

@@ -42,9 +42,9 @@ const getAllProducts = (): DetailedProduct[] => {
 
      {
       id: 'rug-003',
-      name: 'Bamboos',
+      name: 'Baasn',
       material: 'Hand-knotted Wool',
-      imageUrl: '/assets/images/products/bamboos.jpg',
+      imageUrl: '/assets/images/products/baasn.jpg',
       features: [
         'Hand-knotted by master artisans',
         'Premium yarn construction',
@@ -1037,6 +1037,21 @@ const getAllProducts = (): DetailedProduct[] => {
       name: 'Phulchoki',
       material: 'Hand-knotted Wool',
       imageUrl: '/assets/images/products/Phulchoki.jpg',
+      features: [
+        'Hand-knotted by master artisans',
+        'Premium yarn construction',
+        'Traditional Persian design',
+        'Fade-resistant colors',
+        'Durable and long-lasting',
+        'Easy to maintain'
+      ],
+    },
+
+    {
+      id: 'rug-072',
+      name: 'Thaali',
+      material: 'Hand-knotted Wool',
+      imageUrl: '/assets/images/products/Thaali.jpg',
       features: [
         'Hand-knotted by master artisans',
         'Premium yarn construction',
