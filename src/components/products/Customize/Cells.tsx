@@ -9,6 +9,8 @@ import colorDataE from '../../../../colorE.json';
 
 
 import CellsLayer from './CellsLayer';
+import Navbar from '@/components/ui/Navbar';
+import Footer from '@/components/ui/Footer';
 
 
 const colorData1000 = [
@@ -1189,9 +1191,10 @@ const Cells = () => {
 
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
+    <>
+    <Navbar />
+    <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
-        <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
         <h1 className="text-3xl font-serif mt-2">Cells</h1>
       </div>
 
@@ -1199,19 +1202,25 @@ const Cells = () => {
         <div className="w-2/5 relative">
           <div className='mb-5'>
             <h2>Description of Carpet</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nisi impedit obcaecati quis quam, doloribus corporis ex, minima aut iste odio sed harum sunt totam itaque voluptas alias. Dolor ex vel, temporibus excepturi facere tempora quod repudiandae deleniti </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nisi impedit obcaecati quis quam, doloribus corporis ex, minima aut iste odio sed harum sunt totam itaque voluptas alias. Dolor ex vel, temporibus excepturi facere tempora quod repudiandae deleniti Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex corporis itaque aut. Eveniet numquam quam consequuntur, aliquam soluta unde deserunt nulla.</p>
           </div>
           <div
             className="border bg-gray-50"
             style={{
               width: "500px",
-              height: "700px",
+              height: "620px",
               overflow: "hidden"
             }}
           >
             <div className="w-full h-full">
               <CellsLayer layers={layers} />
             </div>
+          </div>
+          <div className='flex flex-column gap-2.5'>
+            <img src='/public/assets/images/ProductDetailImages/cells1.jpg' className='h-72 w-40 object-cover mt-4'/>
+            <img src='/public/assets/images/ProductDetailImages/cells2.jpg' className='h-72 w-40 object-cover mt-4'/>
+            <img src='/public/assets/images/ProductDetailImages/cells3.jpg' className='h-72 w-40 object-cover mt-4'/>
+
           </div>
         </div>
 
@@ -1313,7 +1322,7 @@ const Cells = () => {
                   </p>
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className="flex gap-4 pt-4 pl-24">
                   <button
                     onClick={goToPrevious1200}
                     disabled={currentPage1200 === 1}
@@ -1341,10 +1350,10 @@ const Cells = () => {
 
 
 
-              <div className="   bg-gray-100  p-8">
+              <div className="   bg-gray-100">
                 <div className="max-w-7xl mx-auto">
                   <div>
-                    <h1 className="text-xl font-bold text-center mb-10 font-serif">Color Chart ARS 1000 Viscose Box</h1>
+                    <h1 className="text-xl font-bold text-center mb-5 font-serif">Color Chart ARS 1000 Viscose Box</h1>
                   </div>
                   <div className="flex flex-row justify-center flex-wrap gap-2">
                     {split20(colorData1000.slice((currentPage1000 - 1) * 200, 200 * currentPage1000).reverse()).map((group, i) => (
@@ -1381,7 +1390,7 @@ const Cells = () => {
                   </p>
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className="flex gap-4 pt-4 pl-20">
                   <button
                     onClick={goToPrevious1000}
                     disabled={currentPage1000 === 1}
@@ -1405,14 +1414,14 @@ const Cells = () => {
 
             <button
               onClick={() => setShowNewContent(!showNewContent)}
-              className="border border-gray-400 px-4 py-2 rounded-md mx-auto block text-center hover:bg-gray-100 transition mt-4 ml-[189px]"
+              className="border border-gray-400 px-4 py-2 rounded-md mx-auto block text-center hover:bg-gray-100 transition mt-4 ml-[250px]"
             >
               {showNewContent ? 'Show Previous Chart 1200' : 'Show New Chart 1000'}
             </button>
           </div>
 
           {/* Save Button */}
-          <button className="bg-black text-white px-6 py-3 mt-4 self-start ml-48">
+          <button className="bg-black text-white px-6 py-3 mt-4 self-start ml-60">
             🖨 Save your creation as PDF
           </button>
 
@@ -1423,6 +1432,8 @@ const Cells = () => {
         </div>
       </div >
     </div >
+    <Footer />
+    </>
   );
 };
 
