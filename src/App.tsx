@@ -19,7 +19,6 @@ import FountainWater from "./components/products/Customize/FountainWater";
 import Gurung from "./components/products/Customize/Gurung";
 import Holi from "./components/products/Customize/Holi";
 import Imagination from "./components/products/Customize/Imagination";
-import JungleSafari from "./components/products/Customize/JungleSafari";
 import JungleTribes from "./components/products/Customize/JungleTribes";
 import LakheFace from "./components/products/Customize/LakheFace";
 import Majesty from "./components/products/Customize/Majesty";
@@ -105,7 +104,6 @@ export default function App() {
         <Route path="/customize/gurung" element={<Gurung/>} />
         <Route path="/customize/holi" element={<Holi/>} />
         <Route path="/customize/imagination" element={<Imagination/>} />
-        <Route path="/customize/junglesafari" element={<JungleSafari/>} />
         <Route path="/customize/jungletribes" element={<JungleTribes/>} />
         <Route path="/customize/lakheface" element={<LakheFace/>} />
         <Route path="/customize/majesty" element={<Majesty/>} />

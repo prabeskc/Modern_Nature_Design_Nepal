@@ -1208,7 +1208,7 @@ const Cells = () => {
             className="border bg-gray-50"
             style={{
               width: "500px",
-              height: "620px",
+              height: "580px",
               overflow: "hidden"
             }}
           >
@@ -1217,9 +1217,9 @@ const Cells = () => {
             </div>
           </div>
           <div className='flex flex-column gap-2.5'>
-            <img src='/public/assets/images/ProductDetailImages/cells1.jpg' className='h-72 w-40 object-cover mt-4'/>
-            <img src='/public/assets/images/ProductDetailImages/cells2.jpg' className='h-72 w-40 object-cover mt-4'/>
-            <img src='/public/assets/images/ProductDetailImages/cells3.jpg' className='h-72 w-40 object-cover mt-4'/>
+            <img src='/public/assets/images/ProductDetailImages/cells1.jpg' className='h-52 w-40 object-cover mt-4'/>
+            <img src='/public/assets/images/ProductDetailImages/cells2.jpg' className='h-52 w-40 object-cover mt-4'/>
+            <img src='/public/assets/images/ProductDetailImages/cells3.jpg' className='h-52 w-40 object-cover mt-4'/>
 
           </div>
         </div>

@@ -21,7 +21,6 @@ const products: UnifiedProduct[] = [
   { id: 'rug-012', name: 'Gurung', material: 'Flatweave Wool', size: "6'x9'", price: '$699', style: 'Flatweave Kilim', imageUrl: '/assets/images/products/Gurung.jpg' },
   { id: 'rug-013', name: 'Holi', material: 'Shag Wool', size: "8'x10'", price: '$1,049', style: 'Moroccan Shag', imageUrl: '/assets/images/products/Holi.jpg' },
   { id: 'rug-014', name: 'Imagination', material: 'Hand-tufted Wool', size: "7'x9'", price: '$849', style: 'Hand Tufted', imageUrl: '/assets/images/products/Imagination.jpg' },
-  { id: 'rug-015', name: 'Jungle Safari', material: 'Hand-knotted Wool', size: "8'x10'", price: '$2,199', style: 'Traditional Persian', imageUrl: '/assets/images/products/JungleSafari.jpg' },
   { id: 'rug-016', name: 'Jungle Tribes', material: 'Synthetic Blend', size: "6'x9'", price: '$899', style: 'Modern Contemporary', imageUrl: '/assets/images/products/JungleTribes.jpg' },
   { id: 'rug-017', name: 'Lakhe Face', material: 'Wool Blend', size: "6'x9'", price: '$799', style: 'Minimal Scandinavian', imageUrl: '/assets/images/products/LakheFace.jpg' },
   { id: 'rug-018', name: 'Majesty', material: 'Wool Blend', size: "5'x8'", price: '$699', style: 'Bohemian', imageUrl: '/assets/images/products/Majesty.jpg' },

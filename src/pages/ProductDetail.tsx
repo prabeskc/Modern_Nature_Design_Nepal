@@ -205,20 +205,6 @@ const getAllProducts = (): DetailedProduct[] => {
       ],
     },
 
-    {
-      id: 'rug-015',
-      name: 'Jungle Safari',
-      material: 'Hand-knotted Wool',
-      imageUrl: '/assets/images/products/JungleSafari.jpg',
-      features: [
-        'Hand-knotted by master artisans',
-        'Premium yarn construction',
-        'Traditional Persian design',
-        'Fade-resistant colors',
-        'Durable and long-lasting',
-        'Easy to maintain'
-      ],
-    },
 
     {
       id: 'rug-016',
