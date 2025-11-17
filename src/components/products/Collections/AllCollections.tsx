@@ -25,7 +25,6 @@ const carpets: Carpet[] = [
     { id: 'rug-012', name: 'Gurung', imageUrl: '/assets/images/products/Gurung.jpg' },
     { id: 'rug-013', name: 'Holi', imageUrl: '/assets/images/products/Holi.jpg' },
     { id: 'rug-014', name: 'Imagination', imageUrl: '/assets/images/products/Imagination.jpg' },
-    { id: 'rug-015', name: 'Jungle Safari', imageUrl: '/assets/images/products/JungleSafari.jpg' },
     { id: 'rug-016', name: 'Jungle Tribes', imageUrl: '/assets/images/products/JungleTribes.jpg' },
     { id: 'rug-017', name: 'Lakhe Face', imageUrl: '/assets/images/products/LakheFace.jpg' },
     { id: 'rug-018', name: 'Majesty', imageUrl: '/assets/images/products/Majesty.jpg' },
