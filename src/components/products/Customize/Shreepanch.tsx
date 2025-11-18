@@ -8,6 +8,8 @@ import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
 import ShreePanchLayer from '@/components/products/Customize/ShreePanchLayer';
+import Navbar from '@/components/ui/Navbar';
+import Footer from '@/components/ui/Footer';
 
 
 
@@ -1184,6 +1186,8 @@ const ShreePanch = () => {
 
 
   return (
+    <>
+    <Navbar/>
     <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
         <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
@@ -1400,6 +1404,8 @@ const ShreePanch = () => {
         </div>
       </div >
     </div >
+    <Footer/>
+    </>
   );
 };
 

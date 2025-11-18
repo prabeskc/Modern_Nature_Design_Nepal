@@ -8,6 +8,8 @@ import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
 import MonkeyTempleLayer from '@/components/products/Customize/MonkeyTempleLayer';
+import Navbar from '@/components/ui/Navbar';
+import Footer from '@/components/ui/Footer';
 
 
 
@@ -1180,7 +1182,9 @@ const MonkeyTemple = () => {
 
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
+    <>
+    <Navbar/>
+    <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
         <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
         <h1 className="text-3xl font-serif mt-2">MonkeyTemple</h1>
@@ -1396,6 +1400,8 @@ const MonkeyTemple = () => {
         </div>
       </div >
     </div >
+    <Footer/>
+    </>
   );
 };
 
