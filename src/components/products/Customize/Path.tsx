@@ -2551,16 +2551,15 @@ const Path = () => {
 
     return (
         <>
-        <Navbar/>
-        <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
-            <div className="text-center mb-6">
-                <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
-                <h1 className="text-3xl font-serif mt-2">Path</h1>
-            </div>
+            <Navbar />
+            <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
+                <div className="text-center mb-6">
+                    <h1 className="text-3xl font-serif mt-2">Path</h1>
+                </div>
 
-            <div className="flex w-full max-w-7xl gap-6">
-                <div className="w-5/12 relative">
-                    {/* {svgMarkup ? (
+                <div className="flex w-full max-w-7xl gap-6">
+                    <div className="w-5/12 relative">
+                        {/* {svgMarkup ? (
                         <div
                             className="w-full h-full [&>svg]:block [&>svg]:w-full [&>svg]:h-auto"
                             style={{ ['--fg-color' as any]: foregroundColor, ['--bg-color' as any]: backgroundColor }}
@@ -2574,133 +2573,74 @@ const Path = () => {
                             alt="Custom Rug"
                             className="w-full h-full object-cover"
                         />
-                    {/* )} */}
-                    <div id="aankhi-jhyal-description" className="sr-only">
-                        Interactive color customization tool for the Aankhi Jhyal rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
-                    </div>
-                </div>
-
-                <div className="w-1/2 flex flex-col gap-6">
-                    <div className="bg-gray-100 p-4 shadow-sm border">
-                        <h2 className="font-semibold mb-2">TO CHANGE COLORS:</h2>
-                        <ol className="list-decimal ml-4 text-sm text-gray-700 space-y-1">
-                            <li>Click on the color window below corresponding to the part of the design that you want to re-color.</li>
-                            <li>Then click on the desired color in the color chart.</li>
-                        </ol>
+                        {/* )} */}
+                        <div id="aankhi-jhyal-description" className="sr-only">
+                            Interactive color customization tool for the Aankhi Jhyal rug design. Use the foreground and background pickers to update colors. Contrast ratio {currentContrast.toFixed(2)}.
+                        </div>
                     </div>
 
+                    <div className="w-1/2 flex flex-col gap-6">
+                        <div className="bg-gray-100 p-4 shadow-sm border">
+                            <h2 className="font-semibold mb-2">TO CHANGE COLORS:</h2>
+                            <ol className="list-decimal ml-4 text-sm text-gray-700 space-y-1">
+                                <li>Click on the color window below corresponding to the part of the design that you want to re-color.</li>
+                                <li>Then click on the desired color in the color chart.</li>
+                            </ol>
+                        </div>
 
-                    <div className="flex items-center gap-4">
-                        <div
-                            role="button"
-                            aria-label="Foreground color panel"
-                            onClick={() => setActiveTarget('foreground')}
-                            onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('foreground')}
-                            tabIndex={0}
-                            className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'foreground' ? 'ring-2 ring-gray-800' : ''}`}
-                        >
-                            <div className="w-10 h-10 border" style={{ backgroundColor: foregroundColor }} />
-                            <div className="text-sm">
-                                <div className="font-medium">Foreground</div>
-                                <div className="text-xs text-gray-600">{foregroundColor} · RGB {hexToRgb(foregroundColor).r}, {hexToRgb(foregroundColor).g}, {hexToRgb(foregroundColor).b}</div>
+
+                        <div className="flex items-center gap-4">
+                            <div
+                                role="button"
+                                aria-label="Foreground color panel"
+                                onClick={() => setActiveTarget('foreground')}
+                                onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('foreground')}
+                                tabIndex={0}
+                                className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'foreground' ? 'ring-2 ring-gray-800' : ''}`}
+                            >
+                                <div className="w-10 h-10 border" style={{ backgroundColor: foregroundColor }} />
+                                <div className="text-sm">
+                                    <div className="font-medium">Foreground</div>
+                                    <div className="text-xs text-gray-600">{foregroundColor} · RGB {hexToRgb(foregroundColor).r}, {hexToRgb(foregroundColor).g}, {hexToRgb(foregroundColor).b}</div>
+                                </div>
+                            </div>
+                            <div
+                                role="button"
+                                aria-label="Background color panel"
+                                onClick={() => setActiveTarget('background')}
+                                onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('background')}
+                                tabIndex={0}
+                                className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'background' ? 'ring-2 ring-gray-800' : ''}`}
+                            >
+                                <div className="w-10 h-10 border" style={{ backgroundColor: backgroundColor }} />
+                                <div className="text-sm">
+                                    <div className="font-medium">Background</div>
+                                    <div className="text-xs text-gray-600">{backgroundColor} · RGB {hexToRgb(backgroundColor).r}, {hexToRgb(backgroundColor).g}, {hexToRgb(backgroundColor).b}</div>
+                                </div>
+                            </div>
+                            <div className="ml-auto flex items-center gap-2">
+                                <button onClick={resetColors} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
                             </div>
                         </div>
-                        <div
-                            role="button"
-                            aria-label="Background color panel"
-                            onClick={() => setActiveTarget('background')}
-                            onKeyDown={(e) => e.key === 'Enter' && setActiveTarget('background')}
-                            tabIndex={0}
-                            className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeTarget === 'background' ? 'ring-2 ring-gray-800' : ''}`}
-                        >
-                            <div className="w-10 h-10 border" style={{ backgroundColor: backgroundColor }} />
-                            <div className="text-sm">
-                                <div className="font-medium">Background</div>
-                                <div className="text-xs text-gray-600">{backgroundColor} · RGB {hexToRgb(backgroundColor).r}, {hexToRgb(backgroundColor).g}, {hexToRgb(backgroundColor).b}</div>
-                            </div>
-                        </div>
-                        <div className="ml-auto flex items-center gap-2">
-                            <button onClick={resetColors} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
-                        </div>
-                    </div>
-                    {/* <div className="flex gap-4">
+                        {/* <div className="flex gap-4">
             <button className="ml-auto text-sm underline text-gray-600 hover:text-black">
               ⟳ Reset to original colors
             </button>
           </div> */}
 
-                    <div className="p-6 bg-gray-100 rounded-2xl shadow-md w-full mx-auto">
-                        {/* Conditional rendering based on showNewContent */}
-                        {!showNewContent ? (
-                            <>
-                                <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1200</h1>
-                                <div className="text-xs text-gray-600 text-center mb-2">Active target: {activeTarget}</div>
-                                <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
+                        <div className="p-6 bg-gray-100 rounded-2xl shadow-md w-full mx-auto">
+                            {/* Conditional rendering based on showNewContent */}
+                            {!showNewContent ? (
+                                <>
+                                    <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1200</h1>
+                                    <div className="text-xs text-gray-600 text-center mb-2">Active target: {activeTarget}</div>
+                                    <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
 
 
-                                <div className="flex flex-row justify-center flex-wrap gap-1">
-                                    {split20(getCurrentColorData()).reverse().map((group, i) => (
-                                        <div className=' flex flex-row gap-3' key={i}>
-                                            {group.map((colorItem: any) => (
-                                                <div key={colorItem.name}>
-                                                    <div
-                                                        className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
-                                                        style={{
-                                                            backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
-                                                        }}
-                                                    ></div>
-                                                    <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
-                                                        {colorItem.name}
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div className=" text-center ">
-                                    <p className="text-gray-600 pt-6">
-                                        Page {currentPage1200} of {totalPages1200}
-                                    </p>
-                                </div>
-
-                                <div className="flex gap-4 pt-4">
-                                    <button
-                                        onClick={goToPrevious1200}
-                                        disabled={currentPage1200 === 1}
-                                        className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
-                                    >
-                                        <span className="text-lg">‹</span>
-                                        PREVIOUS COLOR CHART
-                                    </button>
-
-                                    <button
-                                        onClick={goToNext1200}
-                                        disabled={currentPage1200 === totalPages1200}
-                                        className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
-                                    >
-                                        NEXT COLOR CHART
-                                        <span className="text-lg">›</span>
-                                    </button>
-                                </div>
-
-
-
-
-                            </>
-                        ) : (
-
-
-
-                            <div className="   bg-gray-100  p-8">
-                                <div className="max-w-7xl mx-auto">
-                                    <div>
-                                        <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1000</h1>
-                                    </div>
-                                    <div className="flex flex-row justify-center flex-wrap gap-2">
-                                        {split20(colorData1000.slice((currentPage1000 - 1) * 200, 200 * currentPage1000).reverse()).map((group, i) => (
+                                    <div className="flex flex-row justify-center flex-wrap gap-1">
+                                        {split20(getCurrentColorData()).reverse().map((group, i) => (
                                             <div className=' flex flex-row gap-3' key={i}>
-                                                {group.reverse().map((colorItem: any) => (
+                                                {group.map((colorItem: any) => (
                                                     <div key={colorItem.name}>
                                                         <div
                                                             className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
@@ -2708,7 +2648,7 @@ const Path = () => {
                                                                 backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
                                                             }}
                                                         ></div>
-                                                        <div className="text-[7px] text-center mt-1 text-gray-600">
+                                                        <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
                                                             {colorItem.name}
                                                         </div>
                                                     </div>
@@ -2716,60 +2656,119 @@ const Path = () => {
                                             </div>
                                         ))}
                                     </div>
+
+                                    <div className=" text-center ">
+                                        <p className="text-gray-600 pt-6">
+                                            Page {currentPage1200} of {totalPages1200}
+                                        </p>
+                                    </div>
+
+                                    <div className="flex gap-4 pt-4">
+                                        <button
+                                            onClick={goToPrevious1200}
+                                            disabled={currentPage1200 === 1}
+                                            className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
+                                        >
+                                            <span className="text-lg">‹</span>
+                                            PREVIOUS COLOR CHART
+                                        </button>
+
+                                        <button
+                                            onClick={goToNext1200}
+                                            disabled={currentPage1200 === totalPages1200}
+                                            className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
+                                        >
+                                            NEXT COLOR CHART
+                                            <span className="text-lg">›</span>
+                                        </button>
+                                    </div>
+
+
+
+
+                                </>
+                            ) : (
+
+
+
+                                <div className="   bg-gray-100  p-8">
+                                    <div className="max-w-7xl mx-auto">
+                                        <div>
+                                            <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1000</h1>
+                                        </div>
+                                        <div className="flex flex-row justify-center flex-wrap gap-2">
+                                            {split20(colorData1000.slice((currentPage1000 - 1) * 200, 200 * currentPage1000).reverse()).map((group, i) => (
+                                                <div className=' flex flex-row gap-3' key={i}>
+                                                    {group.reverse().map((colorItem: any) => (
+                                                        <div key={colorItem.name}>
+                                                            <div
+                                                                className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
+                                                                style={{
+                                                                    backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
+                                                                }}
+                                                            ></div>
+                                                            <div className="text-[7px] text-center mt-1 text-gray-600">
+                                                                {colorItem.name}
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div className=" text-center ">
+                                        <p className="text-gray-600 pt-6">
+                                            Page {currentPage1000} of {totalPages1000}
+                                        </p>
+                                    </div>
+
+                                    <div className="flex gap-4 pt-4">
+                                        <button
+                                            onClick={goToPrevious1000}
+                                            disabled={currentPage1000 === 1}
+                                            className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
+                                        >
+                                            <span className="text-lg">‹</span>
+                                            PREVIOUS COLOR CHART
+                                        </button>
+
+                                        <button
+                                            onClick={goToNext1000}
+                                            disabled={currentPage1000 === totalPages1000}
+                                            className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
+                                        >
+                                            NEXT COLOR CHART
+                                            <span className="text-lg">›</span>
+                                        </button>
+                                    </div>
                                 </div>
+                            )}
 
+                            <button
+                                onClick={() => setShowNewContent(!showNewContent)}
+                                className="border border-gray-400 px-4 py-2 rounded-md mx-auto block text-center hover:bg-gray-100 transition mt-4 ml-[189px]"
+                            >
+                                {showNewContent ? 'Show Previous Chart 1200' : 'Show New Chart 1000'}
+                            </button>
+                        </div>
 
-
-
-                                <div className=" text-center ">
-                                    <p className="text-gray-600 pt-6">
-                                        Page {currentPage1000} of {totalPages1000}
-                                    </p>
-                                </div>
-
-                                <div className="flex gap-4 pt-4">
-                                    <button
-                                        onClick={goToPrevious1000}
-                                        disabled={currentPage1000 === 1}
-                                        className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
-                                    >
-                                        <span className="text-lg">‹</span>
-                                        PREVIOUS COLOR CHART
-                                    </button>
-
-                                    <button
-                                        onClick={goToNext1000}
-                                        disabled={currentPage1000 === totalPages1000}
-                                        className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
-                                    >
-                                        NEXT COLOR CHART
-                                        <span className="text-lg">›</span>
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-
-                        <button
-                            onClick={() => setShowNewContent(!showNewContent)}
-                            className="border border-gray-400 px-4 py-2 rounded-md mx-auto block text-center hover:bg-gray-100 transition mt-4 ml-[189px]"
-                        >
-                            {showNewContent ? 'Show Previous Chart 1200' : 'Show New Chart 1000'}
+                        {/* Save Button */}
+                        <button className="bg-black text-white px-6 py-3 mt-4 self-start ml-48">
+                            🖨 Save your creation as PDF
                         </button>
+
+                        {/* Disclaimer */}
+                        <p className="text-xs text-gray-500 mt-2">
+                            Images are color simulations for visualization purposes only. Actual yarns or poms must be used for accurate color selection.
+                        </p>
                     </div>
-
-                    {/* Save Button */}
-                    <button className="bg-black text-white px-6 py-3 mt-4 self-start ml-48">
-                        🖨 Save your creation as PDF
-                    </button>
-
-                    {/* Disclaimer */}
-                    <p className="text-xs text-gray-500 mt-2">
-                        Images are color simulations for visualization purposes only. Actual yarns or poms must be used for accurate color selection.
-                    </p>
-                </div>
+                </div >
             </div >
-        </div >
-        <Footer/>
+            <Footer />
         </>
     );
 };
