@@ -1215,9 +1215,9 @@ const FountainWater = () => {
               </div>
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/cells1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/cells2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/cells3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/fountainwater1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/fountainwater2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/fountainwater3.jpg' className='h-52 w-40 object-cover mt-4' />
 
             </div>
           </div>

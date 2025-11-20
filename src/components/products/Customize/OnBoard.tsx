@@ -1216,9 +1216,9 @@ const OnBoard = () => {
               </div>
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/cells1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/cells2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/cells3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/onboard1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/onboard2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/onboard3.jpg' className='h-52 w-40 object-cover mt-4' />
 
             </div>
           </div>

@@ -1212,9 +1212,9 @@ const ShreePanch = () => {
               </div>
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/cells1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/cells2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/cells3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/shreepanch1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/shreepanch2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/shreepanch3.jpg' className='h-52 w-40 object-cover mt-4' />
 
             </div>
           </div>

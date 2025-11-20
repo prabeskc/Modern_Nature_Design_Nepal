@@ -9,13 +9,13 @@ const fadeInUp: Variants = {
 const AboutUsPage: React.FC = () => {
   return (
     <motion.section
-      className="relative bg-gradient-to-br from-white via-gray-50 to-amber-50 py-20 px-6 md:px-20"
+      className="relative bg-gradient-to-br from-white via-gray-50 to-amber-50 py-24 px-6 md:px-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
     >
-      <div className="flex flex-col lg:flex-row gap-20 w-4/5 mx-auto items-center justify-center">
+      <div className="flex flex-col lg:flex-row gap-32 w-4/5 mx-auto items-center justify-center">
 
         {/* Left Content */}
         <div className="w-full lg:w-1/2 max-w-5xl mx-auto space-y-6 text-center lg:text-left">
@@ -35,9 +35,9 @@ const AboutUsPage: React.FC = () => {
         {/* Right Video */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <video
-            src="/public/assets/images/about/video.mp4"
+            src="/public/assets/images/about/video.mov"
             controls
-            className="rounded-2xl shadow-lg w-full h-auto object-cover"
+            className="rounded-2xl shadow-lg w-full h-[700px] object-cover"
           />
         </div>
 
