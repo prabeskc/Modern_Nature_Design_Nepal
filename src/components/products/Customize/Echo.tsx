@@ -9,8 +9,8 @@ import colorDataE from '../../../../colorE.json';
 
 
 import EchoLayer from './EchoLayer';
-import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
+import Navbar from '@/components/ui/Navbar';
 
 
 const colorData1000 = [
@@ -1039,17 +1039,11 @@ const colorData1000 = [
 
 
 const Echo = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
+   const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
     1: "#E7AE18",
-<<<<<<< Updated upstream
-    2: "#3B5A40",
-    3: "#EEAAB1",
+    2: "#3EA4CA",
+    3: "#D6CCC0",
 
-=======
-    2: "#3ea4ca",
-    3: "#d6ccc0",
-  
->>>>>>> Stashed changes
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1116,7 +1110,6 @@ const Echo = () => {
     { src: "/layers/Echo/Echos1.png", color: colors[1] },
     { src: "/layers/Echo/Echos2.png", color: colors[2] },
     { src: "/layers/Echo/Echos3.png", color: colors[3] }
-
   ], [colors]);
 
   const [layerNameList, setLayerNameList] = useState(["DH 07", "CJ 07", "AD 10"]);
@@ -1195,7 +1188,7 @@ const Echo = () => {
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-serif mt-2">Echo</h1>
+          <h1 className="text-3xl font-serif mt-2">Birendra Taal</h1>
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
@@ -1215,23 +1208,12 @@ const Echo = () => {
               <div className="w-full h-full">
                 <EchoLayer layers={layers} />
               </div>
-<<<<<<< Updated upstream
             </div>
             <div className='flex flex-column gap-2.5'>
               <img src='/public/assets/images/ProductDetailImages/echo1.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/echo2.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/echo3.jpg' className='h-52 w-40 object-cover mt-4' />
 
-=======
-            ))}
-            <div className="ml-auto flex items-center gap-2">
-              <button onClick={() => {
-                resetColors();
-                setLayerNameList((lArray) => {
-                  return ["DH 07", "CJ 07", "AD 10"]
-                })
-              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
->>>>>>> Stashed changes
             </div>
           </div>
 

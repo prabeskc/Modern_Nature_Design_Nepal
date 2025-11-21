@@ -7,8 +7,7 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-
-import TeraiFarmLayer from './TeraiFarmLayer';
+import TeraiFarmLayer from '@/components/products/Customize/TeraiFarmLayer';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
 
@@ -1039,13 +1038,8 @@ const colorData1000 = [
 
 
 const TeraiFarm = () => {
-<<<<<<< Updated upstream
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8]: string } = {
+    const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8]: string } = {
     1: "#725264",
-=======
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 |4 | 5 | 6 | 7 | 8 ]: string } = {
-    1: "#8A4F49",
->>>>>>> Stashed changes
     2: "#d7be8a",
     3: "#e4c69c",
     4: "#ebdcb4",
@@ -1053,9 +1047,7 @@ const TeraiFarm = () => {
     6: "#91be9f",
     7: "#52717a",
     8: "#1e2a3d",
-
-
-  };
+ }
 
   const [colors, setColors] = useState(INITIAL_COLORS);
 
@@ -1118,7 +1110,7 @@ const TeraiFarm = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[1] },
+   { src: "/layers/TeraiFarm/Terai Farm1.png", color: colors[1] },
     { src: "/layers/TeraiFarm/Terai Farm2.png", color: colors[2] },
     { src: "/layers/TeraiFarm/Terai Farm3.png", color: colors[3] },
     { src: "/layers/TeraiFarm/Terai Farm4.png", color: colors[4] },
@@ -1126,11 +1118,9 @@ const TeraiFarm = () => {
     { src: "/layers/TeraiFarm/Terai Farm6.png", color: colors[6] },
     { src: "/layers/TeraiFarm/Terai Farm7.png", color: colors[7] },
     { src: "/layers/TeraiFarm/Terai Farm8.png", color: colors[8] },
-
-
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["EJ 06", "DB 07", "DS 09", "DT 11", "CD 11", "CH 09", "CF 05", "BK 01"]);
+  const [layerNameList, setLayerNameList] = useState(["ES 06", "DB 07", "DS 09", "DT 11", "CD 11", "CH 09", "CF 05", "BK 01"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1228,13 +1218,12 @@ const TeraiFarm = () => {
               </div>
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/teraifarm1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/teraifarm2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/teraifarm3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/TeraiFarm1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/TeraiFarm2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/TeraiFarm3.jpg' className='h-52 w-40 object-cover mt-4' />
 
             </div>
           </div>
-
           <div className="w-3/5 flex flex-col gap-6">
             <div className="bg-gray-100 p-4 shadow-sm border">
               <h2 className="font-semibold mb-2">TO CHANGE COLORS:</h2>
@@ -1268,7 +1257,7 @@ const TeraiFarm = () => {
                 <button onClick={() => {
                   resetColors();
                   setLayerNameList((lArray) => {
-                    return ["ES 06", "DB 07", "DS 09", "DT 11", "CD 11", "CH 09", "CF 05", "BK 01"]
+                    return ["ES 06", "DB 07", "DS 09", "DT 11", "CD 11", "CH 09", "CF 05", "BK 01"];
                   })
                 }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
               </div>

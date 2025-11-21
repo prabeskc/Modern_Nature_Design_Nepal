@@ -7,14 +7,9 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-<<<<<<< Updated upstream
-import KundaLayer from '@/components/products/Customize/KundaLayer';
+import KapaalLayer from '@/components/products/Customize/KapaalLayer';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
-=======
-import KapaalLayer from '@/components/products/Customize/KapaalLayer';
->>>>>>> Stashed changes
-
 
 
 const colorData1000 = [
@@ -1043,9 +1038,12 @@ const colorData1000 = [
 
 
 const Kapaal = () => {
-  const INITIAL_COLORS: { [key in 1 | 2]: string } = {
-    1: "#e19f04",
-    2: "#0c120d"
+  const INITIAL_COLORS: { [key in 1 | 2 ]: string } = {
+    1: "#E19F04",
+    2: "#0C120D",
+
+
+
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1186,23 +1184,11 @@ const Kapaal = () => {
 
 
   return (
-<<<<<<< Updated upstream
     <>
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-serif mt-2">Kunda</h1>
-=======
-    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
-      <div className="text-center mb-6">
-        <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Kapaal</p>
-        <h1 className="text-3xl font-serif mt-2">Kapaal</h1>
-      </div>
-
-      <div className="flex w-full max-w-7xl gap-6">
-        <div className="w-1/2 relative">
-          <KapaalLayer layers={layers} />
->>>>>>> Stashed changes
+          <h1 className="text-3xl font-serif mt-2">Kapaal</h1>
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
@@ -1220,25 +1206,14 @@ const Kapaal = () => {
               }}
             >
               <div className="w-full h-full">
-                <KundaLayer layers={layers} />
+                <KapaalLayer layers={layers} />
               </div>
-<<<<<<< Updated upstream
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/kapaal1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/kapaal2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/kapaal3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kaapal2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kaapal1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kaapal3.jpg' className='h-52 w-40 object-cover mt-4' />
 
-=======
-            ))}
-            <div className="ml-auto flex items-center gap-2">
-              <button onClick={() => {
-                resetColors();
-                setLayerNameList((lArray) => {
-                  return ["DI 01", "CA 01"];
-                })
-              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
->>>>>>> Stashed changes
             </div>
           </div>
 
@@ -1275,11 +1250,12 @@ const Kapaal = () => {
                 <button onClick={() => {
                   resetColors();
                   setLayerNameList((lArray) => {
-                    return ["DM 11", "CN 10", "EH 09"];
+                    return ["DI 01", "CA 01"]
                   })
                 }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
               </div>
             </div>
+
 
             <div className="p-6 bg-gray-100 rounded-2xl shadow-md w-full mx-auto">
               {/* Conditional rendering based on showNewContent */}

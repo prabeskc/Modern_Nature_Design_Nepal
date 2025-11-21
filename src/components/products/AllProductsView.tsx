@@ -97,12 +97,6 @@ const AllProductsView = ({ onProductSelect }: AllProductsViewProps) => {
     />
   </div>
 
-  {/* Product Info */}
-  {/* <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
-    <div className="text-charcoal/60 text-sm text-center sm:text-left">
-      <span className="font-medium text-charcoal">{products.length}</span> products found
-    </div>
-  </div> */}
 
   {/* Product Grid */}
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
