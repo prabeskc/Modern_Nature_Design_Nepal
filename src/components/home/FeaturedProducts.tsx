@@ -4,6 +4,7 @@ import Container from '../ui/Container.tsx';
 import SectionHeading from './SectionHeading';
 import { useModal } from '@/hooks/useModal';
 import productsData from '@/data/products.json';
+import { Link } from 'react-router-dom';
 
 interface Product {
   id: string;
@@ -298,12 +299,12 @@ export default function FeaturedProducts() {
         <div className="text-center mt-12">
           <div className={`transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}>
-            <button className="inline-flex items-center px-8 py-3 bg-charcoal text-off-white font-medium rounded-lg hover:bg-charcoal/90 transition-colors duration-200">
+            <Link to="/collections" className="inline-flex items-center px-8 py-3 bg-charcoal text-off-white font-medium rounded-lg hover:bg-charcoal/90 transition-colors duration-200">
               View All Products
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </Container>

@@ -76,6 +76,7 @@ import BirendraTaal from "./components/products/Customize/BirendraTaal";
 import Phulchoki from "./components/products/Customize/Phulchoki";
 import Kapaal from "./components/products/Customize/Kapaal";
 import Thaali from "./components/products/Customize/Thaali";
+import OurExperience from "./components/home/OurExperience";
 
 
 
@@ -85,6 +86,9 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/craftmanship" element={<OurExperience />} />
+
+
 
         <Route path="/collections" element={<AllCollections />} />
         

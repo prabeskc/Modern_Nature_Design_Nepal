@@ -8,6 +8,8 @@ import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
 import BubblesLayer from '@/components/products/Customize/BubblesLayer';
+import Navbar from '@/components/ui/Navbar';
+import Footer from '@/components/ui/Footer';
 
 
 
@@ -1182,18 +1184,40 @@ const Bubbles = () => {
 
 
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
+    <>
+    <Navbar/>
+    <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
       <div className="text-center mb-6">
-        <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Bubbles</p>
         <h1 className="text-3xl font-serif mt-2">Bubbles</h1>
       </div>
 
       <div className="flex w-full max-w-7xl gap-6">
-        <div className="w-1/2 relative">
-          <BubblesLayer layers={layers} />
+        <div className="w-2/5 relative">
+          <div className='mb-5'>
+            <h2>Description of Carpet</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nisi impedit obcaecati quis quam, doloribus corporis ex, minima aut iste odio sed harum sunt totam itaque voluptas alias. Dolor ex vel, temporibus excepturi facere tempora quod repudiandae deleniti Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex corporis itaque aut. Eveniet numquam quam consequuntur, aliquam soluta unde deserunt nulla.</p>
+          </div>
+          <div
+            className="border bg-gray-50"
+            style={{
+              width: "500px",
+              height: "580px",
+              overflow: "hidden"
+            }}
+          >
+            <div className="w-full h-full">
+              <BubblesLayer layers={layers} />
+            </div>
+          </div>
+          <div className='flex flex-column gap-2.5'>
+            <img src='/public/assets/images/ProductDetailImages/bubble1.jpg' className='h-52 w-40 object-cover mt-4' />
+            <img src='/public/assets/images/ProductDetailImages/bubble2.jpg' className='h-52 w-40 object-cover mt-4' />
+            <img src='/public/assets/images/ProductDetailImages/bubble3.jpg' className='h-52 w-40 object-cover mt-4' />
+
+          </div>
         </div>
 
-        <div className="w-1/2 flex flex-col gap-6">
+        <div className="w-3/5 flex flex-col gap-6">
           <div className="bg-gray-100 p-4 shadow-sm border">
             <h2 className="font-semibold mb-2">TO CHANGE COLORS:</h2>
             <ol className="list-decimal ml-4 text-sm text-gray-700 space-y-1">
@@ -1237,9 +1261,9 @@ const Bubbles = () => {
             {/* Conditional rendering based on showNewContent */}
             {!showNewContent ? (
               <>
-                <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1200</h1>
-                <div className="text-xs text-gray-600 text-center mb-2">Active layer: {activeLayer}</div>
-                <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
+                <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart ARS 1200 Wool Box</h1>
+                {/* <div className="text-xs text-gray-600 text-center mb-2">Active layer: {activeLayer}</div>
+                <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div> */}
 
 
                 <div className="flex flex-row justify-center flex-wrap gap-1">
@@ -1288,7 +1312,7 @@ const Bubbles = () => {
                   </p>
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className="flex gap-4 pt-4 pl-24">
                   <button
                     onClick={goToPrevious1200}
                     disabled={currentPage1200 === 1}
@@ -1316,10 +1340,10 @@ const Bubbles = () => {
 
 
 
-              <div className="   bg-gray-100  p-8">
+              <div className="   bg-gray-100">
                 <div className="max-w-7xl mx-auto">
                   <div>
-                    <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1000</h1>
+                    <h1 className="text-xl font-bold text-center mb-5 font-serif">Color Chart ARS 1000 Viscose Box</h1>
                   </div>
                   <div className="flex flex-row justify-center flex-wrap gap-2">
                     {split20(colorData1000.slice((currentPage1000 - 1) * 200, 200 * currentPage1000).reverse()).map((group, i) => (
@@ -1356,7 +1380,7 @@ const Bubbles = () => {
                   </p>
                 </div>
 
-                <div className="flex gap-4 pt-4">
+                <div className="flex gap-4 pt-4 pl-20">
                   <button
                     onClick={goToPrevious1000}
                     disabled={currentPage1000 === 1}
@@ -1380,7 +1404,7 @@ const Bubbles = () => {
 
             <button
               onClick={() => setShowNewContent(!showNewContent)}
-              className="border border-gray-400 px-4 py-2 rounded-md mx-auto block text-center hover:bg-gray-100 transition mt-4 ml-[189px]"
+              className="border border-gray-400 px-4 py-2 rounded-md mx-auto block text-center hover:bg-gray-100 transition mt-4 ml-[250px]"
             >
               {showNewContent ? 'Show Previous Chart 1200' : 'Show New Chart 1000'}
             </button>
@@ -1398,6 +1422,8 @@ const Bubbles = () => {
         </div>
       </div >
     </div >
+    <Footer/>
+    </>
   );
 };
 

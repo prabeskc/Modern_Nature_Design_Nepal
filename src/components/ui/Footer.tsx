@@ -44,18 +44,11 @@ export default function Footer() {
   }, []);
 
   const footerLinks = {
-    shop: {
-      title: 'Shop',
-      links: [
-        { name: 'Bestsellers', action: () => scrollToSection('bestsellers') },
-        { name: 'New Arrivals', action: () => scrollToSection('designs') }
-      ]
-    },
     about: {
       title: 'About',
       links: [
         { name: 'Our Story', action: () => scrollToSection('editorial') },
-        { name: 'Craftsmanship', action: () => scrollToSection('process') }
+        { name: 'Craftsmanship', action: () => scrollToSection('/craftmanship') }
       ]
     },
     support: {
@@ -63,6 +56,8 @@ export default function Footer() {
       links: [
         { name: '+977-9801037585', action: () => {} },
         { name: 'Thaiba-14, Lalitpur, Nepal', action: () => {} },
+        { name: 'info@modernnaturedesignnepal.com', action: () => {} },
+
       ]
     }
   };
@@ -87,7 +82,7 @@ export default function Footer() {
     >
       <Container>
         <div className="py-8 lg:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 items-start">
             {/* Brand */}
             <div 
               className={`lg:col-span-2 transform transition-all duration-800 ease-out ${
@@ -113,10 +108,10 @@ export default function Footer() {
                   <MapPin className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                   <span>Lalitpur, Nepal</span>
                 </div> */}
-                <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
+                {/* <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
                   <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                   <span>info@modernnaturedesignnepal.com</span>
-                </div>
+                </div> */}
               </div>
             </div>
             

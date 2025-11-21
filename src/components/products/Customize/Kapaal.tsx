@@ -1039,7 +1039,7 @@ const colorData1000 = [
 
 
 const Kapaal = () => {
- const INITIAL_COLORS: { [key in 1 | 2]: string } = {
+  const INITIAL_COLORS: { [key in 1 | 2]: string } = {
     1: "#e19f04",
     2: "#0c120d"
   };
@@ -1188,7 +1188,7 @@ const Kapaal = () => {
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-serif mt-2">Kapaal
-          
+
           </h1>
         </div>
 
@@ -1211,12 +1211,9 @@ const Kapaal = () => {
               </div>
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/Kapaal
-            1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/Kapaal
-            2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/Kapaal
-            3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kapaal1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kapaal2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kapaal3.jpg' className='h-52 w-40 object-cover mt-4' />
 
             </div>
           </div>
