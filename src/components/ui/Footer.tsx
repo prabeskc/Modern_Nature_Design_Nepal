@@ -48,7 +48,7 @@ export default function Footer() {
       title: 'About',
       links: [
         { name: 'Our Story', action: () => scrollToSection('editorial') },
-        { name: 'Craftsmanship', action: () => scrollToSection('/craftmanship') }
+        { name: 'Craftsmanship', action: () => scrollToSection('craftmanship') }
       ]
     },
     support: {
