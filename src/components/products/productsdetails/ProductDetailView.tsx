@@ -32,11 +32,8 @@ export interface ProductDetailViewProps {
 const ProductDetailView = ({
   product,
   onCustomize,
-  onAddToCart,
-  onBuyNow,
   onWishlist,
   onShare,
-  showBuyNow = true,
   showWishlist = true,
   showShare = true,
   showTrustBadges = true,
@@ -52,24 +49,6 @@ const ProductDetailView = ({
     } else {
       // Default behavior
       alert('Customize functionality would be implemented here!');
-    }
-  };
-
-  const handleAddToCart = (quantity: number) => {
-    if (onAddToCart) {
-      onAddToCart(product, quantity);
-    } else {
-      // Default behavior
-      alert(`Added ${quantity} ${product.name} to cart!`);
-    }
-  };
-
-  const handleBuyNow = (quantity: number) => {
-    if (onBuyNow) {
-      onBuyNow(product, quantity);
-    } else {
-      // Default behavior
-      alert(`Proceeding to checkout with ${quantity} ${product.name}`);
     }
   };
 
@@ -124,9 +103,6 @@ const ProductDetailView = ({
           <ProductActions
             product={product}
             onCustomize={handleCustomize}
-            onAddToCart={handleAddToCart}
-            onBuyNow={handleBuyNow}
-            showBuyNow={showBuyNow}
             customizeButtonText={customizeButtonText}
           />
 

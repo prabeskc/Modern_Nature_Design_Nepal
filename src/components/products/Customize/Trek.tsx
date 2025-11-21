@@ -1039,18 +1039,11 @@ const colorData1000 = [
 
 
 const Trek = () => {
-<<<<<<< Updated upstream
-  const INITIAL_COLORS: { [key in 1 | 2]: string } = {
-    1: "#989e92",
-    2: "#daaa7e",
-   
-
-=======
   const INITIAL_COLORS: { [key in 1 | 2 ]: string } = {
-    1: "#989e92",
-    2: "#daaa7e",
+    1: "#daaa7e",
+    2: "#989e92",
+   
  
->>>>>>> Stashed changes
 
   };
 
@@ -1122,7 +1115,7 @@ const Trek = () => {
 
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CA 08", "DS 08"]);
+  const [layerNameList, setLayerNameList] = useState(["DS 08", "CA 08"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1260,7 +1253,7 @@ const Trek = () => {
                 <button onClick={() => {
                   resetColors();
                   setLayerNameList((lArray) => {
-                    return ["CA 08", "DS 08"];
+                    return ["DS 08", "CA 08"];
                   })
                 }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
               </div>

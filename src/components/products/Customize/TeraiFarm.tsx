@@ -1037,14 +1037,10 @@ const colorData1000 = [
 
 
 
+
 const TeraiFarm = () => {
-<<<<<<< Updated upstream
     const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8]: string } = {
     1: "#725264",
-=======
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 |4 | 5 | 6 | 7 | 8 ]: string } = {
-    1: "#8A4F49",
->>>>>>> Stashed changes
     2: "#d7be8a",
     3: "#e4c69c",
     4: "#ebdcb4",

@@ -56,19 +56,6 @@ const ProductInfo = ({
           {product.name}
         </h1>
         
-        <div className="flex items-center space-x-4 mb-4">
-          <div className="flex items-center">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-current text-yellow-400" />
-            ))}
-            <span className="ml-2 text-sm text-charcoal/60">(4.8) • 127 reviews</span>
-          </div>
-        </div>
-        
-        <div className="text-3xl font-bold text-charcoal mb-6">
-          {product.price}
-          <span className="text-sm font-normal text-charcoal/60 ml-2">Free shipping</span>
-        </div>
       </div>
 
       {/* Key Features */}

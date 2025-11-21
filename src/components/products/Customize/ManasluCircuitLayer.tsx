@@ -76,11 +76,7 @@ export default function ManasluCircuitLayer({ layers }) {
           key={index}
           ref={(el) => (canvasRefs.current[index] = el)}
           style={{
-<<<<<<< Updated upstream
-            position: "absolute",
-=======
             position: index === 0 ? 'relative' : 'absolute',
->>>>>>> Stashed changes
             top: 0,
             left: 0,
             width: "100%",

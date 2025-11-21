@@ -7,8 +7,6 @@ interface ProductDetailModalProps {
   isOpen: boolean;
   onClose: () => void;
   onCustomize?: ProductDetailViewProps['onCustomize'];
-  onAddToCart?: ProductDetailViewProps['onAddToCart'];
-  onBuyNow?: ProductDetailViewProps['onBuyNow'];
   onWishlist?: ProductDetailViewProps['onWishlist'];
   onShare?: ProductDetailViewProps['onShare'];
 }
@@ -22,8 +20,6 @@ const ProductDetailModal = ({
   isOpen,
   onClose,
   onCustomize,
-  onAddToCart,
-  onBuyNow,
   onWishlist,
   onShare
 }: ProductDetailModalProps) => {
@@ -53,8 +49,6 @@ const ProductDetailModal = ({
           <ProductDetailView
             product={product}
             onCustomize={onCustomize}
-            onAddToCart={onAddToCart}
-            onBuyNow={onBuyNow}
             onWishlist={onWishlist}
             onShare={onShare}
             showTabs={false} // Simplified view for modal

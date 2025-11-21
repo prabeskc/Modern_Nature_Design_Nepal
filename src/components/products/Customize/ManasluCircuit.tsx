@@ -7,13 +7,9 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-<<<<<<< Updated upstream
-import ManasluCircuitLayer from '@/components/products/Customize/ManasluCircuitLayer';
-import Navbar from '@/components/ui/Navbar';
-import Footer from '@/components/ui/Footer';
-=======
 import ManasluCircuitLayer from './ManasluCircuitLayer';
->>>>>>> Stashed changes
+import Footer from '@/components/ui/Footer';
+import Navbar from '@/components/ui/Navbar';
 
 
 const colorData1000 = [
@@ -1040,9 +1036,7 @@ const colorData1000 = [
 
 
 
-
 const ManasluCircuit = () => {
-<<<<<<< Updated upstream
     const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11]: string } = {
         1: "#989e92",
         2: "#bdbaa3",
@@ -1056,48 +1050,6 @@ const ManasluCircuit = () => {
         10: "#51562e",
         11: "#373133",
 
-=======
-  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11  ]: string } = {
-    1: "#989e92",
-    2: "#bdbaa3",
-    3: "#ded7a0",
-    4: "#eee8d2",
-    5: "#f9f8f5",
-    6: "#d3d89e",
-    7: "#b1ba49",
-    8: "#949f3e",
-    9: "#6f862b",
-    10: "#51562e",
-    11: "#373133"
-  };
-
-  const [colors, setColors] = useState(INITIAL_COLORS);
-
-  const DEFAULT_FG = '#211A1F';
-  const DEFAULT_BG = '#DFDBD7';
-
-  const [foregroundColor, setForegroundColor] = useState<string>(() => {
-    return (localStorage.getItem('aankhi_fg') || DEFAULT_FG).toUpperCase();
-  });
-  const [backgroundColor, setBackgroundColor] = useState<string>(() => {
-    return (localStorage.getItem('aankhi_bg') || DEFAULT_BG).toUpperCase();
-  });
-
-
-
-  useEffect(() => {
-    localStorage.setItem('aankhi_fg', foregroundColor);
-    localStorage.setItem('aankhi_bg', backgroundColor);
-  }, [foregroundColor, backgroundColor]);
-
-  const hexToRgb = (hex: string) => {
-    const clean = hex.replace('#', '');
-    const bigint = parseInt(clean, 16);
-    return {
-      r: (bigint >> 16) & 255,
-      g: (bigint >> 8) & 255,
-      b: bigint & 255,
->>>>>>> Stashed changes
     };
 
     const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1105,7 +1057,6 @@ const ManasluCircuit = () => {
     const DEFAULT_FG = '#211A1F';
     const DEFAULT_BG = '#DFDBD7';
 
-<<<<<<< Updated upstream
     const [foregroundColor, setForegroundColor] = useState<string>(() => {
         return (localStorage.getItem('aankhi_fg') || DEFAULT_FG).toUpperCase();
     });
@@ -1113,39 +1064,6 @@ const ManasluCircuit = () => {
         return (localStorage.getItem('aankhi_bg') || DEFAULT_BG).toUpperCase();
     });
 
-=======
-  const applyColor = (hex: string) => {
-    const nextHex = hex.toUpperCase();
-    setColors((prev) => ({ ...prev, [activeLayer]: nextHex }));
-  };
-
-  const resetColors = () => {
-    setForegroundColor(DEFAULT_FG);
-    setBackgroundColor(DEFAULT_BG);
-    setColors(INITIAL_COLORS);
-  };
-
-  const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
-
-   const layers = useMemo(() => [
-    { src: "/layers/ManasluCircuit/Manaslu Circuit1.png", color: colors[1] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit2.png", color: colors[2] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit3.png", color: colors[3] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit4.png", color: colors[4] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit5.png", color: colors[5] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit6.png", color: colors[6] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit7.png", color: colors[7] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit8.png", color: colors[8] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit9.png", color: colors[9] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit10.png", color: colors[10] },
-    { src: "/layers/ManasluCircuit/Manaslu Circuit11.png", color: colors[11] },
-
-  ], [colors]);
-
-const [layerNameList, setLayerNameList]=useState(["CA 08", "CQ 10", "DE 11", "AH 09", "AH 12", "CK 10", "CK 05","CK 04","CL 04","CP 04","AJ 01"]);
-  const [activeLayer, setActiveLayer] = useState(1);
- 
->>>>>>> Stashed changes
 
 
     useEffect(() => {
@@ -1286,71 +1204,12 @@ const [layerNameList, setLayerNameList]=useState(["CA 08", "CQ 10", "DE 11", "AH
                 <div className="text-center mb-6">
                     <h1 className="text-3xl font-serif mt-2">Manaslu Circuit</h1>
                 </div>
-<<<<<<< Updated upstream
 
                 <div className="flex w-full max-w-7xl gap-6">
                     <div className="w-2/5 relative">
                         <div className='mb-5'>
                             <h2>Description of Carpet</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nisi impedit obcaecati quis quam, doloribus corporis ex, minima aut iste odio sed harum sunt totam itaque voluptas alias. Dolor ex vel, temporibus excepturi facere tempora quod repudiandae deleniti Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex corporis itaque aut. Eveniet numquam quam consequuntur, aliquam soluta unde deserunt nulla.</p>
-=======
-              </div>
-            ))}
-            <div className="ml-auto flex items-center gap-2">
-              <button onClick={() => {
-                resetColors();
-                setLayerNameList((lArray) => {
-                  return ["CA 08", "CQ 10", "DE 11", "AH 09", "AH 12", "CK 10", "CK 05","CK 04","CL 04","CP 04","AJ 01"];
-                })
-              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
-            </div>
-          </div>
-         
-
-          <div className="p-6 bg-gray-100 rounded-2xl shadow-md w-full mx-auto">
-            {/* Conditional rendering based on showNewContent */}
-            {!showNewContent ? (
-              <>
-                <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1200</h1>
-                <div className="text-xs text-gray-600 text-center mb-2">Active layer: {activeLayer}</div>
-                <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
-
-
-                <div className="flex flex-row justify-center flex-wrap gap-1">
-                  {split20(getCurrentColorData()).reverse().map((group, i) => (
-                    <div className=' flex flex-row gap-3' key={i}>
-                      {group.map((colorItem: any) => (
-                        <div key={colorItem.name}>
-                          <div
-                            className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
-                            style={{
-                              backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
-                            }}
-                            onClick={() => {
-                              applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b));
-                              setLayerNameList((lname)=>{
-                               let newName= colorItem.name
-                                let lArray=[];
-                                lname.map((cname,index)=>{
-                                  if (index+1==activeLayer){
-                                    lArray.push(newName);
-                                  }else{
-                                    lArray.push(cname);
-                                  }
-                                })
-                                return lArray;
-                            })
-                            
-                            }}
-                            onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
-                            role="button"
-                            tabIndex={0}
-                            aria-label={`Set Layer ${activeLayer} to ${colorItem.name}`}
-                          ></div>
-                          <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
-                            {colorItem.name}
-                          </div>
->>>>>>> Stashed changes
                         </div>
                         <div
                             className="border bg-gray-50"

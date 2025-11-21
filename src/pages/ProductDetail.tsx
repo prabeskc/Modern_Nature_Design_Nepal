@@ -1082,21 +1082,6 @@ const ProductDetail = () => {
     );
   }
 
-  const handleCustomize = (product: DetailedProduct) => {
-    // In a real app, this would open a customization modal or navigate to a customization page
-    alert('Customize functionality would be implemented here!');
-  };
-
-  const handleAddToCart = (product: DetailedProduct, quantity: number) => {
-    // In a real app, this would add the product to cart
-    alert(`Added ${quantity} ${product.name} to cart!`);
-  };
-
-  const handleBuyNow = (product: DetailedProduct, quantity: number) => {
-    // In a real app, this would proceed to checkout
-    alert(`Proceeding to checkout with ${quantity} ${product.name}`);
-  };
-
   const handleWishlist = (product: DetailedProduct, isWishlisted: boolean) => {
     // In a real app, this would update the wishlist
     alert(`${isWishlisted ? 'Added to' : 'Removed from'} wishlist: ${product.name}`);
@@ -1133,9 +1118,7 @@ const ProductDetail = () => {
           <nav className="text-sm text-charcoal/60">
             <span>Home</span>
             <span className="mx-2">/</span>
-            <span>Products</span>
-            <span className="mx-2">/</span>
-            <span>Living Room Rugs</span>
+            <span>Color Customizer</span>
             <span className="mx-2">/</span>
             <span className="text-charcoal">{product.name}</span>
           </nav>
@@ -1144,9 +1127,6 @@ const ProductDetail = () => {
         {/* Product Detail View Component */}
         <ProductDetailView
           product={product}
-          onCustomize={handleCustomize}
-          // onAddToCart={handleAddToCart}
-          // onBuyNow={handleBuyNow}
           onWishlist={handleWishlist}
           onShare={handleShare}
           className="py-8"

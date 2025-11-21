@@ -1038,18 +1038,13 @@ const colorData1000 = [
 
 
 
+
 const Echo = () => {
    const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
     1: "#E7AE18",
-<<<<<<< Updated upstream
     2: "#3EA4CA",
     3: "#D6CCC0",
 
-=======
-    2: "#3ea4ca",
-    3: "#d6ccc0",
-  
->>>>>>> Stashed changes
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1214,23 +1209,12 @@ const Echo = () => {
               <div className="w-full h-full">
                 <EchoLayer layers={layers} />
               </div>
-<<<<<<< Updated upstream
             </div>
             <div className='flex flex-column gap-2.5'>
               <img src='/public/assets/images/ProductDetailImages/echo1.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/echo2.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/echo3.jpg' className='h-52 w-40 object-cover mt-4' />
 
-=======
-            ))}
-            <div className="ml-auto flex items-center gap-2">
-              <button onClick={() => {
-                resetColors();
-                setLayerNameList((lArray) => {
-                  return ["DH 07", "CJ 07", "AD 10"]
-                })
-              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
->>>>>>> Stashed changes
             </div>
           </div>
 
