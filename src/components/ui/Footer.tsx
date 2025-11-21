@@ -44,20 +44,28 @@ export default function Footer() {
   }, []);
 
   const footerLinks = {
-    about: {
-      title: 'About',
+     links: {
+      title: 'Quick Links',
       links: [
-        { name: 'Our Story', action: () => scrollToSection('editorial') },
-        { name: 'Craftsmanship', action: () => scrollToSection('craftmanship') }
+        { name: 'Collections', action: () => { } },
+        { name: 'About', action: () => { } },
+        { name: 'Services', action: () => { } },
+        { name: 'Contact', action: () => { } },
+        { name: 'Color Customizer', action: () => { } },
+      ]
+    },
+    about: {
+      title: 'Terms & Policy',
+      links: [
+        { name: 'Legal Terms', action: () => scrollToSection('craftmanship') },
+        { name: 'Privacy Policy', action: () => scrollToSection('craftmanship') }
       ]
     },
     support: {
       title: 'Contact',
       links: [
-        { name: '+977-9801037585', action: () => {} },
-        { name: 'Thaiba-14, Lalitpur, Nepal', action: () => {} },
-        { name: 'info@modernnaturedesignnepal.com', action: () => {} },
-
+        { name: '+977-9801037585', action: () => { } },
+        { name: 'Thaiba-14, Lalitpur', action: () => { } },
       ]
     }
   };
@@ -69,12 +77,12 @@ export default function Footer() {
   ];
 
   return (
-    <footer 
+    <footer
       ref={footerRef}
-      id="footer" 
+      id="footer"
       className="bg-charcoal text-off-white relative overflow-hidden"
       style={{
-        background: isVisible 
+        background: isVisible
           ? 'linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 50%, #2c2c2c 100%)'
           : '#2c2c2c',
         transition: 'background 1.2s ease-out'
@@ -82,14 +90,13 @@ export default function Footer() {
     >
       <Container>
         <div className="py-8 lg:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-16 items-start">
             {/* Brand */}
-            <div 
-              className={`lg:col-span-2 transform transition-all duration-800 ease-out ${
-                animatedElements.has('brand')
-                  ? 'translate-y-0 opacity-100'
-                  : 'translate-y-8 opacity-0'
-              }`}
+            <div
+              className={`lg:col-span-2 transform transition-all duration-800 ease-out ${animatedElements.has('brand')
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-8 opacity-0'
+                }`}
               style={{
                 willChange: 'transform, opacity',
                 transitionDelay: animatedElements.has('brand') ? '0ms' : '0ms'
@@ -101,29 +108,33 @@ export default function Footer() {
               <p className="text-off-white/70 text-sm leading-relaxed mb-4 hover:text-off-white/90 transition-colors duration-300">
                 Hand-Knotted in Nepal, each rug is a masterpiece of heritage and precision, seamlessly blending traditional weaving artistry with contemporary design. Crafted for discerning interiors around the world, Our rugs embody timeless elegance, exceptional quality and ethical craftmanship - a statement of sophistication for generations to come.
               </p>
-              
+
+               <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
+                  <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                  <span>info@modernnaturedesignnepal.com</span>
+                </div>
+
               {/* Contact Info */}
               <div className="space-y-2">
                 {/* <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
                   <MapPin className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                   <span>Lalitpur, Nepal</span>
-                </div> */}
-                {/* <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
+                </div> 
+                <div className="flex items-center text-off-white/70 text-sm hover:text-mint-green transition-all duration-300 group">
                   <Mail className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                   <span>info@modernnaturedesignnepal.com</span>
                 </div> */}
               </div>
             </div>
-            
+
             {/* Footer Links */}
             {Object.entries(footerLinks).map(([key, section], sectionIndex) => (
-              <div 
+              <div
                 key={key}
-                className={`transform transition-all duration-800 ease-out ${
-                  animatedElements.has('links')
-                    ? 'translate-y-0 opacity-100'
-                    : 'translate-y-8 opacity-0'
-                }`}
+                className={`transform transition-all duration-800 ease-out ${animatedElements.has('links')
+                  ? 'translate-y-0 opacity-100'
+                  : 'translate-y-8 opacity-0'
+                  }`}
                 style={{
                   willChange: 'transform, opacity',
                   transitionDelay: animatedElements.has('links') ? `${sectionIndex * 100}ms` : '0ms'
@@ -144,14 +155,13 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
-            
+
             {/* Social Links */}
-            <div 
-              className={`transform transition-all duration-800 ease-out ${
-                animatedElements.has('social')
-                  ? 'translate-y-0 opacity-100'
-                  : 'translate-y-8 opacity-0'
-              }`}
+            <div
+              className={`transform transition-all duration-800 ease-out ${animatedElements.has('social')
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-8 opacity-0'
+                }`}
               style={{
                 willChange: 'transform, opacity',
                 transitionDelay: animatedElements.has('social') ? '300ms' : '0ms'
@@ -179,14 +189,13 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
+
         {/* Footer Bottom */}
-        <div 
-          className={`border-t border-off-white/20 py-6 transform transition-all duration-800 ease-out ${
-            animatedElements.has('bottom')
-              ? 'translate-y-0 opacity-100'
-              : 'translate-y-4 opacity-0'
-          }`}
+        <div
+          className={`border-t border-off-white/20 py-6 transform transition-all duration-800 ease-out ${animatedElements.has('bottom')
+            ? 'translate-y-0 opacity-100'
+            : 'translate-y-4 opacity-0'
+            }`}
           style={{
             willChange: 'transform, opacity',
             transitionDelay: animatedElements.has('bottom') ? '450ms' : '0ms'

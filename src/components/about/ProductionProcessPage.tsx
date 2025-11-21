@@ -25,7 +25,7 @@ const steps: Step[] = [
     description:
       "Raw wool is carefully sorted, impurities removed, and thoroughly cleaned.",
     detailedDescription:
-      "We begin with pure Tibetan wool sourced from the High Himalayas of Nepal, known for its strength, softness, and natural sheen. Each fleece is hand-sorted to remove impurities and separate natural color shades. The wool is then washed in warm water, cleansing away oils and dust — preparing it to absorb dyes beautifully and evenly.We use 100% Tibetan wool, never mixed, ensuring the finest quality from the very first touch."
+      "We begin with pure Tibetan wool sourced from the High Himalayas of Nepal, known for its strength, softness, and natural sheen. Each fleece is hand-sorted to remove impurities and separate natural color shades. The wool is then washed in warm water, cleansing away oils and dust - preparing it to absorb dyes beautifully and evenly.We use 100% Tibetan wool, never mixed, ensuring the finest quality from the very first touch."
   },
   {
     title: "Wool Carding",
@@ -33,7 +33,7 @@ const steps: Step[] = [
     description:
       "Fibers are combed to remove residues and prepare for spinning.",
     detailedDescription:
-      "The cleaned wool is hand-carded using traditional wooden and steel combs. This process aligns the fibers, removes the last traces of impurities, and creates a smooth, airy texture — the perfect foundation for spinning fine yarns."
+      "The cleaned wool is hand-carded using traditional wooden and steel combs. This process aligns the fibers, removes the last traces of impurities, and creates a smooth, airy texture - the perfect foundation for spinning fine yarns."
   },
   {
     title: "Spinning",
@@ -41,7 +41,7 @@ const steps: Step[] = [
     description:
       "Traditional spinning wheels twist threads into yarn.",
     detailedDescription:
-      "Our artisans spin the carded wool on the wooden wheel (Charkha), twisting and drawing each fiber into yarns of perfect thickness. Yarn thickness depends on the rug’s knot density — coarser for 60–80 knots, finer for 100–150 knots. Every spin carries the rhythm of tradition, forming the soul of a timeless hand-knotted rug.",
+      "Our artisans spin the carded wool on the wooden wheel (Charkha), twisting and drawing each fiber into yarns of perfect thickness. Yarn thickness depends on the rug’s knot density - coarser for 60–80 knots, finer for 100–150 knots. Every spin carries the rhythm of tradition, forming the soul of a timeless hand-knotted rug.",
   },
       {
     title: "Dyeing",
@@ -49,7 +49,7 @@ const steps: Step[] = [
     description:
       "Yarns are dyed with Swiss chrome azo-free or vegetable dyes.",
     detailedDescription:
-      "The spun yarns are washed again and then dyed by hand in large metal pots heated over wood or gas stoves. We use Swiss Chrome Azo-free dyes or natural vegetable dyes, depending on the desired color tone. Each hue is tested, matched, and fixed to perfection — ensuring brilliant, long-lasting colors that remain true for generations."
+      "The spun yarns are washed again and then dyed by hand in large metal pots heated over wood or gas stoves. We use Swiss Chrome Azo-free dyes or natural vegetable dyes, depending on the desired color tone. Each hue is tested, matched, and fixed to perfection - ensuring brilliant, long-lasting colors that remain true for generations."
   },
   {
     title: "Weaving",
@@ -57,7 +57,7 @@ const steps: Step[] = [
     description:
       "Weavers handcraft rugs using looms and traditional tools.",
     detailedDescription:
-      "Weaving is where craftsmanship meets art. Each rug is woven on vertical looms by master weavers following 1:1 scale design graphs placed in front of them. Using simple tools — scissors, rods, wooden beaters, and hammers — they tie each knot with precision and care. Thousands of hand-tied knots unite to form intricate patterns, capturing the essence of artistry."
+      "Weaving is where craftsmanship meets art. Each rug is woven on vertical looms by master weavers following 1:1 scale design graphs placed in front of them. Using simple tools - scissors, rods, wooden beaters, and hammers - they tie each knot with precision and care. Thousands of hand-tied knots unite to form intricate patterns, capturing the essence of artistry."
   },
   {
     title: "Clipping & Carving",
@@ -80,7 +80,7 @@ const steps: Step[] = [
     image: "assets/images/about/8.jpg",
     description: "Surfaces are clipped again for uniformity.",
     detailedDescription:
-      "After drying, the rug receives another round of fine clipping and carving. This step ensures a perfectly balanced surface and sharp, clean patterns — the final polish of perfection."
+      "After drying, the rug receives another round of fine clipping and carving. This step ensures a perfectly balanced surface and sharp, clean patterns - the final polish of perfection."
   },
   {
     title: "Stretching",
@@ -94,7 +94,7 @@ const steps: Step[] = [
     image: "assets/images/about/10.jpg",
     description: "Experts inspect rugs for size, texture, and quality.",
     detailedDescription:
-      "Each rug undergoes strict quality inspection by our experts. Every detail — size, color, texture, design, and surface — is examined to meet our highest standards. Only rugs that embody excellence move forward for packaging."
+      "Each rug undergoes strict quality inspection by our experts. Every detail - size, color, texture, design, and surface - is examined to meet our highest standards. Only rugs that embody excellence move forward for packaging."
   },
   {
     title: "Packing",
@@ -109,7 +109,7 @@ const steps: Step[] = [
     image: "assets/images/about/12.jpg",
     description: "Dispatched worldwide with trusted couriers.",
     detailedDescription:
-      "Shipping The rugs are shipped with the fastest courier service, which normally takes 3–4 business days."
+      "Shipping The rugs are shipped with the fastest courier service, which normally takes 3-4 business days."
   },
 ];
 

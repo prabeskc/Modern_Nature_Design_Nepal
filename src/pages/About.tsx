@@ -21,11 +21,11 @@ const About = () => {
     <div className="min-h-screen bg-off-white pt-4">
       <Navbar />
       <AboutUsPage />
-      <div className="flex flex-col lg:flex-row gap-20 w-4/5 mx-auto mb-10">
-        <div className="w-full lg:w-1/2">
+      <div className="flex flex-col lg:flex-row gap-8 w-[90%] mx-auto mb-10">
+        <div className="w-full lg:w-45%">
           <OurHistoryPage />
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-45%">
           <HistoryGraph />
         </div>
       </div>

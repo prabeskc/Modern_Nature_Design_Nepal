@@ -176,7 +176,7 @@ const PhilosophyPage: React.FC = () => {
             <li>Nepalese artistry is celebrated globally as a symbol of heritage and creativity.</li>
             <li>Sustainability is standard, setting new benchmarks in eco-friendly rug production.</li>
             <li>Communities thrive, with artisans uplifted through meaningful employment.</li>
-            <li>Design meets purpose — every rug tells a story of craft, culture, and conscience.</li>
+            <li>Design meets purpose - every rug tells a story of craft, culture, and conscience.</li>
           </ul>
         </>
       ),
@@ -187,10 +187,10 @@ const PhilosophyPage: React.FC = () => {
       title: "Our Values",
       content: (
         <ul className="list-disc list-inside text-gray-700 text-lg leading-relaxed space-y-2">
-          <li><strong>Integrity</strong> – Honesty and transparency in every process.</li>
-          <li><strong>Quality</strong> – Superior craftsmanship and materials.</li>
-          <li><strong>Sustainability</strong> – Environmentally responsible practices.</li>
-          <li><strong>Community</strong> – Supporting artisans and their families with dignity and pride.</li>
+          <li><strong>Integrity</strong> - Honesty and transparency in every process.</li>
+          <li><strong>Quality</strong> - Superior craftsmanship and materials.</li>
+          <li><strong>Sustainability</strong> - Environmentally responsible practices.</li>
+          <li><strong>Community</strong> - Supporting artisans and their families with dignity and pride.</li>
         </ul>
       ),
     },
@@ -205,9 +205,9 @@ const PhilosophyPage: React.FC = () => {
             handwoven using:
           </p>
           <ul className="list-disc list-inside text-gray-700 text-lg leading-relaxed mt-3 space-y-2">
-            <li>High-quality yarns — soft, durable, and naturally lustrous.</li>
-            <li>Eco-friendly fibers — including bamboo, hemp, and banana fiber.</li>
-            <li>Traditional knotting — 60 to 150 knots per square inch for fine detail and durability.</li>
+            <li>High-quality yarns - soft, durable, and naturally lustrous.</li>
+            <li>Eco-friendly fibers - including bamboo, hemp, and banana fiber.</li>
+            <li>Traditional knotting - 60 to 150 knots per square inch for fine detail and durability.</li>
           </ul>
           <p className="text-gray-700 text-lg leading-relaxed mt-4">
             Every artisan pours passion and precision into their work — transforming raw
@@ -239,7 +239,7 @@ const PhilosophyPage: React.FC = () => {
           className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto"
           variants={fadeInUp}
         >
-          Discover the values and vision that shape every rug we create — a blend of heritage, ethics, and artistic excellence.
+          Discover the values and vision that shape every rug we create - a blend of heritage, ethics, and artistic excellence.
         </motion.p>
 
         {/* Cards Grid */}

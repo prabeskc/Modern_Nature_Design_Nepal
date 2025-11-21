@@ -24,7 +24,7 @@ const HistoryGraph: React.FC = () => {
         <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
           MND Nepal Growth Timeline
         </h3>
-        <ResponsiveContainer width="100%" height={450}>
+        <ResponsiveContainer width="100%" height={580}>
           <LineChart data={data} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="year" />
@@ -46,11 +46,11 @@ const HistoryGraph: React.FC = () => {
         </ResponsiveContainer>
       </div>
 
-      <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
+      {/* <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
         MND Nepal employs over 150 skilled artisans and staff, many of whom have spent decades
         mastering their craft. Their dedication transforms every rug into a living piece of Nepal’s
         cultural legacy.
-      </p>
+      </p> */}
     </>
   );
 };

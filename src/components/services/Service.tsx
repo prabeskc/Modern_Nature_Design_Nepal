@@ -96,7 +96,7 @@ const Services: React.FC = () => {
               key={service.id}
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="bg-[#F5F5DC] rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg cursor-pointer"
+              className="bg-gray-200 rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg cursor-pointer"
               onClick={() => setActiveService(service)}
             >
               <div className="relative w-full h-56 overflow-hidden flex items-center justify-center bg-white">

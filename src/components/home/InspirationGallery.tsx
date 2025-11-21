@@ -25,17 +25,17 @@ export default function InspirationGalleryMinimal() {
 
   return (
     <div className="w-full bg-[#f7f7f7] py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="w-[90%] mx-auto px-4">
 
         {/* HEADER */}
         <div className="mb-14">
-          <h2 className="text-4xl md:text-3xl font-extrabold mt-1 leading-tight">
+          <h2 className="text-center text-4xl md:text-3xl font-extrabold mt-1 leading-tight">
             From Nature’s Palette to Timeless Hand-Knotted Rugs
           </h2>
         </div>
 
         {/* 3 COLUMN LAYOUT */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3">
 
           {/* LEFT COLUMN */}
           <div className="space-y-6 text-center md:text-left">
@@ -49,7 +49,7 @@ export default function InspirationGalleryMinimal() {
               </h3>
 
               <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-                Captured during your trek — the moment that sparked the idea.
+                Captured during your trek - the moment that sparked the idea.
               </p>
             </div>
 
@@ -64,7 +64,7 @@ export default function InspirationGalleryMinimal() {
 
           {/* CENTER COLUMN (TALLER IMAGE) */}
           <div className="space-y-6 text-center">
-            <div className="w-full h-[430px] overflow-hidden rounded-lg shadow-sm">
+            <div className="w-[80%] mx-auto h-[450px] overflow-hidden rounded-lg shadow-sm">
               <img
                 src={item.design}
                 className="w-full h-full"

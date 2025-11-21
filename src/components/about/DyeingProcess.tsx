@@ -30,7 +30,7 @@ const steps: Step[] = [
     image: "assets/images/about/2.jpg",
     description: "✨ Pure. Safe. Vibrant. Crafted to last.",
     detailedDescription: `
-Dye master prepares a small sample tuft to match your desired shade. Once approved, the same formula is used for the full batch—guaranteeing consistency and perfection. The dyeing is done manually, heating pots gradually to 90–95°C. Yarns are then sun-dried naturally, giving them a luminous, lasting shine.
+Dye master prepares a small sample tuft to match your desired shade. Once approved, the same formula is used for the full batch-guaranteeing consistency and perfection. The dyeing is done manually, heating pots gradually to 90-95°C. Yarns are then sun-dried naturally, giving them a luminous, lasting shine.
 
 1. Swiss Chrome Dyes
 Made in Switzerland, these dyes are metal-free, non-toxic, and colorfast, ensuring brilliance without harming your health or the planet.
@@ -39,7 +39,7 @@ Made in Switzerland, these dyes are metal-free, non-toxic, and colorfast, ensuri
 Derived from plants and minerals such as walnut, indigo, madder root, and henna, these dyes create organic tones with a natural, abstract charm. 100% eco-friendly and beautifully imperfect.
 
 3. Color Communication
-We use the ARS color system and can match any sample you provide—ensuring your rug’s color is exactly as you envision.`,
+We use the ARS color system and can match any sample you provide-ensuring your rug’s color is exactly as you envision.`,
   },
 ];
 
@@ -59,7 +59,7 @@ const DyingProcessPage: React.FC = () => {
           Dying Process
         </h2>
         <p className="text-center text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-          Every color is carefully crafted to bring your rugs to life, blending artistry with precision. We use Swiss Chrome AZO-free dyes and natural vegetable dyes — safe, vibrant, and eco-friendly — for colors that are rich, lasting, and beautifully natural.
+          Every color is carefully crafted to bring your rugs to life, blending artistry with precision. We use Swiss Chrome AZO-free dyes and natural vegetable dyes - safe, vibrant, and eco-friendly - for colors that are rich, lasting, and beautifully natural.
         </p>
 
         {/* Grid Layout */}

@@ -182,7 +182,7 @@ export default function OurExperience() {
   }, []);
 
   return (
-    <section className="py-16 lg:py-24 bg-warm-beige/10">
+    <section className="bg-[url('/assets/images/products/TheWall.jpg')] bg-fit py-16 lg:py-24 bg-warm-beige/10">
       <Container>
         <div ref={sectionRef}>
           <div className={`transform transition-all duration-1000 ${

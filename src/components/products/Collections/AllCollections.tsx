@@ -98,7 +98,7 @@ const AllCollections: React.FC = () => {
     {/* Container with 80% width centered */}
     <div className="w-4/5 mx-auto">
       {/* Heading */}
-      <h1 className="mt-10 mb-10 text-4xl md:text-5xl font-bold text-gray-900 text-center">
+      <h1 className="mt-10 mb-10 text-4xl md:text-4xl font-bold text-gray-900 text-center">
         All Collections
       </h1>
 
@@ -113,16 +113,16 @@ const AllCollections: React.FC = () => {
             onClick={() => setActiveCarpet(carpet)}
           >
             {/* UPDATED — Image now fills entire card width */}
-            <div className="flex justify-center items-center bg-gray-200 h-[350px]">
+            <div className="flex justify-center items-center bg-gray-200 h-[400px]">
               <img
                 src={carpet.imageUrl}
                 alt={carpet.name}
-                className="object-cover w-full h-full"
+                className="w-full h-full"
               />
             </div>
 
             {/* Carpet name container */}
-            <div className="p-4 text-center bg-gray-200">
+            <div className="p-1 text-center bg-gray-200">
               <h2 className="text-lg font-semibold text-gray-800">
                 {carpet.name}
               </h2>
