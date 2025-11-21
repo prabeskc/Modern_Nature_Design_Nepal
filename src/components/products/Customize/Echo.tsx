@@ -1041,8 +1041,8 @@ const colorData1000 = [
 const Echo = () => {
   const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
     1: "#E7AE18",
-    2: "#3B5A40",
-    3: "#EEAAB1",
+    2: "#3EA4CA",
+    3: "#D6CCC0",
 
   };
 
@@ -1113,7 +1113,7 @@ const Echo = () => {
 
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["DH 07", "CS 07", "AO 10"]);
+  const [layerNameList, setLayerNameList] = useState(["DH 07", "CJ 07", "AD 10"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1251,7 +1251,7 @@ const Echo = () => {
                 <button onClick={() => {
                   resetColors();
                   setLayerNameList((lArray) => {
-                    return ["DH 07", "CS 07", "AO 10"]
+                    return ["DH 07", "CJ 07", "AD 10"]
                   })
                 }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
               </div>
