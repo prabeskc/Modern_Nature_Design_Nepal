@@ -7,10 +7,9 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import KundaLayer from '@/components/products/Customize/KundaLayer';
+import KapaalLayer from '@/components/products/Customize/KapaalLayer';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
-
 
 
 const colorData1000 = [
@@ -1039,10 +1038,11 @@ const colorData1000 = [
 
 
 const Kapaal = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
-    1: "#feeccb",
-    2: "#a39374",
-    3: "#db988a",
+  const INITIAL_COLORS: { [key in 1 | 2 ]: string } = {
+    1: "#E19F04",
+    2: "#0C120D",
+
+
 
   };
 
@@ -1107,13 +1107,12 @@ const Kapaal = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Kunda/Kunda1.png", color: colors[1] },
-    { src: "/layers/Kunda/Kunda2.png", color: colors[2] },
-    { src: "/layers/Kunda/Kunda3.png", color: colors[3] },
+    { src: "/layers/Kapaal/Kapaal1.png", color: colors[1] },
+    { src: "/layers/Kapaal/Kapaal2.png", color: colors[2] },
 
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["DM 11", "CN 10", "EH 09"]);
+  const [layerNameList, setLayerNameList] = useState(["DI 01", "CA 01"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1189,7 +1188,7 @@ const Kapaal = () => {
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-serif mt-2">Kunda</h1>
+          <h1 className="text-3xl font-serif mt-2">Kapaal</h1>
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
@@ -1207,13 +1206,13 @@ const Kapaal = () => {
               }}
             >
               <div className="w-full h-full">
-                <KundaLayer layers={layers} />
+                <KapaalLayer layers={layers} />
               </div>
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/kapaal1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/kapaal2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/kapaal3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kaapal2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kaapal1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/kaapal3.jpg' className='h-52 w-40 object-cover mt-4' />
 
             </div>
           </div>
@@ -1251,11 +1250,12 @@ const Kapaal = () => {
                 <button onClick={() => {
                   resetColors();
                   setLayerNameList((lArray) => {
-                    return ["DM 11", "CN 10", "EH 09"];
+                    return ["DI 01", "CA 01"]
                   })
                 }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
               </div>
             </div>
+
 
             <div className="p-6 bg-gray-100 rounded-2xl shadow-md w-full mx-auto">
               {/* Conditional rendering based on showNewContent */}

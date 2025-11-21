@@ -7,11 +7,9 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import KundaLayer from '@/components/products/Customize/KundaLayer';
+import PhulchokiLayer from '@/components/products/Customize/PhulchokiLayer';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
-import Kunda from './Kunda';
-
 
 
 const colorData1000 = [
@@ -1040,11 +1038,11 @@ const colorData1000 = [
 
 
 const Phulchoki = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
-    1: "#feeccb",
-    2: "#a39374",
-    3: "#db988a",
-
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4]: string } = {
+    1: "#6d9a99",
+    2: "#50777c",
+    3: "#285150",
+    4: "#728b78",
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1108,13 +1106,13 @@ const Phulchoki = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Kunda/Kunda1.png", color: colors[1] },
-    { src: "/layers/Kunda/Kunda2.png", color: colors[2] },
-    { src: "/layers/Kunda/Kunda3.png", color: colors[3] },
-
+    { src: "/layers/Phulchoki/Phulchoki1.png", color: colors[1] },
+    { src: "/layers/Phulchoki/Phulchoki2.png", color: colors[2] },
+    { src: "/layers/Phulchoki/Phulchoki3.png", color: colors[3] },
+    { src: "/layers/Phulchoki/Phulchoki4.png", color: colors[4] }
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["DM 11", "CN 10", "EH 09"]);
+  const [layerNameList, setLayerNameList] = useState(["CE 07", "CE 06", "CE 03", "CC 06"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1190,7 +1188,7 @@ const Phulchoki = () => {
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-serif mt-2">Kunda</h1>
+          <h1 className="text-3xl font-serif mt-2">Phulchoki</h1>
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
@@ -1208,17 +1206,18 @@ const Phulchoki = () => {
               }}
             >
               <div className="w-full h-full">
-                <KundaLayer layers={layers} />
+                <PhulchokiLayer layers={layers} />
               </div>
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/phulchoki1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/phulchoki2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/phulchoki3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/Phulchoki1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/Phulchoki2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/Phulchoki3.jpg' className='h-52 w-40 object-cover mt-4' />
 
             </div>
           </div>
-          <div className="w-1/2 flex flex-col gap-6">
+
+          <div className="w-3/5 flex flex-col gap-6">
             <div className="bg-gray-100 p-4 shadow-sm border">
               <h2 className="font-semibold mb-2">TO CHANGE COLORS:</h2>
               <ol className="list-decimal ml-4 text-sm text-gray-700 space-y-1">
@@ -1251,7 +1250,7 @@ const Phulchoki = () => {
                 <button onClick={() => {
                   resetColors();
                   setLayerNameList((lArray) => {
-                    return ["DM 11", "CN 10", "EH 09"];
+                    return ["CE 07", "CE 06", "CE 03", "CC 06"]
                   })
                 }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
               </div>

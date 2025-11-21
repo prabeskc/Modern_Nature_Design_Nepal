@@ -9,8 +9,8 @@ import colorDataE from '../../../../colorE.json';
 
 
 import EchoLayer from './EchoLayer';
-import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
+import Navbar from '@/components/ui/Navbar';
 
 
 const colorData1000 = [
@@ -1039,7 +1039,7 @@ const colorData1000 = [
 
 
 const Echo = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
+   const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
     1: "#E7AE18",
     2: "#3EA4CA",
     3: "#D6CCC0",
@@ -1110,7 +1110,6 @@ const Echo = () => {
     { src: "/layers/Echo/Echos1.png", color: colors[1] },
     { src: "/layers/Echo/Echos2.png", color: colors[2] },
     { src: "/layers/Echo/Echos3.png", color: colors[3] }
-
   ], [colors]);
 
   const [layerNameList, setLayerNameList] = useState(["DH 07", "CJ 07", "AD 10"]);
@@ -1189,7 +1188,7 @@ const Echo = () => {
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-serif mt-2">Echo</h1>
+          <h1 className="text-3xl font-serif mt-2">Birendra Taal</h1>
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">

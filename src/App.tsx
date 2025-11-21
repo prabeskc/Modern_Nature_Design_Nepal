@@ -156,10 +156,10 @@ export default function App() {
         <Route path="/customize/sukool" element={<Sukool/>} />
         <Route path="/customize/waterlilies" element={<WaterLilies/>} />
         <Route path="/customize/birendrataal" element={<BirendraTaal/>} />
-        <Route path="/customize/echo" element={<Echo/>} />
+         <Route path="/customize/echo" element={<Echo/>} />
         <Route path="/customize/kapaal" element={<Kapaal/>} />
         <Route path="/customize/phulchoki" element={<Phulchoki/>} />
-        <Route path="/customize/thaali" element={<Thaali/>} />
+        <Route path="/customize/thaali" element={<Thaali/>} /> 
 
 
 

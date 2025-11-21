@@ -7,9 +7,10 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
-import SmokeLayer from '@/components/products/Customize/SmokeLayer';
+import ThaaliLayer from '@/components/products/Customize/ThaaliLayer';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
+
 
 
 const colorData1000 = [
@@ -1038,11 +1039,14 @@ const colorData1000 = [
 
 
 const Thaali = () => {
-  const INITIAL_COLORS: { [key in 1 | 2 | 3]: string } = {
-    1: "#a8d5d3",
-    2: "#c4dfda",
-    3: "#e2e3e4",
-
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7]: string } = {
+    1: "#e4bf4e",
+    2: "#e46b34",
+    3: "#f9f8f5",
+    4: "#6d8db1",
+    5: "#839a81",
+    6: "#aec6bd",
+    7: "#e2e3e4",
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1106,13 +1110,17 @@ const Thaali = () => {
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
   const layers = useMemo(() => [
-    { src: "/layers/Smoke/Smoke1.png", color: colors[1] },
-    { src: "/layers/Smoke/Smoke2.png", color: colors[2] },
-    { src: "/layers/Smoke/Smoke3.png", color: colors[3] }
+    { src: "/layers/Thaali/Thaali1.png", color: colors[1] },
+    { src: "/layers/Thaali/Thaali2.png", color: colors[2] },
+    { src: "/layers/Thaali/Thaali3.png", color: colors[3] },
+    { src: "/layers/Thaali/Thaali4.png", color: colors[4] },
+    { src: "/layers/Thaali/Thaali5.png", color: colors[5] },
+    { src: "/layers/Thaali/Thaali6.png", color: colors[6] },
+    { src: "/layers/Thaali/Thaali7.png", color: colors[7] },
 
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CJ10", "CJ11", "BF12"]);
+  const [layerNameList, setLayerNameList] = useState(["DH 09", "DL 03", "AH 12", "BI 08", "CS 10", "CE 10", "BF 12"]);
   const [activeLayer, setActiveLayer] = useState(1);
 
 
@@ -1188,7 +1196,7 @@ const Thaali = () => {
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-serif mt-2">Smoke</h1>
+          <h1 className="text-3xl font-serif mt-2">Thaali</h1>
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
@@ -1206,13 +1214,13 @@ const Thaali = () => {
               }}
             >
               <div className="w-full h-full">
-                <SmokeLayer layers={layers} />
+                <ThaaliLayer layers={layers} />
               </div>
             </div>
             <div className='flex flex-column gap-2.5'>
-              <img src='/public/assets/images/ProductDetailImages/thaali1.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/thaali2.jpg' className='h-52 w-40 object-cover mt-4' />
-              <img src='/public/assets/images/ProductDetailImages/thaali3.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/Thaali1.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/Thaali2.jpg' className='h-52 w-40 object-cover mt-4' />
+              <img src='/public/assets/images/ProductDetailImages/Thaali3.jpg' className='h-52 w-40 object-cover mt-4' />
 
             </div>
           </div>
@@ -1250,7 +1258,7 @@ const Thaali = () => {
                 <button onClick={() => {
                   resetColors();
                   setLayerNameList((lArray) => {
-                    return ["CJ10", "CJ11", "BF12"]
+                    return ["DH 09", "DL 03", "AH 12", "BI 08", "CS 10", "CE 10", "BF 12"];
                   })
                 }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
               </div>
