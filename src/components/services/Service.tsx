@@ -83,7 +83,7 @@ const Services: React.FC = () => {
   );
 
   return (
-    <section className="bg-[url('/assets/images/services/background2.jpg')] bg-cover bg-center bg-no-repeat min-h-screen bg-[#fdfdfb] py-28 flex justify-center">
+    <section className="relative z-30 bg-[url('/assets/images/services/background2.jpg')] bg-cover bg-center bg-no-repeat min-h-screen bg-[#fdfdfb] py-28 flex justify-center">
       <div className="w-11/12 md:w-4/5">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900">
           Our Services
@@ -127,7 +127,7 @@ const Services: React.FC = () => {
           {activeService && (
             <motion.div
               key="modal"
-              className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex justify-center items-center p-6"
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm flex justify-center items-center p-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

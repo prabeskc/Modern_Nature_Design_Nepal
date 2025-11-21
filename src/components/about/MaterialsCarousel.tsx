@@ -141,7 +141,7 @@ const MaterialsCarousel: React.FC = () => {
           </button>
 
           {/* Cards */}
-          <div className="relative h-[400px] sm:h-[450px] flex justify-center items-center">
+          <div className="relative z-40 h-[400px] sm:h-[450px] flex justify-center items-center">
             {materials.map((m, i) => {
               const { tx, scale, opacity, z } = layout[i];
               if (opacity === 0) return null; // hide cards outside visible range
