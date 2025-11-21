@@ -1,4 +1,4 @@
-// MajesticPersian.tsx
+
 
 import React, { useState, useMemo, useEffect } from 'react';
 import colorDataA from '../../../../color.json';
@@ -6,7 +6,6 @@ import colorDataB from '../../../../colorb.json';
 import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
-
 
 import ManasluCircuitLayer from './ManasluCircuitLayer';
 import Navbar from '@/components/ui/Navbar';
@@ -1039,7 +1038,11 @@ const colorData1000 = [
 
 
 const ManasluCircuit = () => {
+<<<<<<< Updated upstream
   const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11]: string } = {
+=======
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11  ]: string } = {
+>>>>>>> Stashed changes
     1: "#989e92",
     2: "#bdbaa3",
     3: "#ded7a0",
@@ -1050,9 +1053,13 @@ const ManasluCircuit = () => {
     8: "#949f3e",
     9: "#6f862b",
     10: "#51562e",
+<<<<<<< Updated upstream
     11: "#373133",
 
 
+=======
+    11: "#373133"
+>>>>>>> Stashed changes
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1115,7 +1122,7 @@ const ManasluCircuit = () => {
 
   const currentContrast = useMemo(() => contrastRatio(foregroundColor, backgroundColor), [foregroundColor, backgroundColor]);
 
-  const layers = useMemo(() => [
+   const layers = useMemo(() => [
     { src: "/layers/ManasluCircuit/Manaslu Circuit1.png", color: colors[1] },
     { src: "/layers/ManasluCircuit/Manaslu Circuit2.png", color: colors[2] },
     { src: "/layers/ManasluCircuit/Manaslu Circuit3.png", color: colors[3] },
@@ -1128,12 +1135,15 @@ const ManasluCircuit = () => {
     { src: "/layers/ManasluCircuit/Manaslu Circuit10.png", color: colors[10] },
     { src: "/layers/ManasluCircuit/Manaslu Circuit11.png", color: colors[11] },
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   ], [colors]);
 
-  const [layerNameList, setLayerNameList] = useState(["CA 08", "CQ 10", "DE 11", "AH 09", "AH 12", "CK 10", "CK 05", "CK 04", "CL 04", "CP 04", "AJ 01"]);
+const [layerNameList, setLayerNameList]=useState(["CA 08", "CQ 10", "DE 11", "AH 09", "AH 12", "CK 10", "CK 05","CK 04","CL 04","CP 04","AJ 01"]);
   const [activeLayer, setActiveLayer] = useState(1);
-
+ 
 
 
   const [currentPage1000, setCurrentPage1000] = useState(1);
@@ -1227,6 +1237,7 @@ const ManasluCircuit = () => {
               <div className="w-full h-full">
                 <ManasluCircuitLayer layers={layers} />
               </div>
+<<<<<<< Updated upstream
             </div>
             <div className='flex flex-column gap-2.5'>
               <img src='/public/assets/images/ProductDetailImages/manaslucircuit1.jpg' className='h-52 w-40 object-cover mt-4' />
@@ -1262,6 +1273,107 @@ const ManasluCircuit = () => {
                   <div className="text-sm">
                     <div className="font-medium">{layer}</div>
                     <div className="text-xs text-gray-600">{colors[index + 1]}</div>
+=======
+            ))}
+            <div className="ml-auto flex items-center gap-2">
+              <button onClick={() => {
+                resetColors();
+                setLayerNameList((lArray) => {
+                  return ["CA 08", "CQ 10", "DE 11", "AH 09", "AH 12", "CK 10", "CK 05","CK 04","CL 04","CP 04","AJ 01"];
+                })
+              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
+            </div>
+          </div>
+         
+
+          <div className="p-6 bg-gray-100 rounded-2xl shadow-md w-full mx-auto">
+            {/* Conditional rendering based on showNewContent */}
+            {!showNewContent ? (
+              <>
+                <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1200</h1>
+                <div className="text-xs text-gray-600 text-center mb-2">Active layer: {activeLayer}</div>
+                <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
+
+
+                <div className="flex flex-row justify-center flex-wrap gap-1">
+                  {split20(getCurrentColorData()).reverse().map((group, i) => (
+                    <div className=' flex flex-row gap-3' key={i}>
+                      {group.map((colorItem: any) => (
+                        <div key={colorItem.name}>
+                          <div
+                            className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
+                            style={{
+                              backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
+                            }}
+                            onClick={() => {
+                              applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b));
+                              setLayerNameList((lname)=>{
+                               let newName= colorItem.name
+                                let lArray=[];
+                                lname.map((cname,index)=>{
+                                  if (index+1==activeLayer){
+                                    lArray.push(newName);
+                                  }else{
+                                    lArray.push(cname);
+                                  }
+                                })
+                                return lArray;
+                            })
+                            
+                            }}
+                            onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
+                            role="button"
+                            tabIndex={0}
+                            aria-label={`Set Layer ${activeLayer} to ${colorItem.name}`}
+                          ></div>
+                          <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
+                            {colorItem.name}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+
+                <div className=" text-center ">
+                  <p className="text-gray-600 pt-6">
+                    Page {currentPage1200} of {totalPages1200}
+                  </p>
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  <button
+                    onClick={goToPrevious1200}
+                    disabled={currentPage1200 === 1}
+                    className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
+                  >
+                    <span className="text-lg">‹</span>
+                    PREVIOUS COLOR CHART
+                  </button>
+
+                  <button
+                    onClick={goToNext1200}
+                    disabled={currentPage1200 === totalPages1200}
+                    className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
+                  >
+                    NEXT COLOR CHART
+                    <span className="text-lg">›</span>
+                  </button>
+                </div>
+
+
+
+
+              </>
+            ) : (
+
+
+
+              <div className="   bg-gray-100  p-8">
+                <div className="max-w-7xl mx-auto">
+                  <div>
+                    <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1000</h1>
+>>>>>>> Stashed changes
                   </div>
                 </div>
               ))}
