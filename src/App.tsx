@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import AankhiJhyal from "./components/products/Customize/AankhiJhyal";
 import Attraction from "./components/products/Customize/Attraction";
 import Baasn from "./components/products/Customize/Baasn";
-import BayLeaves from "./components/products/Customize/BayLeaves";
+import BayLeaves from "./components/products/Customize/Bayleaves";
 import Bubbles from "./components/products/Customize/Bubbles";
 import BurningRope from "./components/products/Customize/BurningRope";
 import Cells from "./components/products/Customize/Cells";

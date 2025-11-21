@@ -795,7 +795,7 @@ const getAllProducts = (): DetailedProduct[] => {
       id: 'rug-056',
       name: 'Mandro',
       material: 'Hand-knotted Wool',
-      imageUrl: '/assets/images/products/Mandro.png',
+      imageUrl: '/assets/images/products/Mandro.jpg',
       features: [
         'Hand-knotted by master artisans',
         'Premium yarn construction',

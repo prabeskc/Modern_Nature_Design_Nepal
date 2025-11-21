@@ -1267,7 +1267,7 @@ const Echo = () => {
                 <button onClick={() => {
                   resetColors();
                   setLayerNameList((lArray) => {
-                    return ["DH 07", "CS 07", "AO 10"]
+                    return ["DH 07", "CJ 07", "AD 10"]
                   })
                 }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
               </div>

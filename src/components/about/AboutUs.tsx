@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 
 const fadeInUp: Variants = {
@@ -7,6 +7,25 @@ const fadeInUp: Variants = {
 };
 
 const AboutUsPage: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          video.pause();
+        }
+      },
+      { threshold: 0.3 } // pause when <30% visible
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.section
       className="relative bg-gradient-to-br from-white via-gray-50 to-amber-50 py-24 px-6 md:px-20"
@@ -32,9 +51,10 @@ const AboutUsPage: React.FC = () => {
           </p>
         </div>
 
-        {/* Right Video */}
+        {/* Right Video (updated) */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <video
+            ref={videoRef}
             src="/public/assets/images/about/video.mov"
             controls
             className="rounded-2xl shadow-lg w-full h-[700px] object-cover"

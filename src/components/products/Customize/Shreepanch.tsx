@@ -1188,9 +1188,9 @@ const ShreePanch = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
+      <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-serif mt-2">ShreePanch</h1>
+          <h1 className="text-3xl font-serif mt-2">Shreepanch</h1>
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
