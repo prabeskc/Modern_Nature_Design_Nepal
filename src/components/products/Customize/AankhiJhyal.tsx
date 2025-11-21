@@ -8,10 +8,16 @@ import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
 import AankhiJhyalLayer from '@/components/products/Customize/AankhiJhyalLayer';
+<<<<<<< Updated upstream
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
 
 
+=======
+
+
+
+>>>>>>> Stashed changes
 const colorData1000 = [
   // my 1000 color series is here   
 
@@ -1038,12 +1044,18 @@ const colorData1000 = [
 
 
 const AankhiJhyal = () => {
+<<<<<<< Updated upstream
   const INITIAL_COLORS: { [key in 1 | 2 ]: string } = {
     1: "#b2945f",
     2: "#191e2a",
 
 
 
+=======
+  const INITIAL_COLORS: { [key in 1 | 2]: string } = {
+    1: "#191e2a",
+    2: "#b2945f"
+>>>>>>> Stashed changes
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1184,6 +1196,7 @@ const AankhiJhyal = () => {
 
 
   return (
+<<<<<<< Updated upstream
     <>
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
@@ -1243,6 +1256,146 @@ const AankhiJhyal = () => {
                   <div className="text-sm">
                     <div className="font-medium">{layer}</div>
                     <div className="text-xs text-gray-600">{colors[index + 1]}</div>
+=======
+    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
+      <div className="text-center mb-6">
+        <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Aquarela</p>
+        <h1 className="text-3xl font-serif mt-2">AankhiJhyal</h1>
+      </div>
+
+      <div className="flex w-full max-w-7xl gap-6">
+        <div className="w-1/2 relative">
+          <AankhiJhyalLayer layers={layers} />
+        </div>
+
+        <div className="w-1/2 flex flex-col gap-6">
+          <div className="bg-gray-100 p-4 shadow-sm border">
+            <h2 className="font-semibold mb-2">TO CHANGE COLORS:</h2>
+            <ol className="list-decimal ml-4 text-sm text-gray-700 space-y-1">
+              <li>Click on the color window below corresponding to the part of the design that you want to re-color.</li>
+              <li>Then click on the desired color in the color chart.</li>
+            </ol>
+          </div>
+          <div className="flex items-center gap-4 flex-wrap">
+            {layerNameList.map((layer, index) => (
+              <div
+                key={index}
+                role="button"
+                aria-label={`Layer ${layer} color panel`}
+                onClick={() => {
+                  setActiveLayer(index + 1);
+                }
+                }
+                onKeyDown={(e) => e.key === 'Enter' && setActiveLayer(index + 1)}
+                tabIndex={0}
+                className={`p-3 border rounded-md flex items-center gap-3 cursor-pointer select-none ${activeLayer === index + 1 ? 'ring-2 ring-gray-800' : ''}`}
+              >
+                <div className="w-10 h-10 border" style={{ backgroundColor: colors[index + 1] }} />
+                <div className="text-sm">
+                  <div className="font-medium">{layer}</div>
+                  <div className="text-xs text-gray-600">{colors[index + 1]}</div>
+                </div>
+              </div>
+            ))}
+            <div className="ml-auto flex items-center gap-2">
+              <button onClick={() => {
+                resetColors();
+                setLayerNameList((lArray) => {
+                  return ["DT 07", "BM 02"];
+                })
+              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
+            </div>
+          </div>
+
+
+          <div className="p-6 bg-gray-100 rounded-2xl shadow-md w-full mx-auto">
+            {/* Conditional rendering based on showNewContent */}
+            {!showNewContent ? (
+              <>
+                <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1200</h1>
+                <div className="text-xs text-gray-600 text-center mb-2">Active layer: {activeLayer}</div>
+                <div className="text-xs text-gray-600 text-center mb-4">Contrast ratio: {currentContrast.toFixed(2)}{currentContrast < 3 ? ' (low contrast)' : ''}</div>
+
+
+                <div className="flex flex-row justify-center flex-wrap gap-1">
+                  {split20(getCurrentColorData()).reverse().map((group, i) => (
+                    <div className=' flex flex-row gap-3' key={i}>
+                      {group.map((colorItem: any) => (
+                        <div key={colorItem.name}>
+                          <div
+                            className="w-[18px] h-[18px] rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
+                            style={{
+                              backgroundColor: `rgb(${colorItem.r}, ${colorItem.g}, ${colorItem.b})`,
+                            }}
+                            onClick={() => {
+                              applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b));
+                              setLayerNameList((lname) => {
+                                let newName = colorItem.name
+                                let lArray = [];
+                                lname.map((cname, index) => {
+                                  if (index + 1 == activeLayer) {
+                                    lArray.push(newName);
+                                  } else {
+                                    lArray.push(cname);
+                                  }
+                                })
+                                return lArray;
+                              })
+
+                            }}
+                            onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
+                            role="button"
+                            tabIndex={0}
+                            aria-label={`Set Layer ${activeLayer} to ${colorItem.name}`}
+                          ></div>
+                          <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
+                            {colorItem.name}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+
+                <div className=" text-center ">
+                  <p className="text-gray-600 pt-6">
+                    Page {currentPage1200} of {totalPages1200}
+                  </p>
+                </div>
+
+                <div className="flex gap-4 pt-4">
+                  <button
+                    onClick={goToPrevious1200}
+                    disabled={currentPage1200 === 1}
+                    className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
+                  >
+                    <span className="text-lg">‹</span>
+                    PREVIOUS COLOR CHART
+                  </button>
+
+                  <button
+                    onClick={goToNext1200}
+                    disabled={currentPage1200 === totalPages1200}
+                    className="px-6 py-2.5 bg-white border-2 border-gray-800 text-gray-800 font-medium rounded hover:bg-gray-800 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-800 flex items-center gap-2"
+                  >
+                    NEXT COLOR CHART
+                    <span className="text-lg">›</span>
+                  </button>
+                </div>
+
+
+
+
+              </>
+            ) : (
+
+
+
+              <div className="   bg-gray-100  p-8">
+                <div className="max-w-7xl mx-auto">
+                  <div>
+                    <h1 className="text-xl font-bold text-center mb-4 font-serif">Color Chart 1000</h1>
+>>>>>>> Stashed changes
                   </div>
                 </div>
               ))}
@@ -1295,7 +1448,11 @@ const AankhiJhyal = () => {
                               onKeyDown={(e) => { if (e.key === 'Enter') applyColor(rgbToHex(colorItem.r, colorItem.g, colorItem.b)); }}
                               role="button"
                               tabIndex={0}
+<<<<<<< Updated upstream
                               aria-label={`Set Layer ${activeLayer} to ${colorItem.name}`}
+=======
+                              aria-label={`Set layer ${activeLayer} to ${colorItem.name}`}
+>>>>>>> Stashed changes
                             ></div>
                             <div className="text-[6.7px] font-normal text-center mt-1 text-gray-600">
                               {colorItem.name}

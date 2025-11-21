@@ -8,8 +8,12 @@ import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
 import KapaalLayer from '@/components/products/Customize/KapaalLayer';
+<<<<<<< Updated upstream
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
+=======
+
+>>>>>>> Stashed changes
 
 
 const colorData1000 = [
@@ -1038,12 +1042,18 @@ const colorData1000 = [
 
 
 const Kapaal = () => {
+<<<<<<< Updated upstream
   const INITIAL_COLORS: { [key in 1 | 2 ]: string } = {
     1: "#E19F04",
     2: "#0C120D",
 
 
 
+=======
+  const INITIAL_COLORS: { [key in 1 | 2]: string } = {
+    1: "#e19f04",
+    2: "#0c120d"
+>>>>>>> Stashed changes
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1184,11 +1194,23 @@ const Kapaal = () => {
 
 
   return (
+<<<<<<< Updated upstream
     <>
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-serif mt-2">Kapaal</h1>
+=======
+    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
+      <div className="text-center mb-6">
+        <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Kapaal</p>
+        <h1 className="text-3xl font-serif mt-2">Kapaal</h1>
+      </div>
+
+      <div className="flex w-full max-w-7xl gap-6">
+        <div className="w-1/2 relative">
+          <KapaalLayer layers={layers} />
+>>>>>>> Stashed changes
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
@@ -1208,12 +1230,23 @@ const Kapaal = () => {
               <div className="w-full h-full">
                 <KapaalLayer layers={layers} />
               </div>
+<<<<<<< Updated upstream
             </div>
             <div className='flex flex-column gap-2.5'>
               <img src='/public/assets/images/ProductDetailImages/kaapal2.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/kaapal1.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/kaapal3.jpg' className='h-52 w-40 object-cover mt-4' />
 
+=======
+            ))}
+            <div className="ml-auto flex items-center gap-2">
+              <button onClick={() => {
+                resetColors();
+                setLayerNameList((lArray) => {
+                  return ["DI 01", "CA 01"];
+                })
+              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
+>>>>>>> Stashed changes
             </div>
           </div>
 

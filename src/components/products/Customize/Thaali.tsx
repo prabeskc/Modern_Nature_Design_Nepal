@@ -1,4 +1,4 @@
-// MajesticPersian.tsx
+
 
 import React, { useState, useMemo, useEffect } from 'react';
 import colorDataA from '../../../../color.json';
@@ -7,10 +7,14 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
+<<<<<<< Updated upstream
 import ThaaliLayer from '@/components/products/Customize/ThaaliLayer';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
 
+=======
+import ThaaliLayer from './ThaaliLayer';
+>>>>>>> Stashed changes
 
 
 const colorData1000 = [
@@ -1039,14 +1043,22 @@ const colorData1000 = [
 
 
 const Thaali = () => {
+<<<<<<< Updated upstream
   const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7]: string } = {
+=======
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4 | 5 | 6 | 7 ]: string } = {
+>>>>>>> Stashed changes
     1: "#e4bf4e",
     2: "#e46b34",
     3: "#f9f8f5",
     4: "#6d8db1",
     5: "#839a81",
     6: "#aec6bd",
+<<<<<<< Updated upstream
     7: "#e2e3e4",
+=======
+    7: "#e2e3e4",  
+>>>>>>> Stashed changes
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1117,7 +1129,10 @@ const Thaali = () => {
     { src: "/layers/Thaali/Thaali5.png", color: colors[5] },
     { src: "/layers/Thaali/Thaali6.png", color: colors[6] },
     { src: "/layers/Thaali/Thaali7.png", color: colors[7] },
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   ], [colors]);
 
   const [layerNameList, setLayerNameList] = useState(["DH 09", "DL 03", "AH 12", "BI 08", "CS 10", "CE 10", "BF 12"]);
@@ -1192,11 +1207,23 @@ const Thaali = () => {
 
 
   return (
+<<<<<<< Updated upstream
     <>
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-serif mt-2">Thaali</h1>
+=======
+    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
+      <div className="text-center mb-6">
+        <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Thaali</p>
+        <h1 className="text-3xl font-serif mt-2">Thaali</h1>
+      </div>
+
+      <div className="flex w-full max-w-7xl gap-6">
+        <div className="w-1/2 relative">
+          <ThaaliLayer layers={layers} />
+>>>>>>> Stashed changes
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
@@ -1216,12 +1243,23 @@ const Thaali = () => {
               <div className="w-full h-full">
                 <ThaaliLayer layers={layers} />
               </div>
+<<<<<<< Updated upstream
             </div>
             <div className='flex flex-column gap-2.5'>
               <img src='/public/assets/images/ProductDetailImages/Thaali1.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/Thaali2.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/Thaali3.jpg' className='h-52 w-40 object-cover mt-4' />
 
+=======
+            ))}
+            <div className="ml-auto flex items-center gap-2">
+              <button onClick={() => {
+                resetColors();
+                setLayerNameList((lArray) => {
+                  return ["DH 09", "DL 03", "AH 12", "BI 08", "CS 10", "CE 10", "BF 12"]
+                })
+              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
+>>>>>>> Stashed changes
             </div>
           </div>
 

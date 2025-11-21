@@ -1,4 +1,4 @@
-// MajesticPersian.tsx
+
 
 import React, { useState, useMemo, useEffect } from 'react';
 import colorDataA from '../../../../color.json';
@@ -7,9 +7,13 @@ import colorDataC from '../../../../colorC.json';
 import colorDataD from '../../../../colorD.json';
 import colorDataE from '../../../../colorE.json';
 
+<<<<<<< Updated upstream
 import PhulchokiLayer from '@/components/products/Customize/PhulchokiLayer';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
+=======
+import PhulchokiLayer from './PhulchokiLayer';
+>>>>>>> Stashed changes
 
 
 const colorData1000 = [
@@ -1038,11 +1042,20 @@ const colorData1000 = [
 
 
 const Phulchoki = () => {
+<<<<<<< Updated upstream
   const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4]: string } = {
+=======
+  const INITIAL_COLORS: { [key in 1 | 2 | 3 | 4  ]: string } = {
+>>>>>>> Stashed changes
     1: "#6d9a99",
     2: "#50777c",
     3: "#285150",
     4: "#728b78",
+<<<<<<< Updated upstream
+=======
+
+  
+>>>>>>> Stashed changes
   };
 
   const [colors, setColors] = useState(INITIAL_COLORS);
@@ -1109,7 +1122,13 @@ const Phulchoki = () => {
     { src: "/layers/Phulchoki/Phulchoki1.png", color: colors[1] },
     { src: "/layers/Phulchoki/Phulchoki2.png", color: colors[2] },
     { src: "/layers/Phulchoki/Phulchoki3.png", color: colors[3] },
+<<<<<<< Updated upstream
     { src: "/layers/Phulchoki/Phulchoki4.png", color: colors[4] }
+=======
+    { src: "/layers/Phulchoki/Phulchoki4.png", color: colors[4] },
+
+  
+>>>>>>> Stashed changes
   ], [colors]);
 
   const [layerNameList, setLayerNameList] = useState(["CE 07", "CE 06", "CE 03", "CC 06"]);
@@ -1184,11 +1203,23 @@ const Phulchoki = () => {
 
 
   return (
+<<<<<<< Updated upstream
     <>
       <Navbar />
       <div className="mt-12 min-h-screen bg-white flex flex-col items-center justify-start py-10">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-serif mt-2">Phulchoki</h1>
+=======
+    <div className="min-h-screen bg-white flex flex-col items-center justify-start py-10">
+      <div className="text-center mb-6">
+        <p className="text-sm text-gray-500">Home &gt; Color Customizer &gt; Phulchoki</p>
+        <h1 className="text-3xl font-serif mt-2">Phulchoki</h1>
+      </div>
+
+      <div className="flex w-full max-w-7xl gap-6">
+        <div className="w-1/2 relative">
+          <PhulchokiLayer layers={layers} />
+>>>>>>> Stashed changes
         </div>
 
         <div className="flex w-full max-w-7xl gap-6">
@@ -1208,12 +1239,23 @@ const Phulchoki = () => {
               <div className="w-full h-full">
                 <PhulchokiLayer layers={layers} />
               </div>
+<<<<<<< Updated upstream
             </div>
             <div className='flex flex-column gap-2.5'>
               <img src='/public/assets/images/ProductDetailImages/Phulchoki1.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/Phulchoki2.jpg' className='h-52 w-40 object-cover mt-4' />
               <img src='/public/assets/images/ProductDetailImages/Phulchoki3.jpg' className='h-52 w-40 object-cover mt-4' />
 
+=======
+            ))}
+            <div className="ml-auto flex items-center gap-2">
+              <button onClick={() => {
+                resetColors();
+                setLayerNameList((lArray) => {
+                  return ["CE 07", "CE 06", "CE 03", "CC 06"]
+                })
+              }} className="text-sm underline text-gray-600 hover:text-black">⟳ Reset to original colors</button>
+>>>>>>> Stashed changes
             </div>
           </div>
 

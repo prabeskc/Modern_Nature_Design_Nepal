@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { X, Eye } from 'lucide-react';
 import Container from '../ui/Container.tsx';
-
 import SectionHeading from './SectionHeading';
 import { useModal } from '@/hooks/useModal';
 import productsData from '@/data/products.json';
@@ -10,7 +9,6 @@ interface Product {
   id: string;
   name: string;
   description: string;
-  price: number;
   images: string[];
   colors: { id: string; name: string; hex: string }[];
   category: string;
@@ -39,13 +37,12 @@ function ProductCard({ product, onCardClick, isVisible, index, aspectRatio }: Pr
     'assets/images/home/shopbestsellers/Unon-Extin.jpg',
   ];
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0
-    }).format(price);
-  };
+  // const formatPrice = (price: number) => {
+  //   return new Intl.NumberFormat('en-US', {
+  //     style: 'currency',
+  //     minimumFractionDigits: 0
+  //   }).format(price);
+  // };
 
   return (
     <div
@@ -72,9 +69,6 @@ function ProductCard({ product, onCardClick, isVisible, index, aspectRatio }: Pr
           <h3 className="font-serif text-lg font-medium text-white mb-1 line-clamp-1">
             {product.name}
           </h3>
-          {/* <p className="text-mint-green font-bold text-lg">
-            {formatPrice(product.price)}
-          </p> */}
         </div>
       </div>
     </div>
@@ -113,8 +107,6 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
 
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
       minimumFractionDigits: 0
     }).format(price);
   };
@@ -170,11 +162,7 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                   New
                 </span>
               )}
-              {/* {product.isBestseller && (
-                <span className="bg-charcoal text-off-white px-3 py-1 rounded-full text-sm font-medium">
-                  Bestseller
-                </span>
-              )} */}
+
             </div>
 
             {/* Product Info */}
@@ -182,9 +170,6 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
               {product.name}
             </h2>
 
-            {/* <p className="text-xl lg:text-2xl font-bold text-mint-green mb-4">
-              {formatPrice(product.price)}
-            </p> */}
 
             <p className="text-charcoal/70 leading-relaxed mb-6">
               {product.description}
@@ -207,34 +192,6 @@ function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
                 </span>
               </div>
             </div>
-
-            {/* Color Selection */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-charcoal mb-3">Available Colors</h3>
-              <div className="flex space-x-2">
-                {product.colors.map((color) => (
-                  <button
-                    key={color.id}
-                    onClick={() => setSelectedColor(color.hex)}
-                    className={`w-6 h-6 rounded-full border-2 transition-all duration-200 ${selectedColor === color.hex ? 'border-charcoal scale-110' : 'border-gray-300 hover:border-charcoal'
-                      }`}
-                    style={{ backgroundColor: color.hex }}
-                    title={color.name}
-                    aria-label={`Select ${color.name} color`}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Action Buttons */}
-            {/* <div className="flex space-x-3 mt-auto flex-shrink-0">
-              <button className="flex-1 bg-charcoal text-off-white px-6 py-3 rounded-lg font-medium hover:bg-charcoal/90 transition-colors duration-200">
-                Add to Cart
-              </button>
-              <button className="px-6 py-3 border-2 border-charcoal text-charcoal rounded-lg font-medium hover:bg-charcoal hover:text-off-white transition-colors duration-200">
-                Add to Wishlist
-              </button>
-            </div> */}
           </div>
         </div>
       </div>
@@ -250,7 +207,7 @@ export default function FeaturedProducts() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Get first 4 products from the data
+
     const featuredProducts = productsData.products.slice(0, 4);
     setProducts(featuredProducts);
   }, []);

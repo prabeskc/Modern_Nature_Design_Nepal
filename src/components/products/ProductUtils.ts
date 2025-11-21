@@ -12,7 +12,6 @@ export interface UnifiedProduct {
   price?: string;
   imageUrl: string;
   Inspired_From?: string;
-  // Category-specific fields
   comfort?: string;
   style?: string;
   durability?: string;
@@ -20,8 +19,6 @@ export interface UnifiedProduct {
   artisan?: string;
 }
 
-// Products are now managed locally in each category component
-// This keeps the shared configuration and types
 
 // Subcategory descriptions mapping
 export const subcategoryDescriptions: Record<string, string> = {

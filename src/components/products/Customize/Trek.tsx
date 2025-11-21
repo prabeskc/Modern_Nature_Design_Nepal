@@ -1039,10 +1039,17 @@ const colorData1000 = [
 
 
 const Trek = () => {
+<<<<<<< Updated upstream
   const INITIAL_COLORS: { [key in 1 | 2]: string } = {
     1: "#daaa7e",
     2: "#989e92",
 
+=======
+  const INITIAL_COLORS: { [key in 1 | 2 ]: string } = {
+    1: "#989e92",
+    2: "#daaa7e",
+ 
+>>>>>>> Stashed changes
 
   };
 

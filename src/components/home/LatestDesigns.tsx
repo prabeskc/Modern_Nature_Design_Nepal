@@ -12,8 +12,8 @@ interface DesignCard {
   image: string;
   detailedDescription: string;
   materials: string;
-  dimensions: string;
-  price: string;
+  // dimensions: string;
+  // price: string;
 }
 
 const latestDesigns: DesignCard[] = [
@@ -24,8 +24,7 @@ const latestDesigns: DesignCard[] = [
     image: 'assets/images/home/latestdesigns/Beehive.jpg',
     detailedDescription: 'Our Himalayan Texture collection draws inspiration from the majestic mountain ranges of Nepal. Each rug features rich, tactile weaves that capture the essence of rugged landscapes and serene valleys. Hand-crafted by master artisans using traditional techniques passed down through generations.',
     materials: 'Premium Tibetan wool, Natural silk highlights',
-    dimensions: '8\'x10\', 9\'x12\', 10\'x14\'',
-    price: 'Starting from $2,400'
+
   },
   {
     id: 'design-2',
@@ -34,8 +33,6 @@ const latestDesigns: DesignCard[] = [
     image: 'assets/images/home/latestdesigns/Lalitpur.jpg',
     detailedDescription: 'The Artisan Knots series showcases the pinnacle of Nepalese craftsmanship. Each piece features intricate hand-knotted patterns that blend traditional motifs with contemporary design sensibilities. The result is a timeless piece that complements modern interiors while honoring ancient traditions.',
     materials: 'Hand-spun wool, Bamboo silk accents',
-    dimensions: '6\'x9\', 8\'x10\', 9\'x12\'',
-    price: 'Starting from $1,800'
   },
   {
     id: 'design-3',
@@ -44,8 +41,6 @@ const latestDesigns: DesignCard[] = [
     image: 'assets/images/home/latestdesigns/Majesty.jpg',
     detailedDescription: 'Modern Heritage represents the evolution of traditional rug-making for contemporary living spaces. These pieces maintain the soul of classical Nepalese designs while incorporating modern color palettes and simplified patterns that speak to today\'s aesthetic preferences.',
     materials: 'Organic wool, Natural dyes, Cotton foundation',
-    dimensions: '5\'x8\', 8\'x10\', 9\'x12\'',
-    price: 'Starting from $1,600'
   },
   {
     id: 'design-4',
@@ -54,8 +49,6 @@ const latestDesigns: DesignCard[] = [
     image: 'assets/images/home/latestdesigns/ManasluCircut.jpg',
     detailedDescription: 'Zen Minimalism embodies the philosophy of \'less is more\'. These rugs feature clean lines, subtle textures, and a restrained color palette that creates a sense of calm and balance in any space. Perfect for contemporary homes seeking tranquility.',
     materials: 'Fine wool, Linen blend, Natural fibers',
-    dimensions: '6\'x9\', 8\'x11\', 10\'x14\'',
-    price: 'Starting from $2,200'
   },
   {
     id: 'design-5',
@@ -64,8 +57,6 @@ const latestDesigns: DesignCard[] = [
     image: 'assets/images/home/latestdesigns/NamcheBazar.jpg',
     detailedDescription: 'Cultural Fusion celebrates the meeting of Eastern and Western design philosophies. These rugs incorporate traditional Nepalese motifs with contemporary Western aesthetics, creating pieces that are both globally inspired and locally crafted.',
     materials: 'Highland wool, Silk details, Eco-friendly dyes',
-    dimensions: '7\'x10\', 8\'x12\', 9\'x13\'',
-    price: 'Starting from $2,800'
   }
 ];
 
@@ -168,26 +159,8 @@ function ExpandedCardModal({ design, isOpen, onClose }: { design: DesignCard | n
               <div>
                 <h3 className="font-medium text-charcoal mb-2">Materials</h3>
                 <p className="text-charcoal/70">{design.materials}</p>
-              </div>
-              <div>
-                <h3 className="font-medium text-charcoal mb-2">Available Sizes</h3>
-                <p className="text-charcoal/70">{design.dimensions}</p>
-              </div>
-              {/* <div>
-                <h3 className="font-medium text-charcoal mb-2">Price</h3>
-                <p className="text-mint-green font-medium text-lg">{design.price}</p>
-              </div> */}
-            </div>
-            
-            {/* Actions */}
-            {/* <div>
-              <Link to="/products" className="flex-1 bg-charcoal text-off-white px-6 py-3 rounded-lg font-medium hover:bg-charcoal/90 transition-colors duration-200">
-                View Details
-              </Link> 
-              <button className="flex-1 border-2 border-mint-green text-mint-green px-6 py-3 rounded-lg font-medium hover:bg-mint-green hover:text-charcoal transition-colors duration-200">
-                Contact Us
-              </button>
-            </div> */}
+              </div>            
+            </div>           
           </div>
         </div>
       </div>

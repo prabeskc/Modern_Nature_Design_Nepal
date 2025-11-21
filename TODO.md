@@ -1,6 +1,5 @@
-- Remove page2Prefixes, page3Prefixes, page4Prefixes, page5Prefixes arrays
-- Remove totalPages, currentPage state, getPrefixes function, goToPrevious, goToNext functions
-- Update currentPrefixes to always be page1Prefixes
-- Remove pagination buttons and dots
-- Remove the page indicator text
-- Simplify the component to show only the first color palette (AA-AT)
+# TODO: Add Zoom Controls to AllCollections.tsx
+
+- [x] Import Plus and Minus icons from lucide-react
+- [x] Modify TransformWrapper to use render prop for zoomIn and zoomOut functions
+- [x] Add zoom control buttons (+ and -) in the modal below the image and above the carpet name

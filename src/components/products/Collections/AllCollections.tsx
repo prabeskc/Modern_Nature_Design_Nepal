@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { Minus, Plus, X } from "lucide-react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
@@ -160,25 +160,38 @@ const AllCollections: React.FC = () => {
               </button>
             </div>
 
-            {/* Image (UNCHANGED) */}
-            <div className="flex justify-center items-center">
-              <TransformWrapper>
-                <TransformComponent>
-                  <img
-                    src={activeCarpet.imageUrl}
-                    alt={activeCarpet.name}
-                    className="object-contain max-h-[80vh] max-w-[90vw]"
-                  />
-                </TransformComponent>
-              </TransformWrapper>
-            </div>
-
-            {/* Carpet name */}
-            <div className="text-center py-4 bg-gray-200">
-              <h2 className="text-2xl font-semibold text-gray-800">
-                {activeCarpet.name}
-              </h2>
-            </div>
+            {/* Image and zoom controls */}
+            <TransformWrapper>
+              {({ zoomIn, zoomOut }) => (
+                <>
+                  <TransformComponent>
+                    <img
+                      src={activeCarpet.imageUrl}
+                      alt={activeCarpet.name}
+                      className="object-contain max-h-[80vh] max-w-[90vw]"
+                    />
+                  </TransformComponent>
+                  {/* Carpet name with zoom controls */}
+                  <div className="flex items-center justify-between py-4 bg-gray-200 px-4">
+                    <button
+                      onClick={() => zoomOut()}
+                      className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-2 rounded-full transition"
+                    >
+                      <Minus size={20} />
+                    </button>
+                    <h2 className="text-2xl font-semibold text-gray-800">
+                      {activeCarpet.name}
+                    </h2>
+                    <button
+                      onClick={() => zoomIn()}
+                      className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-2 rounded-full transition"
+                    >
+                      <Plus size={20} />
+                    </button>
+                  </div>
+                </>
+              )}
+            </TransformWrapper>
           </motion.div>
         </motion.div>
       )}
