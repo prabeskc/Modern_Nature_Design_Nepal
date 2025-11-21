@@ -668,64 +668,6 @@ export default function Navbar({ className = '' }: NavbarProps) {
                   {/* <ChevronDown className={`chevron-animation w-4 h-4 ${activeMegaMenu === 'shop' ? 'rotate-180' : ''
                     }`} /> */}
                 </Link>
-
-                {/* Mega Menu */}
-                {/* {activeMegaMenu === 'shop' && (
-                  <div
-                    ref={megaMenuRef}
-                    className={`mega-menu-enter absolute p-6 rounded-lg shadow-2xl border border-white/30 w-screen max-w-5xl z-[9999] ${dropdownVerticalPosition === 'top'
-                      ? 'bottom-full mb-2'
-                      : 'top-full mt-2'
-                      } ${dropdownPosition === 'left'
-                        ? 'left-0'
-                        : dropdownPosition === 'right'
-                          ? 'right-0'
-                          : 'right-0 lg:left-1/2 lg:transform lg:-translate-x-1/2'
-                      } ${dropdownPosition === 'center' && (window.innerWidth < 1024)
-                        ? 'left-4 right-4 w-auto max-w-none'
-                        : ''
-                      } ${isScrolled ? 'bg-white/95 backdrop-blur-lg' : 'bg-off-white'
-                      }`}
-                    style={{
-                      maxHeight: dropdownVerticalPosition === 'top'
-                        ? `${Math.min(400, window.innerHeight - 120)}px`
-                        : `${Math.min(400, window.innerHeight - (dropdownRef.current?.getBoundingClientRect().bottom || 0) - 40)}px`,
-                      overflowY: 'auto'
-                    }}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                      {megaMenuItems.shop.sections.map((section) => (
-                        <div key={section.title}>
-                          <Link
-                            to={`/products?category=${section.categoryId}`}
-                            onClick={handleMegaMenuClose}
-                            className="block mb-3"
-                          >
-                            <h3 className="font-medium text-charcoal drop-shadow-sm text-base leading-5 hover:text-mint-green transition-colors duration-200">
-                              {section.title}
-                            </h3>
-                          </Link>
-                          <ul className="space-y-2">
-                            {section.items.map((item) => (
-                              <li key={item.id}>
-                                <Link
-                                  to={`/products?category=${section.categoryId}&subcategory=${item.id}`}
-                                  onClick={handleMegaMenuClose}
-                                  className="navbar-item text-charcoal/70 hover:bg-white/30 hover:text-charcoal px-3 py-2 rounded text-sm block leading-6 transition-all duration-200"
-                                >
-                                  {item.name}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )} */}
               </div>
 
               <Link
