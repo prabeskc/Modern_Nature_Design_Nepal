@@ -87,28 +87,41 @@ const AllProductsView = ({ onProductSelect }: AllProductsViewProps) => {
   };
 
   return (
-   <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-  {/* Centered Image Section */}
-  <div className="bg-[url('/public/assets/images/color-customizer/colorbox.png')] flex justify-center items-center mb-6">
-    <img
-      src="/assets/images/color-customizer/ColorCustomizer.png"
-      alt="Color Customizer"
-      className="w-[300px] h-[100px] object-contain mb-3 mt-3"
-    />
-  </div>
+    <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      {/* Centered Image Section */}
+      <div className="bg-[url('/public/assets/images/color-customizer/colorbox.png')] flex justify-center items-center mb-6">
+        <img
+          src="/assets/images/color-customizer/ColorCustomizer.png"
+          alt="Color Customizer"
+          className="w-[300px] h-[100px] object-contain mb-3 mt-3"
+        />
+      </div>
 
 
-  {/* Product Grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-    {products.map((product) => (
-      <ProductCard
-        key={product.id}
-        product={product}
-        onProductClick={handleProductClick}
-      />
-    ))}
-  </div>
-</div>
+      {/* Search Input */}
+      <div className="mb-8 flex justify-end space-x-2">
+        <input
+          type="text"
+          placeholder="Search products"
+          className="border border-gray-900 rounded-lg px-3 py-2 focus:outline-none focus:ring-gray-900 focus:border-gray-900 text-sm"
+        />
+        <button className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-mint-white-900 transition">
+          Search
+        </button>
+      </div>
+
+
+      {/* Product Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            onProductClick={handleProductClick}
+          />
+        ))}
+      </div>
+    </div>
 
   );
 };

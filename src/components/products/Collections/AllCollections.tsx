@@ -32,7 +32,7 @@ const carpets: Carpet[] = [
   { id: 'rug-020', name: 'Maze', imageUrl: '/assets/images/products/Maze.jpg' },
   { id: 'rug-021', name: 'Mirror', imageUrl: '/assets/images/products/Mirror.jpg' },
   { id: 'rug-023', name: 'Monkey Temple', imageUrl: '/assets/images/products/MonkeyTemple.jpg' },
-  { id: 'rug-024', name: 'Morning Sun', imageUrl:'https://res.cloudinary.com/dflytue4b/image/upload/v1763737260/Morning_Sun_8_x_10_1_Photorealistic_mxbmte.jpg'},
+  { id: 'rug-024', name: 'Morning Sun', imageUrl: 'https://res.cloudinary.com/dflytue4b/image/upload/v1763737260/Morning_Sun_8_x_10_1_Photorealistic_mxbmte.jpg' },
   { id: 'rug-025', name: 'Nagh Daha', imageUrl: '/assets/images/products/NaghDaha.jpg' },
   { id: 'rug-026', name: 'Namche Bazar', imageUrl: '/assets/images/products/NamcheBazar.jpg' },
   { id: 'rug-027', name: 'On Board', imageUrl: '/assets/images/products/OnBoard.jpg' },
@@ -112,148 +112,164 @@ const AllCollections: React.FC = () => {
 
   return (
     <>
-  <Navbar />
-  <section className="min-h-screen bg-[#fdfdfb] py-20">
-    {/* Container with 80% width centered */}
-    <div className="w-4/5 mx-auto">
-      {/* Heading */}
-      <h1 className="mt-10 mb-10 text-4xl md:text-4xl font-bold text-gray-900 text-center">
-        All Collections
-      </h1>
+      <Navbar />
+      <section className="min-h-screen bg-[#fdfdfb] py-20">
+        {/* Container with 80% width centered */}
+        <div className="w-4/5 mx-auto">
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {currentCarpets.map((carpet) => (
-          <motion.div
-            key={carpet.id}
-            whileHover={{ scale: 1.03 }}
-            transition={{ type: "spring", stiffness: 200, damping: 15 }}
-            className="bg-gray-200 rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition flex flex-col"
-            onClick={() => setActiveCarpet(carpet)}
-          >
-            {/* UPDATED — Image now fills entire card width */}
-            <div className="flex justify-center items-center bg-gray-200 h-[400px]">
-              <img
-                src={carpet.imageUrl}
-                alt={carpet.name}
-                className="w-full h-full"
+          <div className="flex justify-between items-center mt-10 mb-10 px-4">
+            {/* Heading - Left */}
+            <h1 className="text-4xl md:text-4xl font-bold text-gray-900">
+              All Collections
+            </h1>
+
+            {/* Search Input - Right */}
+            <div className="flex items-center space-x-2">
+              <input
+                type="text"
+                placeholder="Search products"
+                className="border border-gray-900 rounded-lg px-3 py-2 focus:outline-none focus:ring-gray-900 focus:border-gray-900 text-sm"
               />
-            </div>
-
-            {/* Carpet name container */}
-            <div className="p-1 text-center bg-gray-200">
-              <h2 className="text-lg font-semibold text-gray-800">
-                {carpet.name}
-              </h2>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Pagination Controls */}
-      {totalPages > 1 && (
-        <div className="flex justify-center items-center mt-10 space-x-2">
-          <button
-            onClick={handlePrevious}
-            disabled={currentPage === 1}
-            className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
-          >
-            Previous
-          </button>
-
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index + 1}
-              onClick={() => handlePageChange(index + 1)}
-              className={`px-4 py-2 rounded-lg transition ${
-                currentPage === index + 1
-                  ? 'bg-gray-800 text-white'
-                  : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-              }`}
-            >
-              {index + 1}
-            </button>
-          ))}
-
-          <button
-            onClick={handleNext}
-            disabled={currentPage === totalPages}
-            className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
-          >
-            Next
-          </button>
-        </div>
-      )}
-    </div>
-
-    {/* Modal (UNCHANGED) */}
-    <AnimatePresence>
-      {activeCarpet && (
-        <motion.div
-          key="modal"
-          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex justify-center items-center p-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          <motion.div
-            key={activeCarpet.id}
-            className="relative bg-white rounded-3xl shadow-2xl overflow-hidden"
-            initial={{ scale: 0.95, opacity: 0, y: 50 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.95, opacity: 0, y: 50 }}
-            transition={{ duration: 1 }}
-          >
-            {/* Close Button */}
-            <div className="absolute top-0 right-0 m-2 bg-white rounded-full z-10">
-              <button
-                onClick={() => setActiveCarpet(null)}
-                className="p-1 text-gray-600 hover:text-gray-900 transition"
-              >
-                <X size={24} />
+              <button className="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">
+                Search
               </button>
             </div>
+          </div>
 
-            {/* Image and zoom controls */}
-            <TransformWrapper>
-              {({ zoomIn, zoomOut }) => (
-                <>
-                  <TransformComponent>
-                    <img
-                      src={activeCarpet.imageUrl}
-                      alt={activeCarpet.name}
-                      className="object-contain max-h-[80vh] max-w-[90vw]"
-                    />
-                  </TransformComponent>
-                  {/* Carpet name with zoom controls */}
-                  <div className="flex items-center justify-between py-4 bg-gray-200 px-4">
-                    <button
-                      onClick={() => zoomOut()}
-                      className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-2 rounded-full transition"
-                    >
-                      <Minus size={20} />
-                    </button>
-                    <h2 className="text-2xl font-semibold text-gray-800">
-                      {activeCarpet.name}
-                    </h2>
-                    <button
-                      onClick={() => zoomIn()}
-                      className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-2 rounded-full transition"
-                    >
-                      <Plus size={20} />
-                    </button>
-                  </div>
-                </>
-              )}
-            </TransformWrapper>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  </section>
 
-  <Footer />
-</>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {currentCarpets.map((carpet) => (
+              <motion.div
+                key={carpet.id}
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                className="bg-gray-200 rounded-2xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition flex flex-col"
+                onClick={() => setActiveCarpet(carpet)}
+              >
+                {/* UPDATED — Image now fills entire card width */}
+                <div className="flex justify-center items-center bg-gray-200 h-[400px]">
+                  <img
+                    src={carpet.imageUrl}
+                    alt={carpet.name}
+                    className="w-full h-full"
+                  />
+                </div>
+
+                {/* Carpet name container */}
+                <div className="p-1 text-center bg-gray-200">
+                  <h2 className="text-lg font-semibold text-gray-800">
+                    {carpet.name}
+                  </h2>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center mt-10 space-x-2">
+              <button
+                onClick={handlePrevious}
+                disabled={currentPage === 1}
+                className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+              >
+                Previous
+              </button>
+
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index + 1}
+                  onClick={() => handlePageChange(index + 1)}
+                  className={`px-4 py-2 rounded-lg transition ${currentPage === index + 1
+                    ? 'bg-gray-800 text-white'
+                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                    }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+
+              <button
+                onClick={handleNext}
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+              >
+                Next
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Modal (UNCHANGED) */}
+        <AnimatePresence>
+          {activeCarpet && (
+            <motion.div
+              key="modal"
+              className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex justify-center items-center p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.div
+                key={activeCarpet.id}
+                className="relative bg-white rounded-3xl shadow-2xl overflow-hidden"
+                initial={{ scale: 0.95, opacity: 0, y: 50 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.95, opacity: 0, y: 50 }}
+                transition={{ duration: 1 }}
+              >
+                {/* Close Button */}
+                <div className="absolute top-0 right-0 m-2 bg-white rounded-full z-10">
+                  <button
+                    onClick={() => setActiveCarpet(null)}
+                    className="p-1 text-gray-600 hover:text-gray-900 transition"
+                  >
+                    <X size={24} />
+                  </button>
+                </div>
+
+                {/* Image and zoom controls */}
+                <TransformWrapper>
+                  {({ zoomIn, zoomOut }) => (
+                    <>
+                      <TransformComponent>
+                        <img
+                          src={activeCarpet.imageUrl}
+                          alt={activeCarpet.name}
+                          className="object-contain max-h-[80vh] max-w-[90vw]"
+                        />
+                      </TransformComponent>
+                      {/* Carpet name with zoom controls */}
+                      <div className="flex items-center justify-between py-4 bg-gray-200 px-4">
+                        <button
+                          onClick={() => zoomOut()}
+                          className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-2 rounded-full transition"
+                        >
+                          <Minus size={20} />
+                        </button>
+                        <h2 className="text-2xl font-semibold text-gray-800">
+                          {activeCarpet.name}
+                        </h2>
+                        <button
+                          onClick={() => zoomIn()}
+                          className="bg-gray-200 hover:bg-gray-300 text-gray-800 p-2 rounded-full transition"
+                        >
+                          <Plus size={20} />
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </TransformWrapper>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
+
+      <Footer />
+    </>
 
   );
 };

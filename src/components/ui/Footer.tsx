@@ -1,9 +1,11 @@
 // src/components/Footer.tsx
-import { Instagram, Facebook, Mail } from "lucide-react";
+import { Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Container from "../ui/Container";
 import { FaThreads } from "react-icons/fa6";
+
+
 
 export default function Footer(): JSX.Element {
   const footerRef = useRef<HTMLElement | null>(null);
@@ -88,10 +90,12 @@ export default function Footer(): JSX.Element {
     support: {
       title: "Contact",
       links: [
-        { name: "+977-9801037585", action: () => { } },
-        { name: "Thaiba-14, Lalitpur", action: () => { } },
+        { name: "+977-9801037585", icon: <Phone className="w-4 h-4 mr-2" />, action: () => { } },
+        { name: "Thaiba-14, Lalitpur, Nepal", icon: <MapPin className="w-4 h-4 mr-2" />, action: () => { } },
+        { name: "info@modernnaturedesignnepal.com", icon: <Mail className="w-4 h-4 mr-2" />, action: () => { } },
       ],
     },
+
   };
 
   const socialLinks = [
@@ -112,35 +116,44 @@ export default function Footer(): JSX.Element {
       }}
     >
       <Container>
-        <div className="py-8 lg:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-16 items-start">
+        <div className="py-8 lg:pt-8 lg:pb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 items-start">
             {/* BRAND */}
             <div
-              className={`lg:col-span-2 transform transition-all duration-800 ease-out ${animatedElements.has("brand") ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              className={`lg:col-span-2 transform transition-all duration-800 ease-out ${animatedElements.has("brand")
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
                 }`}
             >
-              <h2 className="font-serif text-xl mb-3">Modern Nature Design Nepal</h2>
+              <h2 className="font-serif text-xl mb-3">
+                Modern Nature Design Nepal
+              </h2>
               <p className="text-off-white/70 text-sm mb-4">
-                Hand-Knotted in Nepal, each rug is a masterpiece of heritage and precision, seamlessly blending traditional weaving artistry with contemporary design. Crafted for discerning interiors around the world, Our rugs embody timeless elegance, exceptional quality and ethical craftmanship - a statement of sophistication for generations to come.
+                Hand-Knotted in Nepal, each rug is a masterpiece of heritage and
+                precision, seamlessly blending traditional weaving artistry with
+                contemporary design. Crafted for discerning interiors around the
+                world, Our rugs embody timeless elegance, exceptional quality and
+                ethical craftmanship - a statement of sophistication for
+                generations to come.
               </p>
-
-              <div className="flex items-center text-off-white/70 text-sm">
-                <Mail className="w-4 h-4 mr-2" />
-                info@modernnaturedesignnepal.com
-              </div>
             </div>
 
             {/* FOOTER NAV LINKS */}
             {Object.entries(footerLinks).map(([_, group], idx) => (
               <div
                 key={idx}
-                className={`transform transition-all duration-800 ${animatedElements.has("links") ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                className={`transform transition-all duration-800 ${animatedElements.has("links")
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-8 opacity-0"
                   }`}
               >
-                <h3 className="font-medium mb-3 text-sm">{group.title}</h3>
+                <h3 className="font-medium mb-3 text-sm">
+                  {group.title}
+                </h3>
                 <ul className="space-y-2">
                   {group.links.map((l, index) => (
-                    <li key={index}>
+                    <li key={index} className="flex items-center">
+                      {l.icon && <span className="">{l.icon}</span>}
                       <button
                         onClick={l.action}
                         className="text-off-white/70 hover:text-mint-green text-sm"
@@ -153,19 +166,20 @@ export default function Footer(): JSX.Element {
               </div>
             ))}
 
-            {/* SOCIAL */}
             <div
-              className={`transform transition-all duration-800 ${animatedElements.has("social") ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              className={`transform transition-all duration-800 ${animatedElements.has("social")
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-8 opacity-0"
                 }`}
             >
-              <h3 className="font-medium mb-3 text-sm ml-6">Follow Us</h3>
-              <div className="flex space-x-3">
+              <h3 className="font-medium mb-3 text-sm ml-28">Follow Us</h3>
+              <div className="flex space-x-6 ml-24">
                 {socialLinks.map((s, i) => (
                   <a
                     key={i}
                     href={s.href}
                     target="_blank"
-                    className="w-8 h-8 bg-off-white/10 rounded-lg flex items-center justify-center hover:scale-110"
+                    className="w-4 h-8 flex items-center justify-center hover:scale-110"
                   >
                     {s.icon}
                   </a>
@@ -176,8 +190,9 @@ export default function Footer(): JSX.Element {
         </div>
 
         {/* BOTTOM */}
-        <div className="border-t border-off-white/20 py-6 text-center text-sm text-off-white/50">
-          © {new Date().getFullYear()} Modern Nature Design Nepal. All rights reserved.
+        <div className="border-t border-off-white/20 py-4 text-center text-sm text-off-white/50">
+          © {new Date().getFullYear()} Modern Nature Design Nepal. All rights
+          reserved.
         </div>
       </Container>
 
@@ -185,7 +200,9 @@ export default function Footer(): JSX.Element {
       {showModal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50">
           <div className="bg-white text-black p-6 rounded-xl max-w-3xl w-full max-h-[85vh] overflow-y-auto">
-            <h2 className="text-xl font-bold mb-4">Legal & Terms - Modern Nature Design Nepal</h2>
+            <h2 className="text-xl font-bold mb-4">
+              Legal & Terms - Modern Nature Design Nepal
+            </h2>
 
             <div style={{ whiteSpace: "pre-line" }} className="text-sm leading-relaxed">
               {legalText}
