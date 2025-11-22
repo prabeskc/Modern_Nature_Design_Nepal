@@ -83,7 +83,6 @@ import OurExperience from "./components/home/OurExperience";
 
 export default function App() {
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/craftmanship" element={<OurExperience />} />
@@ -177,7 +176,5 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      {/* <ChatbotWidget /> */}
-    </Router>
   );
 }
