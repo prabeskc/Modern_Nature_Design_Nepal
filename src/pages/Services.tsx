@@ -10,7 +10,6 @@ const Services = () => {
     <div className="min-h-screen bg-off-white">
       <Navbar />
       <ServicePage />
-      {/* <div className='bg-gradient-to-b from-[#8B5E3C] to-[#87CEEB] h-[200px]'/> */}
       <MaterialsCarousel />
       <Footer />
     </div>

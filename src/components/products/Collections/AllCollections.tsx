@@ -32,7 +32,7 @@ const carpets: Carpet[] = [
   { id: 'rug-020', name: 'Maze', imageUrl: '/assets/images/products/Maze.jpg' },
   { id: 'rug-021', name: 'Mirror', imageUrl: '/assets/images/products/Mirror.jpg' },
   { id: 'rug-023', name: 'Monkey Temple', imageUrl: '/assets/images/products/MonkeyTemple.jpg' },
-  { id: 'rug-024', name: 'Morning Sun', imageUrl: '/assets/images/products/MorningSun.jpg' },
+  { id: 'rug-024', name: 'Morning Sun', imageUrl:'https://res.cloudinary.com/dflytue4b/image/upload/v1763737260/Morning_Sun_8_x_10_1_Photorealistic_mxbmte.jpg'},
   { id: 'rug-025', name: 'Nagh Daha', imageUrl: '/assets/images/products/NaghDaha.jpg' },
   { id: 'rug-026', name: 'Namche Bazar', imageUrl: '/assets/images/products/NamcheBazar.jpg' },
   { id: 'rug-027', name: 'On Board', imageUrl: '/assets/images/products/OnBoard.jpg' },
@@ -81,15 +81,34 @@ const carpets: Carpet[] = [
   { id: 'rug-070', name: 'Kapaal', imageUrl: '/assets/images/products/Kapaal.jpg' },
   { id: 'rug-071', name: 'Phulchoki', imageUrl: '/assets/images/products/Phulchoki.jpg' },
   { id: 'rug-072', name: 'Thaali', imageUrl: '/assets/images/products/Thaali.jpg' },
-
-
-
-
 ];
 
 
 const AllCollections: React.FC = () => {
   const [activeCarpet, setActiveCarpet] = useState<Carpet | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 16;
+
+  const totalPages = Math.ceil(carpets.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentCarpets = carpets.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
     <>
@@ -104,7 +123,7 @@ const AllCollections: React.FC = () => {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {carpets.map((carpet) => (
+        {currentCarpets.map((carpet) => (
           <motion.div
             key={carpet.id}
             whileHover={{ scale: 1.03 }}
@@ -130,6 +149,41 @@ const AllCollections: React.FC = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center mt-10 space-x-2">
+          <button
+            onClick={handlePrevious}
+            disabled={currentPage === 1}
+            className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          >
+            Previous
+          </button>
+
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              onClick={() => handlePageChange(index + 1)}
+              className={`px-4 py-2 rounded-lg transition ${
+                currentPage === index + 1
+                  ? 'bg-gray-800 text-white'
+                  : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+              }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={handleNext}
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
 
     {/* Modal (UNCHANGED) */}
